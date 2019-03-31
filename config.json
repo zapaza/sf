@@ -1,0 +1,27 @@
+{
+  "addCssLibs": [
+    "./src/css/csslibs/*.css"
+  ],
+  "addJsBefore": [
+    "./node_modules/jquery/dist/jquery.min.js",
+    "./node_modules/svg4everybody/dist/svg4everybody.js"
+  ],
+  "addJsAfter": [
+
+  ],
+  "copiedJs": [
+    "./src/js/libs.js"
+  ],
+  "dirs": {
+    "srcPath": "./src/",
+    "buildPath": "./build/",
+    "cssPath": "./src/css/",
+    "htmlPath": "./src/html/",
+    "imgGeneral": "./src/images/general/",
+    "imgContent": "./src/images/content/",
+    "spritePNG": "./src/images/sprite/png/",
+    "spriteSVG": "./src/images/sprite/svg/",
+    "fontsPath": "./src/fonts/",
+    "staticPath": "./src/static/"
+  }
+}

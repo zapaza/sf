@@ -1,0 +1,39 @@
+.table{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+
+  &-header,
+  &-body,
+  &-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &-header{
+    margin-bottom: 12px;
+    font:{
+      size: 1.4rem;
+      weight: $font-regular;
+    }
+    line-height:  2rem;
+    letter-spacing: normal;
+    color: $mid-gray--text;
+  }
+
+  &-row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &-col{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

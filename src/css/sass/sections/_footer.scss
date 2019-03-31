@@ -1,0 +1,22 @@
+.footer {
+  position: relative;
+  flex: 1 0 auto;
+  width: 100%;
+  height: 144px;
+  background-color: $black;
+
+  .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    font:{
+      size: 1.3rem;
+      weight: $font-bold;
+    }
+    line-height: 1.6rem;
+    letter-spacing: normal;
+    color: $mid-gray;
+  }
+}

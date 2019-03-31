@@ -1,0 +1,50 @@
+<header class="header">
+    <div class="wrapper">
+
+        <div class="header-logo">
+            <a href="/">
+                <img src="images/logo.svg" alt="Стоп-фактор">
+            </a>
+        </div>
+
+        <div class="header-search">
+            <form action="">
+                <input class="header-search--input" type="search" placeholder="ИНН, ОГРН, название компании, ФИО руководителя, учредителя" autocomplete="off" autofocus aria-label="Search">
+                <button class="header-search--btn" type="submit">
+                    {{ svg('icon-search') }}
+                </button>
+            </form>
+        </div>
+
+        <div class="header-link">
+            <ul>
+                <li><a href="#0" class="header-link--item">{{ svg('icon-favourites') }}</a></li>
+                <li><a href="#0" class="header-link--item">{{ svg('icon-options') }}</a></li>
+                <li><a href="#0" class="header-link--item big" id="show-menu">{{ svg('icon-profile') }}</a></li>
+            </ul>
+
+            <div class="header-link--menu" id="lk-menu" >
+               <div class="profile-info">
+                   <div class="profile-info--main">Константин</div>
+                   <div class="profile-info--second">+7 (909) 921-23-34</div>
+               </div>
+
+                <div class="profile-subscription">
+                    <div class="profile-subscription--info normal"> <!--в зависимости от состояния добавляются классы normal(зелый цвет), warning(красный цвет), default(черный цвет)-->
+                        <p>Подписка активна до 23.05.2020</p>
+                    </div>
+                    <div class="profile-subscription--btn">
+                        <p>оформить на:</p>
+                        <a href="#0" class="btn btn-green">1 месяц — 1 200 ₽</a>
+                        <a href="#0" class="btn btn-green">1 год — 10 000 ₽</a>
+                    </div>
+                </div>
+                <ul class="profile-menu">
+                    <li><a href="">Тарифы</a></li>
+                    <li><a href="">Настройки</a></li>
+                    <li><a href="">Выход</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

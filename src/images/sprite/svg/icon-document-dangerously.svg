@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>B7740EFB-AC43-4451-BF9F-CEB1A2B3353D</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/report/L/red">
+            <g id="Group">
+                <g>
+                    <rect id="Rectangle-2" x="0" y="0" width="24" height="24"></rect>
+                    <path d="M12.2071068,0.5 L4.5,8.20710678 L4.5,31.5 L27.5,31.5 L27.5,0.5 L12.2071068,0.5 Z" id="Rectangle" stroke="#F24C3D"></path>
+                    <polyline id="Line-2" stroke="#F24C3D" stroke-linecap="square" points="4.5 8.5 12.5 8.5 12.5 0.5"></polyline>
+                    <path d="M8.5,12.5 L23.5,27.5" id="Line" stroke="#F24C3D" stroke-linecap="square"></path>
+                    <path d="M8.5,27.5 L23.5,12.5" id="Line" stroke="#F24C3D" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

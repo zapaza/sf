@@ -1,0 +1,148 @@
+{% extends 'layouts/_base.html' %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="company">
+        {% include 'sections/sidebar.html' %}
+
+        <section class="company-content">
+            <!--Карточка отчетность в 2х примерах-->
+            <article class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                    <h2>Отчетность</h2>
+                </div>
+                <div class="card-content">
+                    {% include 'blocks/otchet.html' %}
+                </div>
+                
+                <div class="card-footer">
+                    <div class="card-footer-btn">
+                        <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                    </div>
+                    <ul class="card-footer-link">
+                        <li><a href="#0" class="card-footer-link--download"></a></li>
+                        <li><a href="#0" class="card-footer-link--share"></a></li>
+                        <li><a href="#0" class="card-footer-link--print"></a></li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="company-content--item card dangerously" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                    <h2>Отчетность</h2>
+                    <a href="#0" class="card-header--factors">2 стоп-фактор</a>
+                </div>
+                <div class="card-content">
+                    {% include 'blocks/otchet-dengerously.html' %}
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-footer-btn">
+                        <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                    </div>
+                    <ul class="card-footer-link">
+                        <li><a href="#0" class="card-footer-link--download"></a></li>
+                        <li><a href="#0" class="card-footer-link--share"></a></li>
+                        <li><a href="#0" class="card-footer-link--print"></a></li>
+                    </ul>
+                </div>
+            </article>
+            <!--Карточка отчетность в 2х примерах конец-->
+
+            <!--Карточка проверки в 2х примерах-->
+            <article class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                    <h2>Проверки</h2>
+                </div>
+                <div class="card-content">
+                    {% include 'blocks/proverki.html' %}
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-footer-btn">
+                        <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                    </div>
+                    <ul class="card-footer-link">
+                        <li><a href="#0" class="card-footer-link--download"></a></li>
+                        <li><a href="#0" class="card-footer-link--share"></a></li>
+                        <li><a href="#0" class="card-footer-link--print"></a></li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="company-content--item card no-index" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                    <h2>Проверки</h2>
+                </div>
+                <div class="card-content">
+                    <p>На сегодняшний день проверок eще не проводилось</p>
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-footer-btn">
+                        <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                    </div>
+                    <ul class="card-footer-link">
+                        <li><a href="#0" class="card-footer-link--download"></a></li>
+                        <li><a href="#0" class="card-footer-link--share"></a></li>
+                        <li><a href="#0" class="card-footer-link--print"></a></li>
+                    </ul>
+                </div>
+            </article>
+            <!--Карточка проверки в 2х примерах конец-->
+
+
+            <!--Карточка бизнес-->
+            <article class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                    <h2>Бизнес</h2>
+                </div>
+                <div class="card-content">
+                    {% include 'blocks/business.html' %}
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-footer-btn">
+                        <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                    </div>
+                    <ul class="card-footer-link">
+                        <li><a href="#0" class="card-footer-link--download"></a></li>
+                        <li><a href="#0" class="card-footer-link--share"></a></li>
+                        <li><a href="#0" class="card-footer-link--print"></a></li>
+                    </ul>
+                </div>
+            </article>
+
+            <!--Карточка бизнес конец-->
+
+            <!-- Карточка арбитражи   -->
+            <article class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                    <h2>Арбитражи</h2>
+                </div>
+                <div class="card-content">
+                    {% include 'blocks/аrbitrage.html' %}
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-footer-btn">
+                        <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                    </div>
+                    <ul class="card-footer-link">
+                        <li><a href="#0" class="card-footer-link--download"></a></li>
+                        <li><a href="#0" class="card-footer-link--share"></a></li>
+                        <li><a href="#0" class="card-footer-link--print"></a></li>
+                    </ul>
+                </div>
+            </article>
+
+
+            <!-- Карточка арбитражи  конец -->
+        </section>
+
+        <div class="company-btn">
+
+        </div>
+    </div>
+</div>
+{% endblock %}

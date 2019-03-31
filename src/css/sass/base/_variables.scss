@@ -1,0 +1,46 @@
+// Семантические цвета
+
+$black:                       rgb(26, 26, 26);
+$black--text:                  rgba(0, 0, 0, 0.9);
+
+$mid-gray:                    rgba(153, 153, 153, 1.0);
+$mid-gray--text:              rgba(0, 0, 0, 0.4);
+
+$light-gray:                  rgba(229, 229, 229, 1);
+$light-gray--text:            rgba(0, 0, 0, 0.1);
+
+$white:                       rgb(255, 255, 255);
+$white--text:                 rgba(0, 0, 0, 0.15);
+
+$gold:                        rgb(230, 163, 69);
+$red:                         rgb(242, 76, 61);
+$red-hover:                   rgb(217, 68, 54);
+$green:                       rgb(58, 166, 94);
+$green-hover:                 rgb(49, 140, 79);
+$green-dark:                  rgb(49, 140, 79);
+
+
+$body-bg-color:               rgb(230, 230, 230);
+
+$link-color:                  #41afd3;
+$link-color--hover:           darken($link-color, 5%);
+$link-color--active:          darken($link-color, 10%);
+
+
+// Базовая типографика
+
+$font-size--root:             10px;
+
+$font-size:                   16px; // rem(16px)
+$font-size--small:            80%;
+
+$font-family:               'Roboto', sans-serif;
+
+$font-regular:              400;
+$font-bold:                 700;
+
+$line-height:                 normal;
+
+
+// Ширины
+

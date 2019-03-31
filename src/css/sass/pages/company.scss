@@ -1,0 +1,110 @@
+.company{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  padding-top: 96px;
+  margin-bottom: 64px;
+
+  &-sidebar{
+    position: fixed;
+    top: 100px;
+    height: 100vh;
+    max-height: 768px;
+    overflow-x: auto;
+    width:18.5%;
+    max-width: 224px;
+    margin-right: 16px;
+    transition: top .5s ease-in-out;
+    transition-duration: .5s;
+
+    &.fixed{
+      top: 30px;
+    }
+    &.overflow-height{
+      height: calc(100vh - 228px);
+    }
+    ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      li{
+        position: relative;
+        margin-bottom: 20px;
+
+        a{
+          display: block;
+          padding-left: 29px;
+          box-sizing: border-box;
+
+          font:{
+            size: 1.6rem;
+            weight: $font-regular;
+          }
+          line-height: 2rem;
+
+          text-decoration: none;
+          color: $black--text;
+          &:before{
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            left: 0;
+            top: 3px;
+          }
+          &.perfectly{
+            &:before{
+              background-color: $green;
+              opacity: .4;
+            }
+          }
+          &.satisfactorily{
+            &:before{
+              background-color: $gold;
+            }
+          }
+          &.dangerously{
+            &:before{
+              background-color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-content{
+    width: 62.02%;
+    max-width: 784px;
+    margin: 0 auto;
+    @media (max-width: 1440px){
+      width: 74.6%;
+    }
+    @media(max-width: 1024px){
+      width: 67.3%;
+    }
+
+    &--item{
+      width: 100%;
+      background-color: $white;
+      padding: 32px;
+      box-sizing: border-box;
+      margin-bottom: 24px;
+      
+      &.dangerously{
+        background-color: rgb(255, 232, 230);
+
+        .btn{
+          background-color: rgb(255, 232, 230);
+          &:hover{
+            background-color:darken(rgb(255, 232, 230), 5%);
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="HandheldFriendly" content="true">
+
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+
+    <!--<link href="css/{% if NODE_ENV == "dev" %}plugins.css{% else %}plugins.min.css{% endif %}" rel="stylesheet">-->
+    <link href="css/{% if NODE_ENV == "dev" %}styles.css{% else %}styles.min.css{% endif %}" rel="stylesheet">
+
+
+    {% include 'layouts/_favicon.html' %}
+
+    {% include 'layouts/_og.html' %}
+</head>
+<body>
+{% macro svg(id) %}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{id}}">
+    <use xlink:href="#{{id}}"></use>
+</svg>
+{% endmacro %}
+
+<div class="container">
+    <div class="content">
+        {% include 'sections/header.html' %}
+        {% block content %}{% endblock %}
+    </div>
+    {% include 'sections/footer.html' %}
+</div>
+
+
+<!--svg-sprite-->
+<div class="svgSprite" hidden>
+    {% include '../../images/general/sprite.svg' %}
+</div>
+
+
+<script src="js/combined.min.js"></script>
+<script src="js/libs.js"></script>
+
+{% include 'layouts/_counters.html' %}
+</body>
+</html>
