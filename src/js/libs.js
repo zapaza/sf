@@ -35,10 +35,10 @@ $(document).ready(function () {
     // });
     //
     //
-    // $('body').on('click', '#show-menu', function (e) {
-    //     e.preventDefault();
-    //     $('#lk-menu').fadeToggle('500');
-    // })
+    $('body').on('click', '#show-menu', function (e) {
+        e.preventDefault();
+        $('#lk-menu').fadeToggle('500');
+    })
 
 
 
