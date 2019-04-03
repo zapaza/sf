@@ -250,7 +250,7 @@ gulp.task('sprite:png', function (callback) {
                 imgName: fileName,
                 cssName: '_sprite.scss',
                 padding: 5,
-                imgPath: '/images/' + fileName
+                imgPath: '../images/' + fileName
             }));
         let imgStream = spriteData.img
             .pipe(buffer())

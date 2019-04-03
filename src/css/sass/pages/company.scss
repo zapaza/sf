@@ -71,6 +71,13 @@
               background-color: $red;
             }
           }
+          &.disabled{
+            pointer-events: none;
+            opacity: .5;
+            &:before{
+              display: none;
+            }
+          }
         }
       }
     }
@@ -101,6 +108,21 @@
           background-color: rgb(255, 232, 230);
           &:hover{
             background-color:darken(rgb(255, 232, 230), 5%);
+          }
+        }
+
+      }
+      &.satisfactorily{
+        background-color: rgb(255, 241, 214);
+        
+        .card-header--factors{
+          color: $gold;
+        }
+
+        .btn{
+          background-color:rgb(255, 241, 214);
+          &:hover{
+            background-color:darken(rgb(255, 241, 214), 5%);
           }
         }
 

@@ -7,7 +7,7 @@
 
         <section class="company-content">
             <!--Карточка отчетность в 2х примерах-->
-            <article class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+            <article id="report" class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
                 <div class="card-header">
                     <h2>Отчетность</h2>
                 </div>
@@ -50,7 +50,7 @@
             <!--Карточка отчетность в 2х примерах конец-->
 
             <!--Карточка проверки в 2х примерах-->
-            <article class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+            <article id="checks" class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
                 <div class="card-header">
                     <h2>Проверки</h2>
                 </div>
@@ -93,7 +93,7 @@
 
 
             <!--Карточка бизнес-->
-            <article class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+            <article id="business" class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
                 <div class="card-header">
                     <h2>Бизнес</h2>
                 </div>
@@ -116,7 +116,7 @@
             <!--Карточка бизнес конец-->
 
             <!-- Карточка арбитражи   -->
-            <article class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+            <article id="аrbitrage" class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
                 <div class="card-header">
                     <h2>Арбитражи</h2>
                 </div>
@@ -139,7 +139,7 @@
             <!-- Карточка арбитражи  конец -->
 
             <!--Карточка экономика -->
-            <article class="company-content--item card">
+            <article id="economy" class="company-content--item card">
                 <div class="card-header">
                     <h2>Экономика</h2>
                 </div>
@@ -161,9 +161,10 @@
             <!--Карточка экономика конец-->
 
             <!--карточка ФССП-->
-            <article class="company-content--item card">
+            <article id="fssp" class="company-content--item card satisfactorily">
                 <div class="card-header">
                     <h2>ФССП</h2>
+                    <a href="#0" class="card-header--factors">2 стоп-фактор</a>
                 </div>
                 <div class="card-content">
                     {% include 'blocks/fssp.html' %}
@@ -184,7 +185,7 @@
 
 
             <!--карточка для тендера-->
-            <article class="company-content--item card">
+            <article id="tender" class="company-content--item card">
                 <div class="card-header">
                     <h2>Тендер</h2>
                 </div>

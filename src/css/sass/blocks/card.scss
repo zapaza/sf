@@ -26,11 +26,37 @@
   &.dangerously{
     &:after{
       position: absolute;
-      content: '';
+      content: '?';
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 3.2rem;
+      font-weight: $font-bold;
+      font-size: 1.6rem;
+      color: #fff;
+      background-color: $red;
       top: 50%;
       right: -16px;
       transform: translateY(-50%);
-      @include sprite($icon-card-dangerously);
+    }
+  }
+  &.satisfactorily{
+    &:after{
+      position: absolute;
+      content: '?';
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 3.2rem;
+      font-weight: $font-bold;
+      font-size: 1.6rem;
+      color: #fff;
+      background-color: $gold;
+      top: 50%;
+      right: -16px;
+      transform: translateY(-50%);
     }
   }
 
@@ -590,6 +616,15 @@
 
     //стили для карточки фссп
     .fssp{
+      .table-header{
+        .table-row{
+          cursor: default;
+          &:hover{
+            background-color: transparent;
+          }
+        }
+      }
+
       .table{
         &-col{
           width: 18%;
@@ -694,19 +729,48 @@
 
     //ситили для карточки тендера
     .tender{
+      &-tabs{
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+
+        &--name{
+          font:{
+            size: 1.4rem;
+            weight: $font-regular;
+          }
+          line-height: 1.6rem;
+          letter-spacing: normal;
+          color: $mid-gray--text;
+          transition: .2s color ease;
+          margin-right: 16px;
+          cursor: pointer;
+          &:last-child{
+            margin-right: 0;
+            margin-left: 16px;
+          }
+
+          &.active{
+            color: $black--text;
+          }
+        }
+      }
       &-select{
         display: flex;
         flex-shrink: 0;
         align-items: center;
         position: relative;
-        width: 64px;
-        height: 32px;
+        width: 24px;
+        height: 8px;
         border-radius: 50em;
         padding: 3px 0;
+        cursor: pointer;
+        pointer-events: none;
 
         &--input,
         &--label{
           position: absolute;
+          cursor: pointer;
           left: 0;
           top: 0;
         }
@@ -718,43 +782,146 @@
           height: 0;
           width: 0;
           pointer-events: none;
-          &:checked + .tender-select--label {
-            background-color: $black;
-          }
-
           &:checked + .tender-select--label + .tender-select--marker {
-            left: calc(100% - 32px + 3px);
+            left: calc(100% - 12px);
           }
 
           &:focus + .tender-select--label,
           &:active + .tender-select--label {
 
-            box-shadow: 0 0 0 3px $black--text;
           }
         }
 
         &--label{
-          width: 100%;
-          height: 100%;
-          color: transparent;
+          width: 24px;
+          height: 8px;
+          border-radius: 8px;
+          background-color: rgba(0, 0, 0, 0.15);
           user-select: none;
-          background-color: #fff;
-          border-radius: inherit;
           z-index: 1;
           transition: background .2s ease;
+          color: transparent;
         }
         &--marker{
-          position: relative;
-          background-color: #fff;
-          width: calc(32px - 3px * 2);
-          height: calc(32px - 3px * 2);
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          width: 16px;
+          height: 16px;
+          border: solid 1px $black--text;
+          background-color:  $black--text;
           border-radius: 50%;
           z-index: 2;
           pointer-events: none;
-          box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.25);
-          left: 3px;
           transition: left .2s ease;
           will-change: left;
+        }
+      }
+
+      &-content{
+        &-tab{
+          display: none;
+          &.active{
+            display: block;
+          }
+
+          .table{
+            &-header{
+              span{
+                width: 100%;
+                text-align: left;
+                display: inline-block;
+              }
+              .table-col{
+                &:last-child,
+                &:nth-child(3){
+                  span{
+                    text-align: right;
+                  }
+                }
+
+                &:hover{
+                  background-color: transparent;
+                }
+              }
+            }
+
+            &-row{
+              justify-content: space-between;
+              margin: 0 -16px;
+            }
+
+            &-col{
+              max-width: 192px;
+              margin-right: 24px;
+              padding: 6px 16px;
+              box-sizing: border-box;
+              cursor: pointer;
+              border-radius:4px ;
+              transition: background-color .2s ease;
+              &:last-child{
+                margin-right: 0;
+              }
+              &:first-child{
+                width: 20%;
+                margin-right: 16px;
+                span{
+                }
+                &:hover{
+                  background: transparent;
+                }
+              }
+              &:hover{
+                background-color: rgba(0, 0, 0, 0.05);
+              }
+
+            }
+
+            &-body{
+              padding-bottom: 24px;
+
+              .table-col{
+                font:{
+                  size: 1.6rem;
+                  weight: $font-regular;
+                }
+                line-height: 2rem;
+                letter-spacing: normal;
+                color: rgba(0, 0, 0, 0.9);
+                &:first-child{
+                  font-weight: $font-bold;
+                }
+
+                span{
+                  box-sizing: border-box;
+                  &.perfectly{
+                    color: $green;
+                    border-bottom: 1px solid $green;
+                  }
+                  &.normal{
+                    color: $mid-gray--text;
+                    border-bottom: none;
+                  }
+                }
+              }
+            }
+
+            &-footer{
+              border-top: 1px solid #d8d8d8;
+              padding-top: 23px;
+              margin-right: 0;
+              margin-left: 0;
+              padding-bottom: 16px;
+              span{
+                &.normal{
+                  color: $mid-gray--text;
+                }
+
+              }
+            }
+
+          }
+
         }
       }
 

@@ -21,6 +21,13 @@
     line-height:  2rem;
     letter-spacing: normal;
     color: $mid-gray--text;
+    .table-row,
+    .table-col{
+      cursor: default !important;
+      &:hover{
+        background-color: transparent !important;
+      }
+    }
   }
 
   &-row{

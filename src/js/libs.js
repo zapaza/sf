@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+    var $body = $('body');
     // var mywindow = $(window);
     // var mypos = 64;
     // var up = false;
@@ -35,11 +37,60 @@ $(document).ready(function () {
     // });
     //
     //
-    $('body').on('click', '#show-menu', function (e) {
+
+    //скрол по якорю
+    $("body").on("click",".company-sidebar a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+        top = $(id).offset().top - 70;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+
+
+
+    //показ меню
+    $body.on('click', '#show-menu', function (e) {
         e.preventDefault();
         $('#lk-menu').fadeToggle('500');
-    })
+    });
 
+
+
+    //скрипты для карточки тендер
+    if($('.tender').length > 0){
+        //анимация чекбокса
+        $body.on('click', '.tender-tabs--name',function(){
+            if (!$(this).hasClass('active')){
+
+                $(this).css('points-events','all');
+                $(this).closest('.tender-tabs').children('.tender-tabs--name').removeClass('active');
+                $(this).addClass('active');
+                $(this).closest('.tender-tabs').find('.tender-select--input').trigger('click');
+            }
+
+        });
+
+        //табы в
+        $(".tender-content-tab").hide();
+        $(".tender-content-tab:first").show();
+
+        /* if in tab mode */
+        $body.on("click", ".tender-tabs .tender-tabs--name", function () {
+
+            $(".tender-content-tab").hide();
+
+            var activeTab = $(this).attr("rel");
+
+            $("#" + activeTab).fadeIn();
+
+            $(".tender-tabs .tender-tabs--name").removeClass("active");
+            $(this).addClass("active");
+
+            // $(".tab-drawer-heading").removeClass("d-active");
+            // $(".tab-drawer-heading[rel^='" + activeTab + "']").addClass("d-active");
+
+        });
+    }
 
 
 });
