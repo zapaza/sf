@@ -74,7 +74,7 @@ $(document).ready(function () {
         $(".tender-content-tab").hide();
         $(".tender-content-tab:first").show();
 
-        /* if in tab mode */
+
         $body.on("click", ".tender-tabs .tender-tabs--name", function () {
 
             $(".tender-content-tab").hide();
@@ -88,10 +88,8 @@ $(document).ready(function () {
 
             // $(".tab-drawer-heading").removeClass("d-active");
             // $(".tab-drawer-heading[rel^='" + activeTab + "']").addClass("d-active");
-
         });
     }
-
 
 });
 

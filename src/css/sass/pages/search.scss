@@ -1,0 +1,129 @@
+.search{
+  width: 100%;
+  padding-top: 72px;
+  &-info{
+
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    &--count{
+      font:{
+        size: 1.4rem;
+        weight: $font-bold;
+      }
+      line-height: 1.6rem;
+      letter-spacing: normal;
+      color:$black--text;
+    }
+
+    &--switch{
+      display: flex;
+      align-items: center;
+      margin-right: 15%;
+      &_inner{
+        position: relative;
+        display: block;
+        width: 24px;
+
+        height: 8px;
+        .switch{
+
+          &_input,
+          &_label{
+            position: absolute;
+            cursor: pointer;
+            left: 0;
+            top: 0;
+          }
+
+          &_input{
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            height: 0;
+            width: 0;
+            pointer-events: none;
+            &:checked + .switch_label + .switch_marker {
+              left: calc(100% - 12px);
+              background: $black;
+              border-color: $black;
+            }
+            &:checked + .switch_label:after{
+              color: $black--text;
+            }
+
+            &:focus + .switch_label,
+            &:active + .switch_label {
+
+            }
+          }
+
+          &_label{
+            width: 24px;
+            height: 8px;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.15);
+            user-select: none;
+            z-index: 1;
+            transition: background .2s ease;
+            color: transparent;
+            &:after{
+              top: 50%;
+              transform: translateY(-50%);
+              position: absolute;
+              content: attr(data-name);
+              font:{
+                size: 1.4rem;
+                weight: $font-regular;
+              }
+              line-height: 1.6rem;
+              letter-spacing: normal;
+              color: $white--text;
+              cursor: pointer;
+              background: none;
+              border: none;
+              white-space: nowrap;
+              left: 140%;
+              transition: color .2s ease;
+            }
+          }
+          &_marker{
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            width: 16px;
+            height: 16px;
+            border: solid 1px $white;
+            background-color:  $white;
+            border-radius: 50%;
+            z-index: 2;
+            pointer-events: none;
+            transition: left .2s ease;
+            will-change: left;
+          }
+        }
+      }
+    }
+  }
+
+  &-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+
+    &--item{
+      padding: 24px 32px;
+      background-color: $white;
+      transition: background-color .2s ease;
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.05)
+      }
+    }
+
+  }
+}
