@@ -94,4 +94,34 @@
     border-color: $white--text;
   }
 
+  .loader{
+    width: 24px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto ;
+    @for $i from 1 through 3{
+      &-item--#{$i}{
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+        border-radius: 50%;
+        animation: opacity 1.5s infinite ease;
+        animation-delay: .3s * $i;
+        transition: .2s all ease;
+      }
+    }
+  }
+
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }

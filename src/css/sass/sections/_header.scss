@@ -45,6 +45,7 @@
     position: relative;
     width: 62.02%;
     max-width: 784px;
+    margin-left: -88px;
     @media(max-width: 1280px) {
       width: 50%;
       max-width: 464px;
@@ -112,7 +113,21 @@
       //left: auto;
       right: 0;
     };
-
+    .btn{
+      width: 80px;
+      display: inline-block;
+      border-radius: 24px;
+      font:{
+        size: 1.4rem;
+        weight: $font-regular;
+      }
+      line-height: 1.6rem;
+      letter-spacing: normal;
+      text-align: center;
+      text-transform: none;
+      color: rgb(255, 255, 255);
+      padding: 8px 16px;
+    }
     ul{
       width: 100%;
       display: flex;
@@ -131,20 +146,46 @@
       display: block;
       width: 32px;
       height: 32px;
+      &:hover{
+        svg{
+          opacity: 1;
+        }
+      }
 
       svg{
         display: block;
         width: 100%;
         height: 100%;
+        opacity: .5;
+        transition: .2s ease opacity;
       }
 
 
 
       &.big{
-        width: 40px;
-        height: 40px;
         border-radius: 50%;
-        overflow: hidden;
+        &:after{
+          content: '';
+          transition: .5s ease all;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+        }
+        svg{
+          border-radius: 50%;
+          overflow: hidden;
+        }
+        &.open{
+          position: relative;
+          &:after{
+            position: absolute;
+            content: '';
+            width: 38px;
+            height: 38px;
+            border: solid 2px rgb(58, 166, 94);
+          }
+        }
       }
     }
 
