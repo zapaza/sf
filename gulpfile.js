@@ -37,9 +37,9 @@ const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
 
 let postCssPlugins = [
     autoprefixer(), // настройки вынесены в package.json, дабы получать их для любой задачи
-    mqpacker({
-        sort: true
-    }),
+    // mqpacker({
+         // sort: true
+    // }),
     atImport(),
     inlineSVG(),
     objectFitImages()

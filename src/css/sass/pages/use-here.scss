@@ -1,0 +1,58 @@
+.use-here{
+  width: 100%;
+  height: 100%;
+
+  .wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--inner{
+    max-width: 464px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1{
+      margin-bottom: 32px;
+      font:{
+        size: 2.8rem;
+        weight: $font-bold;
+
+      }
+      line-height: 3.2rem;
+      letter-spacing: normal;
+      text-align: center;
+      color: $black--text;
+    }
+
+    .btn{
+      width: 100%;
+      max-width: 304px;
+      margin-bottom: 12px;
+
+      &-default{
+        margin-bottom: 36px;
+        background-color: transparent;
+      }
+    }
+
+    .why-show{
+      font:{
+        size: 1.4rem;
+        weight: $font-regular;
+      }
+      line-height: 1.6rem;
+      letter-spacing: normal;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+}

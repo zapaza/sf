@@ -1,10 +1,12 @@
 {
   "addCssLibs": [
-    "./src/css/csslibs/*.css"
+    "./src/css/csslibs/*.css",
+    "./src/css/csslibs/magnific-popup.css"
   ],
   "addJsBefore": [
     "./node_modules/jquery/dist/jquery.min.js",
-    "./node_modules/svg4everybody/dist/svg4everybody.js"
+    "./node_modules/svg4everybody/dist/svg4everybody.js",
+    "./src/js/jslibs/jquery.magnific-popup.min.js"
   ],
   "addJsAfter": [
 

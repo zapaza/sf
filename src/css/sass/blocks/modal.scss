@@ -1,0 +1,41 @@
+.mfp-bg{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal{
+  position: relative;
+  display: block;
+  background-color: $white;
+
+  &-why-show-modal{
+    padding: 72px 32px;
+    max-width: 304px;
+    margin: auto;
+    box-sizing: border-box;
+
+    .mfp-close{
+      right: 24px;
+      top: 24px;
+      width: 24px;
+      height: 24px;
+      text-indent: -999px;
+      overflow: hidden;
+      opacity: 1;
+      @include sprite($icon-close);
+      transition: .2s ease opacity;
+      &:hover{
+        opacity: .6;
+      }
+    }
+
+    p{
+      font:{
+        size: 1.4rem;
+        weight: $font-regular;
+      }
+      line-height: 1.6rem;
+      letter-spacing: normal;
+      color: $black--text;
+    }
+  }
+}
