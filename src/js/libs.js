@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    var $body = $('body');
+    var $body = $('body'),
+        companySelector =  $('.item-info--company');
     // var mywindow = $(window);
     // var mypos = 64;
     // var up = false;
@@ -51,6 +52,7 @@ $(document).ready(function () {
     //показ меню
     $body.on('click', '#show-menu', function (e) {
         e.preventDefault();
+        $(this).toggleClass('open');
         $('#lk-menu').fadeToggle('500');
     });
 
@@ -90,6 +92,17 @@ $(document).ready(function () {
             // $(".tab-drawer-heading[rel^='" + activeTab + "']").addClass("d-active");
         });
     }
+
+    //скрипт показа модалки
+    $('a[data-modal]').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        fixedBgPos: true,
+        preloader: false,
+        overflowY: 'scroll',
+        removalDelay: 300,
+        closeBtnInside: true
+    });
 
 });
 

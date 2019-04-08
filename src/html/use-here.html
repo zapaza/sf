@@ -1,0 +1,25 @@
+{% extends 'layouts/_base.html' %}
+
+{% block content %}
+
+<section class="use-here">
+    <div class="wrapper">
+        <div class="use-here--inner">
+           <h1>Сервис «Стоп-Фактор» <br> открыт на другом устройстве</h1>
+
+            <a href="#0" class="btn btn-green">Использовать здесь</a>
+            <a href="" class="btn btn-default">Отмена</a>
+
+            <a href="#why-show-modal" data-modal class="why-show">Почему я вижу это сообщение?</a>
+        </div>
+
+
+        <div class="modal mfp-hide modal-why-show-modal" id="why-show-modal">
+            <div class="modal-inner">
+                <p>«Стоп-фактор» — это продукт для персонального пользования и он не может работать на нескольких устройствах одновременно. Это сделано для достижения минимально возможной цены.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
