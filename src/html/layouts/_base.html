@@ -10,7 +10,7 @@
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}">
-
+    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.11.1/dist/css/suggestions.min.css" rel="stylesheet" />
     <link href="css/{% if NODE_ENV == "dev" %}plugins.css{% else %}plugins.min.css{% endif %}" rel="stylesheet">
     <link href="css/{% if NODE_ENV == "dev" %}styles.css{% else %}styles.min.css{% endif %}" rel="stylesheet">
 
@@ -44,6 +44,19 @@
 
 
 <script src="js/combined.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.11.1/dist/js/jquery.suggestions.min.js"></script>
+<script>
+    $("#query").suggestions({
+        token: "93dc951d16827886219c6ec5e445288493292104",
+        type: "PARTY",
+        /* Вызывается, когда пользователь выбирает одну из подсказок */
+        onSelect: function(suggestion) {
+            console.log(suggestion);
+        }
+    });
+
+
+</script>
 <script src="js/libs.js"></script>
 
 {% include 'layouts/_counters.html' %}

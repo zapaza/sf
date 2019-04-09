@@ -112,21 +112,54 @@
       </header>
       <div class="page-content">
 
-        <section class="use-here">
+        <section class="settings">
           <div class="wrapper">
-            <div class="use-here--inner">
-              <h1>Сервис «Стоп-Фактор» <br> открыт на другом устройстве</h1>
-
-              <a href="#0" class="btn btn-green">Использовать здесь</a>
-              <a href="" class="btn btn-default">Отмена</a>
-
-              <a href="#why-show-modal" data-modal class="why-show">Почему я вижу это сообщение?</a>
-            </div>
-
-            <div class="modal mfp-hide modal-why-show-modal" id="why-show-modal">
-              <div class="modal-inner">
-                <p>«Стоп-фактор» — это продукт для персонального пользования и он не может работать на нескольких устройствах одновременно. Это сделано для достижения минимально возможной цены.</p>
+            <div class="settings-form">
+              <h1>Настройки</h1>
+              <div class="settings-form--group">
+                <form action="">
+                  <label for="phone">
+                    <input id="phone" type="text" disabled value="+7 (124) 124-12-42">
+                    <span class="icon-question show-hint"></span>
+                    <span class="hard-hint">Для замены номера телефона обратитесь в службу поддержки</span>
+                  </label>
+                </form>
               </div>
+              <div class="settings-form--group">
+                <form action="">
+                  <label for="email">
+                    <input type="email" id="email" placeholder="Электронная почта" data-hint="На новую почту придет письмо с подтверждением.
+На старую почту придёт письмо с уведомлением об изменениях."> <!-- data-hint показывается когда пользователь решил изменить свою почту-->
+                    <span class="icon-time"></span>
+                    <!--показать когда описьмо отправлено 1раз-->
+                    <span class="hard-hint">
+                      <!--показывается при наведении на icon-time-->
+                      Адрес ожидает подтверждения<button type="submit">Отправить письмо повторно</button>
+                    </span>
+                    <span class="icon-check" data-hint="Подтверждено"></span>
+                    <!--показывается когда пользователь подтвердил свою почту-->
+                    <button type="submit" class="btn btn-green">Подтвердить</button>
+                  </label>
+                </form>
+              </div>
+              <div class="settings-form--group">
+                <form action="">
+                  <label for="name">
+                    <input type="text" id="name" placeholder="Имя">
+                    <button type="submit" class="btn btn-green">Подтвердить</button>
+                  </label>
+                </form>
+              </div>
+              <div class="settings-form--group">
+                <form action="">
+                  <label for="organization">
+                    <input type="text" id="organization" placeholder="Организация">
+                    <button type="submit" class="btn btn-green">Подтвердить</button>
+                  </label>
+                </form>
+              </div>
+
+              <a href="" data-modal>Сменить пароль</a>
             </div>
           </div>
         </section>

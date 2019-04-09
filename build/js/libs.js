@@ -93,7 +93,16 @@ $(document).ready(function () {
         });
     }
 
-
+    //скрипт показа модалки
+    $('a[data-modal]').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        fixedBgPos: true,
+        preloader: false,
+        overflowY: 'scroll',
+        removalDelay: 300,
+        closeBtnInside: true
+    });
 
 });
 

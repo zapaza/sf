@@ -10,9 +10,9 @@
   <title>Site title</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-
-  <!--<link href="css/plugins.min.css" rel="stylesheet">-->
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.11.1/dist/css/suggestions.min.css" rel="stylesheet" />
+  <link href="css/plugins.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
   <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -43,7 +43,7 @@
 
           <div class="header-search">
             <form action="">
-              <input class="header-search--input" type="search" placeholder="ИНН, ОГРН, название компании, ФИО руководителя, учредителя" autocomplete="off" autofocus aria-label="Search">
+              <input class="header-search--input suggestions-input" id="query" type="search" placeholder="ИНН, ОГРН, название компании, ФИО руководителя, учредителя" autocomplete="off" autofocus aria-label="Search">
               <button class="header-search--btn" type="submit">
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon-search">
@@ -56,9 +56,9 @@
 
           <div class="header-link">
 
-            <!--<a href="#0" class="btn btn-green">Войти</a>-->
+            <!--<a href="#0" class="btn btn-green enter">Войти</a>-->
 
-            <!--<a href="#0" class="btn btn-green">-->
+            <!--<a href="#0" class="btn btn-green enter">-->
             <!--<span class="loader">-->
             <!--<span class="loader-item loader-item&#45;&#45;1"></span>-->
             <!--<span class="loader-item loader-item&#45;&#45;2"></span>-->
@@ -67,12 +67,12 @@
             <!--</a>-->
 
             <ul>
-              <li><a href="#0" class="header-link--item">
+              <li><a href="#0" class="header-link--item" data-hint="Мониторинг">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon-favourites">
                     <use xlink:href="#icon-favourites"></use>
                   </svg>
                 </a></li>
-              <li><a href="#0" class="header-link--item">
+              <li><a href="#0" class="header-link--item" data-hint="Сравнение">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon-options">
                     <use xlink:href="#icon-options"></use>
                   </svg>
@@ -110,896 +110,899 @@
           </div>
         </div>
       </header>
+      <div class="page-content">
 
-      <div class="wrapper">
         <div class="company">
-          <aside class="company-sidebar">
-            <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
-            <ul>
-              <li data-hint="Собственники не найдены"><a href="#0" class="disabled">Cобственники</a></li>
-              <li><a href="#0" class="perfectly">Взаимосвязи</a></li>
-              <li><a href="#0" class="perfectly">Записи ЕГРЮЛ</a></li>
-              <li><a href="#report" class="perfectly">Отчетность</a></li>
-              <li><a href="#economy" class="dangerously">Экономика</a></li>
-              <li><a href="#business" class="perfectly">Бизнес</a></li>
-              <li><a href="#аrbitrage" class="perfectly">Арбитражи</a></li>
-              <li><a href="#fssp" class="satisfactorily">ФССП</a></li>
-              <li><a href="#tender" class="perfectly">Тендеры</a></li>
-              <li><a href="#checks" class="perfectly">Проверки</a></li>
-              <li><a href="#0" class="perfectly">Лицензии</a></li>
-            </ul>
-          </aside>
-
-          <section class="company-content">
-            <!--Карточка отчетность в 2х примерах-->
-            <article id="report" class="company-content--item card">
+          <div class="wrapper">
+            <aside class="company-sidebar">
               <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
-              <div class="card-header">
-                <h2>Отчетность</h2>
-              </div>
-              <div class="card-content">
-                <div class="reporting">
-                  <a href="#0" class="reporting-item">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
-                        <use xlink:href="#icon-document"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2008</span>
-                  </a>
-                  <a href="#0" class="reporting-item">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
-                        <use xlink:href="#icon-document"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2009</span>
-                  </a>
-                  <a href="#0" class="reporting-item">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
-                        <use xlink:href="#icon-document"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2010</span>
-                  </a>
-                  <a href="#0" class="reporting-item">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
-                        <use xlink:href="#icon-document"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2011</span>
-                  </a>
-                  <a href="#0" class="reporting-item">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
-                        <use xlink:href="#icon-document"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2012</span>
-                  </a>
-                  <a href="#0" class="reporting-item">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
-                        <use xlink:href="#icon-document"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2013</span>
-                  </a>
+              <ul>
+                <li data-hint="Собственники не найдены"><a href="#0" class="disabled">Cобственники</a></li>
+                <li><a href="#0" class="perfectly">Взаимосвязи</a></li>
+                <li><a href="#0" class="perfectly">Записи ЕГРЮЛ</a></li>
+                <li><a href="#report" class="perfectly">Отчетность</a></li>
+                <li><a href="#economy" class="dangerously">Экономика</a></li>
+                <li><a href="#business" class="perfectly">Бизнес</a></li>
+                <li><a href="#аrbitrage" class="perfectly">Арбитражи</a></li>
+                <li><a href="#fssp" class="satisfactorily">ФССП</a></li>
+                <li><a href="#tender" class="perfectly">Тендеры</a></li>
+                <li><a href="#checks" class="perfectly">Проверки</a></li>
+                <li><a href="#0" class="perfectly">Лицензии</a></li>
+              </ul>
+            </aside>
+
+            <section class="company-content">
+              <!--Карточка отчетность в 2х примерах-->
+              <article id="report" class="company-content--item card">
+                <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                  <h2>Отчетность</h2>
                 </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="card-footer-btn">
-                  <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
-                </div>
-                <ul class="card-footer-link">
-                  <li><a href="#0" class="card-footer-link--download"></a></li>
-                  <li><a href="#0" class="card-footer-link--share"></a></li>
-                  <li><a href="#0" class="card-footer-link--print"></a></li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="company-content--item card dangerously">
-              <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
-              <div class="card-header">
-                <h2>Отчетность</h2>
-                <a href="#0" class="card-header--factors">2 стоп-фактор</a>
-              </div>
-              <div class="card-content">
-                <div class="reporting">
-                  <a href="#0" class="reporting-item dangerously">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document-dangerously">
-                        <use xlink:href="#icon-document-dangerously"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2008</span>
-                  </a>
-                  <a href="#0" class="reporting-item dangerously">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document-dangerously">
-                        <use xlink:href="#icon-document-dangerously"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2009</span>
-                  </a>
-                  <a href="#0" class="reporting-item">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
-                        <use xlink:href="#icon-document"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2010</span>
-                  </a>
-                  <a href="#0" class="reporting-item">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
-                        <use xlink:href="#icon-document"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2011</span>
-                  </a>
-                  <a href="#0" class="reporting-item">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
-                        <use xlink:href="#icon-document"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2012</span>
-                  </a>
-                  <a href="#0" class="reporting-item">
-                    <span class="reporting-item--img">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
-                        <use xlink:href="#icon-document"></use>
-                      </svg>
-                    </span>
-                    <span class="reporting-item-years">2013</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="card-footer-btn">
-                  <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
-                </div>
-                <ul class="card-footer-link">
-                  <li><a href="#0" class="card-footer-link--download"></a></li>
-                  <li><a href="#0" class="card-footer-link--share"></a></li>
-                  <li><a href="#0" class="card-footer-link--print"></a></li>
-                </ul>
-              </div>
-            </article>
-            <!--Карточка отчетность в 2х примерах конец-->
-
-            <!--Карточка проверки в 2х примерах-->
-            <article id="checks" class="company-content--item card">
-              <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
-              <div class="card-header">
-                <h2>Проверки</h2>
-              </div>
-              <div class="card-content">
-                <div class="checkup">
-                  <div class="table">
-
-                    <div class="table-header">
-                      <div class="table-row">
-                        <div class="table-col">Год</div>
-                        <div class="table-col">Плановые</div>
-                        <div class="table-col">Внеплановые</div>
-                        <div class="table-col">Всего</div>
-                      </div>
-                    </div>
-
-                    <div class="table-body">
-                      <div class="table-row">
-                        <div class="table-col"><span>2019</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>2018</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>2017</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>2016</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>2015</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                      </div>
-                    </div>
-
-                    <div class="table-footer">
-                      <div class="table-row">
-                        <div class="table-col"><span>Всего</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
-                        <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
-                      </div>
-                    </div>
-
+                <div class="card-content">
+                  <div class="reporting">
+                    <a href="#0" class="reporting-item">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
+                          <use xlink:href="#icon-document"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2008</span>
+                    </a>
+                    <a href="#0" class="reporting-item">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
+                          <use xlink:href="#icon-document"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2009</span>
+                    </a>
+                    <a href="#0" class="reporting-item">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
+                          <use xlink:href="#icon-document"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2010</span>
+                    </a>
+                    <a href="#0" class="reporting-item">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
+                          <use xlink:href="#icon-document"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2011</span>
+                    </a>
+                    <a href="#0" class="reporting-item">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
+                          <use xlink:href="#icon-document"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2012</span>
+                    </a>
+                    <a href="#0" class="reporting-item">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
+                          <use xlink:href="#icon-document"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2013</span>
+                    </a>
                   </div>
                 </div>
-              </div>
 
-              <div class="card-footer">
-                <div class="card-footer-btn">
-                  <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                <div class="card-footer">
+                  <div class="card-footer-btn">
+                    <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                  </div>
+                  <ul class="card-footer-link">
+                    <li><a href="#0" class="card-footer-link--download"></a></li>
+                    <li><a href="#0" class="card-footer-link--share"></a></li>
+                    <li><a href="#0" class="card-footer-link--print"></a></li>
+                  </ul>
                 </div>
-                <ul class="card-footer-link">
-                  <li><a href="#0" class="card-footer-link--download"></a></li>
-                  <li><a href="#0" class="card-footer-link--share"></a></li>
-                  <li><a href="#0" class="card-footer-link--print"></a></li>
-                </ul>
-              </div>
-            </article>
+              </article>
 
-            <article class="company-content--item card no-index">
-              <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
-              <div class="card-header">
-                <h2>Проверки</h2>
-              </div>
-              <div class="card-content">
-                <p>На сегодняшний день проверок eще не проводилось</p>
-              </div>
-
-              <div class="card-footer">
-                <div class="card-footer-btn">
-                  <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+              <article class="company-content--item card dangerously">
+                <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                  <h2>Отчетность</h2>
+                  <a href="#0" class="card-header--factors">2 стоп-фактор</a>
                 </div>
-                <ul class="card-footer-link">
-                  <li><a href="#0" class="card-footer-link--download"></a></li>
-                  <li><a href="#0" class="card-footer-link--share"></a></li>
-                  <li><a href="#0" class="card-footer-link--print"></a></li>
-                </ul>
-              </div>
-            </article>
-            <!--Карточка проверки в 2х примерах конец-->
-
-            <!--Карточка бизнес-->
-            <article id="business" class="company-content--item card">
-              <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
-              <div class="card-header">
-                <h2>Бизнес</h2>
-              </div>
-              <div class="card-content">
-                <div class="business">
-                  <div class="table">
-
-                    <div class="table-header">
-                      <div class="table-row">
-                        <div class="table-col"><span>Показатель</span></div>
-                        <div class="table-col"><span>Норма, ₽</span></div>
-                        <div class="table-col"><span>2017</span></div>
-                        <div class="table-col"><span>2016</span></div>
-                        <div class="table-col"><span>2015</span></div>
-                      </div>
-                    </div>
-
-                    <div class="table-body">
-                      <div class="table-row">
-                        <div class="table-col"><span>Абсолютная ликвидность</span></div>
-                        <div class="table-col"><span class="normal">≥ 25</span></div>
-                        <div class="table-col"><span class="perfectly">31</span></div>
-                        <div class="table-col"><span class="perfectly">62</span></div>
-                        <div class="table-col"><span class="perfectly">100</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Текущая ликвидность</span></div>
-                        <div class="table-col"><span class="normal">≥ 200</span></div>
-                        <div class="table-col"><span class="dangerously">131</span></div>
-                        <div class="table-col"><span class="dangerously">133</span></div>
-                        <div class="table-col"><span class="perfectly">208</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Восстановление платежеспособности</span></div>
-                        <div class="table-col"><span class="normal">≥ 100</span></div>
-                        <div class="table-col"><span class="dangerously">65</span></div>
-                        <div class="table-col"><span class="dangerously">47</span></div>
-                        <div class="table-col"><span class="perfectly">78</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Финансовая устройчивость</span></div>
-                        <div class="table-col"><span class="normal">≥ 50</span></div>
-                        <div class="table-col"><span class="perfectly">75</span></div>
-                        <div class="table-col"><span class="perfectly">76</span></div>
-                        <div class="table-col"><span class="perfectly">78</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Коэффициент маневренности</span></div>
-                        <div class="table-col"><span class="normal">≥ 10</span></div>
-                        <div class="table-col"><span class="dangerously">-344</span></div>
-                        <div class="table-col"><span class="dangerously">-342</span></div>
-                        <div class="table-col"><span class="dangerously">-263</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Автономность</span></div>
-                        <div class="table-col"><span class="normal">≥ 50</span></div>
-                        <div class="table-col"><span class="dangerously">15</span></div>
-                        <div class="table-col"><span class="dangerously">15</span></div>
-                        <div class="table-col"><span class="dangerously">15</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Обеспеченность собсвтенными средствами</span></div>
-                        <div class="table-col"><span class="normal">≥ 50</span></div>
-                        <div class="table-col"><span class="dangerously">-159</span></div>
-                        <div class="table-col"><span class="dangerously">-162</span></div>
-                        <div class="table-col"><span class="dangerously">-88</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Соотношение собственных и заемных средств</span></div>
-                        <div class="table-col"><span class="normal">≤ 70</span></div>
-                        <div class="table-col"><span class="dangerously">530</span></div>
-                        <div class="table-col"><span class="dangerously">522</span></div>
-                        <div class="table-col"><span class="dangerously">533</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Коэффициент капитализации</span></div>
-                        <div class="table-col"><span class="normal">≤ 100</span></div>
-                        <div class="table-col"><span class="dangerously">558</span></div>
-                        <div class="table-col"><span class="dangerously">549</span></div>
-                        <div class="table-col"><span class="dangerously">559</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Коэффициент финансирования</span></div>
-                        <div class="table-col"><span class="normal">≥ 100</span></div>
-                        <div class="table-col"><span class="dangerously">18</span></div>
-                        <div class="table-col"><span class="dangerously">18</span></div>
-                        <div class="table-col"><span class="dangerously">18</span></div>
-                      </div>
-                    </div>
-
+                <div class="card-content">
+                  <div class="reporting">
+                    <a href="#0" class="reporting-item dangerously">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document-dangerously">
+                          <use xlink:href="#icon-document-dangerously"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2008</span>
+                    </a>
+                    <a href="#0" class="reporting-item dangerously">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document-dangerously">
+                          <use xlink:href="#icon-document-dangerously"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2009</span>
+                    </a>
+                    <a href="#0" class="reporting-item">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
+                          <use xlink:href="#icon-document"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2010</span>
+                    </a>
+                    <a href="#0" class="reporting-item">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
+                          <use xlink:href="#icon-document"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2011</span>
+                    </a>
+                    <a href="#0" class="reporting-item">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
+                          <use xlink:href="#icon-document"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2012</span>
+                    </a>
+                    <a href="#0" class="reporting-item">
+                      <span class="reporting-item--img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-document">
+                          <use xlink:href="#icon-document"></use>
+                        </svg>
+                      </span>
+                      <span class="reporting-item-years">2013</span>
+                    </a>
                   </div>
                 </div>
-              </div>
 
-              <div class="card-footer">
-                <div class="card-footer-btn">
-                  <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
-                </div>
-                <ul class="card-footer-link">
-                  <li><a href="#0" class="card-footer-link--download"></a></li>
-                  <li><a href="#0" class="card-footer-link--share"></a></li>
-                  <li><a href="#0" class="card-footer-link--print"></a></li>
-                </ul>
-              </div>
-            </article>
-
-            <!--Карточка бизнес конец-->
-
-            <!-- Карточка арбитражи   -->
-            <article id="аrbitrage" class="company-content--item card">
-              <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
-              <div class="card-header">
-                <h2>Арбитражи</h2>
-              </div>
-              <div class="card-content">
-                <div class="аrbitrage">
-                  <div class="table">
-
-                    <div class="table-body">
-                      <div class="table-body-inner">
-                        <span>2019</span>
-                        <div class="table-row">
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>Истец</span>
-                            </div>
-                            <div class="table-col">
-                              <span>22 дела</span>
-                            </div>
-                            <div class="table-col">
-                              <span>131,73 млн. руб.</span>
-                            </div>
-                          </div>
-
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>Ответчик</span>
-                            </div>
-                            <div class="table-col">
-                              <span>8 дел</span>
-                            </div>
-                            <div class="table-col">
-                              <span>28,29 млн. руб.</span>
-                            </div>
-                          </div>
-
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>3 сторона</span>
-                            </div>
-                            <div class="table-col">
-                              <span>13 дел</span>
-                            </div>
-                            <div class="table-col">
-                              <span>28,29 млн. руб.</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="table-body-inner">
-                        <span>2019</span>
-                        <div class="table-row">
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>Истец</span>
-                            </div>
-                            <div class="table-col">
-                              <span>22 дела</span>
-                            </div>
-                            <div class="table-col">
-                              <span>131,73 млн. руб.</span>
-                            </div>
-                          </div>
-
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>Ответчик</span>
-                            </div>
-                            <div class="table-col">
-                              <span>8 дел</span>
-                            </div>
-                            <div class="table-col">
-                              <span>28,29 млн. руб.</span>
-                            </div>
-                          </div>
-
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>3 сторона</span>
-                            </div>
-                            <div class="table-col">
-                              <span>13 дел</span>
-                            </div>
-                            <div class="table-col">
-                              <span>28,29 млн. руб.</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="table-body-inner">
-                        <span>2019</span>
-                        <div class="table-row">
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>Истец</span>
-                            </div>
-                            <div class="table-col">
-                              <span>22 дела</span>
-                            </div>
-                            <div class="table-col">
-                              <span>131,73 млн. руб.</span>
-                            </div>
-                          </div>
-
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>Ответчик</span>
-                            </div>
-                            <div class="table-col">
-                              <span>8 дел</span>
-                            </div>
-                            <div class="table-col">
-                              <span>28,29 млн. руб.</span>
-                            </div>
-                          </div>
-
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>3 сторона</span>
-                            </div>
-                            <div class="table-col">
-                              <span>13 дел</span>
-                            </div>
-                            <div class="table-col">
-                              <span>28,29 млн. руб.</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="table-body-inner">
-                        <span>Всего</span>
-                        <div class="table-row">
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>Истец</span>
-                            </div>
-                            <div class="table-col">
-                              <span>22 дела</span>
-                            </div>
-                            <div class="table-col">
-                              <span>131,73 млн. руб.</span>
-                            </div>
-                          </div>
-
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>Ответчик</span>
-                            </div>
-                            <div class="table-col">
-                              <span>8 дел</span>
-                            </div>
-                            <div class="table-col">
-                              <span>28,29 млн. руб.</span>
-                            </div>
-                          </div>
-
-                          <div class="table-row-inner">
-                            <div class="table-col">
-                              <span>3 сторона</span>
-                            </div>
-                            <div class="table-col">
-                              <span>13 дел</span>
-                            </div>
-                            <div class="table-col">
-                              <span>28,29 млн. руб.</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
+                <div class="card-footer">
+                  <div class="card-footer-btn">
+                    <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
                   </div>
+                  <ul class="card-footer-link">
+                    <li><a href="#0" class="card-footer-link--download"></a></li>
+                    <li><a href="#0" class="card-footer-link--share"></a></li>
+                    <li><a href="#0" class="card-footer-link--print"></a></li>
+                  </ul>
                 </div>
-              </div>
+              </article>
+              <!--Карточка отчетность в 2х примерах конец-->
 
-              <div class="card-footer">
-                <div class="card-footer-btn">
-                  <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+              <!--Карточка проверки в 2х примерах-->
+              <article id="checks" class="company-content--item card">
+                <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                  <h2>Проверки</h2>
                 </div>
-                <ul class="card-footer-link">
-                  <li><a href="#0" class="card-footer-link--download"></a></li>
-                  <li><a href="#0" class="card-footer-link--share"></a></li>
-                  <li><a href="#0" class="card-footer-link--print"></a></li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- Карточка арбитражи  конец -->
-
-            <!--Карточка экономика -->
-            <article id="economy" class="company-content--item card">
-              <div class="card-header">
-                <h2>Экономика</h2>
-              </div>
-              <div class="card-content">
-                <div class="economy">
-                  <div class="table">
-
-                    <div class="table-header">
-                      <div class="table-row">
-                        <div class="table-col"><span>Показатель</span></div>
-                        <div class="table-col col-economy"><span>2017, ₽</span></div>
-                        <div class="table-col"><span>2016, ₽</span></div>
-                      </div>
-                    </div>
-
-                    <div class="table-body">
-                      <div class="table-row">
-                        <div class="table-col"><span>Выручка</span></div>
-                        <div class="table-col col-economy"><span>3 930 139 846 000</span><span class="percent"><span class="perfectly-up">24%</span></span></div>
-                        <div class="table-col"><span>4 892 934 388 000</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Основные средства</span></div>
-                        <div class="table-col col-economy"><span>1 058 799 579 000</span><span class="percent"><span class="perfectly-up">12%</span></span></div>
-                        <div class="table-col"><span>1 186 529 970 000</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Запасы</span></div>
-                        <div class="table-col col-economy"><span>113 017 735 000</span><span class="percent"><span class="perfectly-down">26%</span></span></div>
-                        <div class="table-col"><span>142 388 555 000</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Дебиторская задолженность</span></div>
-                        <div class="table-col col-economy"><span>1 523 299 152 000</span><span class="percent"><span class="perfectly-up">66%</span></span></div>
-                        <div class="table-col"><span>2 531 306 562</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Кредиторская задолженность</span></div>
-                        <div class="table-col col-economy"><span>1 753 787 381 000</span><span class="percent"><span class="warning-up">2%</span></span></div>
-                        <div class="table-col"><span>1 785 522 679 000</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Прибыль или убыток от продаж</span></div>
-                        <div class="table-col col-economy"><span>34 481 011 000</span><span class="percent"><span class="perfectly-up">944%</span></span></div>
-                        <div class="table-col"><span>359 957 079 000</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Чистая прибыль или убыток</span></div>
-                        <div class="table-col col-economy"><span>99 236 214 000</span><span class="percent"><span class="perfectly-up">40%</span></span></div>
-                        <div class="table-col"><span>138 968 980 000</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>Прибыль (до налогооблажения)</span></div>
-                        <div class="table-col col-economy"><span>84 379 463 000</span><span class="percent"><span class="warning-down">2%</span></span></div>
-                        <div class="table-col"><span>83 106 878 000</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="card-footer-btn">
-                  <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
-                </div>
-                <ul class="card-footer-link">
-                  <li><a href="#0" class="card-footer-link--download"></a></li>
-                  <li><a href="#0" class="card-footer-link--share"></a></li>
-                  <li><a href="#0" class="card-footer-link--print"></a></li>
-                </ul>
-              </div>
-            </article>
-            <!--Карточка экономика конец-->
-
-            <!--карточка ФССП-->
-            <article id="fssp" class="company-content--item card satisfactorily">
-              <div class="card-header">
-                <h2>ФССП</h2>
-                <a href="#0" class="card-header--factors">2 стоп-фактор</a>
-              </div>
-              <div class="card-content">
-                <div class="fssp">
-                  <div class="table">
-
-                    <div class="table-header">
-                      <div class="table-row">
-                        <div class="table-col"><span>Год</span></div>
-                        <div class="table-col"><span>Открытые</span></div>
-                        <div class="table-col"><span>Оконченные</span></div>
-                        <div class="table-col"><span>Общая сумма, ₽</span></div>
-                      </div>
-                    </div>
-
-                    <div class="table-body">
-                      <div class="table-row">
-                        <div class="table-col"><span>2019</span></div>
-                        <div class="table-col"><span class="no-content">—</span></div>
-                        <div class="table-col"><span>2</span></div>
-                        <div class="table-col"><span>24 470,69 </span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>2018</span></div>
-                        <div class="table-col"><span class="no-content">—</span></div>
-                        <div class="table-col"><span>6</span></div>
-                        <div class="table-col"><span>2 917 349,86</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>2017</span></div>
-                        <div class="table-col"><span>1</span></div>
-                        <div class="table-col"><span>64</span></div>
-                        <div class="table-col"><span>659 989 549,36</span></div>
-                      </div>
-
-                      <div class="table-row">
-                        <div class="table-col"><span>2016</span></div>
-                        <div class="table-col"><span class="no-content">—</span></div>
-                        <div class="table-col"><span>4</span></div>
-                        <div class="table-col"><span>4659 989 549,36</span></div>
-                      </div>
-
-                    </div>
-
-                    <div class="table-footer">
-                      <div class="table-row">
-                        <div class="table-col"><span>Всего</span></div>
-                        <div class="table-col"><span>1</span></div>
-                        <div class="table-col"><span>131</span></div>
-                        <div class="table-col"><span>662 932 369, 91</span></div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="card-footer-btn">
-                  <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
-                </div>
-                <ul class="card-footer-link">
-                  <li><a href="#0" class="card-footer-link--download"></a></li>
-                  <li><a href="#0" class="card-footer-link--share"></a></li>
-                  <li><a href="#0" class="card-footer-link--print"></a></li>
-                </ul>
-              </div>
-            </article>
-            <!--карточка ФССП конец-->
-
-            <!--карточка для тендера-->
-            <article id="tender" class="company-content--item card">
-              <div class="card-header">
-                <h2>Тендер</h2>
-              </div>
-              <div class="card-content">
-                <div class="tender">
-
-                  <div class="tender-tabs">
-                    <div class="tender-tabs--name active" rel="tender-tab-content-1">Победитель</div>
-                    <div class="tender-select">
-                      <input class="tender-select--input" type="checkbox" id="tender-select-input">
-                      <label aria-hidden="true" class="tender-select--label" for="tender-select-input">вкл</label>
-                      <div aria-hidden="true" class="tender-select--marker"></div>
-                    </div>
-                    <div class="tender-tabs--name" rel="tender-tab-content-2">Заказчик</div>
-                  </div>
-
-                  <div class="tender-content-tab active" id="tender-tab-content-1">
+                <div class="card-content">
+                  <div class="checkup">
                     <div class="table">
+
                       <div class="table-header">
                         <div class="table-row">
-                          <div class="table-col"><span>Год</span></div>
-                          <div class="table-col"><span>44-ФЗ, млн. ₽</span></div>
-                          <div class="table-col"><span>223-ФЗ, млн. ₽</span></div>
-                          <div class="table-col"><span>223-ФЗ, млн. ₽</span></div>
+                          <div class="table-col">Год</div>
+                          <div class="table-col">Плановые</div>
+                          <div class="table-col">Внеплановые</div>
+                          <div class="table-col">Всего</div>
                         </div>
                       </div>
 
                       <div class="table-body">
                         <div class="table-row">
                           <div class="table-col"><span>2019</span></div>
-                          <div class="table-col"><span class="perfectly">2</span><span>1 022,84</span></div>
-                          <div class="table-col"><span class="perfectly">5</span><span>7 329,06</span></div>
-                          <div class="table-col"><span class="perfectly">367</span><span>8 351,90</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
                         </div>
+
                         <div class="table-row">
                           <div class="table-col"><span>2018</span></div>
-                          <div class="table-col"><span class="perfectly">14</span><span>8 548,96</span></div>
-                          <div class="table-col"><span class="perfectly">95</span><span>80 453,74</span></div>
-                          <div class="table-col"><span class="perfectly">109</span><span>89 002,70</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
                         </div>
+
                         <div class="table-row">
                           <div class="table-col"><span>2017</span></div>
-                          <div class="table-col"><span class="perfectly">7</span><span>1 937,09</span></div>
-                          <div class="table-col"><span class="perfectly">347</span><span>13 094,80</span></div>
-                          <div class="table-col"><span class="perfectly">375</span><span>570 830,25</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
                         </div>
+
                         <div class="table-row">
                           <div class="table-col"><span>2016</span></div>
-                          <div class="table-col"><span class="perfectly">7</span><span>628,74</span></div>
-                          <div class="table-col"><span class="perfectly">358</span><span>1 096,62</span></div>
-                          <div class="table-col"><span class="perfectly">3 334</span><span>556 722,73</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
                         </div>
+
                         <div class="table-row">
                           <div class="table-col"><span>2015</span></div>
-                          <div class="table-col"><span class="perfectly">7</span><span>280,21</span></div>
-                          <div class="table-col"><span class="perfectly">249</span><span>942,23</span></div>
-                          <div class="table-col"><span class="perfectly">256</span><span>1 070 594,58</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
                         </div>
                       </div>
 
                       <div class="table-footer">
                         <div class="table-row">
                           <div class="table-col"><span>Всего</span></div>
-                          <div class="table-col"><span class="normal">172</span><span>19 944,28</span></div>
-                          <div class="table-col"><span class="normal">1109</span><span>2 297 120,04</span></div>
-                          <div class="table-col"><span class="normal">1 281</span><span>2 371 064,32</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal dangerously">(4)</span></div>
+                          <div class="table-col"><span class="amount">48</span> <span class="normal">(0)</span></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="card-footer-btn">
+                    <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                  </div>
+                  <ul class="card-footer-link">
+                    <li><a href="#0" class="card-footer-link--download"></a></li>
+                    <li><a href="#0" class="card-footer-link--share"></a></li>
+                    <li><a href="#0" class="card-footer-link--print"></a></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="company-content--item card no-index">
+                <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                  <h2>Проверки</h2>
+                </div>
+                <div class="card-content">
+                  <p>На сегодняшний день проверок eще не проводилось</p>
+                </div>
+
+                <div class="card-footer">
+                  <div class="card-footer-btn">
+                    <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                  </div>
+                  <ul class="card-footer-link">
+                    <li><a href="#0" class="card-footer-link--download"></a></li>
+                    <li><a href="#0" class="card-footer-link--share"></a></li>
+                    <li><a href="#0" class="card-footer-link--print"></a></li>
+                  </ul>
+                </div>
+              </article>
+              <!--Карточка проверки в 2х примерах конец-->
+
+              <!--Карточка бизнес-->
+              <article id="business" class="company-content--item card">
+                <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                  <h2>Бизнес</h2>
+                </div>
+                <div class="card-content">
+                  <div class="business">
+                    <div class="table">
+
+                      <div class="table-header">
+                        <div class="table-row">
+                          <div class="table-col"><span>Показатель</span></div>
+                          <div class="table-col"><span>Норма, ₽</span></div>
+                          <div class="table-col"><span>2017</span></div>
+                          <div class="table-col"><span>2016</span></div>
+                          <div class="table-col"><span>2015</span></div>
+                        </div>
+                      </div>
+
+                      <div class="table-body">
+                        <div class="table-row">
+                          <div class="table-col"><span>Абсолютная ликвидность</span></div>
+                          <div class="table-col"><span class="normal">≥ 25</span></div>
+                          <div class="table-col"><span class="perfectly">31</span></div>
+                          <div class="table-col"><span class="perfectly">62</span></div>
+                          <div class="table-col"><span class="perfectly">100</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Текущая ликвидность</span></div>
+                          <div class="table-col"><span class="normal">≥ 200</span></div>
+                          <div class="table-col"><span class="dangerously">131</span></div>
+                          <div class="table-col"><span class="dangerously">133</span></div>
+                          <div class="table-col"><span class="perfectly">208</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Восстановление платежеспособности</span></div>
+                          <div class="table-col"><span class="normal">≥ 100</span></div>
+                          <div class="table-col"><span class="dangerously">65</span></div>
+                          <div class="table-col"><span class="dangerously">47</span></div>
+                          <div class="table-col"><span class="perfectly">78</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Финансовая устройчивость</span></div>
+                          <div class="table-col"><span class="normal">≥ 50</span></div>
+                          <div class="table-col"><span class="perfectly">75</span></div>
+                          <div class="table-col"><span class="perfectly">76</span></div>
+                          <div class="table-col"><span class="perfectly">78</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Коэффициент маневренности</span></div>
+                          <div class="table-col"><span class="normal">≥ 10</span></div>
+                          <div class="table-col"><span class="dangerously">-344</span></div>
+                          <div class="table-col"><span class="dangerously">-342</span></div>
+                          <div class="table-col"><span class="dangerously">-263</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Автономность</span></div>
+                          <div class="table-col"><span class="normal">≥ 50</span></div>
+                          <div class="table-col"><span class="dangerously">15</span></div>
+                          <div class="table-col"><span class="dangerously">15</span></div>
+                          <div class="table-col"><span class="dangerously">15</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Обеспеченность собсвтенными средствами</span></div>
+                          <div class="table-col"><span class="normal">≥ 50</span></div>
+                          <div class="table-col"><span class="dangerously">-159</span></div>
+                          <div class="table-col"><span class="dangerously">-162</span></div>
+                          <div class="table-col"><span class="dangerously">-88</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Соотношение собственных и заемных средств</span></div>
+                          <div class="table-col"><span class="normal">≤ 70</span></div>
+                          <div class="table-col"><span class="dangerously">530</span></div>
+                          <div class="table-col"><span class="dangerously">522</span></div>
+                          <div class="table-col"><span class="dangerously">533</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Коэффициент капитализации</span></div>
+                          <div class="table-col"><span class="normal">≤ 100</span></div>
+                          <div class="table-col"><span class="dangerously">558</span></div>
+                          <div class="table-col"><span class="dangerously">549</span></div>
+                          <div class="table-col"><span class="dangerously">559</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Коэффициент финансирования</span></div>
+                          <div class="table-col"><span class="normal">≥ 100</span></div>
+                          <div class="table-col"><span class="dangerously">18</span></div>
+                          <div class="table-col"><span class="dangerously">18</span></div>
+                          <div class="table-col"><span class="dangerously">18</span></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="card-footer-btn">
+                    <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                  </div>
+                  <ul class="card-footer-link">
+                    <li><a href="#0" class="card-footer-link--download"></a></li>
+                    <li><a href="#0" class="card-footer-link--share"></a></li>
+                    <li><a href="#0" class="card-footer-link--print"></a></li>
+                  </ul>
+                </div>
+              </article>
+
+              <!--Карточка бизнес конец-->
+
+              <!-- Карточка арбитражи   -->
+              <article id="аrbitrage" class="company-content--item card">
+                <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
+                <div class="card-header">
+                  <h2>Арбитражи</h2>
+                </div>
+                <div class="card-content">
+                  <div class="аrbitrage">
+                    <div class="table">
+
+                      <div class="table-body">
+                        <div class="table-body-inner">
+                          <span>2019</span>
+                          <div class="table-row">
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>Истец</span>
+                              </div>
+                              <div class="table-col">
+                                <span>22 дела</span>
+                              </div>
+                              <div class="table-col">
+                                <span>131,73 млн. руб.</span>
+                              </div>
+                            </div>
+
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>Ответчик</span>
+                              </div>
+                              <div class="table-col">
+                                <span>8 дел</span>
+                              </div>
+                              <div class="table-col">
+                                <span>28,29 млн. руб.</span>
+                              </div>
+                            </div>
+
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>3 сторона</span>
+                              </div>
+                              <div class="table-col">
+                                <span>13 дел</span>
+                              </div>
+                              <div class="table-col">
+                                <span>28,29 млн. руб.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="table-body-inner">
+                          <span>2019</span>
+                          <div class="table-row">
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>Истец</span>
+                              </div>
+                              <div class="table-col">
+                                <span>22 дела</span>
+                              </div>
+                              <div class="table-col">
+                                <span>131,73 млн. руб.</span>
+                              </div>
+                            </div>
+
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>Ответчик</span>
+                              </div>
+                              <div class="table-col">
+                                <span>8 дел</span>
+                              </div>
+                              <div class="table-col">
+                                <span>28,29 млн. руб.</span>
+                              </div>
+                            </div>
+
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>3 сторона</span>
+                              </div>
+                              <div class="table-col">
+                                <span>13 дел</span>
+                              </div>
+                              <div class="table-col">
+                                <span>28,29 млн. руб.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="table-body-inner">
+                          <span>2019</span>
+                          <div class="table-row">
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>Истец</span>
+                              </div>
+                              <div class="table-col">
+                                <span>22 дела</span>
+                              </div>
+                              <div class="table-col">
+                                <span>131,73 млн. руб.</span>
+                              </div>
+                            </div>
+
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>Ответчик</span>
+                              </div>
+                              <div class="table-col">
+                                <span>8 дел</span>
+                              </div>
+                              <div class="table-col">
+                                <span>28,29 млн. руб.</span>
+                              </div>
+                            </div>
+
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>3 сторона</span>
+                              </div>
+                              <div class="table-col">
+                                <span>13 дел</span>
+                              </div>
+                              <div class="table-col">
+                                <span>28,29 млн. руб.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="table-body-inner">
+                          <span>Всего</span>
+                          <div class="table-row">
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>Истец</span>
+                              </div>
+                              <div class="table-col">
+                                <span>22 дела</span>
+                              </div>
+                              <div class="table-col">
+                                <span>131,73 млн. руб.</span>
+                              </div>
+                            </div>
+
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>Ответчик</span>
+                              </div>
+                              <div class="table-col">
+                                <span>8 дел</span>
+                              </div>
+                              <div class="table-col">
+                                <span>28,29 млн. руб.</span>
+                              </div>
+                            </div>
+
+                            <div class="table-row-inner">
+                              <div class="table-col">
+                                <span>3 сторона</span>
+                              </div>
+                              <div class="table-col">
+                                <span>13 дел</span>
+                              </div>
+                              <div class="table-col">
+                                <span>28,29 млн. руб.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="card-footer-btn">
+                    <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                  </div>
+                  <ul class="card-footer-link">
+                    <li><a href="#0" class="card-footer-link--download"></a></li>
+                    <li><a href="#0" class="card-footer-link--share"></a></li>
+                    <li><a href="#0" class="card-footer-link--print"></a></li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Карточка арбитражи  конец -->
+
+              <!--Карточка экономика -->
+              <article id="economy" class="company-content--item card">
+                <div class="card-header">
+                  <h2>Экономика</h2>
+                </div>
+                <div class="card-content">
+                  <div class="economy">
+                    <div class="table">
+
+                      <div class="table-header">
+                        <div class="table-row">
+                          <div class="table-col"><span>Показатель</span></div>
+                          <div class="table-col col-economy"><span>2017, ₽</span></div>
+                          <div class="table-col"><span>2016, ₽</span></div>
+                        </div>
+                      </div>
+
+                      <div class="table-body">
+                        <div class="table-row">
+                          <div class="table-col"><span>Выручка</span></div>
+                          <div class="table-col col-economy"><span>3 930 139 846 000</span><span class="percent"><span class="perfectly-up">24%</span></span></div>
+                          <div class="table-col"><span>4 892 934 388 000</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Основные средства</span></div>
+                          <div class="table-col col-economy"><span>1 058 799 579 000</span><span class="percent"><span class="perfectly-up">12%</span></span></div>
+                          <div class="table-col"><span>1 186 529 970 000</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Запасы</span></div>
+                          <div class="table-col col-economy"><span>113 017 735 000</span><span class="percent"><span class="perfectly-down">26%</span></span></div>
+                          <div class="table-col"><span>142 388 555 000</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Дебиторская задолженность</span></div>
+                          <div class="table-col col-economy"><span>1 523 299 152 000</span><span class="percent"><span class="perfectly-up">66%</span></span></div>
+                          <div class="table-col"><span>2 531 306 562</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Кредиторская задолженность</span></div>
+                          <div class="table-col col-economy"><span>1 753 787 381 000</span><span class="percent"><span class="warning-up">2%</span></span></div>
+                          <div class="table-col"><span>1 785 522 679 000</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Прибыль или убыток от продаж</span></div>
+                          <div class="table-col col-economy"><span>34 481 011 000</span><span class="percent"><span class="perfectly-up">944%</span></span></div>
+                          <div class="table-col"><span>359 957 079 000</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Чистая прибыль или убыток</span></div>
+                          <div class="table-col col-economy"><span>99 236 214 000</span><span class="percent"><span class="perfectly-up">40%</span></span></div>
+                          <div class="table-col"><span>138 968 980 000</span></div>
+                        </div>
+
+                        <div class="table-row">
+                          <div class="table-col"><span>Прибыль (до налогооблажения)</span></div>
+                          <div class="table-col col-economy"><span>84 379 463 000</span><span class="percent"><span class="warning-down">2%</span></span></div>
+                          <div class="table-col"><span>83 106 878 000</span></div>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  <div class="tender-content-tab " id="tender-tab-content-2">
+                <div class="card-footer">
+                  <div class="card-footer-btn">
+                    <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                  </div>
+                  <ul class="card-footer-link">
+                    <li><a href="#0" class="card-footer-link--download"></a></li>
+                    <li><a href="#0" class="card-footer-link--share"></a></li>
+                    <li><a href="#0" class="card-footer-link--print"></a></li>
+                  </ul>
+                </div>
+              </article>
+              <!--Карточка экономика конец-->
+
+              <!--карточка ФССП-->
+              <article id="fssp" class="company-content--item card satisfactorily">
+                <div class="card-header">
+                  <h2>ФССП</h2>
+                  <a href="#0" class="card-header--factors">2 стоп-фактор</a>
+                </div>
+                <div class="card-content">
+                  <div class="fssp">
                     <div class="table">
+
                       <div class="table-header">
                         <div class="table-row">
                           <div class="table-col"><span>Год</span></div>
-                          <div class="table-col"><span>44-ФЗ, млн. ₽</span></div>
-                          <div class="table-col"><span>223-ФЗ, млн. ₽</span></div>
-                          <div class="table-col"><span>223-ФЗ, млн. ₽</span></div>
+                          <div class="table-col"><span>Открытые</span></div>
+                          <div class="table-col"><span>Оконченные</span></div>
+                          <div class="table-col"><span>Общая сумма, ₽</span></div>
                         </div>
                       </div>
 
                       <div class="table-body">
                         <div class="table-row">
                           <div class="table-col"><span>2019</span></div>
-                          <div class="table-col"><span class="normal">—</span><span>1 022,84</span></div>
-                          <div class="table-col"><span class="perfectly">5</span><span>7 329,06</span></div>
-                          <div class="table-col"><span class="perfectly">367</span><span>8 351,90</span></div>
+                          <div class="table-col"><span class="no-content">—</span></div>
+                          <div class="table-col"><span>2</span></div>
+                          <div class="table-col"><span>24 470,69 </span></div>
                         </div>
+
                         <div class="table-row">
                           <div class="table-col"><span>2018</span></div>
-                          <div class="table-col"><span class="normal">—</span><span>8 548,96</span></div>
-                          <div class="table-col"><span class="perfectly">95</span><span>80 453,74</span></div>
-                          <div class="table-col"><span class="perfectly">109</span><span>89 002,70</span></div>
+                          <div class="table-col"><span class="no-content">—</span></div>
+                          <div class="table-col"><span>6</span></div>
+                          <div class="table-col"><span>2 917 349,86</span></div>
                         </div>
+
                         <div class="table-row">
                           <div class="table-col"><span>2017</span></div>
-                          <div class="table-col"><span class="normal">—</span><span>1 937,09</span></div>
-                          <div class="table-col"><span class="perfectly">347</span><span>13 094,80</span></div>
-                          <div class="table-col"><span class="perfectly">375</span><span>570 830,25</span></div>
+                          <div class="table-col"><span>1</span></div>
+                          <div class="table-col"><span>64</span></div>
+                          <div class="table-col"><span>659 989 549,36</span></div>
                         </div>
+
                         <div class="table-row">
                           <div class="table-col"><span>2016</span></div>
-                          <div class="table-col"><span class="normal">—</span><span>628,74</span></div>
-                          <div class="table-col"><span class="perfectly">358</span><span>1 096,62</span></div>
-                          <div class="table-col"><span class="perfectly">3 334</span><span>556 722,73</span></div>
+                          <div class="table-col"><span class="no-content">—</span></div>
+                          <div class="table-col"><span>4</span></div>
+                          <div class="table-col"><span>4659 989 549,36</span></div>
                         </div>
-                        <div class="table-row">
-                          <div class="table-col"><span>2015</span></div>
-                          <div class="table-col"><span class="normal">—</span><span>280,21</span></div>
-                          <div class="table-col"><span class="perfectly">249</span><span>942,23</span></div>
-                          <div class="table-col"><span class="perfectly">256</span><span>1 070 594,58</span></div>
-                        </div>
+
                       </div>
 
                       <div class="table-footer">
                         <div class="table-row">
                           <div class="table-col"><span>Всего</span></div>
-                          <div class="table-col"><span class="normal">—</span><span>19 944,28</span></div>
-                          <div class="table-col"><span class="normal">1109</span><span>2 297 120,04</span></div>
-                          <div class="table-col"><span class="normal">1 281</span><span>2 371 064,32</span></div>
+                          <div class="table-col"><span>1</span></div>
+                          <div class="table-col"><span>131</span></div>
+                          <div class="table-col"><span>662 932 369, 91</span></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="card-footer-btn">
+                    <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                  </div>
+                  <ul class="card-footer-link">
+                    <li><a href="#0" class="card-footer-link--download"></a></li>
+                    <li><a href="#0" class="card-footer-link--share"></a></li>
+                    <li><a href="#0" class="card-footer-link--print"></a></li>
+                  </ul>
+                </div>
+              </article>
+              <!--карточка ФССП конец-->
+
+              <!--карточка для тендера-->
+              <article id="tender" class="company-content--item card">
+                <div class="card-header">
+                  <h2>Тендер</h2>
+                </div>
+                <div class="card-content">
+                  <div class="tender">
+
+                    <div class="tender-tabs">
+                      <div class="tender-tabs--name active" rel="tender-tab-content-1">Победитель</div>
+                      <div class="tender-select">
+                        <input class="tender-select--input" type="checkbox" id="tender-select-input">
+                        <label aria-hidden="true" class="tender-select--label" for="tender-select-input">вкл</label>
+                        <div aria-hidden="true" class="tender-select--marker"></div>
+                      </div>
+                      <div class="tender-tabs--name" rel="tender-tab-content-2">Заказчик</div>
+                    </div>
+
+                    <div class="tender-content-tab active" id="tender-tab-content-1">
+                      <div class="table">
+                        <div class="table-header">
+                          <div class="table-row">
+                            <div class="table-col"><span>Год</span></div>
+                            <div class="table-col"><span>44-ФЗ, млн. ₽</span></div>
+                            <div class="table-col"><span>223-ФЗ, млн. ₽</span></div>
+                            <div class="table-col"><span>223-ФЗ, млн. ₽</span></div>
+                          </div>
+                        </div>
+
+                        <div class="table-body">
+                          <div class="table-row">
+                            <div class="table-col"><span>2019</span></div>
+                            <div class="table-col"><span class="perfectly">2</span><span>1 022,84</span></div>
+                            <div class="table-col"><span class="perfectly">5</span><span>7 329,06</span></div>
+                            <div class="table-col"><span class="perfectly">367</span><span>8 351,90</span></div>
+                          </div>
+                          <div class="table-row">
+                            <div class="table-col"><span>2018</span></div>
+                            <div class="table-col"><span class="perfectly">14</span><span>8 548,96</span></div>
+                            <div class="table-col"><span class="perfectly">95</span><span>80 453,74</span></div>
+                            <div class="table-col"><span class="perfectly">109</span><span>89 002,70</span></div>
+                          </div>
+                          <div class="table-row">
+                            <div class="table-col"><span>2017</span></div>
+                            <div class="table-col"><span class="perfectly">7</span><span>1 937,09</span></div>
+                            <div class="table-col"><span class="perfectly">347</span><span>13 094,80</span></div>
+                            <div class="table-col"><span class="perfectly">375</span><span>570 830,25</span></div>
+                          </div>
+                          <div class="table-row">
+                            <div class="table-col"><span>2016</span></div>
+                            <div class="table-col"><span class="perfectly">7</span><span>628,74</span></div>
+                            <div class="table-col"><span class="perfectly">358</span><span>1 096,62</span></div>
+                            <div class="table-col"><span class="perfectly">3 334</span><span>556 722,73</span></div>
+                          </div>
+                          <div class="table-row">
+                            <div class="table-col"><span>2015</span></div>
+                            <div class="table-col"><span class="perfectly">7</span><span>280,21</span></div>
+                            <div class="table-col"><span class="perfectly">249</span><span>942,23</span></div>
+                            <div class="table-col"><span class="perfectly">256</span><span>1 070 594,58</span></div>
+                          </div>
+                        </div>
+
+                        <div class="table-footer">
+                          <div class="table-row">
+                            <div class="table-col"><span>Всего</span></div>
+                            <div class="table-col"><span class="normal">172</span><span>19 944,28</span></div>
+                            <div class="table-col"><span class="normal">1109</span><span>2 297 120,04</span></div>
+                            <div class="table-col"><span class="normal">1 281</span><span>2 371 064,32</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tender-content-tab " id="tender-tab-content-2">
+                      <div class="table">
+                        <div class="table-header">
+                          <div class="table-row">
+                            <div class="table-col"><span>Год</span></div>
+                            <div class="table-col"><span>44-ФЗ, млн. ₽</span></div>
+                            <div class="table-col"><span>223-ФЗ, млн. ₽</span></div>
+                            <div class="table-col"><span>223-ФЗ, млн. ₽</span></div>
+                          </div>
+                        </div>
+
+                        <div class="table-body">
+                          <div class="table-row">
+                            <div class="table-col"><span>2019</span></div>
+                            <div class="table-col"><span class="normal">—</span><span>1 022,84</span></div>
+                            <div class="table-col"><span class="perfectly">5</span><span>7 329,06</span></div>
+                            <div class="table-col"><span class="perfectly">367</span><span>8 351,90</span></div>
+                          </div>
+                          <div class="table-row">
+                            <div class="table-col"><span>2018</span></div>
+                            <div class="table-col"><span class="normal">—</span><span>8 548,96</span></div>
+                            <div class="table-col"><span class="perfectly">95</span><span>80 453,74</span></div>
+                            <div class="table-col"><span class="perfectly">109</span><span>89 002,70</span></div>
+                          </div>
+                          <div class="table-row">
+                            <div class="table-col"><span>2017</span></div>
+                            <div class="table-col"><span class="normal">—</span><span>1 937,09</span></div>
+                            <div class="table-col"><span class="perfectly">347</span><span>13 094,80</span></div>
+                            <div class="table-col"><span class="perfectly">375</span><span>570 830,25</span></div>
+                          </div>
+                          <div class="table-row">
+                            <div class="table-col"><span>2016</span></div>
+                            <div class="table-col"><span class="normal">—</span><span>628,74</span></div>
+                            <div class="table-col"><span class="perfectly">358</span><span>1 096,62</span></div>
+                            <div class="table-col"><span class="perfectly">3 334</span><span>556 722,73</span></div>
+                          </div>
+                          <div class="table-row">
+                            <div class="table-col"><span>2015</span></div>
+                            <div class="table-col"><span class="normal">—</span><span>280,21</span></div>
+                            <div class="table-col"><span class="perfectly">249</span><span>942,23</span></div>
+                            <div class="table-col"><span class="perfectly">256</span><span>1 070 594,58</span></div>
+                          </div>
+                        </div>
+
+                        <div class="table-footer">
+                          <div class="table-row">
+                            <div class="table-col"><span>Всего</span></div>
+                            <div class="table-col"><span class="normal">—</span><span>19 944,28</span></div>
+                            <div class="table-col"><span class="normal">1109</span><span>2 297 120,04</span></div>
+                            <div class="table-col"><span class="normal">1 281</span><span>2 371 064,32</span></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="card-footer">
-                <div class="card-footer-btn">
-                  <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                <div class="card-footer">
+                  <div class="card-footer-btn">
+                    <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
+                  </div>
+                  <ul class="card-footer-link">
+                    <li><a href="#0" class="card-footer-link--download"></a></li>
+                    <li><a href="#0" class="card-footer-link--share"></a></li>
+                    <li><a href="#0" class="card-footer-link--print"></a></li>
+                  </ul>
                 </div>
-                <ul class="card-footer-link">
-                  <li><a href="#0" class="card-footer-link--download"></a></li>
-                  <li><a href="#0" class="card-footer-link--share"></a></li>
-                  <li><a href="#0" class="card-footer-link--print"></a></li>
-                </ul>
-              </div>
-            </article>
-            <!--карточка для тендера конец-->
-          </section>
+              </article>
+              <!--карточка для тендера конец-->
+            </section>
 
-          <div class="company-btn">
-
+            <div class="company-btn">
+              <a href="#0" class="btn btn-default">Отчет</a>
+              <a href="#0" class="btn btn-default">Выписка</a>
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
     <footer class="footer">
       <div class="wrapper">FOOTER</div>
@@ -1062,6 +1065,19 @@
   </div>
 
   <script src="js/combined.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.11.1/dist/js/jquery.suggestions.min.js"></script>
+  <script>
+    $("#query").suggestions(
+    {
+      token: "93dc951d16827886219c6ec5e445288493292104",
+      type: "PARTY",
+      /* Вызывается, когда пользователь выбирает одну из подсказок */
+      onSelect: function(suggestion)
+      {
+        console.log(suggestion);
+      }
+    });
+  </script>
   <script src="js/libs.js"></script>
 
 </body>
