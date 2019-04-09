@@ -39,6 +39,26 @@ $(document).ready(function () {
     //
     //
 
+    //фокус поиска
+    $('#query').on('keyup',function(){
+        var $this = $(this),
+            val = $this.val();
+
+        if(val.length >= 1){
+            $(this).closest('form').find('.header-search--btn_reset').fadeIn('200');
+            $(this).closest('form').find('.header-search--btn').css('opacity','1');
+        }else {
+            $(this).closest('form').find('.header-search--btn_reset').fadeOut('200');
+            $(this).closest('form').find('.header-search--btn').css('opacity','.4');
+        }
+    });
+
+    $body.on('click', '.header-search--btn_reset', function () {
+       $(this).fadeOut('fast');
+       $(this).closest('form').find('.header-search--btn').css('opacity','.4');
+    });
+
+
     //скрол по якорю
     $("body").on("click",".company-sidebar a", function (event) {
         event.preventDefault();
