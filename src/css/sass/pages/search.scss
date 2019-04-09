@@ -228,6 +228,9 @@
             text-transform: uppercase;
             color: $black--text;
             margin-bottom: 8px;
+            &.one-element{
+              text-transform: none;
+            }
             span{
               color: $mid-gray--text;
             }
@@ -237,6 +240,7 @@
             &:last-child{
               margin-bottom: 0;
             }
+
           }
         }
       }

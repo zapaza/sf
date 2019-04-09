@@ -1,0 +1,122 @@
+.settings{
+  width: 100%;
+  height: 100%;
+  .wrapper{
+    height: 100%;
+    width: 100%;
+  }
+  &-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1{
+      margin-bottom: 24px;
+      font: {
+        size: 2.8rem;
+        weight: $font-bold;
+      }
+      line-height: 4rem;
+      letter-spacing: normal;
+      text-align: center;
+      color: $black--text;
+    }
+    &--group{
+      max-width: 304px;
+      width: 100%;
+      margin-bottom: 24px;
+      form{
+        width: 100%;
+        display: block;
+        label{
+          width: 100%;
+          display: block;
+          position: relative;
+
+          input{
+            display: block;
+            max-width: 304px;
+            width: 100%;
+            height: 48px;
+            padding: 16px;
+            box-sizing: border-box;
+            font:{
+              size: 1.4rem;
+              weight: $font-regular;
+            }
+            line-height: 1.6rem;
+            letter-spacing: normal;
+            color:$black--text;
+            border-radius: 4px;
+            border: solid 1px $white--text;
+            background-color: $white;
+            &[disabled]{
+              background-color: $body-bg-color;
+            }
+          }
+          .icon-question{
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            @include sprite($icon-question);
+            border-radius: 50%;
+            border: 0;
+            cursor: pointer;
+          }
+          .show-hint{
+            &:hover + .hard-hint{
+              opacity: 1;
+            }
+          }
+          .hard-hint{
+            opacity: 0;
+            position: absolute;
+            z-index: 99;
+            top: 50%;
+            left: 100%;
+            max-width: 168px;
+            width: 100%;
+            margin-left: 12px;
+            padding: 12px;
+            font:{
+              size: 1.4rem;
+              weight: $font-regular;
+            }
+            letter-spacing: normal;
+            line-height: 1.6rem;
+            transform: translateY(-50%);
+            border-radius: 4px;
+            background-color:$mid-gray;
+            color: white;
+            box-sizing: border-box;
+            &:after{
+              display: block;
+              top: 50%;
+              position: absolute;
+              z-index: 99;
+              content: '';
+              width: 8px;
+              height: 16px;
+              left: 0;
+              margin-left: -12px;
+              margin-bottom: -8px;
+              border: 8px solid transparent;
+              border-right-color:$mid-gray;
+              box-sizing: border-box;
+              opacity: 1;
+              transition: .1s ease opacity;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}

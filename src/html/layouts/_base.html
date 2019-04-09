@@ -29,7 +29,9 @@
 <div class="container">
     <div class="content">
         {% include 'sections/header.html' %}
-        {% block content %}{% endblock %}
+        <div class="page-content">
+            {% block content %}{% endblock %}
+        </div>
     </div>
     {% include 'sections/footer.html' %}
 </div>
