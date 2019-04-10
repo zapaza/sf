@@ -10,10 +10,12 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
+    min-width:944px;
 
     .page-content{
       width: 100%;
       height: 100%;
+
     }
   }
 }
@@ -133,4 +135,44 @@
   50% {
     opacity: 0;
   }
+}
+
+.zoom-in {
+
+  /* start state */
+  .modal  {
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    transform: scale(0.5);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+    transition: all .2s ease-out;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .modal  {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .modal {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
 }

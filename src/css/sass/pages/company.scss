@@ -23,6 +23,8 @@
     }
     &.overflow-height{
       height: calc(100vh - 228px);
+      overflow-y: auto;
+      overflow-x: hidden;
     }
     ul{
       display: flex;

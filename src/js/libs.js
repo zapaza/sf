@@ -1,45 +1,54 @@
 $(document).ready(function () {
 
-    var $body = $('body'),
-        companySelector =  $('.item-info--company');
-    // var mywindow = $(window);
-    // var mypos = 64;
-    // var up = false;
-    // var newscroll;
-    // var scrollEnd =  $('.company').offset().top + $('.company').innerHeight() - $('.company-sidebar').innerHeight();
-    // mywindow.scroll(function () {
-    //     newscroll = mywindow.scrollTop();
-    //     if (newscroll > mypos && !up) {
-    //         $('.header').stop().toggleClass('scroll-bottom');
-    //         up = !up;
-    //     } else if(newscroll < mypos && up) {
-    //         $('.header').stop().toggleClass('scroll-bottom');
-    //         up = !up;
-    //     }
-    //
-    //     if ( $('.header').hasClass('scroll-bottom')){
-    //         $('.company-sidebar').addClass('fixed');
-    //     } else {
-    //         $('.company-sidebar').removeClass('fixed');
-    //     }
-    //
-    //     if($(window).scrollTop() >= scrollEnd) {
-    //         $('.company-sidebar').addClass('overflow-height');
-    //         // $('.company-sidebar').css('position', 'relative');
-    //         // $('.company-sidebar').css('align-self', 'flex-end');
-    //         // $('.company-sidebar').css('top', '30');
-    //         // $('.company-content').css('margin', '0');
-    //
-    //     } else{
-    //         $('.company-sidebar').removeClass('overflow-height');
-    //         // $('.company-content').removeAttr("style");
-    //     }
-    //     mypos = newscroll;
-    // });
-    //
-    //
+    var $body = $('body');
 
-    //фокус поиска
+
+    var mywindow = $(window);
+    var mypos = 68;
+    var up = false;
+    var newscroll;
+    var scrollEnd =  $('.page-content').offset().top + $('.page-content').innerHeight() - $('.company-sidebar').innerHeight();
+    mywindow.scroll(function () {
+        newscroll = mywindow.scrollTop();
+        if (newscroll > mypos && !up) { //если есть прокрутка в низ
+            if($('#show-menu').hasClass('open')){
+                $('.header').stop().removeClass('scroll-bottom');
+                up = !up;
+            } else {
+                $('.header').stop().addClass('scroll-bottom');
+                up = !up;
+            }
+
+        } else if(newscroll < mypos && up) { //если прокрутка в верх
+            $('.header').stop().removeClass('scroll-bottom');
+            up = !up;
+        }
+        // проверка на анимацию шапки
+        if ( $('.header').hasClass('scroll-bottom')){
+            $('.company-sidebar').addClass('fixed');
+        } else {
+            $('.company-sidebar').removeClass('fixed');
+        }
+        // условие прокрутки по размеру стрницы
+        if($(window).scrollTop() >= scrollEnd) {
+            $('.company-sidebar').addClass('overflow-height');
+            // $('.company-sidebar').css('position', 'relative');
+            // $('.company-sidebar').css('align-self', 'flex-end');
+            // $('.company-sidebar').css('top', '30');
+            // $('.company-content').css('margin', '0');
+
+        } else{
+            $('.company-sidebar').removeClass('overflow-height');
+            // $('.company-content').removeAttr("style");
+        }
+        mypos = newscroll;
+    });
+
+
+
+
+
+//фокус поиска
     $('#query').on('keyup',function(){
         var $this = $(this),
             val = $this.val();
@@ -60,14 +69,12 @@ $(document).ready(function () {
 
 
     //скрол по якорю
-    $("body").on("click",".company-sidebar a", function (event) {
-        event.preventDefault();
+    $body.on("click",".company-sidebar a", function (e) {
+        e.preventDefault();
         var id  = $(this).attr('href'),
         top = $(id).offset().top - 70;
         $('body,html').animate({scrollTop: top}, 1000);
     });
-
-
 
     //показ меню
     $body.on('click', '#show-menu', function (e) {
@@ -75,8 +82,6 @@ $(document).ready(function () {
         $(this).toggleClass('open');
         $('#lk-menu').fadeToggle('500');
     });
-
-
 
     //скрипты для карточки тендер
     if($('.tender').length > 0){
@@ -121,7 +126,8 @@ $(document).ready(function () {
         preloader: false,
         overflowY: 'scroll',
         removalDelay: 300,
-        closeBtnInside: true
+        closeBtnInside: true,
+        mainClass: 'zoom-in'
     });
 
 });
