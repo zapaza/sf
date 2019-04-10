@@ -7,6 +7,27 @@
         {% include 'sections/sidebar.html' %}
 
         <section class="company-content">
+            <!--Карточка бизнес-->
+            <article id="main" class="company-content--item card " > <!-- если существует - то ничего не добавляется, а если ликвидирована то добавляется класс main-card-eliminated  -->
+                <div class="card-header">
+                    <h1>ООО «ЯНДЕКС.ВЕРТИКАЛИ ТЕХНОЛОГИИ»</h1>
+                    <a href="#0" class="card-header--factors">9 стоп-факторов</a>
+                </div>
+                <div class="card-content">
+                    {% include 'blocks/main.html' %}
+                </div>
+                <div class="card-footer">
+                    <ul class="card-footer-link">
+                        <li><a href="#0" class="card-footer-link--download"></a></li>
+                        <li><a href="#0" class="card-footer-link--share"></a></li>
+                        <li><a href="#0" class="card-footer-link--print"></a></li>
+                    </ul>
+                </div>
+            </article>
+
+            <!--Карточка бизнес конец-->
+
+
             <!--Карточка отчетность в 2х примерах-->
             <article id="report" class="company-content--item card" ><!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
                 <div class="card-header">

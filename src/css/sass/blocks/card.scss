@@ -59,6 +59,15 @@
       transform: translateY(-50%);
     }
   }
+  &.main-card-eliminated{
+    .main-card-header--status {
+      display: none;
+    }
+    .card-header{
+      color: $mid-gray--text;
+    }
+  }
+
 
   &-header{
     position: relative;
@@ -69,6 +78,11 @@
     }
     line-height: 4rem;
     color: $black--text;
+
+    h1,h2{
+      max-width: 469px;
+      width: 59.2%;
+    }
 
     &--factors{
       width: 280px;
@@ -149,6 +163,204 @@
   }
   &-content{
     margin-bottom: 32px;
+
+    //стили для клавной карточки
+    .main-card{
+      &-header{
+        text-align: left;
+        margin-bottom:24px;
+        p{
+          margin-bottom: 8px;
+          font:{
+            size: 1.4rem;
+            weight: $font-regular;
+          }
+          line-height: 1.6rem;
+          letter-spacing: normal;
+        }
+        &--status{
+          color: $green;
+        }
+        &--registration{
+          color: $mid-gray--text;
+        }
+      }
+
+      &-info{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        &.full{
+          align-items: flex-start;
+          .main-card-info--col{
+            box-shadow: none;
+            padding: 0;
+            background: transparent;
+            border-radius: 0;
+            justify-content: flex-start;
+          }
+          .main-card-info--row{
+            margin-bottom: 32px;
+            p{
+              margin-bottom: 12px;
+              &:not(.title){
+                font-size: 1.6rem;
+                line-height: 2rem;
+              }
+              span{
+                display: inline-block;
+                width: 72px;
+                &.normal{
+                  width: auto;
+                  margin-right: 4px;
+                }
+              }
+            }
+            .item-address{
+              margin-bottom: 8px;
+              p{
+                margin-bottom: 0;
+              }
+            }
+          }
+
+        }
+        &--col{
+          width: 49%;
+          max-width: 352px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          padding: 16px;
+          box-sizing: border-box;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+          background-color: rgb(255, 255, 255);
+
+          p{
+            font:{
+              size: 1.4rem;
+              weight:$font-regular;
+            }
+            line-height: 1.6rem;
+            letter-spacing: normal;
+            color: $black--text;
+            span{
+              color: $mid-gray--text;
+            }
+            &.title{
+            margin-bottom: 8px;
+            color: $mid-gray--text;
+            }
+          }
+
+          h3{
+            margin-bottom: 12px;
+
+            font:{
+              size: 1.6rem;
+              weight: $font-bold;
+            }
+            line-height: 2rem;
+
+            color:$black--text;
+            &.name{
+              margin-bottom: 4px;
+              text-transform: uppercase;
+              letter-spacing: 0.4px;
+            }
+          }
+
+          a{
+            font:{
+              size: 1.4rem;
+              weight: $font-regular;
+            }
+            line-height: 1.6rem;
+            letter-spacing: normal;
+            color: $mid-gray--text;
+            span{
+              color: $green;
+              border-bottom: 1px solid $green;
+            }
+            &:hover{
+              text-decoration: none;
+              span{
+                color: $green-hover;
+                border-bottom-color:$green-hover ;
+              }
+            }
+          }
+        }
+      }
+
+      &-interconnections{
+        width: 100%;
+        margin-bottom: 107px;
+        border-top:1px solid $body-bg-color;
+        height: 512px;
+
+        .expand{
+          display: block;
+          position: relative;
+          padding: 8px  22px 8px 46px;
+
+          font:{
+            size: 1.4rem;
+            weight: $font-regular;
+          }
+          line-height: 1.6rem;
+          letter-spacing: normal;
+          color: rgb(255, 255, 255);
+
+          border-radius: 16px;
+          border:none;
+          background-color: rgba(0, 0, 0, 0.4);
+          .icon-expand{
+            display: inline-block;
+            position: absolute;
+            left: 22px;
+            top: 8px;
+            @include sprite($icon-expand);
+          }
+        }
+
+        .change{
+          position: relative;
+          width: 32px;
+          height: 32px;
+          border-radius: 16px;
+          background-color: rgba(0, 0, 0, 0.4);
+          border: none;
+          color: $white;
+          text-indent: -999px;
+          overflow: hidden;
+          font-weight: $font-bold;
+          &:before{
+            position: absolute;
+            content: '';
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          &.plus{
+             &:before{
+               @include sprite($icon-plus);
+             }
+           }
+          &.minus{
+            &:before{
+              @include sprite($icon-minus)
+            }
+          }
+
+        }
+      }
+    }
 
     //стили ддя карточки отчета
     .reporting{
