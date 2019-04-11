@@ -7,7 +7,34 @@
       opacity: 1;
     }
   }
-
+}
+.mfp-wrap{
+  &:before{
+    position: absolute;
+    content:'';
+    width: 168px;
+    height: 21px;
+    top: 26px;
+    left: 32px;
+    opacity: .4;
+    background-image: url(../images/logo-modal-full.png);
+  }
+  &.authorization{
+    .mfp-close{
+      right: 20px;
+      top: 20px;
+      width: 32px;
+      height: 32px;
+      text-indent: -999px;
+      overflow: hidden;
+      opacity: .4;
+      @include sprite($icon-close-full);
+      transition: .2s ease opacity;
+      &:hover{
+        opacity: .3;
+      }
+    }
+  }
 }
 .modal{
   position: relative;
@@ -52,6 +79,8 @@
     width: 100%;
     margin: auto;
     background-color: transparent;
+
+
 
     .modal-content--inner{
       display: flex;
@@ -98,17 +127,16 @@
           }
           &[data-hint]{
             &:before{
-
-              position: absolute;
-              bottom: 100%;
-              left:0;
-              z-index: 99;
               content: attr(data-hint);
+              position: absolute;
+              top:50%;
+              transform: translateY(-50%);
+              left:100%;
+              margin-left: 12px;
+              z-index: 99;
               display: block;
               max-width: 464px;
-              padding: 12px;
-              margin-bottom: 12px;
-
+              padding: 8px;
 
               pointer-events: none;
 
@@ -129,17 +157,17 @@
 
             }
             &:after{
-              bottom: 100%;
               position: absolute;
-              margin-bottom: 0px;
-              z-index: 99;
               content: '';
+              z-index: 99;
               width: 8px;
-              height: 16px;
-              left: 4px;
-              margin-left: 4px;
+              height: 8px;
+              top:50%;
+              left: 100%;
+              transform: translateY(-50%);
+              margin-left: -4px;
               border: 8px solid transparent;
-              border-top-color:$red;
+              border-right-color:$red;
               box-sizing: border-box;
               opacity: 1;
               transition: .1s ease opacity;
@@ -197,6 +225,10 @@
         width: 100%;
         margin:0 auto 32px;
       }
+      .btn-default{
+        background-color: transparent;
+        font-weight: $font-bold;
+      }
       a{
         text-align: center;
         margin-bottom: 32px;
@@ -216,6 +248,9 @@
           &:hover{
             color: $green-hover;
           }
+        }
+        &.return-code{
+          padding-top: 16px;
         }
 
         &:last-child{
@@ -243,7 +278,16 @@
         margin-bottom: 32px;
       }
       .info{
+        padding-top: 16px;
         color: $mid-gray--text;
+        margin-bottom: 0;
+
+        a{
+          color: $green;
+          &:hover{
+            color: $green-hover;
+          }
+        }
       }
 
 

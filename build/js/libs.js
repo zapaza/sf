@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var $body = $('body');
 
-
+// действие при прокрутке страницы
     var mywindow = $(window);
     var mypos = 68;
     var up = false;
@@ -44,10 +44,6 @@ $(document).ready(function () {
         mypos = newscroll;
     });
 
-
-
-
-
 //фокус поиска
     $('#query').on('keyup',function(){
         var $this = $(this),
@@ -62,13 +58,13 @@ $(document).ready(function () {
         }
     });
 
+//очистка поля поиска
     $body.on('click', '.header-search--btn_reset', function () {
        $(this).fadeOut('fast');
        $(this).closest('form').find('.header-search--btn').css('opacity','.4');
     });
 
-
-    //скрол по якорю
+//скрол по якорю
     $body.on("click",".company-sidebar a", function (e) {
         e.preventDefault();
         var id  = $(this).attr('href'),
@@ -76,14 +72,14 @@ $(document).ready(function () {
         $('body,html').animate({scrollTop: top}, 1000);
     });
 
-    //показ меню
+//показ меню
     $body.on('click', '#show-menu', function (e) {
         e.preventDefault();
         $(this).toggleClass('open');
         $('#lk-menu').fadeToggle('500');
     });
 
-    //скрипты для карточки тендер
+//скрипты для карточки тендер
     if($('.tender').length > 0){
         //анимация чекбокса
         $body.on('click', '.tender-tabs--name',function(){
@@ -118,7 +114,7 @@ $(document).ready(function () {
         });
     }
 
-    //скрипт показа модалки
+//скрипт показа модалки
     $('a[data-modal]').magnificPopup({
         type: 'inline',
         midClick: true,
@@ -129,7 +125,7 @@ $(document).ready(function () {
         closeBtnInside: true,
         mainClass: 'zoom-in'
     });
-    //модалка авторизации
+//модалка авторизации
     $('a[data-modal-authorization]').magnificPopup({
         type: 'inline',
         midClick: true,
@@ -141,7 +137,7 @@ $(document).ready(function () {
         mainClass: 'zoom-in authorization'
     });
 
-    //показ пароля
+//показ пароля
     $body.on('click', '.show-password', function (e) {
         e.preventDefault();
         var passwordInput = $(this).closest('label').find('input.password'),
@@ -149,6 +145,22 @@ $(document).ready(function () {
             passwordInput.prop('type', typeInput);
             $(this).toggleClass('show');
     });
+
+//таймер в модалке регистрации
+    if($('.timeout').length > 0){
+        var second = $('.timeout').text(),
+            int;
+        int = setInterval(function () {
+            if (second > 0){
+                second--;
+                $('.timeout').text(second);
+            } else{
+                clearInterval(int);
+                $('.timeout').closest('p').hide();
+                $('.return-code').show();
+            }
+        }, 1000);
+    }
 
 });
 
