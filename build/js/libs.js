@@ -129,6 +129,26 @@ $(document).ready(function () {
         closeBtnInside: true,
         mainClass: 'zoom-in'
     });
+    //модалка авторизации
+    $('a[data-modal-authorization]').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        fixedBgPos: true,
+        preloader: false,
+        overflowY: 'scroll',
+        removalDelay: 300,
+        closeBtnInside: false,
+        mainClass: 'zoom-in authorization'
+    });
+
+    //показ пароля
+    $body.on('click', '.show-password', function (e) {
+        e.preventDefault();
+        var passwordInput = $(this).closest('label').find('input.password'),
+            typeInput = passwordInput.attr('type') == "text" ? "password" : 'text';
+            passwordInput.prop('type', typeInput);
+            $(this).toggleClass('show');
+    });
 
 });
 

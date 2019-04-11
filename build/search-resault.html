@@ -10,8 +10,8 @@
   <title>Site title</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <link href="css/plugins.min.css" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/plugins.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
   <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -56,7 +56,7 @@
 
           <div class="header-link">
 
-            <!--<a href="#0" class="btn btn-green enter">Войти</a>-->
+            <a href="#authorization" data-modal-authorization class="btn btn-green enter">Войти</a>
 
             <!--<a href="#0" class="btn btn-green enter">-->
             <!--<span class="loader">-->
@@ -66,23 +66,23 @@
             <!--</span>-->
             <!--</a>-->
 
-            <ul>
-              <li><a href="#0" class="header-link--item" data-hint="Мониторинг">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-favourites">
-                    <use xlink:href="#icon-favourites"></use>
-                  </svg>
-                </a></li>
-              <li><a href="#0" class="header-link--item" data-hint="Сравнение">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-options">
-                    <use xlink:href="#icon-options"></use>
-                  </svg>
-                </a></li>
-              <li><a href="#0" class="header-link--item big" id="show-menu">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-profile">
-                    <use xlink:href="#icon-profile"></use>
-                  </svg>
-                </a></li>
-            </ul>
+            <!--<ul>-->
+            <!--<li><a href="#0" class="header-link&#45;&#45;item" data-hint="Мониторинг">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-favourites">
+    <use xlink:href="#icon-favourites"></use>
+</svg>
+</a></li>-->
+            <!--<li><a href="#0" class="header-link&#45;&#45;item" data-hint="Сравнение">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-options">
+    <use xlink:href="#icon-options"></use>
+</svg>
+</a></li>-->
+            <!--<li><a href="#0" class="header-link&#45;&#45;item big" id="show-menu">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-profile">
+    <use xlink:href="#icon-profile"></use>
+</svg>
+</a></li>-->
+            <!--</ul>-->
 
             <div class="header-link--menu" id="lk-menu">
               <div class="profile-info">
@@ -308,6 +308,44 @@
     <footer class="footer">
       <div class="wrapper">FOOTER</div>
     </footer>
+  </div>
+
+  <!--модалки-->
+  <div class="modal modal-full mfp-hide" id="authorization">
+    <div class="modal-content">
+      <!--<div class="modal-content&#45;&#45;inner">&lt;!&ndash; тело для входа &ndash;&gt;-->
+      <!--<h2>Вход</h2>-->
+      <!--<form action="" class="sing-in">-->
+      <!--<label for="sing-in-tel" class="">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды&ndash;&gt;-->
+      <!--<input type="tel"  id="sing-in-tel" placeholder="Номер телеофна" autocomplete="off">-->
+      <!--</label>-->
+      <!--<label for="sing-in-password" class="error">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды&ndash;&gt;-->
+      <!--<input type="password"   class="password " id="sing-in-password" autocomplete="off" placeholder="Пароль">-->
+      <!--<button type="button" class="show-password"></button>-->
+      <!--</label>-->
+      <!--<div class="g-recaptcha" data-sitekey="" data-callback="recaptchaCallback"></div> &lt;!&ndash;После трех попыток неудачного входа показываем капчу.&ndash;&gt;-->
+      <!--<button class="btn btn-green" type="submit">Войти</button>-->
+      <!--</form>-->
+      <!--<p class="error-massage">Неверный номер или пароль</p>&lt;!&ndash;показывается если не порошел валидацию  показать на 2-3 секунды&ndash;&gt;-->
+      <!--<a href="#0" class="recovery-pass normal">Забыли пароль?</a>-->
+      <!--<a href="#0" class="registradion green">Зарегистрироваться</a>-->
+      <!--</div>-->
+      <div class="modal-content--inner registration">
+        <!--тело для регистрации   добавляется класс-->
+        <h2>Регистрация</h2>
+        <p>Введите свой номер телефона,  <br> мы отправим вам проверочный код</p>
+        <!--Если  сообщение отправлено текст меняется на 'СМС с кодом отправлено на номер +7 (909) 668-88-58'-->
+        <form action="" class="sing-in">
+          <label for="sing-in-tel" class="error" data-hint="Некорректный номер">
+            <!--если не порошел валидацию то добавляется клаcc error 2-3 секунды. Если номер написан в правильном формате, но не найден в базе,  добавляется клаcc error 2-3 секунды, в хинте (data-hint) с ошибкой будет «Номер уже зарегистрирован».-->
+            <input type="tel" id="sing-in-tel" class="error" autocomplete="off" placeholder="Номер телефона">
+          </label>
+          <button class="btn btn-green" type="submit">Продолжить</button>
+          <a href="#0" class="btn btn-default">Назад</a>
+        </form>
+        <p class="info">Уже зарегистрированы? <a href="#0" class="recovery-pass">Войти</a></p>
+      </div>
+    </div>
   </div>
 
   <!--svg-sprite-->
