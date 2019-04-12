@@ -7,7 +7,49 @@
         {% include 'sections/sidebar.html' %}
 
         <section class="company-content">
-            <!--Карточка бизнес-->
+
+            <!--карточка собственники-->
+            <article id=owner" class="company-content--item card " >
+                <div class="card-header">
+                    <h2>Собственники</h2>
+                    <!--<a href="#0" class="card-header&#45;&#45;factors">9 стоп-факторов</a>-->
+                </div>
+                <div class="card-content">
+                    {% include 'blocks/owner.html' %}
+                </div>
+                <div class="card-footer">
+                    <ul class="card-footer-link">
+                        <li><a href="#0" class="card-footer-link--download"></a></li>
+                        <li><a href="#0" class="card-footer-link--share"></a></li>
+                        <li><a href="#0" class="card-footer-link--print"></a></li>
+                    </ul>
+                </div>
+            </article>
+            <!-- карточка собственники конец-->
+
+            <!--карточка взаимосвязи-->
+            <article id=child" class="company-content--item card child" >
+                <div class="card-header">
+                    <h2>Взаимосвязи</h2>
+                    <!--<a href="#0" class="card-header&#45;&#45;factors">9 стоп-факторов</a>-->
+                </div>
+                <div class="card-content">
+                    {% include 'blocks/child.html' %}
+                </div>
+                <div class="card-footer">
+                    <div class="card-footer-btn">
+                        <a href="#0" class="btn btn-default">Все учрежденные юридические лица <span>200</span></a>
+                    </div>
+                    <ul class="card-footer-link">
+                        <li><a href="#0" class="card-footer-link--download"></a></li>
+                        <li><a href="#0" class="card-footer-link--share"></a></li>
+                        <li><a href="#0" class="card-footer-link--print"></a></li>
+                    </ul>
+                </div>
+            </article>
+            <!-- карточка взаимосвязи конец-->
+
+            <!--Карточка Главная-->
             <article id="main" class="company-content--item card " > <!-- если существует - то ничего не добавляется, а если ликвидирована то добавляется класс main-card-eliminated  -->
                 <div class="card-header">
                     <h1>ООО «ЯНДЕКС.ВЕРТИКАЛИ ТЕХНОЛОГИИ»</h1>
@@ -25,7 +67,7 @@
                 </div>
             </article>
 
-            <!--Карточка бизнес конец-->
+            <!--Карточка Главная конец-->
 
 
             <!--Карточка отчетность в 2х примерах-->

@@ -938,8 +938,208 @@
       }
     }
 
+    //стили для карточки собственники
+    .owner{
+      .table{
+        &-row{
+          justify-content: space-between;
+          padding: 6px 16px;
+          margin: {
+            left: -16px;
+            right: -16px;
+            bottom: 16px;
+          };
+          cursor: pointer;
+          &:hover{
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+        &-col{
+          width: 64px;
+          position: relative;
+          text-align: right;
+          margin-right: 0;
+          justify-content: flex-start;
+          &:first-child{
+            width: 60.2%;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: auto;
+            span{
+              text-align: left;
+              display: inline-block;
+              width: auto;
+              &.name{
 
-    //ситили для карточки тендера
+                width: 100%;
+                margin-bottom: 8px;
+                font:{
+                  size: 1.6rem;
+                  weight: $font-bold;
+                }
+                line-height: 2rem;
+                letter-spacing: 0.5px;
+                color:$black--text;
+                .icon-name{
+                  margin-left: 4px;
+                  vertical-align: baseline;
+                  @include sprite($icon-name)
+                }
+                &-info{
+                  margin-right: 16px;
+                  font:{
+                    size: 1.6rem;
+                    weight: $font-regular;
+                  }
+                  line-height: 2rem;
+                  letter-spacing: normal;
+                  color: $mid-gray--text;
+                  span{
+                    margin-left: 4px;
+                    color: $black--text;
+                  }
+                }
+              }
+            }
+          }
+          &:last-child{
+            width: 20%;
+            text-align: right;
+            margin-left: 24px;
+          }
+          span{
+            display: block;
+            width: 100%;
+            text-align: right;
+          }
+
+        }
+        &-body{
+          .table-col{
+            font:{
+              size: 1.6rem;
+              weight:$font-regular;
+            }
+            line-height: 2rem;
+            letter-spacing: normal;
+            color: $black--text;
+          }
+        }
+
+      }
+    }
+  //стили взаимосвязи
+    .child{
+      .table{
+        &-row{
+          justify-content: space-between;
+          padding: 6px 16px;
+          margin: {
+            left: -16px;
+            right: -16px;
+            bottom: 16px;
+          };
+          cursor: pointer;
+          &:hover{
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+          &.eliminated{
+            span{
+              color: $mid-gray--text !important;
+            }
+
+          }
+        }
+        &-col{
+          width: 64px;
+          position: relative;
+          text-align: right;
+          margin-right: 0;
+          justify-content: flex-start;
+          &:first-child{
+            width: 66%;
+            max-width: 472px;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: auto;
+            span{
+              text-align: left;
+              display: inline-block;
+              width: auto;
+              &.name{
+
+                width: 100%;
+                margin-bottom: 8px;
+                font:{
+                  size: 1.6rem;
+                  weight: $font-bold;
+                }
+                line-height: 2rem;
+                letter-spacing: 0.5px;
+                color:$black--text;
+                .icon-name{
+                  margin-left: 4px;
+                  vertical-align: baseline;
+                  @include sprite($icon-name)
+                }
+                &-info{
+                  margin-right: 16px;
+                  font:{
+                    size: 1.6rem;
+                    weight: $font-regular;
+                  }
+                  line-height: 2rem;
+                  letter-spacing: normal;
+                  color: $mid-gray--text;
+                  span{
+                    margin-left: 4px;
+                    color: $black--text;
+                  }
+                }
+              }
+            }
+          }
+          &:last-child{
+            width: 20%;
+            text-align: right;
+            margin-left: 24px;
+          }
+          span{
+            display: block;
+            width: 100%;
+            text-align: right;
+          }
+
+        }
+        &-body{
+          .table-col{
+            font:{
+              size: 1.6rem;
+              weight:$font-regular;
+            }
+            line-height: 2rem;
+            letter-spacing: normal;
+            color: $black--text;
+          }
+        }
+
+      }
+    }
+
+
+      //ситили для карточки тендера
     .tender{
       &-tabs{
         display: flex;
