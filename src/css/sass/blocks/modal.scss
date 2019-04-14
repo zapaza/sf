@@ -9,17 +9,18 @@
   }
 }
 .mfp-wrap{
-  &:before{
-    position: absolute;
-    content:'';
-    width: 168px;
-    height: 21px;
-    top: 26px;
-    left: 32px;
-    opacity: .4;
-    background-image: url(../images/logo-modal-full.png);
-  }
+
   &.authorization{
+    &:before{
+      position: absolute;
+      content:'';
+      width: 168px;
+      height: 21px;
+      top: 26px;
+      left: 32px;
+      opacity: .4;
+      background-image: url(../images/logo-modal-full.png);
+    }
     .mfp-close{
       right: 20px;
       top: 20px;
@@ -41,7 +42,8 @@
   display: block;
   background-color: $white;
 
-  &-why-show-modal{
+  &-why-show-modal,
+  &-rewrite-password{
     padding: 72px 32px;
     max-width: 304px;
     margin: auto;
@@ -70,6 +72,141 @@
       line-height: 1.6rem;
       letter-spacing: normal;
       color: $black--text;
+    }
+  }
+
+  &-rewrite-password{
+    max-width: 464px;
+    text-align: center;
+    h2{
+      margin-bottom: 16px;
+      font:{
+        size: 2.8rem;
+        weight: $font-bold;
+      }
+
+      line-height: 4rem;
+      letter-spacing: normal;
+      text-align: center;
+      color: $black--text;
+    }
+    p{
+      margin-bottom: 24px;
+      text-align: center;
+      font:{
+        size: 1.4rem;
+        weight: $font-regular;
+      }
+      line-height: 1.6rem;
+      color: $black--text;
+    }
+    label{
+      display: block;
+      max-width: 304px;
+      width: 100%;
+      position: relative;
+      margin:0 auto 16px;
+      &.error{
+        input{
+          border-color: $red;
+
+          position: relative;
+        }
+        &[data-hint]{
+          &:before{
+            content: attr(data-hint);
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            left:100%;
+            margin-left: 12px;
+            z-index: 99;
+            display: block;
+            max-width: 464px;
+            padding: 8px;
+
+            pointer-events: none;
+
+            opacity: 1;
+
+            border-radius: 4px;
+            background-color: $red;
+            transition: .2s ease opacity;
+            transition-delay: 0s;
+            text-transform: none;
+            white-space: nowrap;
+            font:{
+              size: 1.4rem;
+              weight: $font-regular;
+            }
+            line-height: 1.6rem;
+            color: rgb(255, 255, 255);
+
+          }
+          &:after{
+            position: absolute;
+            content: '';
+            z-index: 99;
+            width: 8px;
+            height: 8px;
+            top:50%;
+            left: 100%;
+            transform: translateY(-50%);
+            margin-left: -4px;
+            border: 8px solid transparent;
+            border-right-color:$red;
+            box-sizing: border-box;
+            opacity: 1;
+            transition: .1s ease opacity;
+            transition-delay: 0s;
+          }
+        }
+      }
+      input{
+        display: block;
+        width: 100%;
+        height: 48px;
+        margin: auto;
+        padding: 0 16px;
+        border-radius: 4px;
+        border: solid 1px rgba(0, 0, 0, 0.15);
+        background-color: rgb(255, 255, 255);
+        font:{
+          size: 1.4rem;
+          weight: $font-regular;
+        }
+        line-height: 1.6rem;
+        letter-spacing: normal;
+        color: $black--text;
+        &::placeholder{
+          color: $mid-gray--text;
+        }
+
+      }
+      .show-password{
+        position: absolute;
+        width:24px;
+        height: 24px;
+        display: block;
+        right: 12px;
+        top: 12px;
+        border: 0;
+        background-color: $white;
+        @include sprite($icon-password);
+        filter: grayscale(100%);
+        transition: filter .2s ease;
+        &.show{
+          @include sprite($icon-password-show);
+        }
+        &:hover{
+          filter: grayscale(0%);
+        }
+      }
+    }
+    .btn{
+      max-width: 304px;
+      width: 100%;
+      margin:0 auto 16px;
     }
   }
 
@@ -293,4 +430,6 @@
 
     }
   }
+
+
 }

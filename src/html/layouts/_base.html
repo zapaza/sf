@@ -104,7 +104,37 @@
         <!--</div>-->
     </div>
 </div>
+<div class="modal modal-rewrite-password mfp-hide" id="rewrite-password">
+    <div class="modal-content">
+        <!--В этой модалке много общего с модалкой авторизации,id можешь менять на них ничего не навершено-->
+        <div class="modal-content--inner registration" ><!--тело для смены пароля-->
+            <h2>Смена пароля</h2>
+            <p>На номер +7 (909) 668-88-58 будет<br>  отправлена СМС с кодом подтверждения</p> <!--Когда смс отправлено то текст меняется на СМС с кодом подтверждения <br> отправлено на ваш номер телефона-->
+            <form action="" class="rewrite-password">
+                <button class="btn btn-green" type="submit">Отправить</button>
+            </form>
+            <!--форма меняется на эту при отправке сообщения на телефон-->
+           <form action="">
+                <label for="sing-in-code">
+                    <input type="text"  id="sing-in-code" autocomplete="off" placeholder="Код из СМС" >
+                </label>
+               <!--Если не правильный код-->
+               <label for="sing-in-tel" class="error" data-hint="Неверный код подтверждения" ><!--если не порошел валидацию то добавляется клаcc error 2-3 секунды. Если номер написан в правильном формате, но не найден в базе,  добавляется клаcc error 2-3 секунды, в хинте (data-hint) с ошибкой будет «Номер уже зарегистрирован»-->
+                   <input type="text"  id="sing-in-tel" autocomplete="off" placeholder="Код из СМС" >
+               </label>
+               <label for="sing-in-password" class="error" data-hint="Пароль слишком короткий"><!--если не порошел валидацию то добавляется клаcc error 2-3 секунды, валидация это минимум 6 символов-->
+                   <input type="password"   class="password " id="sing-in-password" autocomplete="off" minlength="6" placeholder="Пароль">
+                   <button type="button" class="show-password"></button>
+               </label>
+               <!--Когда код введен верный то показываем поле смены пароля-->
+                <button class="btn btn-green" type="submit">Продолжить</button>
+            </form>
+            <p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>
+            <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>
 
+        </div>
+    </div>
+</div>
 
 <!--svg-sprite-->
 <div class="svgSprite" hidden>
