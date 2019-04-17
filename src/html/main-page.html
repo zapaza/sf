@@ -1,0 +1,213 @@
+{% set bodyClass = "main-page" %}
+{% extends 'layouts/_base.html' %}
+{% block content %}
+<section class="main-block">
+    <div class="wrapper">
+        <div class="main-block-title">
+            <h1>Проверка контрагентов, понятная людям</h1>
+            <p>Наш сервис проверяет контрагентов по ключевым параметрам, позволяя в доступном формате оценить <br> риски сотрудничества по каждому из показателей.</p>
+            <a href="#0" class="btn btn-green">Попробовать</a>
+        </div>
+    </div>
+</section>
+<section class="advantage">
+    <div class="wrapper">
+        <div class="header-block">
+            <h2>Преимущества сервиса</h2>
+        </div>
+
+        <div class="advantage-list">
+            <div class="advantage-list--item">
+                <div class="icon">
+                    <img src="/images/advantage-icon-1.svg" alt="Удобный интерфейс" title="Удобный интерфейс">
+                </div>
+                <div class="info">
+                    <h3>Удобный интерфейс</h3>
+                    <p>Информация приведена в максимально компактном и логичном формате, чтобы не отвлекать пользователя ненужной информацией.</p>
+                </div>
+            </div>
+
+            <div class="advantage-list--item">
+                <div class="icon">
+                    <img src="/images/advantage-icon-2.svg" alt="Мониторинг и уведомления" title="Мониторинг и уведомления">
+                </div>
+                <div class="info">
+                    <h3>Мониторинг и уведомления</h3>
+                    <p>Отмечайте контрагентов и получайте настраиваемые уведомления — о любых изменениях или только при появлении новых стоп-факторов.</p>
+                </div>
+            </div>
+
+            <div class="advantage-list--item">
+                <div class="icon">
+                    <img src="/images/advantage-icon-3.svg" alt="Оперативная и объективная оценка" title="Оперативная и объективная оценка">
+                </div>
+                <div class="info">
+                    <h3>Оперативная и объективная оценка</h3>
+                    <p>Общая оценка контрагента необъективна. Стоп-факторы по 9 параметрам позволяют выявить проблемные зоны и оперативно принять решение.</p>
+                </div>
+            </div>
+
+            <div class="advantage-list--item">
+                <div class="icon">
+                    <img src="/images/advantage-icon-4.svg" alt="Информация вовремя" title="Информация вовремя">
+                </div>
+                <div class="info">
+                    <h3>Информация вовремя</h3>
+                    <p>Вы получаете уведомление сразу после подачи заявления в ФНС. Это даёт пространство для манёвра и запас по времени.</p>
+                </div>
+            </div>
+
+            <div class="advantage-list--item">
+                <div class="icon">
+                    <img src="/images/advantage-icon-5.svg" alt="Справка ЕГРЮЛ с ЭЦП" title="Справка ЕГРЮЛ с ЭЦП">
+                </div>
+                <div class="info">
+                    <h3>Справка ЕГРЮЛ с ЭЦП</h3>
+                    <p>Получите простую справку ЕГРЮЛ моментально, либо закажите справку, заверенную ЭЦП, которую принимают нотариусы и суды. Бесплатно.</p>
+                </div>
+            </div>
+
+            <div class="advantage-list--item">
+                <div class="icon">
+                    <img src="/images/advantage-icon-6.svg" alt="Реквизиты для договора" title="Реквизиты для договора">
+                </div>
+                <div class="info">
+                    <h3>Реквизиты для договора</h3>
+                    <p>Для большинства компаний сервис предоставит реквизиты, которые удобно использовать для заполнения и сверки договоров.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tariffs">
+    <div class="wrapper">
+        <div class="header-block">
+            <h2>Тарифы</h2>
+        </div>
+
+        <div class="tariffs-list">
+            <div class="tariffs-list--item">
+                <div class="name">
+                    <h3>1 проверка</h3>
+                </div>
+                <div class="price">
+                    <h4>бесплатно</h4>
+                </div>
+                <a href="#0" class="btn btn-default">Попробовать</a>
+            </div>
+
+            <div class="tariffs-list--item">
+                <div class="name">
+                    <h3>1 месяц</h3>
+                </div>
+                <div class="price">
+                    <h4>за 3 000 ₽</h4>
+                </div>
+                <a href="#0" class="btn btn-green">Оформить на месяц</a>
+            </div>
+
+            <div class="tariffs-list--item">
+                <div class="name">
+                    <h3>1 год</h3>
+                </div>
+                <div class="price">
+                    <h4>за 15 000 ₽</h4>
+                </div>
+                <div class="old-price">
+                    <h4>за 36 000 ₽</h4>
+                </div>
+                <a href="#0" class="btn btn-green">Оформить на год</a>
+            </div>
+        </div>
+
+        <a href="#0" class="tariffs-more">Узнать о способах оплаты</a>
+    </div>
+</section>
+
+<section class="questions">
+    <div class="wrapper">
+        <div class="header-block">
+            <h2>Вопросы и ответы</h2>
+        </div>
+
+        <div class="questions-list">
+            <div class="questions-list--item">
+                <div class="title"><h3>Откуда у вас данные? Им можно верить?</h3></div>
+                <div class="content">
+                    <p>Все данные берутся из официальных источников, таких как ФНС, Росстат, ФССП, суды,
+                    Росреестр и других. Благодаря гибкой системе организации, нам удается получать достоверную информацию с
+                    минимальными задержками.</p>
+                </div>
+            </div>
+
+            <div class="questions-list--item">
+                <div class="title"><h3>Как часто обновляется информация?</h3></div>
+                <div class="content">
+                    <p>В зависимости от конкретного источника обновление может быть в реальном времени,
+                    суточным, недельным или месячным. Мы обрабатываем всю входящую информацию в реальном времени, задержки
+                    минимизированы.</p>
+                </div>
+            </div>
+
+            <div class="questions-list--item">
+                <div class="title"><h3>Почему так дёшево?</h3></div>
+                <div class="content">
+                    <p>Одной из главных идей нашего сервиса является доступность. Исходя из этого принципа
+                    мы разработали тарифную сетку с максимально доступной ценовой политикой.</p>
+                </div>
+            </div>
+
+            <div class="questions-list--item">
+                <div class="title"><h3>Сколько устройств может использовать один аккаунт?</h3></div>
+                <div class="content">
+                    <p>«Стоп-фактор» — это продукт для персонального пользования, и он не может работать на
+                    нескольких устройствах одновременно. Это обусловлено политикой достижения лучшей цены на рынке.</p>
+                </div>
+            </div>
+
+            <div class="questions-list--item">
+                <div class="title"><h3>Зачем подтверждать номер телефона?</h3></div>
+                <div class="content">
+                    <p>Номер необходим для идентификации, благодаря ему мы можем точно понять, что именно
+                    Вы вошли в систему, а также повысить безопасность сервиса. Использование номера в рекламных целях
+                    исключено.</p>
+                </div>
+            </div>
+
+            <div class="questions-list--item">
+                <div class="title"><h3>Насколько сервис сложен внутри?</h3></div>
+                <div class="content">
+                    <p>Интерфейсы сервиса разработаны максимально интуитивными и «чистыми», что позволяет
+                    очень быстро освоить весь функционал. Система стоп-факторов сокращает время оценки контрагента до
+                    считанных секунд.</p>
+                </div>
+            </div>
+
+            <div class="questions-list--item">
+                <div class="title"><h3>Чем вы отличаетесь от конкурентов?</h3></div>
+                <div class="content">
+                    <p>Проработав в отрасли более 15 лет, в том числе со стороны пользователей аналогичных
+                    сервисов, наша команда при разработке руководствовалась следующими принципами: простота, скорость,
+                    достоверность.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="attachment">
+    <div class="wrapper">
+        <div class="attachment-title">
+            <h2>Приложение на iOS и Android — уже скоро!</h2>
+        </div>
+        <div class="attachment-form">
+            <p>Оставьте ваш номер телефона и мы сообщим о запуске</p>
+            <form action="">
+                <input type="tel" required autocomplete="off" placeholder="+7 (">
+                <button class="btn btn-green">Получить приглашение</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

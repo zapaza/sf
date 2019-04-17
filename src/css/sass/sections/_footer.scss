@@ -2,21 +2,132 @@
   position: relative;
   flex: 0 0 auto;
   width: 100%;
-  height: 144px;
-  background-color: $black;
+  background-color: $mid-gray;
+  padding: 40px 0;
 
-  .wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+  &-nav{
+    width: 100%;
+    margin-bottom: 88px;
+    ul{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      li{
+        margin-right: 32px;
+        &:last-child{
+          margin-right: 0;
+        }
 
-    font:{
-      size: 1.3rem;
-      weight: $font-bold;
+        a{
+          font:{
+            size: 1.4rem;
+            weight: $font-bold;
+          }
+          line-height: 2rem;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          color: $white;
+          transition: .2s;
+
+          &:hover{
+            text-decoration: none;
+            color: rgba(255,255,255,.8);
+          }
+        }
+      }
     }
-    line-height: 1.6rem;
+  }
+
+  &-ask{
+    max-width: 408px;
+    margin-bottom: 44px;
+    font-size: 2.2rem;
+    font-weight: $font-bold;
+    line-height: 3.2rem;
     letter-spacing: normal;
-    color: $mid-gray;
+    color:$white;
+    a{
+      font-size: 2.2rem;
+      font-weight: $font-bold;
+      line-height: 3.2rem;
+      letter-spacing: normal;
+      color:$white;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+      transition: .2s;
+      &:hover{
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,.5);
+      }
+    }
+  }
+
+  &-copywrite{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    & > div{
+      width: 44.1%;
+
+      &.left{
+        font-size: 1.4rem;
+        font-weight: $font-regular;
+        line-height: 1.6rem;
+        letter-spacing: normal;
+        color: $white;
+
+        .info{
+          display: flex;
+          align-items: center;
+          padding-top: 8px;
+          margin-bottom: 8px;
+          p{
+            margin-right: 24px;
+            opacity: .6;
+            span{
+              display: inline-block;
+              margin-right: 8px;
+            };
+            &:last-child{
+              margin-right: 0;
+            }
+          }
+        }
+        .adress{
+          opacity: .6;
+        }
+      }
+
+      &.right{
+        text-align: right;
+        a{
+          position: relative;
+          display: inline-block;
+          margin-right: 20px;
+          font-size: 1.4rem;
+          font-weight: $font-regular;
+          line-height: 1.6rem;
+          letter-spacing: normal;
+          text-align: right;
+          color: rgb(255, 255, 255);
+          border-bottom: 1px solid rgb(255, 255, 255);
+          &:after{
+            position: absolute;
+            content: '';
+            right: 0px;
+            top: -1px;
+            margin-right: -16px;
+            width: 16px;
+            height: 16px;
+            background-image: url(../images/icon-arrow-light.svg);
+          }
+          &:hover{
+            text-decoration: none;
+            opacity: .8;
+          }
+        }
+      }
+    }
+
   }
 }

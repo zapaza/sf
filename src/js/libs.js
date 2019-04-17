@@ -3,6 +3,7 @@ $(document).ready(function () {
     var $body = $('body');
 
 // действие при прокрутке страницы
+    if(!$('body').hasClass('main-page')){
     var mywindow = $(window);
     var mypos = 68;
     var up = false;
@@ -43,6 +44,7 @@ $(document).ready(function () {
         }
         mypos = newscroll;
     });
+    }
 
 //фокус поиска
     $('#query').on('keyup',function(){
@@ -162,8 +164,19 @@ $(document).ready(function () {
         }, 1000);
     }
 
+//аккордион на главной странице
+    if($('.questions').length > 0){
+        var accordionContent = $('.questions-list .content').hide();
 
+        $body.on('click', '.questions-list--item .title', function () {
+            $this = $(this);
+            $target = $this.closest('.questions-list--item').find('.content');
 
+            $this.toggleClass('active');
+            $target.slideToggle(500);
+
+        } )
+    }
 });
 
 

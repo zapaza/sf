@@ -22,9 +22,10 @@
       top: 30px;
     }
     &.overflow-height{
-      height: calc(100vh - 228px);
-      overflow-y: auto;
-      overflow-x: hidden;
+      position: absolute;
+      bottom: 64px;
+      height: auto;
+      top: auto;
     }
 
     .lazyload{
