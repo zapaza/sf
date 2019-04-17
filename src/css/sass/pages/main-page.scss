@@ -3,13 +3,48 @@
     background-color: transparent;
     border-bottom-color: transparent;
     transition: .5s ease all;
-    &-search{
-      display: none;
-    }
+    //&-search{
+    //  display: none;
+    //}
     &.scroll{
       background-color: $body-bg-color;
       border-bottom-color: rgba(0, 0, 0, 0.1);
     }
+    &:not(.scroll){
+      .header-logo{
+        svg{
+          path,rect,polygon{
+            fill:$white;
+          }
+          #Line-7{
+            stroke: $white;
+          }
+        }
+      }
+
+      .header-link--item{
+        svg{
+          .options,
+          .star,
+          circle{
+            fill: $white;
+          }
+          .overlay{
+            fill:#323232;
+          }
+        }
+        &:hover{
+          svg{
+            .options,
+            .star,
+            circle{
+              fill:#c1c1c1;
+            }
+          }
+        }
+      }
+    }
+
   }
 
   .header-block{
@@ -470,11 +505,18 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  @media (min-width:1344px){
+    height: 384px;
+  }
 
   .wrapper{
     height: 100%;
     padding: 48px 0 56px;
     box-sizing: border-box;
+    @media (min-width:1344px){
+      padding: 64px 0 ;
+    }
+
 
   }
 
@@ -489,6 +531,12 @@
     letter-spacing: normal;
     color:$white;
     margin-bottom: 56px;
+    @media (min-width:1344px){
+      max-width: 506px;
+      font-size: 4.8rem;
+      line-height: 5.6rem;
+      margin-bottom: 60px;
+    }
   }
 
   &-form{
@@ -500,7 +548,11 @@
       }
       line-height: 1.6rem;
       letter-spacing: normal;
-      color: rgba(255, 255, 255, 0.4);;
+      color: rgba(255, 255, 255, 0.4);
+      @media (min-width:1344px){
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
     }
     form{
       display: flex;
@@ -517,7 +569,6 @@
         border-radius: 4px;
         background-color: rgb(255, 255, 255);
         border: none;
-
         font:{
           size: 1.4rem;
           weight:$font-regular
@@ -525,8 +576,17 @@
         line-height: normal;
         letter-spacing: normal;
         color: $black--text;
+        @media (min-width:1344px){
+          width: 284px;
+        }
         &::placeholder{
           color: $mid-gray--text;
+        }
+      }
+
+      .btn{
+        @media (min-width:1344px){
+          width: 284px;
         }
       }
     }
