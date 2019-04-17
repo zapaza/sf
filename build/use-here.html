@@ -10,8 +10,8 @@
   <title>Site title</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <link href="css/plugins.min.css" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/plugins.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
   <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -27,7 +27,7 @@
   <meta property="og:description" content="">
   <meta property="og:image" content="images/og-image.jpg">
 </head>
-<body>
+<body class="">
 
   <div class="container">
     <div class="content">
@@ -36,7 +36,9 @@
 
           <div class="header-logo">
             <a href="/">
-              <img src="images/logo.svg" alt="Стоп-фактор">
+              <img class="dark-logo" src="images/logo.svg" alt="Стоп-фактор">
+              <!--<img class="light-logo" src="images/logo-light.svg" alt="Стоп-фактор" >-->
+
             </a>
           </div>
 
@@ -134,7 +136,33 @@
       </div>
     </div>
     <footer class="footer">
-      <div class="wrapper">FOOTER</div>
+      <div class="wrapper">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#0">БЛОГ</a></li>
+            <li><a href="#0">ВОПРОСЫ И ОТВЕТЫ</a></li>
+            <li><a href="#0">О СЕРВИСЕ</a></li>
+            <li><a href="#0">Контактная информация</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-ask">
+          <p>У вас есть вопросы или предложения?</p>
+          <p>Напишите нам <a href="mailto:info@sfinx.ru">info@sfinx.ru</a></p>
+        </div>
+
+        <div class="footer-copywrite">
+          <div class="left">
+            <p>2019 © ООО «СФИНКС»</p>
+            <div class="info">
+              <p><span>ИНН</span>7801653043</p>
+              <p><span>ОГРН</span>1187847299540</p>
+            </div>
+            <p class="adress">107076, г. Москва, улица Электрозаводская, 29 стр.1, офис 403</p>
+          </div>
+          <div class="right"><a href="#0">Пользовательское соглашение</a></div>
+        </div>
+      </div>
     </footer>
   </div>
 
@@ -207,6 +235,41 @@
       <!--<p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>-->
       <!--<a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>-->
       <!--</div>-->
+    </div>
+  </div>
+  <div class="modal modal-rewrite-password mfp-hide" id="rewrite-password">
+    <div class="modal-content">
+      <!--В этой модалке много общего с модалкой авторизации,id можешь менять на них ничего не навершено-->
+      <div class="modal-content--inner registration">
+        <!--тело для смены пароля-->
+        <h2>Смена пароля</h2>
+        <p>На номер +7 (909) 668-88-58 будет<br> отправлена СМС с кодом подтверждения</p>
+        <!--Когда смс отправлено то текст меняется на СМС с кодом подтверждения <br> отправлено на ваш номер телефона-->
+        <form action="" class="rewrite-password">
+          <button class="btn btn-green" type="submit">Отправить</button>
+        </form>
+        <!--форма меняется на эту при отправке сообщения на телефон-->
+        <form action="">
+          <label for="sing-in-code">
+            <input type="text" id="sing-in-code" autocomplete="off" placeholder="Код из СМС">
+          </label>
+          <!--Если не правильный код-->
+          <label for="sing-in-tel" class="error" data-hint="Неверный код подтверждения">
+            <!--если не порошел валидацию то добавляется клаcc error 2-3 секунды. Если номер написан в правильном формате, но не найден в базе,  добавляется клаcc error 2-3 секунды, в хинте (data-hint) с ошибкой будет «Номер уже зарегистрирован»-->
+            <input type="text" id="sing-in-tel" autocomplete="off" placeholder="Код из СМС">
+          </label>
+          <label for="sing-in-password" class="error" data-hint="Пароль слишком короткий">
+            <!--если не порошел валидацию то добавляется клаcc error 2-3 секунды, валидация это минимум 6 символов-->
+            <input type="password" class="password " id="sing-in-password" autocomplete="off" minlength="6" placeholder="Пароль">
+            <button type="button" class="show-password"></button>
+          </label>
+          <!--Когда код введен верный то показываем поле смены пароля-->
+          <button class="btn btn-green" type="submit">Продолжить</button>
+        </form>
+        <p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>
+        <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>
+
+      </div>
     </div>
   </div>
 

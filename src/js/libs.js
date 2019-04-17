@@ -46,6 +46,31 @@ $(document).ready(function () {
     });
     }
 
+//добавление класса к хедеру при прокруттке страницы на главной
+
+    if($('.main-page').length >0){
+        if($(window).scrollTop() >= 0) {
+            var height = $(window).scrollTop();
+
+            if (height > 1) {
+                $('header').addClass('scroll');
+            } else {
+                $('header').removeClass('scroll');
+            }
+        }
+        $(window).scroll(function() {
+
+            if($(window).scrollTop() >= 0) {
+                var height = $(window).scrollTop();
+
+                if (height > 1) {
+                    $('header').addClass('scroll');
+                } else {
+                    $('header').removeClass('scroll');
+                }
+            }
+        });
+    }
 //фокус поиска
     $('#query').on('keyup',function(){
         var $this = $(this),

@@ -2,8 +2,13 @@
   .header{
     background-color: transparent;
     border-bottom-color: transparent;
+    transition: .5s ease all;
     &-search{
       display: none;
+    }
+    &.scroll{
+      background-color: $body-bg-color;
+      border-bottom-color: rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -15,6 +20,11 @@
     line-height: 4.8rem;
     letter-spacing: normal;
     text-align: center;
+    @media (min-width: 1344px){
+      font-size: 4.8rem;
+      line-height: 5.6rem;
+      letter-spacing: -0.5px;
+    }
   }
 }
 
@@ -26,8 +36,11 @@
     color: rgb(26, 26, 26);
     image: url("../images/main-img.jpg");
     position: top right;
-    size: auto 100%;
+    size: cover;
     repeat: no-repeat;
+  }
+  @media (min-width: 1344px){
+    height: 600px;
   }
   &:before{
     position: absolute;
@@ -39,28 +52,24 @@
     z-index: 1;
     background:linear-gradient(23deg, rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0));;
   }
-  &-img{
-    width: 100%;
-    overflow: hidden;
-    text-align: right;
-    img{
-
-      display: block;
-      height: 100%;
-      max-height: 560px;
-    }
+  .wrapper{
+    position: relative;
+    height: 100%;
   }
 
   &-title{
     position: absolute;
     z-index: 2;
-    left: 40px;
+    left: 0;
     top: 25.7%;
-    width: calc(50% - 40px);
+    width: 50%;
     max-width: 464px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     letter-spacing: normal;
     color: rgb(255, 255, 255);
+    @media (min-width: 1344px){
+      max-width: none;
+    }
     h1{
       margin-bottom: 16px;
       font:{
@@ -68,6 +77,12 @@
         size: 3.6rem;
       }
       line-height:4.4rem;
+      @media (min-width: 1344px){
+        margin-bottom: 24px;
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        letter-spacing: -0.5px;
+      }
     }
     p{
       margin-bottom: 32px;
@@ -76,10 +91,19 @@
         weight: $font-regular;
       }
       line-height: 2.4rem;
+      @media (min-width: 1344px){
+        margin-bottom: 36px;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+      }
     }
 
     .btn{
       width: 304px;
+      @media (min-width: 1344px){
+        width: 384px;
+        padding: 20px 16px  ;
+      }
     }
   }
 }
@@ -92,12 +116,18 @@
   .header-block{
     margin-bottom: 48px;
     color: $black--text;
+    @media (min-width: 1344px) {
+      margin-bottom: 64px;
+    }
   }
 
   &-list{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    @media (min-width: 1344px){
+      justify-content: space-between;
+    }
 
 
     &--item{
@@ -107,11 +137,29 @@
       align-items: flex-start;
       margin-right: 9%;
       margin-bottom: 48px;
+      @media (min-width: 1184px) and (max-width: 1343px){
+        flex-direction: row;
+      }
+      @media (min-width: 1344px){
+        width:28.6%;
+        margin-right: 16px;
+        flex-direction: column;
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+      }
 
       .icon{
         width: 104px;
         height: 104px;
         margin-bottom: 16px;
+        @media (min-width: 1184px) and (max-width: 1344px){
+          margin-right: 24px;
+          margin-bottom: 0;
+        }
+        @media (min-width: 1344px){
+          margin-bottom: 24px;
+        }
         img{
           display: block;
           width: 100%;
@@ -128,6 +176,9 @@
           line-height: 3.2rem;
           letter-spacing: normal;
           color: $black--text;
+          @media (min-width: 1344px){
+            margin-bottom: 16px;
+          }
         }
         p{
           font:{
@@ -137,6 +188,9 @@
           line-height: 2rem;
           letter-spacing: normal;
           color: $black--text;
+          @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
         }
       }
     }
@@ -151,6 +205,9 @@
   padding: 72px 0;
   box-sizing: border-box;
   background: linear-gradient(121deg, rgb(58, 166, 94), rgb(55, 116, 75));
+  @media (min-width: 1344px){
+    padding-bottom: 88px;
+  }
   .wrapper{
     display: flex;
     flex-direction: column;
@@ -159,12 +216,22 @@
   .header-block{
     margin-bottom: 32px;
     color: $white;
+    @media (min-width: 1344px){
+      margin-bottom: 48px;
+    }
   }
 
   &-list{
     display: flex;
     justify-content: space-between;
     margin-bottom: 64px;
+    @media (min-width: 1184px) and (max-width: 1343px){
+      justify-content: center;
+    }
+    @media (min-width: 1344px){
+      justify-content: center;
+      margin-bottom: 68px;
+    }
 
     &--item{
       max-width: 304px;
@@ -179,6 +246,21 @@
       transition: .2s ease box-shadow;
       padding: 40px 55px 48px;
       box-sizing: border-box;
+      @media (min-width: 1184px) and (max-width: 1343px){
+        margin-right: 16px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+      @media (min-width: 1344px){
+        max-width: 384px;
+        height: 384px;
+        padding: 72px 0;
+        margin-right: 16px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
       &:hover{
         box-shadow: 0 12px 20px 0 rgba(0,0,0,.32);
       }
@@ -192,11 +274,21 @@
         letter-spacing: -0.4px;
         text-align: center;
         color: $black--text;
+        @media (min-width: 1344px){
+          font-size: 4.8rem;
+          letter-spacing: -.5px;
+          margin-bottom: 8px;
+        }
       }
 
       .price{
         @extend .name;
         margin-bottom: 12px;
+        @media (min-width: 1344px){
+          font-size: 4.8rem;
+          letter-spacing: -.5px;
+          margin-bottom: 20px
+        }
       }
       .old-price{
         position: relative;
@@ -211,6 +303,9 @@
         letter-spacing: normal;
         text-align: center;
         color: rgba(0, 0, 0, 0.9);
+        @media (min-width: 1344px){
+          font-size: 2.2rem;
+        }
         &:before{
           position: absolute;
           content: '';
@@ -237,6 +332,10 @@
         padding: 16px 9px;
         margin-bottom: 0;
         margin-top: auto;
+        @media (min-width: 1344px){
+          max-width: 240px;
+          padding: 20px 10px;
+        }
       }
     }
 
@@ -255,6 +354,10 @@
     text-align: center;
     color: $white;
     border-bottom: 1px solid rgba(230,230,230,0.4);
+    @media (min-width: 1344px) {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
     &:after{
       position: absolute;
       content: '';
@@ -275,11 +378,14 @@
 
 .questions{
   width: 100%;
-  padding: 72px 40px 96px;
+  padding: 72px 0 96px;
   box-sizing: border-box;
 
   .header-block{
     margin-bottom: 32px;
+    @media (min-width: 1344px){
+      margin-bottom: 48px;
+    }
   }
   .questions-list{
     display: flex;
@@ -340,9 +446,16 @@
         line-height:2rem;
         letter-spacing: normal;
         color: $black--text;
+        @media (min-width: 1344px){
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
         p{
           max-width: 592px;
           width: 100%;
+          @media (min-width: 1344px){
+            max-width: 640px;
+          }
         }
       }
     }
@@ -355,7 +468,7 @@
   background-color: $black;
   background-image: url(../images/img-app.jpg);
   background-position: center;
-  background-size: auto 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 
   .wrapper{
