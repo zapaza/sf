@@ -29,7 +29,7 @@
       text-indent: -999px;
       overflow: hidden;
       opacity: .4;
-      @include sprite($icon-close-full);
+      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E5B56EE7F-3A1E-4ED2-BAB5-B5310287347B%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Cpath d='M3,29 L29,3' id='Path-2' stroke='%23000000' stroke-width='3'%3E%3C/path%3E%3Cpath d='M3,29 L29,3' id='Path-2-Copy' stroke='%23000000' stroke-width='3' transform='translate(16.000000, 16.000000) scale(-1, 1) translate(-16.000000, -16.000000) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       transition: .2s ease opacity;
       &:hover{
         opacity: .3;
@@ -57,7 +57,7 @@
       text-indent: -999px;
       overflow: hidden;
       opacity: 1;
-      @include sprite($icon-close);
+      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ED254B955-C740-450F-8233-2BCE7A651267%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/M/normal'%3E%3Cg id='Group-14'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpath d='M4.5,4.5 L19.5,19.5' id='Line-2' stroke='%23000000' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M19.5,4.5 L4.5,19.5' id='Line-2' stroke='%23000000' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       transition: .2s ease opacity;
       &:hover{
         opacity: .6;
@@ -192,11 +192,11 @@
         top: 12px;
         border: 0;
         background-color: $white;
-        @include sprite($icon-password);
+        background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E08912693-6391-4B69-9E91-EFA4A18543D8%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/pass/M/invisible/hover'%3E%3Cg id='icon/pass/invisible/hover'%3E%3Cg id='icon-pass-invisible-hover'%3E%3Crect id='Rectangle-2' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cg id='Group-4' transform='translate(1.000000, 8.000000)' stroke='%233AA65E'%3E%3Cpath d='M21.1663679,0 L21.1663679,2.73558953e-13 L21.1663679,2.73558953e-13 C19.2654003,3.86074061 15.4255626,6.5 10.9981839,6.5 C6.57080528,6.5 2.73096754,3.86074061 0.829999983,2.73558953e-13' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3Cpath d='M14.2,16 L14.8,18' id='Line' stroke='%233AA65E' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M19,15 L20.5,17' id='Line' stroke='%233AA65E' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M3.5,15 L5,17' id='Line' stroke='%233AA65E' stroke-linecap='square' transform='translate(4.250000, 16.000000) scale(-1, 1) translate(-4.250000, -16.000000) '%3E%3C/path%3E%3Cpath d='M9.8,16 L9.2,18' id='Line' stroke='%233AA65E' stroke-linecap='square'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         filter: grayscale(100%);
         transition: filter .2s ease;
         &.show{
-          @include sprite($icon-password-show);
+          background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E36350042-7C93-47A7-89E6-1C4CF4E14299%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/pass/M/visible/hover'%3E%3Cg id='icon/pass/visible/hover-copy'%3E%3Cg id='icon-pass-visible-hover'%3E%3Crect id='Rectangle-2' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cg id='Group-8' transform='translate(1.000000, 3.000000)' stroke='%233AA65E'%3E%3Cg id='Group-4' transform='translate(0.000000, 3.500000)'%3E%3Cpath d='M0.331816054,6.5 C2.32625987,2.63925939 6.3549139,0 11,0 C15.6450861,0 19.6737401,2.63925939 21.6681839,6.5 C19.6737401,10.3607406 15.6450861,13 11,13 C6.3549139,13 2.32625987,10.3607406 0.331816054,6.5 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3Ccircle id='Oval-10' cx='11' cy='10' r='2.5'%3E%3C/circle%3E%3Cg id='Group-5' transform='translate(11.000000, 1.500000) scale(1, -1) translate(-11.000000, -1.500000) translate(2.000000, 0.000000)' stroke-linecap='square'%3E%3Cpath d='M11.5,1 L12,3' id='Line'%3E%3C/path%3E%3Cpath d='M16,0 L17.5,2' id='Line'%3E%3C/path%3E%3Cpath d='M0.5,0 L2,2' id='Line' transform='translate(1.250000, 1.000000) scale(-1, 1) translate(-1.250000, -1.000000) '%3E%3C/path%3E%3Cpath d='M6.5,1 L6,3' id='Line'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         &:hover{
           filter: grayscale(0%);
@@ -207,6 +207,17 @@
       max-width: 304px;
       width: 100%;
       margin:0 auto 16px;
+    }
+    .green{
+      font:{
+        size: 1.4rem;
+        width: $font-regular;
+      }
+      color: $green;
+      &:hover{
+        color:$green-hover;
+        text-decoration: none;
+      }
     }
   }
 
@@ -342,11 +353,11 @@
           top: 12px;
           border: 0;
           background-color: $white;
-          @include sprite($icon-password);
+          background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E08912693-6391-4B69-9E91-EFA4A18543D8%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/pass/M/invisible/hover'%3E%3Cg id='icon/pass/invisible/hover'%3E%3Cg id='icon-pass-invisible-hover'%3E%3Crect id='Rectangle-2' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cg id='Group-4' transform='translate(1.000000, 8.000000)' stroke='%233AA65E'%3E%3Cpath d='M21.1663679,0 L21.1663679,2.73558953e-13 L21.1663679,2.73558953e-13 C19.2654003,3.86074061 15.4255626,6.5 10.9981839,6.5 C6.57080528,6.5 2.73096754,3.86074061 0.829999983,2.73558953e-13' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3Cpath d='M14.2,16 L14.8,18' id='Line' stroke='%233AA65E' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M19,15 L20.5,17' id='Line' stroke='%233AA65E' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M3.5,15 L5,17' id='Line' stroke='%233AA65E' stroke-linecap='square' transform='translate(4.250000, 16.000000) scale(-1, 1) translate(-4.250000, -16.000000) '%3E%3C/path%3E%3Cpath d='M9.8,16 L9.2,18' id='Line' stroke='%233AA65E' stroke-linecap='square'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
           filter: grayscale(100%);
           transition: filter .2s ease;
           &.show{
-            @include sprite($icon-password-show);
+            background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E36350042-7C93-47A7-89E6-1C4CF4E14299%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/pass/M/visible/hover'%3E%3Cg id='icon/pass/visible/hover-copy'%3E%3Cg id='icon-pass-visible-hover'%3E%3Crect id='Rectangle-2' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cg id='Group-8' transform='translate(1.000000, 3.000000)' stroke='%233AA65E'%3E%3Cg id='Group-4' transform='translate(0.000000, 3.500000)'%3E%3Cpath d='M0.331816054,6.5 C2.32625987,2.63925939 6.3549139,0 11,0 C15.6450861,0 19.6737401,2.63925939 21.6681839,6.5 C19.6737401,10.3607406 15.6450861,13 11,13 C6.3549139,13 2.32625987,10.3607406 0.331816054,6.5 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3Ccircle id='Oval-10' cx='11' cy='10' r='2.5'%3E%3C/circle%3E%3Cg id='Group-5' transform='translate(11.000000, 1.500000) scale(1, -1) translate(-11.000000, -1.500000) translate(2.000000, 0.000000)' stroke-linecap='square'%3E%3Cpath d='M11.5,1 L12,3' id='Line'%3E%3C/path%3E%3Cpath d='M16,0 L17.5,2' id='Line'%3E%3C/path%3E%3Cpath d='M0.5,0 L2,2' id='Line' transform='translate(1.250000, 1.000000) scale(-1, 1) translate(-1.250000, -1.000000) '%3E%3C/path%3E%3Cpath d='M6.5,1 L6,3' id='Line'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
           }
           &:hover{
             filter: grayscale(0%);

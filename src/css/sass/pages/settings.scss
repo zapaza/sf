@@ -114,7 +114,7 @@
             top: 12px;
             width: 24px;
             height: 24px;
-            @include sprite($icon-question);
+            background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EB80C8CBA-AFAB-43AE-9747-C28351359263%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/question/M/normal' fill='%23000000'%3E%3Cg id='Group-15'%3E%3Cg id='Group'%3E%3Ccircle id='Oval' fill-opacity='0.1' cx='12' cy='12' r='12'%3E%3C/circle%3E%3Cpath d='M10.9823091,13.7652778 C10.9823091,13.2356455 11.0858773,12.7976869 11.2930168,12.4513889 C11.5001562,12.1050909 11.8020464,11.7231502 12.1986965,11.3055556 C12.4895731,10.9999985 12.7033202,10.7428251 12.8399441,10.5340278 C12.976568,10.3252304 13.044879,10.0884272 13.044879,9.82361111 C13.044879,9.44675737 12.9148678,9.14884369 12.6548417,8.92986111 C12.3948156,8.71087853 12.0488538,8.60138889 11.616946,8.60138889 C11.2026671,8.60138889 10.8346695,8.70069345 10.5129423,8.89930556 C10.191215,9.09791766 9.92017491,9.37546118 9.69981378,9.73194444 L8.1,8.64722222 C8.47020669,7.99536711 8.97041895,7.49120549 9.60065177,7.13472222 C10.2308846,6.77823896 10.9778976,6.6 11.8417132,6.6 C12.8553744,6.6 13.6684948,6.84953454 14.2810987,7.34861111 C14.8937026,7.84768768 15.2,8.54027335 15.2,9.42638889 C15.2,9.84398357 15.1405034,10.2106466 15.0215084,10.5263889 C14.9025134,10.8421312 14.7570772,11.1094896 14.5851955,11.3284722 C14.4133139,11.5474548 14.1907525,11.7995356 13.9175047,12.0847222 C13.5913702,12.420835 13.3533837,12.7034711 13.2035382,12.9326389 C13.0536926,13.1618067 12.9787709,13.4393502 12.9787709,13.7652778 L10.9823091,13.7652778 Z M12.0013966,17.35 C11.6247343,17.35 11.3100882,17.219955 11.0574488,16.9598611 C10.8048094,16.6997672 10.6784916,16.3832426 10.6784916,16.0102778 C10.6784916,15.6373129 10.8025127,15.3256957 11.0505587,15.0754167 C11.2986046,14.8251376 11.6155474,14.7 12.0013966,14.7 C12.3872459,14.7 12.7041887,14.8251376 12.9522346,15.0754167 C13.2002806,15.3256957 13.3243017,15.6373129 13.3243017,16.0102778 C13.3243017,16.3832426 13.1979839,16.6997672 12.9453445,16.9598611 C12.6927051,17.219955 12.378059,17.35 12.0013966,17.35 Z' id='?' fill-opacity='0.9'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             border-radius: 50%;
             border: 0;
             cursor: pointer;
@@ -194,7 +194,7 @@
             height: 24px;
             right: 12px;
             top: 12px;
-            @include sprite($icon-time);
+            background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E2A40B027-F558-4815-87C1-FEB4658DE8C1%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/time/M/normal'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpath d='M7.51446806,4.5 C7.6408139,6.68590298 8.59505617,8.91420028 10.3923944,11.1901183 L10.6251823,11.484891 L10.4069055,11.7905648 C8.58228076,14.3457606 7.62031718,16.9131406 7.51059703,19.5 L16.4894094,19.5 C16.3797206,16.9123808 15.4177662,14.3450291 13.5931374,11.7906248 L13.3748201,11.4849897 L13.6075537,11.1901841 C15.40488,8.91349572 16.3591344,6.68516486 16.4855219,4.5 L7.51446806,4.5 Z' id='Rectangle' stroke='%23979797'%3E%3C/path%3E%3Cpath d='M10.6476468,17.5 L13.3523532,17.5 C12.8073355,15.5117763 12.2764695,14.5 12,14.5 C11.7235305,14.5 11.1926645,15.5117763 10.6476468,17.5 Z' id='Rectangle' stroke='%23979797' fill='%23979797'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             cursor: pointer;
             &:hover{
               .hard-hint{
@@ -274,7 +274,7 @@
             height: 24px;
             right: 12px;
             top: 12px;
-            @include sprite($icon-sucsess);
+            background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E17996188-26E4-4E39-9819-9E9CFA20F7C7%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/OK/M/normal'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpolyline id='Line-3' stroke='%233AA65E' stroke-width='1.8' stroke-linecap='square' points='5 12 9.5 16.5 19 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             cursor: pointer;
             &:hover{
               .hard-hint{
