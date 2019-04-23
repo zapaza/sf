@@ -1,5 +1,5 @@
-function Scroling(){
-    // действие при прокрутке страницы
+function Scrolling(){
+    //анимация скролинга страницы
     if(!$('body').hasClass('main-page')){
         var mywindow = $(window);
         var mypos = 68;
@@ -9,7 +9,7 @@ function Scroling(){
         console.log(scrollEnd);
         mywindow.scroll(function () {
             newscroll = mywindow.scrollTop();
-            if (newscroll > mypos && !up) { //если есть прокрутка в низ
+            if (newscroll > mypos && !up) { //если есть прокрутка в низ·
                 if($('#show-menu').hasClass('open')){
                     $('.header').stop().removeClass('scroll-bottom');
                     up = !up;
@@ -62,49 +62,13 @@ function Scroling(){
         });
     }
 }
-$(document).ready(function () {
 
+function Tabs(){
     var $body = $('body'),
         ua = navigator.userAgent,
         event = (ua.match(/iPad/i)) ? "touchstart" : "click";
 
-    Scroling();
-//фокус поиска
-    $('#query').on('keyup',function(){
-        var $this = $(this),
-            val = $this.val();
-
-        if(val.length >= 1){
-            $(this).closest('form').find('.header-search--btn_reset').fadeIn('200');
-            $(this).closest('form').find('.header-search--btn').css('opacity','1');
-        }else {
-            $(this).closest('form').find('.header-search--btn_reset').fadeOut('200');
-            $(this).closest('form').find('.header-search--btn').css('opacity','.4');
-        }
-    });
-
-//очистка поля поиска
-    $body.on(event, '.header-search--btn_reset', function () {
-       $(this).fadeOut('fast');
-       $(this).closest('form').find('.header-search--btn').css('opacity','.4');
-    });
-
-//скрол по якорю
-    $body.on(event,".company-sidebar a", function (e) {
-        e.preventDefault();
-        var id  = $(this).attr('href'),
-        top = $(id).offset().top - 70;
-        $('body,html').animate({scrollTop: top}, 1000);
-    });
-
-//показ меню
-    $body.on(event, '#show-menu', function (e) {
-        e.preventDefault();
-        $(this).toggleClass('open');
-        $('#lk-menu').fadeToggle('500');
-    });
-
-//скрипт для карточек , переключение вкладок(анимация)
+    //скрипт для карточек , переключение вкладок(анимация)
     if($('.card-content').length > 0){
         //анимация чекбокса
         $body.on(event, '.card-content-tabs--link',function(){
@@ -138,6 +102,7 @@ $(document).ready(function () {
     }
 
 
+
     //tabs в карточеке тендеры
     if($('.tender').length > 0){
         $(".tender").find('.tender-content-tab').hide();
@@ -159,7 +124,52 @@ $(document).ready(function () {
             // $(".tab-drawer-heading[rel^='" + activeTab + "']").addClass("d-active");
         });
     }
+}
 
+
+$(document).ready(function () {
+
+    var $body = $('body'),
+        ua = navigator.userAgent,
+        event = (ua.match(/iPad/i)) ? "touchstart" : "click";
+
+    Scrolling();
+    Tabs();
+
+//фокус поиска
+    $('#query').on('keyup',function(){
+        var $this = $(this),
+            val = $this.val();
+
+        if(val.length >= 1){
+            $(this).closest('form').find('.header-search--btn_reset').fadeIn('200');
+            $(this).closest('form').find('.header-search--btn').css('opacity','1');
+        }else {
+            $(this).closest('form').find('.header-search--btn_reset').fadeOut('200');
+            $(this).closest('form').find('.header-search--btn').css('opacity','.4');
+        }
+    });
+
+//очистка поля поиска
+    $body.on(event, '.header-search--btn_reset', function () {
+        $(this).fadeOut('fast');
+        $(this).closest('form').find('.header-search--btn').css('opacity','.4');
+    });
+
+//скрол по якорю
+    $body.on(event,".company-sidebar a", function (e) {
+        e.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top - 70;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+
+//показ меню
+    $body.on(event, '#show-menu', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('open');
+        $('#lk-menu').fadeToggle('500');
+    });
 
 //скрипт показа модалки
     $('a[data-modal]').magnificPopup({
@@ -179,18 +189,32 @@ $(document).ready(function () {
         fixedBgPos: true,
         preloader: false,
         overflowY: 'scroll',
+        closeOnBgClick:false,
         removalDelay: 300,
         closeBtnInside: false,
         mainClass: 'zoom-in authorization'
     });
+
+//модалка в модалке "открытия на другом устройстве"
+    if(('.use-here').length > 0){
+        $body.on(event, '.why-show',function (e) {
+            e.preventDefault();
+            $(this).closest('.use-here').find('#why-show-modal').show();
+        });
+        //закрытие этой модалки
+        $body.on(event, '.close-why-show-modal', function (e) {
+            e.preventDefault();
+            $(this).closest('#why-show-modal').hide();
+        });
+    }
 
 //показ пароля
     $body.on(event, '.show-password', function (e) {
         e.preventDefault();
         var passwordInput = $(this).closest('label').find('input.password'),
             typeInput = passwordInput.attr('type') == "text" ? "password" : 'text';
-            passwordInput.prop('type', typeInput);
-            $(this).toggleClass('show');
+        passwordInput.prop('type', typeInput);
+        $(this).toggleClass('show');
     });
 
 //таймер в модалке регистрации
@@ -223,5 +247,4 @@ $(document).ready(function () {
         } )
     }
 });
-
 

@@ -10,8 +10,8 @@
   <title>Site title</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <link href="css/plugins.min.css" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/plugins.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
   <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -88,7 +88,7 @@
 
           <div class="header-link">
 
-            <!--<a href="#authorization" data-modal-authorization class="btn btn-green enter">Войти</a>-->
+            <a href="#use-here" data-modal-authorization class="btn btn-green enter">Войти</a>
 
             <!--<a href="#0" class="btn btn-green enter">-->
             <!--<span class="loader">-->
@@ -98,36 +98,15 @@
             <!--</span>-->
             <!--</a>-->
 
-            <ul>
-              <li><a href="#0" class="header-link--item" data-hint="Мониторинг"><svg id="icon-favourites" width="100%" height="100%">
-                    <g fill="none" fill-rule="evenodd">
-                      <path d="M0 0h32v32H0z"></path>
-                      <path class="star" fill="#999" d="M16 20.94l-7.641 5.577 2.943-8.99-7.666-5.544 9.46.02L16 3l2.904 9.003 9.46-.02-7.666 5.544 2.943 8.99z"></path>
-                    </g>
-                  </svg>
-                </a></li>
-              <li><a href="#0" class="header-link--item" data-hint="Сравнение"><svg id="icon-options" width="100%" height="100%">
-                    <g fill="none" fill-rule="evenodd">
-                      <path d="M0 0h32v32H0z"></path>
-                      <g fill="#999">
-                        <path class="options" d="M16 4h2v24h-2zM19 8h9v4h-9zM8 8h7v4H8zM19 14h5v4h-5zM4 14h11v4H4zM10 20h5v4h-5zM19 20h7v4h-7z"></path>
-                      </g>
-                    </g>
-                  </svg>
-                </a></li>
-              <li><a href="#0" class="header-link--item big" id="show-menu">
-                  <svg id="icon-profile" width="100%" height="100%">
-                    <g fill="none" fill-rule="evenodd">
-                      <path class="overlay" d="M0 0h32v32H0z"></path>
-                      <g fill-opacity=".1" fill="#000">
-                        <circle id="a" cx="16" cy="16" r="16"></circle>
-                      </g>
-                      <circle fill="#999" mask="url(#b)" cx="16" cy="38" r="15"></circle>
-                      <circle fill="#999" cx="16" cy="14" r="7"></circle>
-                    </g>
-                  </svg>
-                </a></li>
-            </ul>
+            <!--<ul>-->
+            <!--<li><a href="#0" class="header-link&#45;&#45;item" data-hint="Мониторинг"><svg id="icon-favourites" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path d="M0 0h32v32H0z"></path><path class="star" fill="#999" d="M16 20.94l-7.641 5.577 2.943-8.99-7.666-5.544 9.46.02L16 3l2.904 9.003 9.46-.02-7.666 5.544 2.943 8.99z"></path></g></svg>-->
+            <!--</a></li>-->
+            <!--<li><a href="#0" class="header-link&#45;&#45;item" data-hint="Сравнение"><svg id="icon-options" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path d="M0 0h32v32H0z"></path><g fill="#999"><path class="options" d="M16 4h2v24h-2zM19 8h9v4h-9zM8 8h7v4H8zM19 14h5v4h-5zM4 14h11v4H4zM10 20h5v4h-5zM19 20h7v4h-7z"></path></g></g></svg>-->
+            <!--</a></li>-->
+            <!--<li><a href="#0" class="header-link&#45;&#45;item big" id="show-menu">-->
+            <!--<svg id="icon-profile" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path class="overlay" d="M0 0h32v32H0z"></path><g fill-opacity=".1" fill="#000"><circle id="a" cx="16" cy="16" r="16"></circle></g><circle fill="#999" mask="url(#b)" cx="16" cy="38" r="15"></circle><circle fill="#999" cx="16" cy="14" r="7"></circle></g></svg>-->
+            <!--</a></li>-->
+            <!--</ul>-->
 
             <div class="header-link--menu" id="lk-menu">
               <div class="profile-info">
@@ -382,6 +361,33 @@
         <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>
 
       </div>
+    </div>
+  </div>
+  <div class="modal modal-full mfp-hide" id="use-here">
+    <div class="modal-content">
+      <div class="modal-content--inner">
+        <!-- тело для входа -->
+
+      </div>
+      <section class="use-here">
+        <div class="wrapper">
+          <div class="use-here--inner">
+            <h1>Сервис «Стоп-Фактор» открыт на другом устройстве</h1>
+
+            <a href="#0" class="btn btn-green">Использовать здесь</a>
+            <a href="" class="btn btn-default">Отмена</a>
+
+            <a href="#why-show-modal" class="why-show">Почему я вижу это сообщение?</a>
+          </div>
+
+          <div class="modal modal-why-show-modal" id="why-show-modal" style="display: none;">
+            <button class="close-why-show-modal"></button>
+            <div class="modal-inner">
+              <p>«Стоп-фактор» — это продукт для персонального пользования и он не может работать на нескольких устройствах одновременно. Это сделано для достижения минимально возможной цены.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 
