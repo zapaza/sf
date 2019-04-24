@@ -265,9 +265,148 @@
                 </div>
                 <div class="card-footer">
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -350,9 +489,148 @@
                 </div>
                 <div class="card-footer">
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -427,9 +705,148 @@
                     <a href="#0" class="btn btn-default">Все учрежденные юридические лица <span>200</span></a>
                   </div>
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -499,9 +916,148 @@
                     <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
                   </div>
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -580,9 +1136,148 @@
                     <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
                   </div>
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -674,9 +1369,148 @@
                     <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
                   </div>
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -695,9 +1529,148 @@
                     <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
                   </div>
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -826,9 +1799,148 @@
                     <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
                   </div>
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -1032,9 +2144,148 @@
                     <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
                   </div>
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -1128,9 +2379,148 @@
                     <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
                   </div>
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -1154,7 +2544,7 @@
                 </div>
                 <div class="card-content">
                   <div class="card-content-tabs">
-                    <div class="card-content-tabs--link active" rel="fssp-tabs-1">Таблица</div>
+                    <div class="card-content-tabs--link active " rel="fssp-tabs-1">Таблица</div>
                     <div class="card-content-tabs--switch">
                       <input type="checkbox" id="fssp-tabs">
                       <label aria-hidden="true" for="fssp-tabs">вкл</label>
@@ -1226,9 +2616,148 @@
                     <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
                   </div>
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -1432,9 +2961,148 @@
                     <a href="#0" class="btn btn-default">Все годы <span>1997—2019</span></a>
                   </div>
                   <ul class="card-footer-link">
-                    <li><a href="#0" class="card-footer-link--download" data-hint="Скачать"></a></li>
-                    <li><a href="#0" class="card-footer-link--share" data-hint="Поделиться"></a></li>
-                    <li><a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a></li>
+                    <li>
+                      <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
+                      <div class="company-modal download-modal">
+                        <form action="">
+                          <label for="card-1">
+                            <input type="checkbox" name="download-card" id="card-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-2">
+                            <input type="checkbox" name="download-card" id="card-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-3">
+                            <input type="checkbox" name="download-card" id="card-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-4">
+                            <input type="checkbox" name="download-card" id="card-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-5">
+                            <input type="checkbox" name="download-card" id="card-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-6">
+                            <input type="checkbox" name="download-card" id="card-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-7">
+                            <input type="checkbox" name="download-card" id="card-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-8">
+                            <input type="checkbox" name="download-card" id="card-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-9">
+                            <input type="checkbox" name="download-card" id="card-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-10">
+                            <input type="checkbox" name="download-card" id="card-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-11">
+                            <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+                      <div class="company-modal share-modal">
+                        <div class="lds-ring">
+                          <!--лоадер-->
+                          <div></div>
+                        </div>
+                        <form action="">
+                          <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+                          <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+                          <!--когда скопирована , то показывается ссылка скопирова-->
+                        </form>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
+                      <div class="company-modal print-modal">
+                        <form action="">
+                          <label for="card-print-1">
+                            <input type="checkbox" name="print-card" id="card-print-1">
+                            <span class="checkbox-info">Краткая справка</span>
+                          </label>
+                          <label for="card-print-2">
+                            <input type="checkbox" name="print-card" id="card-print-2">
+                            <span class="checkbox-info">Собственники</span>
+                          </label>
+                          <label for="card-print-3">
+                            <input type="checkbox" name="print-card" id="card-print-3">
+                            <span class="checkbox-info">Взаимосвязи</span>
+                          </label>
+                          <label for="card-print-4">
+                            <input type="checkbox" name="print-card" id="card-print-4">
+                            <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
+                          </label>
+                          <label for="card-print-5">
+                            <input type="checkbox" name="print-card" id="card-print-5">
+                            <span class="checkbox-info">Отчетность</span>
+                          </label>
+                          <label for="card-print-6">
+                            <input type="checkbox" name="print-card" id="card-print-6">
+                            <span class="checkbox-info">Экономика</span>
+                          </label>
+                          <label for="card-print-7">
+                            <input type="checkbox" name="print-card" id="card-print-7">
+                            <span class="checkbox-info">Бизнес</span>
+                          </label>
+                          <label for="card-print-8">
+                            <input type="checkbox" name="print-card" id="card-print-8">
+                            <span class="checkbox-info">Арбитражи</span>
+                          </label>
+                          <label for="card-print-9">
+                            <input type="checkbox" name="print-card" id="card-print-9">
+                            <span class="checkbox-info">ФССП</span>
+                          </label>
+                          <label for="card-print-10">
+                            <input type="checkbox" name="print-card" id="card-print-10">
+                            <span class="checkbox-info">Тендеры</span>
+                          </label>
+                          <label for="card-print-11">
+                            <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
+                            <span class="checkbox-info">Проверки</span>
+                          </label>
+                          <label for="check-all-print" class="check-all">
+                            <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
+                            <span class="checkbox-info">Выделить все</span>
+                          </label>
+                          <button type="submit" class="coppy-link btn btn-green">Печать</button>
+                          <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
+                          <button type="button" class="btn btn-green enter">
+                            <span class="loader">
+                              <span class="loader-item loader-item--1"></span>
+                              <span class="loader-item loader-item--2"></span>
+                              <span class="loader-item loader-item--3"></span>
+                            </span>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -1446,21 +3114,6 @@
               <a href="#0" class="btn btn-default">Выписка</a>
             </div>
 
-            <!--<div class="compamy-modal share-modal" >-->
-            <!--тут будут элементы управления , пока не трогай оно не доделано-->
-            <!--<div class="lds-ring"> &lt;!&ndash;лоадер&ndash;&gt;-->
-            <!--<div></div>-->
-            <!--<div></div>-->
-            <!--<div></div>-->
-            <!--<div></div>-->
-            <!--</div>-->
-            <!--<form action="">-->
-            <!--<input type="text" value="">-->
-            <!--<button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>-->
-            <!--</form>-->
-            <!--</div>-->
-
-            .
           </div>
         </div>
 

@@ -246,5 +246,21 @@ $(document).ready(function () {
 
         } )
     }
-});
 
+
+//Показ модалки поделиться
+    if($('.company-modal').length > 0){
+        $body.on(event, '.trigger-modal', function (e) {
+            e.preventDefault();
+            $(this).next('.company-modal').fadeIn();
+        })
+    }
+});
+$(document).mouseup(function (e){
+    var div = $(".company-modal");
+    if (!div.is(e.target) && div.has(e.target).length === 0 ) {
+        div.fadeOut();
+    } else if (div.prev('a').is(e.target)){
+        div.show();
+    }
+});
