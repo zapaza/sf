@@ -16,6 +16,9 @@
   }
   &.scroll-bottom{
     top: -68px;
+    @media (max-width: 1263px){
+      top: -64px;
+    }
   }
   .wrapper{
     display: flex;
@@ -36,24 +39,42 @@
       align-items: center;
       justify-content: space-between;
       transition: top .2s ease;
+      @media (max-width: 1343px){
+        width: 704px;
+      }
+      @media (max-width: 1263px){
+        margin-left: 240px;
+      }
       &.show{
         top: 54px;
-      }
-      h1{
-        position: relative;
-        max-width: 672px;
-        width: auto;
-        font:{
-          size: 1.6rem;
-          weight: $font-bold;
+        @media (max-width: 1263px){
+          top: 52px;
         }
-        line-height: 2rem;
-        letter-spacing: 0.5px;
-        color: $black--text;
-        white-space: nowrap;
-        overflow: hidden;
+      }
+      &--inner{
+        position: relative;
+        max-width: 608px;
+        width: auto;
         cursor: pointer;
-        &.max-width{
+        @media (max-width: 1343px){
+          max-width: 528px;
+        }
+        &:after{
+          content:'';
+          position: absolute;
+          right: -32px;
+          top: 50%;
+          margin-top: -12px;
+          z-index: 999;
+          width: 24px;
+          height: 24px;
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'/%3E%3Ccircle cx='12' cy='12' r='12' fill='%23000' fill-opacity='.1'/%3E%3Cpath stroke='%23000' stroke-linecap='square' stroke-width='1.8' d='M8 13.5l4-4 4 4'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        & > div {
+          position: relative;
+          max-width: 100%;
+          width: auto;
           &:after{
             content:'';
             position: absolute;
@@ -65,6 +86,31 @@
           }
         }
 
+        &:hover{
+          h1{
+            opacity: .7;
+          }
+        }
+      }
+      h1{
+        position: relative;
+        max-width: 100%;
+        width: auto;
+        overflow: hidden;
+        font:{
+          size: 1.6rem;
+          weight: $font-bold;
+        }
+        line-height: 2rem;
+        letter-spacing: 0.5px;
+        color: $black--text;
+        white-space: nowrap;
+        transition: .2s ease;
+        text-overflow: clip;
+        @media (max-width: 1343px){
+          font-size: 1.4rem;
+          height: 1.6rem;
+        }
       }
       &--factors{
         position: static;
@@ -73,6 +119,10 @@
           weight: $font-bold;
         }
         line-height: 2rem;
+        @media (max-width: 1343px){
+          font-size: 1.4rem;
+          height: 1.6rem;
+        }
       }
     }
   }

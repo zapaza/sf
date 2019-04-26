@@ -124,6 +124,26 @@ function Tabs(){
             // $(".tab-drawer-heading[rel^='" + activeTab + "']").addClass("d-active");
         });
     }
+    if($('.egrul').length > 0){
+        $(".egrul").find('.egrul-content-tab').hide();
+        $(".egrul").find('.egrul-content-tab:first').show();
+
+
+        $body.on(event, ".egrul-tabs .egrul-tabs--name", function () {
+
+            $(".egrul-content-tab").hide();
+
+            var activeTab = $(this).attr("rel");
+
+            $("#" + activeTab).fadeIn();
+
+            $(".egrul-tabs .egrul-tabs--name").removeClass("active");
+            $(this).addClass("active");
+
+            // $(".tab-drawer-heading").removeClass("d-active");
+            // $(".tab-drawer-heading[rel^='" + activeTab + "']").addClass("d-active");
+        });
+    }
 }
 
 
@@ -265,19 +285,20 @@ $(document).ready(function () {
             mainCardTop = mainCard.offset().top , //Получаем начальное расположение нашего блока
             mainCardHeight = $('.index-card-js')[0].scrollHeight,
             mainCardSum = mainCardHeight -  mainCardTop - 70,
-            fakeName = $(mainCard).find('.card-header').clone();
+            fakeName = mainCard.find('.card-header').clone(),
+            wrapTrue =false;
         $(window).scroll(function () {
             var windowScroll = $(window).scrollTop(); //Получаем величину, показывающую на сколько прокручено окно
-
             if (windowScroll > mainCardSum) { // Если прокрутили больше, чем расстояние до блока, то приклеиваем его
                 $('.header .wrapper').append(fakeName);
                 setTimeout(function () {
                     $('.header').find('.card-header').fadeIn(300).addClass('show');
                 },500);
+                if( wrapTrue === false ){
 
-                if($('.header').find('.card-header').find('h1').width() >= '604'){
-                    console.log(123);
-                    $('.header').find('.card-header').find('h1').addClass('max-width');
+                    $('.header').find('.card-header').find('h1').wrap('<div class="card-header--inner"><div> </div></div>');
+
+                    wrapTrue = true;
                 }
             } else {
                 $('.header').find('.card-header').removeClass('show').fadeOut(300);
@@ -285,9 +306,14 @@ $(document).ready(function () {
                     $('.header').find('.card-header').remove();
                 },300);
             }
-
-
         });
+
+        $('body').on(event, '.card-header--inner', function() {
+            $('html, body').animate({scrollTop: 0},500);
+            return false;
+        })
+
+
     }
 
 

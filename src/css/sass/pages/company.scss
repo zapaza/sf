@@ -225,6 +225,12 @@
         }
 
       }
+      &.card-egrul{
+        padding: 32px 16px;
+        .card-header{
+          padding: 0 16px;
+        }
+      }
     }
   }
 
