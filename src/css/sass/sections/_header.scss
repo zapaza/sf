@@ -21,6 +21,60 @@
     display: flex;
     align-items: center;
     justify-content:flex-start;
+    position: relative;
+
+    .card-header{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      max-width: 784px;
+      margin: 0 auto;
+      background-color: $body-bg-color;
+      padding:24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: top .2s ease;
+      &.show{
+        top: 54px;
+      }
+      h1{
+        position: relative;
+        max-width: 672px;
+        width: auto;
+        font:{
+          size: 1.6rem;
+          weight: $font-bold;
+        }
+        line-height: 2rem;
+        letter-spacing: 0.5px;
+        color: $black--text;
+        white-space: nowrap;
+        overflow: hidden;
+        cursor: pointer;
+        &.max-width{
+          &:after{
+            content:'';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 56px;
+            background-image: linear-gradient(to right, rgba(230, 230, 230, 0), rgb(230, 230, 230));
+          }
+        }
+
+      }
+      &--factors{
+        position: static;
+        font:{
+          size: 1.6rem;
+          weight: $font-bold;
+        }
+        line-height: 2rem;
+      }
+    }
   }
 
   &-logo{

@@ -6,7 +6,7 @@ function Scrolling(){
         var up = false;
         var newscroll;
         var scrollEnd =  $('.page-content').innerHeight() - $('.page-content').offset().top  - $('.company-sidebar').innerHeight();
-        console.log(scrollEnd);
+        // console.log(scrollEnd);
         mywindow.scroll(function () {
             newscroll = mywindow.scrollTop();
             if (newscroll > mypos && !up) { //если есть прокрутка в низ·
@@ -255,6 +255,43 @@ $(document).ready(function () {
             $(this).next('.company-modal').fadeIn();
         })
     }
+
+
+
+//Анимация главной карточки при прокрутке
+
+    if($('.main-card').length > 0){
+        var mainCard = $('.index-card-js'), //Получаем нужный объект
+            mainCardTop = mainCard.offset().top , //Получаем начальное расположение нашего блока
+            mainCardHeight = $('.index-card-js')[0].scrollHeight,
+            mainCardSum = mainCardHeight -  mainCardTop - 70,
+            fakeName = $(mainCard).find('.card-header').clone();
+        $(window).scroll(function () {
+            var windowScroll = $(window).scrollTop(); //Получаем величину, показывающую на сколько прокручено окно
+
+            if (windowScroll > mainCardSum) { // Если прокрутили больше, чем расстояние до блока, то приклеиваем его
+                $('.header .wrapper').append(fakeName);
+                setTimeout(function () {
+                    $('.header').find('.card-header').fadeIn(300).addClass('show');
+                },500);
+
+                if($('.header').find('.card-header').find('h1').width() >= '604'){
+                    console.log(123);
+                    $('.header').find('.card-header').find('h1').addClass('max-width');
+                }
+            } else {
+                $('.header').find('.card-header').removeClass('show').fadeOut(300);
+                setTimeout(function () {
+                    $('.header').find('.card-header').remove();
+                },300);
+            }
+
+
+        });
+    }
+
+
+
 });
 $(document).mouseup(function (e){
     var div = $(".company-modal");
