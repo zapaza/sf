@@ -62,6 +62,31 @@
       }
     }
   }
+  &.affiliation-modal{
+    .mfp-container{
+      padding: 0;
+
+      .mfp-content{
+        width: 100%;
+        height: 100%;
+      }
+
+      .mfp-close{
+        right: 20px;
+        top: 20px;
+        width: 32px;
+        height: 32px;
+        text-indent: -999px;
+        overflow: hidden;
+        opacity: .4;
+        background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E5B56EE7F-3A1E-4ED2-BAB5-B5310287347B%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Cpath d='M3,29 L29,3' id='Path-2' stroke='%23000000' stroke-width='3'%3E%3C/path%3E%3Cpath d='M3,29 L29,3' id='Path-2-Copy' stroke='%23000000' stroke-width='3' transform='translate(16.000000, 16.000000) scale(-1, 1) translate(-16.000000, -16.000000) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        transition: .2s ease opacity;
+        &:hover{
+          opacity: .3;
+        }
+      }
+    }
+  }
 }
 .modal{
   position: relative;
@@ -768,6 +793,11 @@
         }
       }
     }
+  }
+
+  &-affiliation{
+    width: 100%;
+    height: 100%;
   }
 
 

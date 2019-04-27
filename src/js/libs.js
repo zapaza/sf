@@ -225,6 +225,16 @@ $(document).ready(function () {
         closeBtnInside: false,
         mainClass: 'zoom-in card-modal'
     });
+    $('a[data-modal-affiliation]').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        fixedBgPos: true,
+        preloader: false,
+        overflowY: 'auto',
+        removalDelay: 300,
+        closeBtnInside: true,
+        mainClass: 'zoom-in affiliation-modal'
+    });
 
 //модалка в модалке "открытия на другом устройстве"
     if(('.use-here').length > 0){
