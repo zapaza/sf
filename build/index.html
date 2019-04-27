@@ -10,8 +10,8 @@
   <title>Site title</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <link href="css/plugins.min.css" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/plugins.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
   <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -181,38 +181,61 @@
                           <p><span>Дата изменения: </span>30.06.2016 </p>
                         </div>
                       </div>
-                      <div class="main-card-info--col">
-                        <div class="main-card-info--row">
-                          <p class="title">70.22</p>
-                          <h3>Консультирование по вопросам коммерческой деятельности и управления</h3>
-                          <a href="#0"><span>Все виды деятельности </span>44</a>
-                        </div>
-                      </div>
+                      <a href="#modal-affiliation" data-modal class="main-card-info--col">
+                        <span class="main-card-info--row">
+                          <h3 class="name">СХЕМА АФФИЛИРОВАННОСТИ</h3>
+                          <p class="green">Pазвернуть</p>
+                        </span>
+                      </a>
                     </div>
                     <div class="main-card-info full">
                       <div class="main-card-info--col">
+                        <div class="main-card-info--row characteristic">
+                          <p class="title">Характеристики</p>
+                          <p><span>Размер: </span>микропредприятие</p>
+                          <p><span>Выручка: </span>менее 120 млн. руб.</p>
+                          <p><span>Штат: </span>менее 15 человек</p>
+                          <p><span>Уставный капитал: </span>5 105 981 778 ₽</p>
+                          <p><span>Налоговый режим:</span>УСН</p>
+                          <p><span>Блокировка счета:</span><a href="#0" class="block-price"><span>Запросить данные</span></a></p>
+                          <p><span>Блокировка счета:</span><a href="#0" class="block-price loading">
+                              <span class="loader">
+                                <span class="loader-item loader-item--1"></span>
+                                <span class="loader-item loader-item--2"></span>
+                                <span class="loader-item loader-item--3"></span>
+                              </span>
+                            </a></p>
+                          <p><span>Блокировка счета:</span><span class="good">Решений о блокировке счетов не найдено</span></p>
+                          <p><span>Блокировка счета:</span>
+                            <span class="warning">Есть решения о блокировке счетов
+                              <span class="warning-icon">?
+                                <span class="hard-hint">
+                                  <span class="hard-hint--header">
+                                    Почему счет заблокирован?
+                                  </span>
+                                  <span class="hard-hint--text">
+                                    Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                                  </span>
+                                </span>
+                              </span>
+                            </span>
+                          </p>
+                          <a href="#0"><span>Выдано 146 лицензий</span></a>
+                        </div>
                         <div class="main-card-info--row">
-                          <p class="title">Реквизиты</p>
+                          <p class="title">Код статистики</p>
                           <p><span>ОГРН: </span>1027700161906</p>
                           <p><span>ОКПО: </span>58032482</p>
                           <p><span>ИНН: </span>7707300940</p>
                           <p><span>КПП: </span>770701001</p>
-                          <p><span>Р/С: </span>40702810600000000080</p>
-                          <p><span>Банк: </span>Банк «ВБРР» (АО)</p>
-                          <p><span>К/С: </span>30101810900000000880</p>
-                          <p><span>БИК: </span>044525880</p>
-                          <a href="#0"><span>Реквизиты для договора</span></a>
+                          <a href="#modal-cods" data-modal-card><span>Все коды</span></a>
                         </div>
+
                         <div class="main-card-info--row">
-                          <p class="title">Коды статистики</p>
-                          <p><span>ОКОПФ: </span>12247</p>
-                          <p><span>ОКАТО: </span>45286596000</p>
-                          <a href="#0"><span>Все коды</span></a>
-                        </div>
-                        <div class="main-card-info--row">
-                          <p><span class="normal">Уставный капитал: </span>105 981 778 ₽</p>
-                          <p><span class="normal">Режим налогообложения: </span>ОСНО</p>
-                          <a href="#0"><span>Выдано 104 лицензии</span></a>
+                          <p class="title">Вид деятельности</p>
+                          <p><span>ОКВЭД: </span>70.22</p>
+                          <p>Консультирование по вопросам коммерческой деятельности и управления</p>
+                          <a href="#modal-activity" data-modal-card><span>Все виды деятельности</span> 144</a>
                         </div>
                       </div>
 
@@ -225,41 +248,41 @@
                             <p class="item-address--street"> г. Сольцы</p>
                             <p class="item-address--house"> набережная 7 ноября, дом 18</p>
                           </div>
-                          <a href="#0"><span>Смотреть на карте</span></a>
+                          <a href="#modal-map" data-modal-card><span>Смотреть на карте</span></a>
                         </div>
                         <div class="main-card-info--row">
-                          <p class="title">Фактический адрес</p>
+                          <p class="title">Фактическиe адреса</p>
                           <div class="item-address">
                             <p class="item-address--index">175040</p>
                             <p class="item-address--city"> Солецкий р-н</p>
                             <p class="item-address--street"> г. Сольцы</p>
                             <p class="item-address--house"> набережная 7 ноября, дом 18</p>
                           </div>
-                          <a href="#0"><span>Показать все</span> 144</a>
+                          <a href="#modal-address" data-modal-card><span>Показать все</span> 144</a>
                         </div>
                         <div class="main-card-info--row">
                           <p class="title">Телефоны</p>
                           <p>+7 (495) 278-13-13, +7 (495) 278-30-30</p>
-                          <a href="#0"><span>Показать все</span> 144</a>
+                          <a href="#modal-phone" data-modal-card><span>Показать все</span> 144</a>
                         </div>
                         <div class="main-card-info--row">
                           <p class="title">Электронная почта</p>
                           <p>info@rambler-co.ru, info@rambler.ru</p>
-                          <a href="#0"><span>Показать все</span> 144</a>
+                          <a href="#modal-email" data-modal-card><span>Показать все</span> 144</a>
                         </div>
                         <div class="main-card-info--row">
                           <p class="title">Сайт</p>
                           <p><a href="www.auto.ru" class="link" target="_blank">www.auto.ru</a></p>
-                          <a href="#0"><span>Показать все</span> 144</a>
+                          <a href="#modal-sites" data-modal-card><span>Показать все</span> 144</a>
                         </div>
                       </div>
                     </div>
-                    <div class="main-card-interconnections">
-                      <!-- я сделал кнопки как в макете, иконок в макете нет( , там есть большая общая картинка взаимосвязей, но мне ее от туда не достать почему-то в зеплине-->
-                      <button type="button" class="expand"><span class="icon-expand"></span>Развернуть</button>
-                      <button type="button" class="change plus">+</button>
-                      <button type="button" class="change minus">-</button>
-                    </div>
+                    <!--    <div class="main-card-interconnections">-->
+                    <!--        &lt;!&ndash; я сделал кнопки как в макете, иконок в макете нет( , там есть большая общая картинка взаимосвязей, но мне ее от туда не достать почему-то в зеплине&ndash;&gt;-->
+                    <!--        <button type="button" class="expand"><span class="icon-expand"></span>Развернуть</button>-->
+                    <!--        <button type="button" class="change plus">+</button>-->
+                    <!--        <button type="button" class="change minus">-</button>-->
+                    <!--    </div>-->
 
                   </div>
                 </div>
@@ -3814,6 +3837,270 @@
     </div>
   </div>
 
+  <!--модалки для главной карточки компании-->
+  <div class="modal modal-main-card modal-sites  mfp-hide" id="modal-sites">
+    <div class="modal-header">
+      <h2>Сайты</h2>
+      <span class="modal-header--count">Всего 7</span>
+    </div>
+    <div class="modal-content">
+      <ul>
+        <li><a href="https://www.auto.ru" target="_blank">www.auto.ru</a></li>
+        <li><a href="https://www.drive2.ru" target="_blank">www.drive2.ru</a></li>
+        <li><a href="https://www.somethingfactory.com" target="_blank">www.somethingfactory.com</a></li>
+        <li><a href="https://forums.nasioc.com/forums/index.php" target="_blank">forums.nasioc.com/forums/index.php</a></li>
+        <li><a href="https://www.sti-club.su" target="_blank">www.sti-club.su</a></li>
+        <li><a href="https://www.mag.auto.ru" target="_blank">www.mag.auto.ru</a></li>
+        <li><a href="https://www.anywayanyday.com/ru-ru/index" target="_blank">www.anywayanyday.com/ru-ru/index</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal modal-main-card modal-address  mfp-hide" id="modal-address">
+    <div class="modal-header">
+      <h2>Фактические адреса</h2>
+      <span class="modal-header--count">Всего 40</span>
+      <p class="subheader">Включая филиалы и структурные подразделения</p>
+    </div>
+    <div class="modal-content">
+      <ul>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">порядка 500 м на юго-запад от ориентира Хабаровский край, Ульчский район, п. Циммермановка, ул. Железнодорожная, 2</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+        <li>
+          <p class="name">115035, г. Москва, ул. Софийская Набережная, 26</p>
+          <p class="date">ноябрь 2018</p>
+        </li>
+      </ul>
+
+      <div class="modal-content--btn">
+        <a href="#0" class="btn btn-green">Загрузить еще</a>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-main-card modal-email  mfp-hide" id="modal-email">
+    <div class="modal-header">
+      <h2>Электронная почта</h2>
+      <span class="modal-header--count">Всего 9</span>
+    </div>
+    <div class="modal-content">
+      <ul>
+        <li><a href="mailto:i@auto.ru">i@auto.ru</a></li>
+        <li><a href="mailto:bolotov@drive2.ru">bolotov@drive2.ru</a></li>
+        <li><a href="mailto:n.vasilevsky_1984@somethingfactory.com">n.vasilevsky_1984@somethingfactory.com</a></li>
+        <li><a href="mailto:press@vsmn.transneft.ru">press@vsmn.transneft.ru</a></li>
+        <li><a href="mailto:vsmn@vsmn.transneft.ru">vsmn@vsmn.transneft.ru</a></li>
+        <li><a href="mailto:bashmashkin@team.auto.ru">bashmashkin@team.auto.ru</a></li>
+        <li><a href="mailto:valentin_kholodnorukov@team.auto.ru">valentin_kholodnorukov@team.auto.ru</a></li>
+        <li><a href="mailto:b.a.makaronov@team.auto.ru">b.a.makaronov@team.auto.ru</a></li>
+        <li><a href="mailto:supov1953@team.auto.ru">supov1953@team.auto.ru</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal modal-main-card modal-map  mfp-hide" id="modal-map">
+    <div class="modal-header">
+      <h2>Юридический адрес</h2>
+      <p class="subheader">123044, г. Комсомольск-на-Амуре, ул. Соломенного века, д. 15, корп. 1</p>
+    </div>
+    <div class="modal-content">
+      <div id="map">
+
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-main-card modal-phone  mfp-hide" id="modal-phone">
+    <div class="modal-header">
+      <h2>Телефоны</h2>
+      <span class="modal-header--count">Всего 11</span>
+    </div>
+    <div class="modal-content">
+      <ul>
+        <li><a href="tel:+74995171488">+7 (499) 517-14-88</a></li>
+        <li><a href="tel:+74995171488">+7 (499) 517-14-88</a></li>
+        <li><a href="tel:+74995171488">+7 (499) 517-14-88</a></li>
+        <li><a href="tel:+74995171488">+7 (499) 517-14-88</a></li>
+        <li><a href="tel:+74995171488">+7 (499) 517-14-88</a></li>
+        <li><a href="tel:+74995171488">+7 (499) 517-14-88</a></li>
+        <li><a href="tel:+74995171488">+7 (499) 517-14-88</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal modal-main-card modal-cods  mfp-hide" id="modal-cods">
+    <div class="modal-header">
+      <h2>Коды статистики</h2>
+    </div>
+    <div class="modal-content">
+      <ul>
+        <li>
+          <p class="name">ОГРН</p>
+          <p class="value">1026900545770</p>
+        </li>
+        <li>
+          <p class="name">ИНН</p>
+          <p class="value">6903041129</p>
+        </li>
+        <li>
+          <p class="name">ОКПО</p>
+          <p class="value">57298545</p>
+        </li>
+        <li>
+          <p class="name">КПП</p>
+          <p class="value">695001001</p>
+        </li>
+        <li>
+          <p class="name">ОКАТО</p>
+          <p class="value"> <span>28401370000</span>
+            Тверская область, Города областного подчинения Творской области, Тверь, Районы г. Твери, Московский</p>
+        </li>
+        <li>
+          <p class="name">ОКТМО</p>
+          <p class="value">2870100001 — г. Тверь</p>
+        </li>
+        <li>
+          <p class="name">ОКВЭД</p>
+          <p class="value">66.12.2 — Деятельность по управлению ценными бумагами</p>
+        </li>
+        <li>
+          <p class="name">ОКФС</p>
+          <p class="value">23 — Собственность иностранных юридических лиц</p>
+        </li>
+        <li>
+          <p class="name">ОКОПФ</p>
+          <p class="value">12247 — Публичные акционерные общества</p>
+        </li>
+        <li>
+          <p class="name">ФСС</p>
+          <p class="value">690038286669001 Государственное учреждение — Тверское региональное отделение фонда страхования Российской Федерации (11.04.2001)</p>
+        </li>
+        <li>
+          <p class="name">ПФР</p>
+          <p class="value">078043011894 — Управление Пенсионного фонда РФ в Московском районе г. Твери (11.04.2001)</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal modal-main-card modal-activity  mfp-hide" id="modal-activity">
+    <div class="modal-header">
+      <h2>Виды деятельности</h2>
+      <span class="modal-header--count">Всего 10</span>
+    </div>
+    <div class="modal-content">
+      <ul>
+        <li class="main">
+          <p class="name">73.11</p>
+          <p class="value">Деятельность рекламных агентств (основной)</p>
+        </li>
+        <li>
+          <p class="name">46.90</p>
+          <p class="value">Торговля оптовая неспециализированная</p>
+        </li>
+        <li>
+          <p class="name">59.11</p>
+          <p class="value">Производство кинофильмов, видеофильмов и телевизионных программ</p>
+        </li>
+        <li>
+          <p class="name">62.01</p>
+          <p class="value">Разработка компьютерного программного обеспечения</p>
+        </li>
+        <li>
+          <p class="name">62.01</p>
+          <p class="value">Деятельность консультативная и работы в области компьютерных технологий</p>
+        </li>
+        <li>
+          <p class="name">62.01</p>
+          <p class="value">Деятельность, свзанная с использованием вычислительной техники и информационных технологий, прочая</p>
+        </li>
+        <li>
+          <p class="name">63.11</p>
+          <p class="value">Деятельность по обработке данных, предоставление услуг по размещению информации и сваязанная с этим деятельность</p>
+        </li>
+        <li>
+          <p class="name">63.11.12</p>
+          <p class="value">Деятельность по созданию и использованию баз данных и информационных ресурсов</p>
+        </li>
+        <li>
+          <p class="name">82.99</p>
+          <p class="value">Деятельность по предоставлению прочих вспомогательных услуг для бизнеса, не включенная в другие группировки</p>
+        </li>
+        <li>
+          <p class="name">63.11.1</p>
+          <p class="value">Предоставление прочих персональных услуг, не включенных в другие группировки</p>
+        </li>
+      </ul>
+    </div>
+  </div>
   <!--svg-sprite-->
   <div class="svgSprite" hidden>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">

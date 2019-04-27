@@ -214,6 +214,17 @@ $(document).ready(function () {
         closeBtnInside: false,
         mainClass: 'zoom-in authorization'
     });
+//модалки для главной карточки компании
+    $('a[data-modal-card]').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        fixedBgPos: true,
+        preloader: false,
+        overflowY: 'auto',
+        removalDelay: 300,
+        closeBtnInside: false,
+        mainClass: 'zoom-in card-modal'
+    });
 
 //модалка в модалке "открытия на другом устройстве"
     if(('.use-here').length > 0){

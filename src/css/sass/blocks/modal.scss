@@ -7,6 +7,11 @@
       opacity: 1;
     }
   }
+
+  &.card-modal{
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+  }
 }
 .mfp-wrap{
 
@@ -33,6 +38,27 @@
       transition: .2s ease opacity;
       &:hover{
         opacity: .3;
+      }
+    }
+  }
+
+  &.card-modal {
+
+    .mfp-content{
+      padding: 72px 0;
+    }
+    .mfp-close {
+      position: fixed;
+      opacity: 1;
+      top: 20px;
+      right: 32px;
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+      text-indent: -99999px;
+      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E5B56EE7F-3A1E-4ED2-BAB5-B5310287347B%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Cpath d='M3,29 L29,3' id='Path-2' stroke='%23ffffff' stroke-width='3'%3E%3C/path%3E%3Cpath d='M3,29 L29,3' id='Path-2-Copy' stroke='%23ffffff' stroke-width='3' transform='translate(16.000000, 16.000000) scale(-1, 1) translate(-16.000000, -16.000000) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      &:hover {
+        opacity: .8;
       }
     }
   }
@@ -461,6 +487,286 @@
       }
 
 
+    }
+  }
+
+
+  // модалки главной карточки
+  &-main-card {
+    height: auto;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    padding: 32px 40px 48px;
+
+    .modal-header {
+      width: 100%;
+      margin-bottom: 20px;
+      position: relative;
+      font: {
+        size: 2.2rem;
+        weight: $font-bold;
+      }
+      line-height: 3.2rem;
+      letter-spacing: normal;
+      color: $black--text;
+
+      &--count {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: $mid-gray--text;
+      }
+    }
+    .modal-content{
+      ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        li{
+          width: 100%;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          //box-sizing: border-box;
+          &:hover{
+            border-bottom: none;
+          }
+          a{
+            display: block;
+            padding:12px 16px 11px;
+            margin: 0 -16px;
+            font:{
+              size: 1.4rem;
+              weight: $font-regular;
+            }
+            line-height: 2rem;
+            letter-spacing: normal;
+            color: $black--text;
+            box-sizing: border-box;
+            border-radius: 4px;
+            &:hover{
+              background-color: rgba(0, 0, 0, 0.05);
+              padding-bottom: 12px;
+              text-decoration: none;
+            }
+          }
+          &:last-child{
+            border-bottom-color: #fff;
+
+          }
+        }
+      }
+    }
+  }
+
+  &-sites{
+    max-width: 464px;
+    width: 100%;
+
+    a{
+      background-repeat: no-repeat;
+      background-position: 96% center;
+      &:hover{
+        background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='0.400000006' transform='translate(4.000000, 5.000000)' stroke='%23000000'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+
+  }
+
+  &-phone{
+    max-width: 464px;
+    width: 100%;
+
+    ul{
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      li{
+        max-width: 208px;
+        width: calc(50% - 16px)!important;
+        a{
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &-email{
+    max-width: 464px;
+    width: 100%;
+  }
+
+  &-address{
+    max-width: 784px;
+    width: 100%;
+
+    .modal-header{
+      h2{
+        margin-bottom: 8px;
+      }
+      &--count{
+        top: 0;
+      }
+
+      .subheader{
+        font-size: 1.4rem;
+        font-weight: $font-regular;
+        line-height: 1.6rem;
+        letter-spacing: normal;
+        color: $mid-gray--text;
+      }
+    }
+
+    ul{
+      margin-bottom: 52px;
+      li{
+        padding: 12px 0 11px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 0;
+        .name{
+          max-width: 517px;
+          width: 73.4%;
+        }
+        .date{
+          justify-self: flex-end;
+          font-size: 1.4rem;
+          color: $mid-gray--text;
+        }
+        &:hover{
+          width: calc(100% + 32px);
+          background-color: rgba(0, 0, 0, 0.05);
+          border-radius: 4px;
+          padding: 12px 16px 12px;
+          margin: 0 0 0 -16px;
+          cursor: default;
+          border-bottom: none;
+        }
+      }
+    }
+
+    .modal-content--btn{
+      max-width:464px;
+      margin: auto;
+
+      .btn{
+        padding: 16px;
+        font-size:1.4rem;
+        line-height: 1.6rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &-map{
+    max-width: 784px;
+    width: 100%;
+    padding: 32px 0 48px;
+    .modal-header{
+      padding: 0 40px;
+      h2{
+        margin-bottom: 8px;
+      }
+
+      .subheader{
+        font-size: 1.4rem;
+        font-weight: $font-regular;
+        line-height: 1.6rem;
+        letter-spacing: normal;
+        color: $mid-gray--text;
+      }
+    }
+    .modal-content{
+      width: 100%;
+      max-height:508px;
+      height: 100%;
+      & > div{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+
+  }
+
+  &-cods{
+    width: 100%;
+    max-width: 464px;
+
+    ul{
+      li{
+        padding: 12px 0 11px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 0;
+        .name{
+          width: 65px;
+          margin-right: 56px;
+          color: $mid-gray--text;
+        }
+        .value{
+          width: calc(100% - 65px - 56px);
+          justify-self: flex-start;
+          font-size: 1.4rem;
+
+          span{
+            display: block;
+          }
+        }
+        &:hover{
+          width: calc(100% + 32px);
+          background-color: rgba(0, 0, 0, 0.05);
+          border-radius: 4px;
+          padding: 12px 16px 12px;
+          margin: 0 0 0 -16px;
+          cursor: default;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  &-activity{
+    width: 100%;
+    max-width: 784px;
+
+    ul{
+      li{
+        padding: 12px 0 11px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 0;
+        &.main{
+          p{
+            color: $green;
+          }
+        }
+        .name{
+          width: 64px;
+          margin-right: 24px;
+          color: $mid-gray--text;
+        }
+        .value{
+          width: calc(100% - 64px - 24px);
+          justify-self: flex-start;
+          font-size: 1.4rem;
+
+        }
+        &:hover{
+          width: calc(100% + 32px);
+          background-color: rgba(0, 0, 0, 0.05);
+          border-radius: 4px;
+          padding: 12px 16px 12px;
+          margin: 0 0 0 -16px;
+          cursor: default;
+          border-bottom: none;
+        }
+      }
     }
   }
 

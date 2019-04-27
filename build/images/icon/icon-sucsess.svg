@@ -1,1 +1,16 @@
-<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path stroke="#3AA65E" stroke-width="1.8" stroke-linecap="square" d="M5 12l4.5 4.5L19 7"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>17996188-26E4-4E39-9819-9E9CFA20F7C7</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/OK/M/normal">
+            <g id="Group-2">
+                <g id="Group">
+                    <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                    <polyline id="Line-3" stroke="#3AA65E" stroke-width="1.8" stroke-linecap="square" points="5 12 9.5 16.5 19 7"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -56,6 +56,11 @@
         max-width: 608px;
         width: auto;
         cursor: pointer;
+        &:hover{
+          &:after{
+            opacity: 1;
+          }
+        }
         @media (max-width: 1343px){
           max-width: 528px;
         }
@@ -69,6 +74,8 @@
           width: 24px;
           height: 24px;
           background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'/%3E%3Ccircle cx='12' cy='12' r='12' fill='%23000' fill-opacity='.1'/%3E%3Cpath stroke='%23000' stroke-linecap='square' stroke-width='1.8' d='M8 13.5l4-4 4 4'/%3E%3C/g%3E%3C/svg%3E");
+          opacity: 0;
+          transition: .2s opacity ease;
         }
 
         & > div {
