@@ -287,8 +287,6 @@ $(document).ready(function () {
 
         } )
     }
-
-
 //Показ модалки поделиться
     if($('.company-modal').length > 0){
         $body.on(event, '.trigger-modal', function (e) {
@@ -296,9 +294,6 @@ $(document).ready(function () {
             $(this).next('.company-modal').fadeIn();
         })
     }
-
-
-
 //Анимация главной карточки при прокрутке
 
     if($('.main-card').length > 0){
@@ -333,12 +328,15 @@ $(document).ready(function () {
             $('html, body').animate({scrollTop: 0},500);
             return false;
         })
-
-
     }
 
+//ховер на стопфактор
+    if($('.card').length > 0){
 
-
+        $('.card').find('.card-header--factors_icon').hover(function () {
+            $(this).removeClass('active');
+        });
+    }
 });
 $(document).mouseup(function (e){
     var div = $(".company-modal");
