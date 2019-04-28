@@ -235,6 +235,16 @@ $(document).ready(function () {
         closeBtnInside: true,
         mainClass: 'zoom-in affiliation-modal'
     });
+    $('a[data-modal-inside]').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        fixedBgPos: true,
+        preloader: false,
+        overflowY: 'auto',
+        removalDelay: 300,
+        closeBtnInside: false,
+        mainClass: 'zoom-in modal-inside'
+    });
 
 //модалка в модалке "открытия на другом устройстве"
     if(('.use-here').length > 0){
