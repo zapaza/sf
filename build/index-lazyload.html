@@ -10,8 +10,8 @@
   <title>Site title</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <link href="css/plugins.min.css" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/plugins.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
   <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -319,7 +319,7 @@
                               </span>
                             </span>
                           </p>
-                          <a href="#0"><span>Выдано 146 лицензий</span></a>
+                          <a href="#modal-license" data-modal-card><span>Выдано 146 лицензий</span></a>
                         </div>
                         <div class="main-card-info--row">
                           <p class="title">Код статистики</p>
@@ -1751,6 +1751,89 @@
   <div class="modal modal-main-card modal-affiliation  mfp-hide" id="modal-affiliation">
     <div class="modal-content">
       <div class="block-affiliation">
+
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-main-card modal-license  mfp-hide" id="modal-license">
+    <div class="modal-header">
+      <h2>Лицензии</h2>
+      <!--        <span class="modal-header&#45;&#45;count">Всего 10</span> &lt;!&ndash;если много то показываем кнопки&ndash;&gt;-->
+      <div class="modal-header-filters">
+        <button class="filters-btn active">Все <span>40</span></button>
+        <button class="filters-btn">Действующие <span>31</span></button>
+        <button class="filters-btn">Недействующие <span>9</span></button>
+      </div>
+    </div>
+    <div class="modal-content">
+      <ul>
+        <li class="warning">
+          <!-- warning - если отменина expire - если истекла  normal- если все норм -->
+          <div class="col from">
+            <p>СЛХ 02559 НР</p>
+            <p class="disc">Департамент по недропользованию по Уральскому ФО</p>
+          </div>
+          <div class="col text">
+            <p>Геологическое изучение недр, включающее поиски и оценку месторождений полезных ископаемых и оценку пригодности участков недр для строительства и эксплуатации подземных сооружений, не связанных с добычей полезных ископаемых.</p>
+            <p class="disc">Ямало-Ненецкий автономный округ, Тазовский район, Толавэйский</p>
+          </div>
+          <div class="col out">
+            <p>24.09.2009 — 24.09.2019 </p>
+            <p class="disc">Приостановлена</p>
+          </div>
+        </li>
+        <li class="normal">
+          <!-- warning - если отменина expire - если истекла  normal- если все норм -->
+          <div class="col from">
+            <p>СЛХ 02559 НР</p>
+            <p class="disc">Департамент по недропользованию по Уральскому ФО</p>
+          </div>
+          <div class="col text">
+            <p>Геологическое изучение недр, включающее поиски и оценку месторождений полезных ископаемых и оценку пригодности участков недр для строительства и эксплуатации подземных сооружений, не связанных с добычей полезных ископаемых.</p>
+          </div>
+          <div class="col out">
+            <p>Выдана 24.09.2018 </p>
+          </div>
+        </li>
+        <li class="expire">
+          <!-- warning - если отменина expire - если истекла  normal- если все норм -->
+          <div class="col from">
+            <p>СЛХ 02559 НР</p>
+            <p class="disc">Департамент по недропользованию по Уральскому ФО</p>
+          </div>
+          <div class="col text">
+            <p>Геологическое изучение недр, включающее поиски и оценку месторождений полезных ископаемых и оценку пригодности участков недр для строительства и эксплуатации подземных сооружений, не связанных с добычей полезных ископаемых.</p>
+            <p class="disc">Ямало-Ненецкий автономный округ, Тазовский район, Толавэйский</p>
+          </div>
+          <div class="col out">
+            <p>24.09.2009 — 24.09.2019 </p>
+            <p class="disc">Истекла</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="modal-content-pagination">
+
+        <div class="modal-content-pagination--btn">
+          <a href="#0" class="btn btn-green">Загрузить еще</a>
+          <a href="#0" class="btn btn-green">
+            <span class="loader">
+              <span class="loader-item loader-item--1"></span>
+              <span class="loader-item loader-item--2"></span>
+              <span class="loader-item loader-item--3"></span>
+            </span>
+          </a>
+        </div>
+
+        <ul class="modal-content-pagination--list">
+          <li><a href="#0" class="prev"></a></li>
+          <li><a href="#0" class="active">1</a></li>
+          <li><a href="#0">2</a></li>
+          <li><a href="#0">3</a></li>
+          <li><a href="#0">4</a></li>
+          <li><a href="#0">5</a></li>
+          <li><a href="#0" class="next"></a></li>
+        </ul>
 
       </div>
     </div>

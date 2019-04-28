@@ -1,1 +1,63 @@
-<svg width="104" height="104" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path opacity=".2" d="M0 0h104v104H0z"/><rect fill="#FFF" x="32" width="72" height="32" rx="2"/><rect fill="#FFF" x="32" y="36" width="72" height="32" rx="2"/><rect fill="#FFF" x="32" y="72" width="72" height="32" rx="2"/><path d="M96 97H40v-5.75l31.188-35.375c5.166-5.958 8.75-10.875 10.75-14.75s3-7.646 3-11.313c0-5.75-1.688-10.302-5.063-13.656-3.375-3.354-8.02-5.031-13.938-5.031-6.125 0-11.072 1.958-14.843 5.875-3.771 3.917-5.657 9-5.657 15.25H38c0-5.125 1.156-9.792 3.469-14 2.312-4.208 5.604-7.51 9.875-9.906 4.27-2.396 9.135-3.594 14.593-3.594 8.334 0 14.844 2.187 19.532 6.563 4.687 4.375 7.031 10.333 7.031 17.874 0 4.25-1.323 8.896-3.969 13.938S81.23 54.458 74.562 62L49.1 91H96v6z" fill="#E6E6E6"/><rect fill="#FFF" width="28" height="53" rx="2"/><path fill="#E6E6E6" d="M0 11h28v1H0zm0-6h28v1H0zm0 12h28v1H0zm0 6h28v1H0zm0 6h28v1H0zm0 6h28v1H0zm0 6h28v1H0zm0 6h28v1H0zM36 5h24v1H36zm0 4h24v1H36zm0 4h24v1H36zm28-8h16v1H64zm0 4h16v1H64zm0 4h16v1H64zm20-8h16v1H84zm0 4h16v1H84zm0 4h16v1H84zM36 41h24v1H36zm0 4h24v1H36zm0 4h24v1H36zm28-8h16v1H64zm0 4h16v1H64zm0 4h16v1H64zm20-8h16v1H84zm0 4h16v1H84zm0 4h16v1H84zM36 77h24v1H36zm0 4h24v1H36zm0 4h24v1H36zm28-8h16v1H64zm0 4h16v1H64zm0 4h16v1H64zm20-8h16v1H84zm0 4h16v1H84zm0 4h16v1H84z"/><g fill="#E6E6E6"><path d="M15 11l6-6v43h-6z"/><path d="M5 12l16-7v6L5 18z"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>1A482F20-B64B-43E8-9361-76044C73BD9B</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="trash" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="INDEX/DESKTOP/SMALL" transform="translate(-40.000000, -728.000000)">
+            <g id="graphic/main/img01" transform="translate(40.000000, 728.000000)">
+                <rect id="Rectangle-Copy-40" opacity="0.200000003" x="0" y="0" width="104" height="104"></rect>
+                <rect id="Rectangle-Copy-41" fill="#FFFFFF" fill-rule="evenodd" x="32" y="0" width="72" height="32" rx="2"></rect>
+                <rect id="Rectangle-Copy-42" fill="#FFFFFF" fill-rule="evenodd" x="32" y="36" width="72" height="32" rx="2"></rect>
+                <rect id="Rectangle-Copy-43" fill="#FFFFFF" fill-rule="evenodd" x="32" y="72" width="72" height="32" rx="2"></rect>
+                <path d="M96,97 L40,97 L40,91.25 L71.1875,55.875 C76.3541925,49.9166369 79.93749,45.0000194 81.9375,41.125 C83.93751,37.2499806 84.9375,33.479185 84.9375,29.8125 C84.9375,24.0624713 83.2500169,19.5104334 79.875,16.15625 C76.4999831,12.8020666 71.8541963,11.125 65.9375,11.125 C59.8124694,11.125 54.8646022,13.0833138 51.09375,17 C47.3228978,20.9166862 45.4375,25.9999687 45.4375,32.25 L38,32.25 C38,27.1249744 39.1562384,22.4583544 41.46875,18.25 C43.7812616,14.0416456 47.0728953,10.7395953 51.34375,8.34375 C55.6146047,5.94790469 60.4791394,4.75 65.9375,4.75 C74.270875,4.75 80.7812266,6.93747812 85.46875,11.3125 C90.1562734,15.6875219 92.5,21.6457956 92.5,29.1875 C92.5,33.4375213 91.1770966,38.0833081 88.53125,43.125 C85.8854034,48.1666919 81.2292,54.4582956 74.5625,62 L49.1,91 L96,91 L96,97 Z" id="2-copy-3" fill="#E6E6E6" fill-rule="evenodd"></path>
+                <rect id="Rectangle-Copy-44" fill="#FFFFFF" fill-rule="evenodd" x="0" y="0" width="28" height="53" rx="2"></rect>
+                <rect id="Rectangle-Copy-45" fill="#E6E6E6" fill-rule="evenodd" x="0" y="11" width="28" height="1"></rect>
+                <rect id="Rectangle-Copy-45" fill="#E6E6E6" fill-rule="evenodd" x="0" y="5" width="28" height="1"></rect>
+                <rect id="Rectangle-Copy-46" fill="#E6E6E6" fill-rule="evenodd" x="0" y="17" width="28" height="1"></rect>
+                <rect id="Rectangle-Copy-47" fill="#E6E6E6" fill-rule="evenodd" x="0" y="23" width="28" height="1"></rect>
+                <rect id="Rectangle-Copy-48" fill="#E6E6E6" fill-rule="evenodd" x="0" y="29" width="28" height="1"></rect>
+                <rect id="Rectangle-Copy-49" fill="#E6E6E6" fill-rule="evenodd" x="0" y="35" width="28" height="1"></rect>
+                <rect id="Rectangle-Copy-50" fill="#E6E6E6" fill-rule="evenodd" x="0" y="41" width="28" height="1"></rect>
+                <rect id="Rectangle-Copy-51" fill="#E6E6E6" fill-rule="evenodd" x="0" y="47" width="28" height="1"></rect>
+                <g id="Group-21" stroke-width="1" fill-rule="evenodd" transform="translate(36.000000, 5.000000)" fill="#E6E6E6">
+                    <rect id="Rectangle" x="0" y="0" width="24" height="1"></rect>
+                    <rect id="Rectangle" x="0" y="4" width="24" height="1"></rect>
+                    <rect id="Rectangle" x="0" y="8" width="24" height="1"></rect>
+                    <rect id="Rectangle" x="28" y="0" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="28" y="4" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="28" y="8" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="48" y="0" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="48" y="4" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="48" y="8" width="16" height="1"></rect>
+                </g>
+                <g id="Group-21" stroke-width="1" fill-rule="evenodd" transform="translate(36.000000, 41.000000)" fill="#E6E6E6">
+                    <rect id="Rectangle" x="0" y="0" width="24" height="1"></rect>
+                    <rect id="Rectangle" x="0" y="4" width="24" height="1"></rect>
+                    <rect id="Rectangle" x="0" y="8" width="24" height="1"></rect>
+                    <rect id="Rectangle" x="28" y="0" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="28" y="4" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="28" y="8" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="48" y="0" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="48" y="4" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="48" y="8" width="16" height="1"></rect>
+                </g>
+                <g id="Group-21" stroke-width="1" fill-rule="evenodd" transform="translate(36.000000, 77.000000)" fill="#E6E6E6">
+                    <rect id="Rectangle" x="0" y="0" width="24" height="1"></rect>
+                    <rect id="Rectangle" x="0" y="4" width="24" height="1"></rect>
+                    <rect id="Rectangle" x="0" y="8" width="24" height="1"></rect>
+                    <rect id="Rectangle" x="28" y="0" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="28" y="4" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="28" y="8" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="48" y="0" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="48" y="4" width="16" height="1"></rect>
+                    <rect id="Rectangle" x="48" y="8" width="16" height="1"></rect>
+                </g>
+                <g id="Group-20-Copy-2" stroke-width="1" fill-rule="evenodd" transform="translate(5.000000, 5.000000)" fill="#E6E6E6">
+                    <polygon id="Rectangle" points="10 6 16 0 16 43 10 43"></polygon>
+                    <polygon id="Rectangle" points="-9.14823772e-14 7 16 -1.39444012e-13 16 6 -9.14823772e-14 13"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
