@@ -243,7 +243,18 @@ $(document).ready(function () {
         overflowY: 'auto',
         removalDelay: 300,
         closeBtnInside: false,
-        mainClass: 'zoom-in modal-inside'
+        mainClass: 'zoom-in modal-inside',
+        callbacks: {
+            open: function () {
+                if($('.mfp-wrap').find('.big')){
+                    $('.mfp-wrap').find('.big').closest('.mfp-content').addClass('big');
+                }
+                if($('.mfp-wrap').find('#modal-inside-аrbitrage').length > 0) {
+                   $('.mfp-wrap').find('.mfp-container').append('<button type="button" class="show-all-years"></button>');
+                }
+            }
+        }
+
     });
 
 //модалка в модалке "открытия на другом устройстве"
@@ -332,6 +343,10 @@ $(document).ready(function () {
                     $('.header').find('.card-header').remove();
                 },300);
             }
+
+            if ($('.card-header--inner').width() > 440){
+                $('.card-header--inner').find('div').addClass('fade');
+            }
         });
 
         $('body').on(event, '.card-header--inner', function() {
@@ -347,6 +362,11 @@ $(document).ready(function () {
             $(this).removeClass('active');
         });
     }
+//показ выпадающих годов
+    $('body').on(event,'.show-all--list', function (e) {
+        e.preventDefault();
+        $(this).next('.show-all--dropdown').fadeToggle();
+    })
 });
 $(document).mouseup(function (e){
     var div = $(".company-modal");
