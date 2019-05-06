@@ -144,6 +144,23 @@ function Tabs(){
             // $(".tab-drawer-heading[rel^='" + activeTab + "']").addClass("d-active");
         });
     }
+    if($('.child').length > 0){
+        $(".child").find('.child-content-tab').hide();
+        $(".child").find('.child-content-tab:first').show();
+
+
+        $body.on(event, ".child-tabs .child-tabs--name", function () {
+
+            $(".child-content-tab").hide();
+
+            var activeTab = $(this).attr("rel");
+
+            $("#" + activeTab).fadeIn();
+
+            $(".child-tabs .child-tabs--name").removeClass("active");
+            $(this).addClass("active");
+        });
+    }
 }
 
 

@@ -4213,13 +4213,32 @@ input[type="number"]::-webkit-outer-spin-button {
     display: none;
 }
 
+.card.child .card-header h2 {
+    width: 100%;
+    max-width: none;
+}
+
 .card-header {
     position: relative;
     margin-bottom: 16px;
     font-weight: 700;
-    font-size: 2.8rem;
-    line-height: 4rem;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-header {
+        font-size: 2.8rem;
+        line-height: 4rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-header {
+        font-size: 2.8rem;
+        line-height: 4rem;
+    }
 }
 
 .card-header h1, .card-header h2 {
@@ -4486,6 +4505,18 @@ input[type="number"]::-webkit-outer-spin-button {
     letter-spacing: normal;
 }
 
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .main-card-header p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .main-card-header p {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .main-card-header--status {
     color: #3aa65e;
 }
@@ -4561,6 +4592,18 @@ input[type="number"]::-webkit-outer-spin-button {
     position: relative;
 }
 
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .main-card-info.full .main-card-info--row.characteristic span.warning-icon {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .main-card-info.full .main-card-info--row.characteristic span.warning-icon {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .main-card-info.full .main-card-info--row.characteristic span.warning-icon:hover .hard-hint {
     display: block;
 }
@@ -4608,11 +4651,35 @@ input[type="number"]::-webkit-outer-spin-button {
     line-height: 1.6rem;
 }
 
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .main-card-info.full .main-card-info--row.characteristic span.warning-icon .hard-hint--text {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .main-card-info.full .main-card-info--row.characteristic span.warning-icon .hard-hint--text {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .main-card-info.full .main-card-info--row.characteristic span.warning-icon .hard-hint--header {
     color: rgba(0, 0, 0, 0.9);
     margin-bottom: 8px;
     font-size: 1.4rem;
     line-height: 1.6rem;
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .main-card-info.full .main-card-info--row.characteristic span.warning-icon .hard-hint--header {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .main-card-info.full .main-card-info--row.characteristic span.warning-icon .hard-hint--header {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .main-card-info.full .main-card-info--row.characteristic .block-price {
@@ -4707,8 +4774,20 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .main-card-info.full .main-card-info--row p:not(.title) {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2rem;
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .main-card-info.full .main-card-info--row p:not(.title) {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .main-card-info.full .main-card-info--row p:not(.title) {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .main-card-info.full .main-card-info--row p span {
@@ -4783,6 +4862,18 @@ input[type="number"]::-webkit-outer-spin-button {
     color: rgba(0, 0, 0, 0.9);
 }
 
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .main-card-info--col p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .main-card-info--col p {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .main-card-info--col p span {
     color: rgba(0, 0, 0, 0.4);
 }
@@ -4794,10 +4885,22 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .card-content .main-card-info--col h3 {
     margin-bottom: 12px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 2rem;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .main-card-info--col h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .main-card-info--col h3 {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .main-card-info--col h3.name, .card-content .main-card-info--col .tariffs-list--item h3.price, .tariffs-list--item .card-content .main-card-info--col h3.price {
@@ -4814,6 +4917,18 @@ input[type="number"]::-webkit-outer-spin-button {
     color: rgba(0, 0, 0, 0.4);
 }
 
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .main-card-info--col a {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .main-card-info--col a {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .main-card-info--col a span {
     color: #3aa65e;
     border-bottom: 1px solid #3aa65e;
@@ -4821,11 +4936,23 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .card-content .main-card-info--col a.link {
     position: relative;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .main-card-info--col a.link {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .main-card-info--col a.link {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .main-card-info--col a.link:after {
@@ -4946,7 +5073,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-right: 3.6%;
     text-align: center;
     font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
@@ -4954,6 +5081,18 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 4px;
     -webkit-transition: background-color .2s ease;
     transition: background-color .2s ease;
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .reporting-item {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .reporting-item {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .reporting-item:nth-child(6n + 6) {
@@ -5043,11 +5182,25 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .card-content .checkup .table-body .table-col:first-child,
         .card-content .checkup .table-footer .table-col:first-child {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .checkup .table-body .table-col:first-child,
+            .card-content .checkup .table-footer .table-col:first-child {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .checkup .table-body .table-col:first-child,
+            .card-content .checkup .table-footer .table-col:first-child {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .checkup .table-body .table-col:first-child span,
@@ -5059,22 +5212,50 @@ input[type="number"]::-webkit-outer-spin-button {
         .card-content .checkup .table-footer .table-col span.amount {
     text-align: left;
     width: 48px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
 }
 
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .checkup .table-body .table-col span.amount,
+            .card-content .checkup .table-footer .table-col span.amount {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .checkup .table-body .table-col span.amount,
+            .card-content .checkup .table-footer .table-col span.amount {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .checkup .table-body .table-col span.normal,
         .card-content .checkup .table-footer .table-col span.normal {
     text-align: right;
     width: 64px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .checkup .table-body .table-col span.normal,
+            .card-content .checkup .table-footer .table-col span.normal {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .checkup .table-body .table-col span.normal,
+            .card-content .checkup .table-footer .table-col span.normal {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .checkup .table-body .table-col span.normal.dangerously,
@@ -5131,13 +5312,19 @@ input[type="number"]::-webkit-outer-spin-button {
 .card-content .business .table-header .table-col span {
     width: 100%;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.6rem;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1264px) and (min-height: 671px) {
     .card-content .business .table-header .table-col span {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .business .table-header .table-col span {
+        font-size: 1.4rem;
     }
 }
 
@@ -5162,9 +5349,15 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: left;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1264px) and (min-height: 671px) {
     .card-content .business .table-body .table-col span {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .business .table-body .table-col span {
+        font-size: 1.6rem;
     }
 }
 
@@ -5178,16 +5371,22 @@ input[type="number"]::-webkit-outer-spin-button {
 .card-content .business .table-body .table-col:not(:first-child) span {
     display: block;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1264px) and (min-height: 671px) {
     .card-content .business .table-body .table-col:not(:first-child) span {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .business .table-body .table-col:not(:first-child) span {
+        font-size: 1.6rem;
     }
 }
 
@@ -5224,7 +5423,7 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 30%;
     display: block;
     text-align: left;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: normal;
@@ -5234,6 +5433,18 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (max-width: 1440px) {
     .card-content .аrbitrage .table-body-inner > span {
         font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .аrbitrage .table-body-inner > span {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .аrbitrage .table-body-inner > span {
+        font-size: 1.6rem;
     }
 }
 
@@ -5274,7 +5485,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .card-content .аrbitrage .table-body-inner .table-row-inner .table-col span {
     width: 100%;
     display: block;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     text-align: right;
@@ -5282,9 +5493,15 @@ input[type="number"]::-webkit-outer-spin-button {
     color: rgba(0, 0, 0, 0.9);
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1264px) and (min-height: 671px) {
     .card-content .аrbitrage .table-body-inner .table-row-inner .table-col span {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .аrbitrage .table-body-inner .table-row-inner .table-col span {
+        font-size: 1.6rem;
     }
 }
 
@@ -5438,11 +5655,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .economy .table-body .table-col {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .economy .table-body .table-col {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .economy .table-body .table-col {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .economy .table-body .table-col.col-economy {
@@ -5504,11 +5733,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .fssp .table-body .table-col {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .fssp .table-body .table-col {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .fssp .table-body .table-col {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .fssp .table-body .table-col span.no-content {
@@ -5516,11 +5757,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .fssp .table-body .table-col:first-child {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .fssp .table-body .table-col:first-child {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .fssp .table-body .table-col:first-child {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .fssp .table-body .table-col:first-child span {
@@ -5549,11 +5802,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .fssp .table-footer .table-col:first-child {
-    font-size: 1.6rem;
+    font-size: 1.4em;
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .fssp .table-footer .table-col:first-child {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .fssp .table-footer .table-col:first-child {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .fssp .table-footer .table-col:first-child span {
@@ -5616,11 +5881,23 @@ input[type="number"]::-webkit-outer-spin-button {
 .card-content .owner .table-col:first-child span.name, .card-content .owner .table-col:first-child .tariffs-list--item span.price, .tariffs-list--item .card-content .owner .table-col:first-child span.price {
     width: 100%;
     margin-bottom: 8px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: 0.5px;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .owner .table-col:first-child span.name, .card-content .owner .table-col:first-child .tariffs-list--item span.price, .tariffs-list--item .card-content .owner .table-col:first-child span.price {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .owner .table-col:first-child span.name, .card-content .owner .table-col:first-child .tariffs-list--item span.price, .tariffs-list--item .card-content .owner .table-col:first-child span.price {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .owner .table-col:first-child span.name .icon-name, .card-content .owner .table-col:first-child .tariffs-list--item span.price .icon-name, .tariffs-list--item .card-content .owner .table-col:first-child span.price .icon-name {
@@ -5633,11 +5910,23 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .card-content .owner .table-col:first-child span.name-info {
     margin-right: 16px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .owner .table-col:first-child span.name-info {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .owner .table-col:first-child span.name-info {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .owner .table-col:first-child span.name-info span {
@@ -5662,14 +5951,78 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .owner .table-body .table-col {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
 }
 
-.card-content .child .table-row {
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .owner .table-body .table-col {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .owner .table-body .table-col {
+        font-size: 1.6rem;
+    }
+}
+
+.card-content .child-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.card-content .child-tabs--name {
+    padding: 8px 16px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    -webkit-transition: .2s ease all;
+    transition: .2s ease all;
+}
+
+.card-content .child-tabs--name.active {
+    color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.card-content .child-tabs--name:hover {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.card-content .child-tabs--name:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 0;
+}
+
+.card-content .child-tabs--name:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: 0;
+}
+
+.card-content .child-content-tab {
+    display: none;
+}
+
+.card-content .child-content-tab.active {
+    display: block;
+}
+
+.card-content .child-content-tab .table-row {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -5680,21 +6033,21 @@ input[type="number"]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
-.card-content .child .table-row:hover {
+.card-content .child-content-tab .table-row:hover {
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.05);
     text-decoration: none;
 }
 
-.card-content .child .table-row:last-child {
+.card-content .child-content-tab .table-row:last-child {
     margin-bottom: 0;
 }
 
-.card-content .child .table-row.eliminated span {
+.card-content .child-content-tab .table-row.eliminated span {
     color: rgba(0, 0, 0, 0.4) !important;
 }
 
-.card-content .child .table-col {
+.card-content .child-content-tab .table-col {
     width: 64px;
     position: relative;
     text-align: right;
@@ -5704,7 +6057,7 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: flex-start;
 }
 
-.card-content .child .table-col:first-child {
+.card-content .child-content-tab .table-col:first-child {
     width: 66%;
     max-width: 472px;
     text-align: left;
@@ -5716,23 +6069,35 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-right: auto;
 }
 
-.card-content .child .table-col:first-child span {
+.card-content .child-content-tab .table-col:first-child span {
     text-align: left;
     display: inline-block;
     width: auto;
 }
 
-.card-content .child .table-col:first-child span.name, .card-content .child .table-col:first-child .tariffs-list--item span.price, .tariffs-list--item .card-content .child .table-col:first-child span.price {
+.card-content .child-content-tab .table-col:first-child span.name, .card-content .child-content-tab .table-col:first-child .tariffs-list--item span.price, .tariffs-list--item .card-content .child-content-tab .table-col:first-child span.price {
     width: 100%;
     margin-bottom: 8px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: 0.5px;
     color: rgba(0, 0, 0, 0.9);
 }
 
-.card-content .child .table-col:first-child span.name .icon-name, .card-content .child .table-col:first-child .tariffs-list--item span.price .icon-name, .tariffs-list--item .card-content .child .table-col:first-child span.price .icon-name {
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .child-content-tab .table-col:first-child span.name, .card-content .child-content-tab .table-col:first-child .tariffs-list--item span.price, .tariffs-list--item .card-content .child-content-tab .table-col:first-child span.price {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .child-content-tab .table-col:first-child span.name, .card-content .child-content-tab .table-col:first-child .tariffs-list--item span.price, .tariffs-list--item .card-content .child-content-tab .table-col:first-child span.price {
+        font-size: 1.6rem;
+    }
+}
+
+.card-content .child-content-tab .table-col:first-child span.name .icon-name, .card-content .child-content-tab .table-col:first-child .tariffs-list--item span.price .icon-name, .tariffs-list--item .card-content .child-content-tab .table-col:first-child span.price .icon-name {
     margin-left: 4px;
     vertical-align: baseline;
     width: 16px;
@@ -5740,38 +6105,62 @@ input[type="number"]::-webkit-outer-spin-button {
     background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='0.400000006' transform='translate(4.000000, 5.000000)' stroke='%23000000'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.card-content .child .table-col:first-child span.name-info {
+.card-content .child-content-tab .table-col:first-child span.name-info {
     margin-right: 16px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.4);
 }
 
-.card-content .child .table-col:first-child span.name-info span {
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .child-content-tab .table-col:first-child span.name-info {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .child-content-tab .table-col:first-child span.name-info {
+        font-size: 1.6rem;
+    }
+}
+
+.card-content .child-content-tab .table-col:first-child span.name-info span {
     margin-left: 4px;
     color: rgba(0, 0, 0, 0.9);
 }
 
-.card-content .child .table-col:last-child {
+.card-content .child-content-tab .table-col:last-child {
     width: 20%;
     text-align: right;
     margin-left: 24px;
 }
 
-.card-content .child .table-col span {
+.card-content .child-content-tab .table-col span {
     display: block;
     width: 100%;
     text-align: right;
 }
 
-.card-content .child .table-body .table-col {
-    font-size: 1.6rem;
+.card-content .child-content-tab .table-body .table-col {
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .child-content-tab .table-body .table-col {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .child-content-tab .table-body .table-col {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .tender-tabs {
@@ -5881,11 +6270,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .tender-content-tab .table-body .table-col {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .tender-content-tab .table-body .table-col {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .tender-content-tab .table-body .table-col {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .tender-content-tab .table-body .table-col:first-child {
@@ -5983,11 +6384,23 @@ input[type="number"]::-webkit-outer-spin-button {
 .card-content .egrul .table-row .title {
     margin-bottom: 16px;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .egrul .table-row .title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .egrul .table-row .title {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .egrul .table-row-inner {
@@ -6048,11 +6461,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .egrul .table-body.fns .table-col.date span {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .egrul .table-body.fns .table-col.date span {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .egrul .table-body.fns .table-col.date span {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .egrul .table-body.fns .table-col.info {
@@ -6064,7 +6489,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .egrul .table-body.fns .table-col p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
@@ -6072,12 +6497,36 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 8px;
 }
 
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .egrul .table-body.fns .table-col p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .egrul .table-body.fns .table-col p {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .egrul .table-body.fns .table-col p span {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: 0.5px;
     color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .egrul .table-body.fns .table-col p span {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .egrul .table-body.fns .table-col p span {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .egrul .table-body.fns .table-col p span:not(.rename), .card-content .egrul .table-body.fns .table-col p span:not(.icon-name) {
@@ -6118,11 +6567,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .egrul .table-body.stat .table-col.date span {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .egrul .table-body.stat .table-col.date span {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .egrul .table-body.stat .table-col.date span {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .egrul .table-body.stat .table-col.info {
@@ -6134,7 +6595,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .card-content .egrul .table-body.stat .table-col p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: normal;
@@ -6142,12 +6603,36 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 8px;
 }
 
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .egrul .table-body.stat .table-col p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .egrul .table-body.stat .table-col p {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .egrul .table-body.stat .table-col p span {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: 0.5px;
     color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1264px) and (min-height: 671px) {
+    .card-content .egrul .table-body.stat .table-col p span {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1344px) {
+    .card-content .egrul .table-body.stat .table-col p span {
+        font-size: 1.6rem;
+    }
 }
 
 .card-content .egrul .table-body.stat .table-col p span:not(.rename), .card-content .egrul .table-body.stat .table-col p span:not(.icon-name) {
