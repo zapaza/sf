@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
-    <title>15C97301-E412-4403-BC48-8DB05A83377C</title>
-    <desc>Created with sketchtool.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon/card/download/L/normal">
-            <g id="Group">
-                <g id="Group-25">
-                    <rect id="Rectangle" opacity="0.200000003" x="0" y="0" width="32" height="32"></rect>
-                    <rect id="Rectangle" fill="#000000" x="9" y="21" width="14" height="2"></rect>
-                    <rect id="Rectangle" fill="#000000" x="15" y="9" width="2" height="9"></rect>
-                </g>
-            </g>
-            <polygon id="Rectangle" fill="#000000" points="12.5 15 19.5 15 16 19.75"></polygon>
-        </g>
-    </g>
-</svg>
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path opacity=".2" d="M0 0h32v32H0z"/><path fill="#000" d="M9 21h14v2H9zm6-12h2v9h-2z"/><path fill="#000" d="M12.5 15h7L16 19.75z"/></g></svg>
