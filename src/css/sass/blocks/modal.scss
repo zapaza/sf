@@ -824,6 +824,14 @@
         .name{
           max-width: 517px;
           width: 73.4%;
+          h3{
+            font-size: 1.4rem;
+            font-weight: $font-bold;
+            line-height: 2rem;
+            letter-spacing: 0.5px;
+            color: $black--text;
+            margin-bottom: 4px;
+          }
         }
         .date{
           justify-self: flex-end;
@@ -1133,6 +1141,283 @@
       }
     }
 }
+
+  &-director,
+  &-address--mas{
+    max-width: 784px;
+    width: 100%;
+    .modal-header{
+      margin-bottom: 32px;
+      h2{
+        margin-bottom: 8px;
+      }
+      p{
+        margin-bottom: 8px;
+        font:{
+          size: 1.4rem;
+          weight: $font-regular;
+        }
+        line-height: 2rem;
+        letter-spacing: normal;
+        color: $black--text;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+        span{
+          color: $mid-gray--text;
+        }
+      }
+    }
+    .modal-content{
+      .title{
+        margin-bottom: 24px;
+        font:{
+          size: 1.4rem;
+          weight: $font-regular;
+        }
+        line-height:2rem;
+        color: $mid-gray--text;
+        & > span{
+          display: inline-block;
+          margin-left: 4px;
+          color:$mid-gray--text;
+          vertical-align: middle;
+          &.warning{
+            color: $red;
+          }
+        }
+        span.icon-red-question{
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+          margin-left: 4px;
+          svg {
+            path, circle{
+              transition: .2s;
+            }
+          }
+          &:hover{
+            path{
+              fill: $white;
+            }
+            circle{
+              fill: $red
+            }
+
+            .hard-hint{
+              opacity: 1;
+              display: block;
+
+            }
+          }
+          .hard-hint{
+            display: none;
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            width: 260px;
+            height: auto;
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2) ;
+            left:calc(100% + 12px);
+            margin-top: -12px;
+            margin-right: 0;
+            transition: .2s ease;
+            transition-duration: 1s;
+            box-sizing: border-box;
+            &:after{
+              position: absolute;
+              content: '';
+              top: 12px;
+              left: -12px;
+              width: 6px;
+              height: 16px;
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              border: 8px solid transparent;
+              border-right-color: white;
+            }
+            &--text{
+              color:$black--text;
+              font-weight: $font-regular;
+              font-size: 1.4rem;
+              line-height: 1.6rem;
+              @media (min-width: 1264px) and (min-height:671px){
+                font-size: 1.6rem;
+              }
+              @media (min-width: 1344px){
+                font-size: 1.6rem;
+              }
+            }
+            &--header{
+              color:$black--text;
+              margin-bottom: 8px;
+              font-size: 1.4rem;
+              line-height: 1.6rem;
+              @media (min-width: 1264px) and (min-height:671px){
+                font-size: 1.6rem;
+              }
+              @media (min-width: 1344px){
+                font-size: 1.6rem;
+              }
+            }
+          }
+
+        }
+      }
+      ul{
+        display: flex;
+        width: 100%;
+        margin-bottom: 48px;
+        height: auto;
+        flex-direction: column;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+        li{
+          width: 100%;
+          a{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+            &.eliminated{
+              .name{
+                p{
+                  span:not(.icon-name){
+                    text-decoration: line-through;
+                    color: $mid-gray--text;
+                    text-decoration-color:rgba(0, 0, 0, 0.6);
+                  }
+                }
+              }
+              .inn,.ogrn,.ogrnip{
+                p{
+                  color: $mid-gray--text;
+                }
+              }
+            }
+          }
+          .col{
+            width: 100%;
+
+            &.name{
+              max-width: 354px;
+              margin-right: 40px;
+              p{
+                font-size: 1.4rem;
+                font-weight: $font-bold;
+                line-height: 2rem;
+                letter-spacing: 0.5px;
+                color: $black--text;
+                text-transform: uppercase;
+                .icon-name{
+                  margin-left: 4px;
+                  display: inline-block;
+                  vertical-align:baseline;
+                  width: 16px;
+                  height: 16px;
+                  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='0.400000006' transform='translate(4.000000, 5.000000)' stroke='%23000000'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                }
+              }
+
+            }
+            &.inn{
+              max-width:122px;
+              margin-right: 38px;
+              p{
+                display: inline-block;
+                margin-right: 4px;
+                font-size: 1.4rem;
+                font-weight: $font-regular;
+                line-height: 2rem;
+                span{
+                  letter-spacing: 0.5px;
+                  color: $mid-gray--text;
+                  display: inline-block;
+                  margin-right: 4px;
+                }
+              }
+            }
+            &.ogrn{
+              max-width: 150px;
+              p{
+                font-size: 1.4rem;
+                font-weight: $font-regular;
+                line-height: 2rem;
+                span{
+                  letter-spacing: 0.5px;
+                  color:$mid-gray--text;
+                  display: inline-block;
+                  margin-right: 4px;
+                }
+              }
+            }
+            &.ogrnip{
+              max-width: 190px;
+              p{
+                font-size: 1.4rem;
+                font-weight: $font-regular;
+                line-height: 2rem;
+                span{
+                  letter-spacing: 0.5px;
+                  color:$mid-gray--text;
+                  display: inline-block;
+                  margin-right: 4px;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+  &-address--mas{
+    .modal-content{
+      &-pagination{
+        padding-top: 64px;
+      }
+    }
+  }
+
+  &-affiliation-noregistr{
+    max-width: 464px;
+    width: 100%;
+    padding: 48px 32px;
+
+    .modal-header{
+      text-align: center;
+      font-size: 2.2rem;
+      line-height:2.8rem;
+      margin-bottom: 0;
+      h2{
+        margin-bottom: 16px;
+      }
+
+      .subheader{
+        max-width: 304px;
+        margin: auto;
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: $font-regular;
+        margin-bottom: 24px;
+      }
+      .btn{
+        max-width: 304px;
+        margin: auto;
+        padding: 16px 13px;
+        text-transform: uppercase;
+      }
+    }
+  }
 
 
 }
