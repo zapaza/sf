@@ -266,9 +266,9 @@ $(document).ready(function () {
                 if($('.mfp-wrap').find('.big')){
                     $('.mfp-wrap').find('.big').closest('.mfp-content').addClass('big');
                 }
-                if($('.mfp-wrap').find('#modal-inside-аrbitrage').length > 0) {
-                   $('.mfp-wrap').find('.mfp-container').append('<button type="button" class="show-all-years"></button>');
-                }
+                // if($('.mfp-wrap').find('#modal-inside-аrbitrage').length > 0) {
+                //    $('.mfp-wrap').find('.mfp-container').append('<button type="button" class="show-all-years"></button>');
+                // }
             }
         }
 

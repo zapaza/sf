@@ -1422,6 +1422,8 @@
 
 }
 #modal-inside-report{
+  padding-bottom: 92px;
+  min-height: 100%;
   .modal-inside--info{
     max-width: 604px;
 
@@ -1498,6 +1500,7 @@
 
 #modal-inside-аrbitrage{
   padding-bottom: 92px;
+  min-height: 100%;
   .select-years{
     margin-bottom: 48px;
   }
@@ -1736,5 +1739,165 @@
     }
   }
 }
+#modal-inside-fssp{
+  padding-bottom: 92px;
+  min-height: 100%;
+  .select-years{
+    margin-bottom: 48px;
+  }
 
+  .fssp-type{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 48px;
+
+    li{
+      margin-right: 36px;
+      min-width: 98px;
+      a{
+        &:hover{
+          text-decoration: none;
+
+          .name{
+            border-bottom: 0;
+          }
+        }
+
+        &.active{
+          .name{
+            color: $black--text;
+            border-bottom: 0;
+          }
+
+          .info{
+            display: block;
+          }
+        }
+      }
+      .name{
+        display: inline-block;
+        margin-bottom: 8px;
+        font:{
+          size: 2.4rem;
+          weight: $font-bold;
+        }
+        line-height: 3.2rem;
+        letter-spacing: normal;
+        color: $mid-gray--text;
+        border-bottom: 1px solid rgba(0,0,0,.2);
+
+        transition: .2s all ease;
+      }
+
+      .info{
+        display: none;
+        font:{
+          size: 1.4rem;
+          weight: $font-regular;
+        }
+        color: $black--text;
+        line-height: 2rem;
+        span{
+          display: block;
+        }
+      }
+    }
+  }
+
+  .fssp-list{
+
+    &--item{
+      padding-left: 20px;
+      border-left: 4px solid $black;
+      margin-bottom: 32px;
+      box-sizing: border-box;
+
+
+      .info{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+
+        font:{
+          size: 1.4rem;
+          weight: $font-regular;
+        }
+        line-height: 2rem;
+        color: $black--text;
+        @media (min-width: 1264px){
+          font-size: 1.6rem;
+        }
+
+        div{
+          margin-right: 16px;
+          font-weight: $font-bold;
+          &.number , &.date{
+            font-weight: $font-regular;
+          }
+        }
+      }
+
+      &_info{
+        box-sizing: border-box;
+        padding-left: 48px;
+        margin-bottom: 96px;
+
+        .documents{
+          table{
+            width: 656px;
+            @media (min-width:1264px ) {
+              width: 736px;
+            }
+            tr{
+              border-bottom: 1px solid $mid-gray--text;
+              &:last-child{
+                border-bottom: 0;
+              }
+              td{
+                padding: 11px 0;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                @media (min-width: 1264px){
+                  font-size: 1.6rem;
+                }
+                &:first-of-type{
+                  width: 240px;
+                  color: $mid-gray--text;
+                }
+                &:not(:first-of-type){
+                  padding-left: 32px;
+                }
+
+                .name{
+
+                  margin-bottom: 8px;
+                  font-size: 1.4rem;
+                  font-weight: $font-regular;
+                  line-height: 2rem;
+                  letter-spacing: normal;
+                  color: $black--text;
+                  @media (min-width: 1264px){
+                    font-size: 1.6rem;
+                  }
+
+                  &-firms{
+                    font-size: 1.4rem;
+                    font-weight: $font-regular;
+                    line-height: 2rem;
+                    letter-spacing: normal;
+
+                    color: $mid-gray--text;
+                    @media (min-width: 1264px){
+                      font-size: 1.6rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
