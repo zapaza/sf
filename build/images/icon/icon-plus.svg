@@ -1,1 +1,17 @@
-<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h16v16H0z"/><path fill="#FFF" d="M2 7h12v2H2z"/><path fill="#FFF" d="M7 2h2v12H7z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>7A86CB08-DB43-4AEA-8F5E-23EF9F4EAB5F</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/zoom/S/in">
+            <g id="Group-2">
+                <g id="Group">
+                    <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" x="2" y="7" width="12" height="2"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" x="7" y="2" width="2" height="12"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

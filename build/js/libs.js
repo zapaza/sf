@@ -266,9 +266,19 @@ $(document).ready(function () {
                 if($('.mfp-wrap').find('.big')){
                     $('.mfp-wrap').find('.big').closest('.mfp-content').addClass('big');
                 }
-                // if($('.mfp-wrap').find('#modal-inside-аrbitrage').length > 0) {
-                //    $('.mfp-wrap').find('.mfp-container').append('<button type="button" class="show-all-years"></button>');
-                // }
+                if($('.mfp-wrap').find('#modal-inside-business').length > 0) {
+                        var businessTableHeight= $('#modal-inside-business .table').height(),
+                            businessTableWidth = $('#modal-inside-business .table').width(),
+                            wrapperWidth = $('#modal-inside-business .modal-inside--wrapper').width(),
+                            newWrapperWidth = wrapperWidth + 32;
+
+                        $('#modal-inside-business .modal-inside--table').removeAttr( 'style' );
+                        $('#modal-inside-business .modal-inside--table').height( businessTableHeight - 20).width(newWrapperWidth);
+
+                        if( businessTableWidth > newWrapperWidth) {
+                            $('#modal-inside-business .modal-inside--table').addClass('bigger')
+                        }
+                    }
             }
         }
 
