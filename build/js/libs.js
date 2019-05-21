@@ -394,6 +394,18 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).next('.show-all--dropdown').fadeToggle();
     })
+
+    //scroll table
+    $('.scroll-horizontal').smoothDivScroll({
+        touchScrolling: true,
+        manualContinuousScrolling: false,
+        hotSpotScrolling: false,
+        visibleHotSpotBackgrounds: "",
+        mousewheelScrollingStep: 45,
+        mousewheelScrolling: "allDirections",
+    });
+
+
 });
 $(document).mouseup(function (e){
     var div = $(".company-modal");
