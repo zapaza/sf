@@ -1485,6 +1485,26 @@
         overflow-x: auto;
         overflow-y: visible;
         box-sizing: border-box;
+
+        div.scrollWrapper{
+          width: calc(100% + 32px);
+          padding: 0 16px;
+        }
+        .scrollableArea{
+          width: 100%;
+          position: relative;
+        }
+        .table{
+          position: relative;
+          float: left;
+          margin: 0;
+          padding: 0 120px 0 0;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -o-user-select: none;
+          user-select: none;
+        }
       }
       .table{
         width: auto;
@@ -1505,8 +1525,8 @@
               &:before{
                 position: absolute;
                 content: '';
-                width: 16px;
-                left: -16px;
+                width: 32px;
+                left: -32px;
                 height: 100%;
                 background-color: $white;
               }
@@ -1595,8 +1615,8 @@
               &:before{
                 position: absolute;
                 content: '';
-                width: 16px;
-                left: -17px;
+                width: 32px;
+                left: -32px;
                 height: 100%;
                 background-color: $white;
               }
