@@ -444,3 +444,10 @@ div.scrollableArea
   width: auto;
   height: 100%;
 }
+.suggestions-subtext {
+  &_inline{
+    .suggestions-subtext-delimiter{
+      display: none;
+    }
+  }
+}
