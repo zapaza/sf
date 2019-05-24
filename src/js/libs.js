@@ -266,6 +266,19 @@ $(document).ready(function () {
                 if($('.mfp-wrap').find('.big')){
                     $('.mfp-wrap').find('.big').closest('.mfp-content').addClass('big');
                 }
+                //аккордион на главной странице
+                if($('.document-list--item_accordion').length > 0){
+                    var accordionContent = $('.document-list--item_accordion .content').hide();
+
+                    $body.on(event, '.document-list--item_accordion .title', function () {
+                        $this = $(this);
+                        $target = $this.closest('.document-list--item_accordion').find('.content');
+
+                        $this.toggleClass('active');
+                        $target.slideToggle(100);
+
+                    } )
+                }
             }
         }
 
@@ -322,6 +335,7 @@ $(document).ready(function () {
 
         } )
     }
+
 //Показ модалки поделиться
     if($('.company-modal').length > 0){
         $body.on(event, '.trigger-modal', function (e) {
