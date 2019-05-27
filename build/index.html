@@ -88,25 +88,49 @@
 
           <div class="header-link">
 
-            <a href="#use-here" data-modal-authorization class="btn btn-green enter">Войти</a>
+            <!--            <a href="#use-here" data-modal-authorization class="btn btn-green enter">Войти</a>-->
 
-            <!--<a href="#0" class="btn btn-green enter">-->
-            <!--<span class="loader">-->
-            <!--<span class="loader-item loader-item&#45;&#45;1"></span>-->
-            <!--<span class="loader-item loader-item&#45;&#45;2"></span>-->
-            <!--<span class="loader-item loader-item&#45;&#45;3"></span>-->
-            <!--</span>-->
-            <!--</a>-->
+            <!--            <a href="#0" class="btn btn-green enter">-->
+            <!--               <span class="loader">-->
+            <!--                  <span class="loader-item loader-item&#45;&#45;1"></span>-->
+            <!--                  <span class="loader-item loader-item&#45;&#45;2"></span>-->
+            <!--                  <span class="loader-item loader-item&#45;&#45;3"></span>-->
+            <!--               </span>-->
+            <!--            </a>-->
 
-            <!--<ul>-->
-            <!--<li><a href="#0" class="header-link&#45;&#45;item" data-hint="Мониторинг"><svg id="icon-favourites" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path d="M0 0h32v32H0z"></path><path class="star" fill="#999" d="M16 20.94l-7.641 5.577 2.943-8.99-7.666-5.544 9.46.02L16 3l2.904 9.003 9.46-.02-7.666 5.544 2.943 8.99z"></path></g></svg>-->
-            <!--</a></li>-->
-            <!--<li><a href="#0" class="header-link&#45;&#45;item" data-hint="Сравнение"><svg id="icon-options" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path d="M0 0h32v32H0z"></path><g fill="#999"><path class="options" d="M16 4h2v24h-2zM19 8h9v4h-9zM8 8h7v4H8zM19 14h5v4h-5zM4 14h11v4H4zM10 20h5v4h-5zM19 20h7v4h-7z"></path></g></g></svg>-->
-            <!--</a></li>-->
-            <!--<li><a href="#0" class="header-link&#45;&#45;item big" id="show-menu">-->
-            <!--<svg id="icon-profile" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path class="overlay" d="M0 0h32v32H0z"></path><g fill-opacity=".1" fill="#000"><circle id="a" cx="16" cy="16" r="16"></circle></g><circle fill="#999" mask="url(#b)" cx="16" cy="38" r="15"></circle><circle fill="#999" cx="16" cy="14" r="7"></circle></g></svg>-->
-            <!--</a></li>-->
-            <!--</ul>-->
+            <ul>
+              <li><a href="#0" class="header-link--item" data-hint="Мониторинг"><svg id="icon-favourites" width="100%" height="100%">
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M0 0h32v32H0z"></path>
+                      <path class="star" fill="#999" d="M16 20.94l-7.641 5.577 2.943-8.99-7.666-5.544 9.46.02L16 3l2.904 9.003 9.46-.02-7.666 5.544 2.943 8.99z"></path>
+                    </g>
+                  </svg>
+                </a></li>
+              <li><a href="#0" class="header-link--item" data-hint="Сравнение"><svg id="icon-options" width="100%" height="100%">
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M0 0h32v32H0z"></path>
+                      <g fill="#999">
+                        <path class="options" d="M16 4h2v24h-2zM19 8h9v4h-9zM8 8h7v4H8zM19 14h5v4h-5zM4 14h11v4H4zM10 20h5v4h-5zM19 20h7v4h-7z"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </a></li>
+              <li><a href="#0" class="header-link--item big" id="show-menu">
+                  <span class="mark"></span>
+                  <!--После появления новой выписки из ЕГРЮЛ показываем кружок у юзерпика.
+Убираем его после открытия меню сразу же (чтоб при открытом меню иконка была уже без кружка)-->
+                  <svg id="icon-profile" width="100%" height="100%">
+                    <g fill="none" fill-rule="evenodd">
+                      <path class="overlay" d="M0 0h32v32H0z"></path>
+                      <g fill-opacity=".1" fill="#000">
+                        <circle id="a" cx="16" cy="16" r="16"></circle>
+                      </g>
+                      <circle fill="#999" mask="url(#b)" cx="16" cy="38" r="15"></circle>
+                      <circle fill="#999" cx="16" cy="14" r="7"></circle>
+                    </g>
+                  </svg>
+                </a></li>
+            </ul>
 
             <div class="header-link--menu" id="lk-menu">
               <div class="profile-info">
@@ -126,6 +150,8 @@
                 </div>
               </div>
               <ul class="profile-menu">
+                <li class="statement active"><a href="">Мои выписки<span>8</span></a></li>
+                <!--если есть новые выписки добовляется класс active-->
                 <li><a href="">Тарифы</a></li>
                 <li><a href="">Настройки</a></li>
                 <li><a href="">Выход</a></li>
@@ -140,7 +166,7 @@
           <div class="wrapper">
             <aside class="company-sidebar">
               <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
-              <ul>
+              <ul class="company-sidebar--menu">
                 <li data-hint="Собственники не найдены"><a href="#0" class="disabled">Cобственники</a></li>
                 <li><a href="#0" class="perfectly">Взаимосвязи</a></li>
                 <li><a href="#0" class="perfectly">Записи ЕГРЮЛ</a></li>
@@ -153,12 +179,31 @@
                 <li><a href="#checks" class="perfectly">Проверки</a></li>
                 <li><a href="#0" class="perfectly">Лицензии</a></li>
               </ul>
+
+              <div class="company-btn">
+                <div class="company-btn--inner">
+                  <ul class="company-btn--dropdown  report">
+                    <li><a href="#short-report" data-modal-inside>Краткий отчет</a></li>
+                    <li><a href="#full-report" data-modal>Полный отчет</a></li>
+                  </ul>
+                  <a href="#0" class="btn">Отчет</a>
+                </div>
+
+                <div class="company-btn--inner">
+                  <ul class="company-btn--dropdown statement">
+                    <li><a href="#egrul-email-modal" data-modal="">Выписка из ЕГРЮЛ</a></li>
+                    <li><a href="#0">Выписка из ЕГРЮЛ с ЭЦП</a></li>
+                    <li><a href="#0">Ранее заказанные выписки <span>99 +</span></a></li>
+                  </ul>
+                  <a href="#0" class="btn">Выписка</a>
+                </div>
+              </div>
             </aside>
 
             <section class="company-content">
               <!--Карточка Главная-->
               <article id="main" class="company-content--item main-card-eliminated card index-card-js">
-                <!-- если существует - то ничего не добавляется, а если ликвидирована то добавляется класс main-card-eliminated  -->
+                <!-- если существует - то ничего не добавляется, а если ликвидирована то добавляется класс main-card-eliminated , если по решению налоговой то main-card-eliminated_nalog -->
                 <div class="card-header">
                   <h1>ООО «МОЯ ОБОРОНА»</h1>
                   <a href="#0" class="card-header--factors">9 стоп-факторов</a>
@@ -187,6 +232,50 @@
                         </span>
                       </p>
 
+                    </div>
+                    <div class="main-card-status liquidation">
+                      <div class="main-card-status_header">
+                        <div class="text">
+                          <span class="icon"></span>
+                          <h2>Находится в стадии ликвидации</h2>
+                        </div>
+
+                        <div class="show-more">
+                          <button class="show-more-btn">Подробнее <span class="icon"></span></button>
+                        </div>
+
+                      </div>
+                      <div class="main-card-status_content">
+                        <div class="title">Всего 5 иска:</div>
+                        <div class="isk-list">
+                          <a href="#0" class="isk-item">23.06.2013<span class="icon-name"></span></a>
+                          <a href="#0" class="isk-item">23.06.2013<span class="icon-name"></span></a>
+                          <a href="#0" class="isk-item">23.06.2013<span class="icon-name"></span></a>
+                          <a href="#0" class="isk-item">23.06.2013<span class="icon-name"></span></a>
+                          <a href="#0" class="isk-item">23.06.2013<span class="icon-name"></span></a>
+                          <a href="#0" class="isk-item">23.06.2013<span class="icon-name"></span></a>
+                          <a href="#0" class="isk-item">23.06.2013<span class="icon-name"></span></a>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="main-card-status bankruptcy">
+                      <div class="main-card-status_header">
+                        <div class="text">
+                          <span class="icon">
+
+                          </span>
+                          <h2>В отношение компании подавались иски о банкротстве</h2>
+                        </div>
+                        <div class="show-more">
+                          <button class="show-more-btn">Подробнее <span class="icon"></span></button>
+                        </div>
+
+                      </div>
+                      <div class="main-card-status_content">
+                        Регистрирующим органом принято решение о предстоящем исключении юридического лица из ЕГРЮЛ (наличие в ЕГРЮЛ сведений о юридическом лице, в отношении которых внесена запись о недостоверности)
+                      </div>
                     </div>
 
                     <div class="main-card-info">
@@ -233,7 +322,15 @@
                           <p><span>Блокировка счета:</span><span class="good">Решений о блокировке счетов не найдено</span></p>
                           <p><span>Блокировка счета:</span>
                             <span class="warning">Есть решения о блокировке счетов
-                              <span class="warning-icon">?
+                              <span class="warning-icon">
+                                <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Group">
+                                      <circle id="Oval" stroke="#F24C3D" stroke-width="1.2" cx="10" cy="10" r="9.4"></circle>
+                                      <path d="M8.98230912,11.7652778 C8.98230912,11.2356455 9.0858773,10.7976869 9.29301676,10.4513889 C9.50015622,10.1050909 9.80204643,9.72315024 10.1986965,9.30555556 C10.4895731,8.99999847 10.7033202,8.74282512 10.8399441,8.53402778 C10.976568,8.32523044 11.044879,8.08842725 11.044879,7.82361111 C11.044879,7.44675737 10.9148678,7.14884369 10.6548417,6.92986111 C10.3948156,6.71087853 10.0488538,6.60138889 9.616946,6.60138889 C9.20266708,6.60138889 8.83466952,6.70069345 8.51294227,6.89930556 C8.19121503,7.09791766 7.92017491,7.37546118 7.69981378,7.73194444 L6.1,6.64722222 C6.47020669,5.99536711 6.97041895,5.49120549 7.60065177,5.13472222 C8.23088459,4.77823896 8.97789761,4.6 9.84171322,4.6 C10.8553744,4.6 11.6684948,4.84953454 12.2810987,5.34861111 C12.8937026,5.84768768 13.2,6.54027335 13.2,7.42638889 C13.2,7.84398357 13.1405034,8.21064657 13.0215084,8.52638889 C12.9025134,8.84213121 12.7570772,9.10948965 12.5851955,9.32847222 C12.4133139,9.5474548 12.1907525,9.79953561 11.9175047,10.0847222 C11.5913702,10.420835 11.3533837,10.7034711 11.2035382,10.9326389 C11.0536926,11.1618067 10.9787709,11.4393502 10.9787709,11.7652778 L8.98230912,11.7652778 Z M10.0013966,15.35 C9.62473431,15.35 9.31008817,15.219955 9.05744879,14.9598611 C8.80480941,14.6997672 8.67849162,14.3832426 8.67849162,14.0102778 C8.67849162,13.6373129 8.80251273,13.3256957 9.05055866,13.0754167 C9.29860459,12.8251376 9.61554742,12.7 10.0013966,12.7 C10.3872459,12.7 10.7041887,12.8251376 10.9522346,13.0754167 C11.2002806,13.3256957 11.3243017,13.6373129 11.3243017,14.0102778 C11.3243017,14.3832426 11.1979839,14.6997672 10.9453445,14.9598611 C10.6927051,15.219955 10.378059,15.35 10.0013966,15.35 Z" id="?" fill="#F24C3D"></path>
+                                    </g>
+                                  </g>
+                                </svg>
                                 <span class="hard-hint">
                                   <span class="hard-hint--header">
                                     Почему счет заблокирован?
@@ -1052,8 +1149,27 @@
                   <div class="owner card-content-item" id="owner-tabs-1">
 
                     <div class="owner-one">
-                      <p>Ведение реестра акционеров c 03.08.2016 передано реестродержателю</p>
-                      <a href="#0"><span class="name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «РЕЕСТР-РН»<span class="icon-name"></span></span></a>
+                      <div class="owner-one--text">
+                        <p>Ведение реестра акционеров c 03.08.2016 передано реестродержателю</p>
+                        <a href="#0"><span class="name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «РЕЕСТР-РН»<span class="icon-name"></span></span></a>
+                      </div>
+
+                      <div class="icon-question"></div>
+
+                      <span class="icon-question">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                          <g fill="none" fill-rule="evenodd">
+                            <circle cx="10" cy="10" r="9.4" stroke="#000" stroke-opacity=".2" stroke-width="1.2" />
+                            <path fill="#000" fill-opacity=".4" d="M8.982 11.765c0-.53.104-.967.311-1.314.207-.346.509-.728.906-1.145a5.82 5.82 0 0 0 .64-.772c.138-.209.206-.446.206-.71 0-.377-.13-.675-.39-.894-.26-.22-.606-.329-1.038-.329-.414 0-.782.1-1.104.298a2.502 2.502 0 0 0-.813.833L6.1 6.647c.37-.652.87-1.156 1.5-1.512.63-.357 1.378-.535 2.242-.535 1.013 0 1.826.25 2.44.749.612.499.918 1.191.918 2.077 0 .418-.06.785-.178 1.1a3.008 3.008 0 0 1-.437.802c-.172.22-.394.472-.667.757-.327.336-.565.618-.714.848-.15.229-.225.506-.225.832H8.982zm1.02 3.585c-.377 0-.692-.13-.945-.39a1.312 1.312 0 0 1-.379-.95 1.275 1.275 0 0 1 1.323-1.31 1.275 1.275 0 0 1 1.323 1.31c0 .373-.126.69-.379.95-.252.26-.567.39-.944.39z" />
+                          </g>
+                        </svg>
+                        <span class="hard-hint">
+                          <span class="hard-hint--text">
+                            В соответствии с законодательством РФ о государственной регистрации юридических лиц в ЕГРЮЛ содержатся сведения об учредителях акционерного общества, а не о его акционерах. Сведения об акционерах общества отражаются в реестре акционеров, держателем которого является само общество или регистратор (реестродержатель).
+                          </span>
+                        </span>
+                      </span>
+
                     </div>
 
                     <div class="table">
@@ -3776,12 +3892,6 @@
               </article>
               <!--карточка для тендера конец-->
             </section>
-
-            <div class="company-btn">
-              <a href="#0" class="btn btn-default">Отчет</a>
-              <a href="#0" class="btn btn-default">Выписка</a>
-            </div>
-
           </div>
         </div>
 
@@ -3821,75 +3931,70 @@
   <!--модалки-->
   <div class="modal modal-full mfp-hide" id="authorization">
     <div class="modal-content">
-      <div class="modal-content--inner">
-        <!-- тело для входа -->
-        <h2>Вход</h2>
-        <form action="" class="sing-in">
-          <label for="sing-in-tel" class="">
-            <!--если не порошел валидацию то добавляется клаcc error 2-3 секунды-->
-            <input type="tel" id="sing-in-tel" placeholder="Номер телеофна" autocomplete="off">
-          </label>
-          <label for="sing-in-password" class="error">
-            <!--если не порошел валидацию то добавляется клаcc error 2-3 секунды-->
-            <input type="password" class="password " id="sing-in-password" autocomplete="off" placeholder="Пароль">
-            <button type="button" class="show-password"></button>
-          </label>
-          <div class="g-recaptcha" data-sitekey="" data-callback="recaptchaCallback"></div>
-          <!--После трех попыток неудачного входа показываем капчу.-->
-          <button class="btn btn-green" type="submit">Войти</button>
-        </form>
-        <p class="error-massage">Неверный номер или пароль</p>
-        <!--показывается если не порошел валидацию  показать на 2-3 секунды-->
-        <a href="#0" class="recovery-pass normal">Забыли пароль?</a>
-        <a href="#0" class="registradion green">Зарегистрироваться</a>
-      </div>
+      <!--        <div class="modal-content&#45;&#45;inner">&lt;!&ndash; тело для входа &ndash;&gt;-->
+      <!--            <h2>Вход</h2>-->
+      <!--            <form action="" class="sing-in">-->
+      <!--                <label for="sing-in-tel" class="">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды&ndash;&gt;-->
+      <!--                    <input type="tel"  id="sing-in-tel" placeholder="Номер телеофна" autocomplete="off">-->
+      <!--                </label>-->
+      <!--                <label for="sing-in-password" class="error">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды&ndash;&gt;-->
+      <!--                    <input type="password"   class="password " id="sing-in-password" autocomplete="off" placeholder="Пароль">-->
+      <!--                    <button type="button" class="show-password"></button>-->
+      <!--                </label>-->
+      <!--                <div class="g-recaptcha" data-sitekey="" data-callback="recaptchaCallback"></div> &lt;!&ndash;После трех попыток неудачного входа показываем капчу.&ndash;&gt;-->
+      <!--                <button class="btn btn-green" type="submit">Войти</button>-->
+      <!--            </form>-->
+      <!--            <p class="error-massage">Неверный номер или пароль</p>&lt;!&ndash;показывается если не порошел валидацию  показать на 2-3 секунды&ndash;&gt;-->
+      <!--            <a href="#0" class="recovery-pass normal">Забыли пароль?</a>-->
+      <!--            <a href="#0" class="registradion green">Зарегистрироваться</a>-->
+      <!--        </div>-->
 
-      <!--<div class="modal-content&#45;&#45;inner registration" >&lt;!&ndash;тело для регистрации   добавляется класс&ndash;&gt;-->
-      <!--<h2>Регистрация</h2>-->
-      <!--<p>Введите свой номер телефона,  <br> мы отправим вам проверочный код</p> &lt;!&ndash;Если  сообщение отправлено текст меняется на 'СМС с кодом отправлено на номер +7 (909) 668-88-58'&ndash;&gt;-->
-      <!--<form action="" class="sing-in">-->
-      <!--<label for="sing-in-tel" class="error" data-hint="Некорректный номер" >&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды. Если номер написан в правильном формате, но не найден в базе,  добавляется клаcc error 2-3 секунды, в хинте (data-hint) с ошибкой будет «Номер уже зарегистрирован».&ndash;&gt;-->
-      <!--<input type="tel"  id="sing-in-tel" autocomplete="off" placeholder="Номер телефона" >-->
-      <!--</label>-->
-      <!--<label for="sing-in-code"  >&lt;!&ndash;показывается когда телефон прошел валидацию и телефон отправился&ndash;&gt;-->
-      <!--<input type="text"  id="sing-in-code" autocomplete="off" placeholder="Код из СМС" >-->
-      <!--</label>-->
-      <!--<label for="sing-in-password" class="error" data-hint="Пароль слишком короткий">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды, валидация это минимум 6 символов&ndash;&gt;-->
-      <!--<input type="password"   class="password " id="sing-in-password" autocomplete="off" minlength="6" placeholder="Пароль">-->
-      <!--<button type="button" class="show-password"></button>-->
-      <!--</label>-->
-      <!--<button class="btn btn-green" type="submit">Продолжить</button> &lt;!&ndash;Когда доходит до шага придумать пароль то заменить текст на "Зарегистрироваться"&ndash;&gt;-->
-      <!--<a href="#0" class="btn btn-default">Назад</a>-->
-      <!--</form>-->
-      <!--<p class="info">Уже зарегистрированы? <a href="#0" class="recovery-pass">Войти</a></p>-->
-      <!--<p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>&lt;!&ndash;Скрипт написал, лежит в libs.js 149 строка если что&ndash;&gt;-->
-      <!--<a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>-->
-      <!--</div>-->
+      <!--        <div class="modal-content&#45;&#45;inner registration" >&lt;!&ndash;тело для регистрации   добавляется класс&ndash;&gt;-->
+      <!--            <h2>Регистрация</h2>-->
+      <!--            <p>Введите свой номер телефона,  <br> мы отправим вам проверочный код</p> &lt;!&ndash;Если  сообщение отправлено текст меняется на 'СМС с кодом отправлено на номер +7 (909) 668-88-58'&ndash;&gt;-->
+      <!--            <form action="" class="sing-in">-->
+      <!--                <label for="sing-in-tel" class="error" data-hint="Некорректный номер" >&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды. Если номер написан в правильном формате, но не найден в базе,  добавляется клаcc error 2-3 секунды, в хинте (data-hint) с ошибкой будет «Номер уже зарегистрирован».&ndash;&gt;-->
+      <!--                    <input type="tel"  id="sing-in-tel" autocomplete="off" placeholder="Номер телефона" >-->
+      <!--                </label>-->
+      <!--                <label for="sing-in-code"  >&lt;!&ndash;показывается когда телефон прошел валидацию и телефон отправился&ndash;&gt;-->
+      <!--                    <input type="text"  id="sing-in-code" autocomplete="off" placeholder="Код из СМС" >-->
+      <!--                </label>-->
+      <!--                <label for="sing-in-password" class="error" data-hint="Пароль слишком короткий">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды, валидация это минимум 6 символов&ndash;&gt;-->
+      <!--                    <input type="password"   class="password " id="sing-in-password" autocomplete="off" minlength="6" placeholder="Пароль">-->
+      <!--                    <button type="button" class="show-password"></button>-->
+      <!--                </label>-->
+      <!--                <button class="btn btn-green" type="submit">Продолжить</button> &lt;!&ndash;Когда доходит до шага придумать пароль то заменить текст на "Зарегистрироваться"&ndash;&gt;-->
+      <!--                <a href="#0" class="btn btn-default">Назад</a>-->
+      <!--            </form>-->
+      <!--            <p class="info">Уже зарегистрированы? <a href="#0" class="recovery-pass">Войти</a></p>-->
+      <!--            <p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>&lt;!&ndash;Скрипт написал, лежит в libs.js 149 строка если что&ndash;&gt;-->
+      <!--            <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>-->
+      <!--        </div>-->
 
-      <!--<div class="modal-content&#45;&#45;inner registration" >&lt;!&ndash;тело для востановления пароля, так как оно такое как и регистрация, то я не вижу смысла менять класс на какой-то другой, тк будет одинакой css код как и для класса registration фунгционал тот же самый&ndash;&gt;-->
-      <!--<h2>Восстановление пароля</h2>-->
-      <!--<p>Введите номер телефона,<br> которые вы указали при регистрации</p> &lt;!&ndash;Если  сообщение отправлено текст меняется на 'СМС с кодом отправлено на номер +7 (909) 668-88-58'&ndash;&gt;-->
-      <!--<form action="" class="sing-in">-->
-      <!--<label for="sing-in-tel" class="error" data-hint="Некорректный номер" >-->
-      <!--<input type="tel"  id="sing-in-tel" autocomplete="off" placeholder="Номер телефона" >-->
-      <!--</label>-->
-      <!--<label for="sing-in-code"  >-->
-      <!--<input type="text"  id="sing-in-code" autocomplete="off" placeholder="Код из СМС" >-->
-      <!--</label>-->
-      <!--<label for="sing-in-password" class="error" data-hint="Пароль слишком короткий">-->
-      <!--<input type="password"   class="password " id="sing-in-password" autocomplete="off" minlength="6" placeholder="Пароль">-->
-      <!--<button type="button" class="show-password"></button>-->
-      <!--</label>-->
-      <!--<button class="btn btn-green" type="submit">Продолжить</button> &lt;!&ndash;Когда доходит до шага придумать пароль то заменить текст на "Сохранить и войти"&ndash;&gt;-->
-      <!--<a href="#0" class="btn btn-default">Назад</a>-->
-      <!--</form>-->
-      <!--<p class="info">Уже зарегистрированы? <a href="#0" class="recovery-pass">Войти</a></p>-->
-      <!--<p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>-->
-      <!--<a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>-->
-      <!--</div>-->
+      <!--        <div class="modal-content&#45;&#45;inner registration" >&lt;!&ndash;тело для востановления пароля, так как оно такое как и регистрация, то я не вижу смысла менять класс на какой-то другой, тк будет одинакой css код как и для класса registration фунгционал тот же самый&ndash;&gt;-->
+      <!--            <h2>Восстановление пароля</h2>-->
+      <!--            <p>Введите номер телефона,<br> которые вы указали при регистрации</p> &lt;!&ndash;Если  сообщение отправлено текст меняется на 'СМС с кодом отправлено на номер +7 (909) 668-88-58'&ndash;&gt;-->
+      <!--            <form action="" class="sing-in">-->
+      <!--                <label for="sing-in-tel" class="error" data-hint="Некорректный номер" >-->
+      <!--                    <input type="tel"  id="sing-in-tel" autocomplete="off" placeholder="Номер телефона" >-->
+      <!--                </label>-->
+      <!--                <label for="sing-in-code"  >-->
+      <!--                    <input type="text"  id="sing-in-code" autocomplete="off" placeholder="Код из СМС" >-->
+      <!--                </label>-->
+      <!--                <label for="sing-in-password" class="error" data-hint="Пароль слишком короткий">-->
+      <!--                    <input type="password"   class="password " id="sing-in-password" autocomplete="off" minlength="6" placeholder="Пароль">-->
+      <!--                    <button type="button" class="show-password"></button>-->
+      <!--                </label>-->
+      <!--                <button class="btn btn-green" type="submit">Продолжить</button> &lt;!&ndash;Когда доходит до шага придумать пароль то заменить текст на "Сохранить и войти"&ndash;&gt;-->
+      <!--                <a href="#0" class="btn btn-default">Назад</a>-->
+      <!--            </form>-->
+      <!--            <p class="info">Уже зарегистрированы? <a href="#0" class="recovery-pass">Войти</a></p>-->
+      <!--            <p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>-->
+      <!--            <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>-->
+      <!--        </div>-->
     </div>
   </div>
-  <div class="modal modal-rewrite-password mfp-hide" id="rewrite-password">
+  <div class="modal modal-rewrite-password  mfp-hide" id="rewrite-password">
     <div class="modal-content">
       <!--В этой модалке много общего с модалкой авторизации,id можешь менять на них ничего не навершено-->
       <div class="modal-content--inner registration">
@@ -3920,7 +4025,6 @@
         </form>
         <p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>
         <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>
-
       </div>
     </div>
   </div>
@@ -3949,6 +4053,31 @@
           </div>
         </div>
       </section>
+    </div>
+  </div>
+  <div class="modal modal-egrul-email  mfp-hide" id="egrul-email-modal">
+    <div class="modal-content">
+      <div class="modal-content--inner">
+        <!-- тело для входа -->
+        <!--            если почта не известна-->
+        <h2>Выписка из ЕГРЮЛ с ЭЦП</h2>
+        <!--            <p>Вы не указали e-mail в профиле, <br> укажите его чтобы получить выписку.</p>-->
+        <!--           <p> На почту makaronov@rambler-co.ru <br> отправлено письмо с подтверждением. </p>-->
+        <!-- этот текст показывается когда все успешно-->
+        <!--           <p> Выписка будет отправлена как только она будет готова. Обычно это занимает до суток. </p>-->
+        <!-- этот текст показывается когда все успешно-->
+        <!--            <p>Выписка будет отправлена на почту <br> vasisualiy.makaronov@rambler-co.ru, как только она будет готова.<br>Обычно это занимает до суток.</p>-->
+        <!--этот текст показывается вместе с кнопкой ok когда почта уже была введена-->
+        <form action="">
+          <label for="egrul-email" class="error" data-hint="Неверный e-mail">
+            <!--если не порошел валидацию то добавляется клаcc error 2-3 секунды. -->
+            <input type="email" id="egrul-email" autocomplete="off" placeholder="Электронная почта">
+          </label>
+          <button type="submit" class="btn btn-green">Продолжить</button>
+          <button type="submit" class="btn btn-green btn-green-close">Ок</button>
+          <!--показывается когда отправлдено -->
+        </form>
+      </div>
     </div>
   </div>
 
@@ -7692,6 +7821,421 @@
   </div>
   <!--внутрянки конец-->
 
+  <!--Краткий отчет-->
+  <div class="modal mfp-hide modal-inside big short-report" id="short-report">
+    <!--отчетность-->
+    <div class="modal-inside-wrapper">
+      <div class="lds-ring">
+        <!--лоадер-->
+        <div></div>
+      </div>
+      <div class="short-report--header">
+        <div class="title">
+          <h2>ООО «МОЯ ОБОРОНА»</h2>
+          <p>Краткий отчет от <span>20.12.2011</span></p>
+        </div>
+        <!--            Стоп-фактор в учрежденных и управляемых считается как один-->
+        <span class="short-report--factors">9 стоп-факторов</span>
+      </div>
+
+      <div class="short-report--table table">
+        <!--этот блок оставлю для примера -->
+        <div class="table-row">
+          <div class="table-col name">Полное наименование</div>
+          <div class="table-col">
+            <h3>Общество с ограниченной ответственностью «РАМБЛЕР ИНТЕРНЕТ ХОЛДИНГ»</h3>
+            <p class="normal">Действует с 26.06.2002</p>
+            <p class="warning">Ликвидировано 26.06.2002 по решению ФНС</p>
+            <p>Прекращение деятельности юридического лица в связи с исключением из ЕГРЮЛ на основании п.2 ст.21.1 федерального закона от 08.08.2001 №129-ФЗ</p>
+            <p><span>ИНН:</span>772502306276</p>
+            <p><span>Дата изменения:</span>26.08.2018</p>
+            <div class="info">
+              <p>Ведение реестра акционеров c 03.08.2016 передано реестродержателю</p>
+              <h3>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ГЕНЕРАЛЬНЫЙ ВЕРХОВНЫЙ РЕЕСТР-РН»</h3>
+            </div>
+            <div class="detail">
+              <div class="col">
+                <h3>ООО «Яндекс.Медиасервисы»</h3>
+                <p><span>ОГРН:</span><span>2346734574554</span></p>
+                <p><span>ИНН:</span><span>1634534588 </span></p>
+              </div>
+              <div class="col">
+                <p>7 040 000 000 000 ₽<span>(88%)</span></p>
+              </div>
+            </div>
+            <div class="factors satisfactorily ">
+              <!--dangerously-->
+              <h4>Будьте осторожны</h4>
+              <p>Общество является участником (акционером), владеющим долей (акциями) в размере менее 50% уставного капитала, 2-х и более юридических лиц, ранее ликвидированных на основании решения ФНС России.</p>
+            </div>
+            <div class="factors dangerously ">
+              <h4>Стоп-фактор!</h4>
+              <p>Общество является участником (акционером), владеющим долей (акциями) в размере более 50% уставного капитала, 2-х и более юридических лиц, ранее ликвидированных на основании решения ФНС России</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Полное наименование</div>
+          <div class="table-col">
+            <h3>Общество с ограниченной ответственностью «РАМБЛЕР ИНТЕРНЕТ ХОЛДИНГ»</h3>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Статус</div>
+          <div class="table-col">
+            <!--                    Если действует — пишем «Действует с 26.06.2002» зеленым
+
+Если ликвидировано — «Ликвидировано 26.06.2002» серым.
+
+Нижний блок показываем только если ликвидировано по решению ФНС.-->
+            <p class="normal">Действует с 26.06.2002</p>
+            <p class="warning">Ликвидировано 26.06.2002 по решению ФНС</p>
+            <p>Прекращение деятельности юридического лица в связи с исключением из </p>
+
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Единоличный <br> исполнительный орган</div>
+          <div class="table-col">
+            <h3>Сергеев Дмитрий Александрович</h3>
+            <p>Генеральный исполнительный директор</p>
+            <!--                 Если все ок, то не показываем эту строку      -->
+            <p><span>ИНН:</span>772502306276</p>
+            <p><span>Дата изменения:</span>26.08.2018</p>
+            <p class="warning">Входит в реестр массовых руководителей (13 компаний) ФНС России</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Размер</div>
+          <div class="table-col">
+            <p>Микропредприятие</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Выручка в 2017 году</div>
+          <div class="table-col">
+            <p>Менее 120 млн. руб.</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Штат</div>
+          <div class="table-col">
+            <p>Менее 15 человек</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Уставный капитал</div>
+          <div class="table-col">
+            <p>5 105 981 778 ₽</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Налоговый режим</div>
+          <div class="table-col">
+            <p>УСН</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Лицензии</div>
+          <div class="table-col">
+            <p class="row">
+              <span class="title">Выдано</span>
+              <span class="value">782</span>
+            </p>
+            <p class="row">
+              <!--                        показываем только сколько действует.
+если все лицензии у компании действительны, то не показываем эту строку.-->
+              <span class="title">Действует</span>
+              <span class="value">700</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Коды статистики</div>
+          <div class="table-col">
+            <p class="row">
+              <span class="title">ОГРН</span>
+              <span class="value">1027700161906</span>
+            </p>
+            <p class="row">
+              <span class="title">ОКПО</span>
+              <span class="value">58032482</span>
+            </p>
+            <p class="row">
+              <span class="title">ИНН</span>
+              <span class="value">7707300940</span>
+            </p>
+            <p class="row">
+              <span class="title">КПП</span>
+              <span class="value">770701001</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Основной вид деятельности</div>
+          <div class="table-col">
+            <p class="row">
+              <span class="title">70.22</span>
+              <span class="value">Консультирование по вопросам коммерческой деятельности и управления</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Юридический адрес</div>
+          <div class="table-col">
+            <h3></h3>
+            <p>123044, г. Комсомольск-на-Амуре, ул. Соломенного века, д. 15, корп. 1</p>
+            <!--                    Если все ок, то не показываем эту строку-->
+            <p class="warning">Адрес массовой регистрации (7 юридических лиц)</p>
+            <!--                    Если все ок, то не показываем эту строку-->
+            <p class="warning">Сведения недостоверны (результаты проверки достоверности содержащихся в ЕГРЮЛ сведений о юридическом лице) по состоянию на 22.06.2017</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Филиалы и представительства</div>
+          <div class="table-col">
+            <p>10</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Телефоны</div>
+          <div class="table-col">
+            <p>+7 (495) 278-13-13, +7 (495) 278-30-30</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Электронная почта</div>
+          <div class="table-col">
+            <p>info@rambler-co.ru, info@rambler.ru</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Сайт</div>
+          <div class="table-col">
+            <p>www.auto.ru</p>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Собтсвенники </div>
+          <div class="table-col">
+            <div class="info">
+              <p>Ведение реестра акционеров c 03.08.2016 передано реестродержателю</p>
+              <h3>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ГЕНЕРАЛЬНЫЙ ВЕРХОВНЫЙ РЕЕСТР-РН»</h3>
+            </div>
+            <div class="detail">
+              <div class="col">
+                <h3>ООО «Яндекс.Медиасервисы»</h3>
+                <p><span>ОГРН:</span><span>2346734574554</span></p>
+                <p><span>ИНН:</span><span>1634534588 </span></p>
+              </div>
+              <div class="col">
+                <p>7 040 000 000 000 ₽<span>(88%)</span></p>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="col">
+                <h3>ООО «Яндекс.Медиасервисы»</h3>
+                <p><span>ОГРН:</span><span>2346734574554</span></p>
+                <p><span>ИНН:</span><span>1634534588 </span></p>
+              </div>
+              <div class="col">
+                <p>7 040 000 000 000 ₽<span>(88%)</span></p>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="col">
+                <h3>КОМПАНИЯ С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЯНДЕКС МЕДИА СЕРВИСЫ Б.В. (НИДЕРЛАНДЫ)</h3>
+              </div>
+              <div class="col">
+                <p> 800 000 000 000 ₽</p>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="col">
+                <h3>ООО «Яндекс.Медиасервисы»</h3>
+                <p><span>ОГРН:</span><span>2346734574554</span></p>
+                <p><span>ИНН:</span><span>1634534588 </span></p>
+              </div>
+              <div class="col">
+                <p>7 040 000 000 000 ₽<span>(1%)</span></p>
+              </div>
+            </div>
+
+            <div class="factors satisfactorily ">
+              <!--dangerously-->
+              <!--                    Если все ок, то не показываем этот блок.-->
+              <h4>Будьте осторожны!</h4>
+              <p>Общество является участником (акционером), владеющим долей (акциями) в размере менее 50% уставного капитала, 2-х и более юридических лиц, ранее ликвидированных на основании решения ФНС России.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Учрежденные ДЗО</div>
+          <div class="table-col">
+            <div class="detail">
+              <div class="col">
+                <h3>ООО «Яндекс.Медиасервисы»</h3>
+                <p><span>ОГРН:</span><span>2346734574554</span></p>
+                <p><span>ИНН:</span><span>1634534588 </span></p>
+              </div>
+              <div class="col">
+                <p><span></span></p>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="col">
+                <h3>КОМПАНИЯ С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЯНДЕКС МЕДИА СЕРВИСЫ Б.В. (НИДЕРЛАНДЫ)</h3>
+              </div>
+            </div>
+            <!--                    Если все ок, то не показываем этот блок.-->
+            <div class="factors dangerously ">
+              <!--satisfactorily-->
+              <h4>Стоп-фактор!</h4>
+              <p>Общество является управляющей компанией 2-х и более юридических лиц, ранее ликвидированных на основании решения ФНС России</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Управляемые ДЗО</div>
+          <div class="table-col">
+            <div class="detail">
+              <div class="col">
+                <h3>ООО «Яндекс.Медиасервисы»</h3>
+                <p><span>ОГРН:</span><span>2346734574554</span></p>
+                <p><span>ИНН:</span><span>1634534588 </span></p>
+              </div>
+              <div class="col">
+                <p><span></span></p>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="col">
+                <h3>КОМПАНИЯ С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЯНДЕКС МЕДИА СЕРВИСЫ Б.В. (НИДЕРЛАНДЫ)</h3>
+              </div>
+            </div>
+            <!--                    Если все ок, то не показываем этот блок.-->
+            <div class="factors dangerously ">
+              <!--satisfactorily-->
+              <h4>Стоп-фактор!</h4>
+              <p>Общество является управляющей компанией 2-х и более юридических лиц, ранее ликвидированных на основании решения ФНС России</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Здесь и далее:
+если все ок, то не показываем ваще всю строку. -->
+        <div class="table-row">
+          <div class="table-col name">Записи ЕГРЮЛ</div>
+          <div class="table-col">
+            <div class="factors satisfactorily ">
+              <!--dangerously-->
+              <h4>Будьте осторожны!</h4>
+              <p>Общество является средним или малым предприятияем (выручка менее 800 млн.руб.) и его единоличный исполнительнй орган сменялся 2 и более раз за последний год</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Отчетность</div>
+          <div class="table-col">
+            <div class="factors satisfactorily ">
+              <!--dangerously-->
+              <h4>Будьте осторожны!</h4>
+              <p>Не сдана отчетность в ФНС России за предыдущий отчетный год</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Экономика</div>
+          <div class="table-col">
+            <div class="factors satisfactorily ">
+              <!--dangerously-->
+              <h4>Будьте осторожны!</h4>
+              <p>Дебиторская задолженность Общества за последний отчетный год составляет от 50 до 90% всех активов Общества (Строка 1600 бухгалтерского баланса)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Бизнес-коэффициенты</div>
+          <div class="table-col">
+            <div class="factors satisfactorily ">
+              <!--dangerously-->
+              <h4>Будьте осторожны!</h4>
+              <p>Из 10 основных бизнес-коэфициентов 3 и более имеют отклонение от нормы</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Арбитраж</div>
+          <div class="table-col">
+            <div class="factors satisfactorily ">
+              <!--dangerously-->
+              <h4>Будьте осторожны!</h4>
+              <p>Сумма требований, по которым Общество выступает ответчиком, превышает сумму требований, по которым Общество выступает истцом, ИЛИ подано заявление о признании Общества банкротом</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">ФССП</div>
+          <div class="table-col">
+            <div class="factors satisfactorily ">
+              <!--dangerously-->
+              <h4>Будьте осторожны!</h4>
+              <p>Сумма открытых исполнительных производств в отношении Общества более 25% всех активов Общества за последний отчетный период ИЛИ при отсутствии бухгалтерской отчетности имеются открытые в исполнительные производства</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Тендеры</div>
+          <div class="table-col">
+            <div class="factors satisfactorily ">
+              <!--dangerously-->
+              <h4>Будьте осторожны!</h4>
+              <p>Юридическое лицо было внесено более 3-х лет назад в реестр недобросовестных поставщиков согласно ФЗ № 44-ФЗ или ФЗ № 223-ФЗ, но на данный момент в реестре уже не соостоит</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-col name">Проверки</div>
+          <div class="table-col">
+            <div class="factors satisfactorily ">
+              <!--dangerously-->
+              <h4>Будьте осторожны!</h4>
+              <p>Нарушения выявлены в более чем 25% случаев проверок, проводенных в отношении данного Общества</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--Краткий отчет конец-->
   <!--svg-sprite-->
   <div class="svgSprite" hidden>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">

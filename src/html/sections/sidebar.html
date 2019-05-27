@@ -1,5 +1,5 @@
 <aside class="company-sidebar"> <!-- если все норм то добавляется класс perfectly если какае-то предупреждение то добавляется класс satisfactorily  если есть стопфакторы то добавляется класс dangerously-->
-    <ul>
+    <ul class="company-sidebar--menu">
         <li data-hint="Собственники не найдены"><a href="#0" class="disabled" >Cобственники</a></li>
         <li><a href="#0" class="perfectly">Взаимосвязи</a></li>
         <li><a href="#0" class="perfectly">Записи ЕГРЮЛ</a></li>
@@ -12,4 +12,23 @@
         <li><a href="#checks" class="perfectly">Проверки</a></li>
         <li><a href="#0" class="perfectly">Лицензии</a></li>
     </ul>
+
+    <div class="company-btn">
+        <div class="company-btn--inner">
+            <ul class="company-btn--dropdown  report">
+                <li><a href="#short-report" data-modal-inside>Краткий отчет</a></li>
+                <li><a href="#full-report" data-modal>Полный отчет</a></li>
+            </ul>
+            <a href="#0" class="btn">Отчет</a>
+        </div>
+
+        <div class="company-btn--inner">
+            <ul class="company-btn--dropdown statement">
+                <li><a href="#egrul-email-modal" data-modal="">Выписка из ЕГРЮЛ</a></li>
+                <li><a href="#0">Выписка из ЕГРЮЛ с ЭЦП</a></li>
+                <li><a href="#0">Ранее заказанные выписки <span>99 +</span></a></li>
+            </ul>
+            <a href="#0" class="btn">Выписка</a>
+        </div>
+    </div>
 </aside>

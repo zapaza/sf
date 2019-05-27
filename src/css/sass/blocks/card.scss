@@ -240,11 +240,35 @@
       display: none;
     }
     .main-card-header--registration{
-      color: $red;
+      color: $mid-gray--text;
       position: relative;
+      .icon-red-question{
+        circle{
+          stroke: $light-gray;
+        }
+        path{
+          fill:$mid-gray--text
+        }
+        &:hover{
+          circle{
+            fill: $mid-gray--text;
+            stroke: $mid-gray;
+          }
+          path{
+            fill:$white;
+          }
+        }
+      }
+
+
     }
     .card-header{
       color: $mid-gray--text;
+    }
+  }
+  &.main-card-eliminated_nalog{
+    .main-card-header--registration {
+      color: $red;
     }
   }
   &.double{
@@ -635,6 +659,173 @@
         }
       }
 
+      &-status{
+        width: 100%;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        padding: 16px 20px 16px 16px;
+        &.liquidation{
+          background-color: $gold--bg;
+          color: $gold;
+
+          .text{
+            .icon{
+              background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3E228AA890-4BB7-4B13-B5C6-7B04F61B2E72%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='CARDS/DESKTOP/GUIDES-HINT' transform='translate(-384.000000, -291.000000)'%3E%3Cg id='icon/stopfactor/XL/alert' transform='translate(384.000000, 291.000000)'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Ccircle id='Oval' fill='%23E6A345' cx='20' cy='20' r='20'%3E%3C/circle%3E%3Cpath d='M17.6,10 L22.4,10 L21.5625,23.893918 L18.46875,23.893918 L17.6,10 Z M20.0325,31.6 C19.2741629,31.6 18.6458358,31.3483896 18.1475,30.8451613 C17.6491642,30.341933 17.4,29.721294 17.4,28.9832258 C17.4,28.2451576 17.6491642,27.63011 18.1475,27.1380645 C18.6458358,26.646019 19.2741629,26.4 20.0325,26.4 C20.7691703,26.4 21.3812476,26.646019 21.86875,27.1380645 C22.3562524,27.63011 22.6,28.2451576 22.6,28.9832258 C22.6,29.721294 22.3562524,30.341933 21.86875,30.8451613 C21.3812476,31.3483896 20.7691703,31.6 20.0325,31.6 Z' id='!' fill='%23FFFFFF' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            }
+          }
+
+          .show-more-btn{
+            .icon{
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'/%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='%23FA9F37'/%3E%3Cpath stroke='%23FA9F37' stroke-linecap='square' stroke-width='1.8' d='M8 13.5l4-4 4 4'/%3E%3C/g%3E%3C/svg%3E");
+            }
+          }
+        }
+        &.bankruptcy{
+          background-color: $red-bg;
+          color: $red;
+          .text{
+            .icon{
+              background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3EAC5EEC6E-2150-4A16-BBE1-27952C7829B7%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/stopfactor/XL/stop'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Ccircle id='Oval' fill='%23F24C3D' cx='20' cy='20' r='20'%3E%3C/circle%3E%3Cg id='Group-9' transform='translate(15.000000, 15.000000)' stroke='%23FFFFFF' stroke-linecap='square' stroke-width='3.5'%3E%3Cpath d='M2.66009437e-13,10 L10,1.71418435e-13' id='Line-7'%3E%3C/path%3E%3Cpath d='M-3.96127575e-13,2.40030218e-12 L10,10' id='Line-7'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            }
+          }
+
+          .show-more-btn {
+            .icon {
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'/%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='%23f24c3d'/%3E%3Cpath stroke='%23f24c3d' stroke-linecap='square' stroke-width='1.8' d='M8 13.5l4-4 4 4'/%3E%3C/g%3E%3C/svg%3E");
+            }
+          }
+        }
+
+        &_header{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 8px;
+
+
+          .text{
+            display: flex;
+            align-items: center;
+            max-width: 508px;
+
+            font-size: 1.4rem;
+            font-weight: $font-bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.6rem;
+            letter-spacing: normal;
+            .icon{
+              display: inline-block;
+              margin-right: 16px;
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+            }
+          }
+
+          .show-more{
+            &-btn{
+
+              border: none;
+              background-color: transparent;
+              color:inherit;
+
+              font-size: 1.4rem;
+              font-weight:$font-regular;
+              line-height: 1.6rem;
+              text-align: right;
+              transition: .5s ease all;
+              &.active{
+                color: transparent;
+
+                .icon{
+                  transform: rotate(0);
+                }
+              }
+
+              .icon{
+                display: inline-block;
+                vertical-align: middle;
+                width: 24px;
+                height: 24px;
+                margin-left: 8px;
+                background-position: center;
+                border-right: none;
+                -webkit-background-size: contain;
+                background-size: contain;
+                transition: .5s ease all;
+                transform: rotate(-180deg);
+              }
+
+            }
+          }
+        }
+        &_content{
+          display: none;
+          max-width: 556px;
+          padding-left: 48px;
+          box-sizing: border-box;
+
+          font-size: 1.4rem;
+          font-weight: $font-regular;
+          line-height: 2rem;
+
+          .title{
+            margin-bottom: 8px;
+          }
+
+          .isk-list{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .isk-item{
+            display: block;
+            width: 104px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            padding: 4px 6px 4px 8px;
+            box-sizing: border-box;
+
+            font:{
+              weight: $font-regular;
+              size: 1.4rem;
+            }
+            line-height: 1.6rem;
+
+            border-radius: 4px;
+            background-color: $gold;
+            opacity: 1;
+            transition: .2s all ease;
+            color: $white;
+
+            .icon-name{
+              display: inline-block;
+              vertical-align: baseline;
+              margin-bottom: -2px;
+              width: 16px;
+              height: 16px;
+              margin-left: 2px;
+              background-repeat: no-repeat;
+              background-position: center;
+              -webkit-background-size: contain;
+              background-size: contain;
+              background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23fff'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            }
+            
+            &:hover{
+              opacity: .7;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
       &-info{
         display: flex;
         align-items: stretch;
@@ -669,15 +860,23 @@
                     width: 20px;
                     height: 20px;
                     vertical-align: middle;
-                    background-color: $red;
-                    border-radius: 50%;
-                    color: $white;
-                    font-weight: $font-bold;
-                    text-align: center;
-                    font-size: 1.4rem;
-                    line-height: 2.1rem;
                     cursor: pointer;
                     position: relative;
+                    svg{
+                      circle, path{
+                        transition: .2s;
+                      }
+                      &:hover{
+                        circle{
+                          fill:$red;
+                        }
+                        path{
+                          fill:$white;
+                        }
+
+                      }
+                    }
+
                     @media (min-width: 1264px) and (min-height:671px){
                       font-size: 1.6rem;
                     }
@@ -1802,7 +2001,6 @@
       margin-bottom: 24px;
 
       &-one{
-        position: relative;
         margin-bottom: 24px;
         width: 100%;
         border-radius: 8px;
@@ -1810,31 +2008,83 @@
         background-color: rgb(255, 255, 255);
         padding: 16px 24px;
         box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
 
-        &:after{
-          content: '?';
-          position: absolute;
+        &--text{
+          width: calc(100% - 52px);
+        }
+
+        .icon-question{
+          position: relative;
           width: 20px;
           height: 20px;
-          right: 16px;
-          top: 16px;
-          vertical-align: middle;
-          background-color:$light-gray;
-          border-radius: 50%;
-          color: $black;
-          font-weight: 700;
-          text-align: center;
-          font-size: 1.4rem;
-          line-height: 2.1rem;
+          cursor: pointer;
+          circle, path{
+            transition: .2s all ease;
+          }
+          &:hover{
+            circle{
+              fill:$black;
+              fill-opacity: .4;
+            }
+            path{
+              fill:#fff;
+              fill-opacity: 1;
+            }
+
+            .hard-hint{
+              opacity: 1;
+              display: block;
+            }
+          }
+          .hard-hint{
+            display: none;
+            opacity: 0;
+            position: absolute;
+            z-index: 99;
+            right: -8px;
+            top: 36px;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 304px;
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            &:after{
+              position: absolute;
+              content: '';
+              display: block;
+              right: 8px;
+              width: 8px;
+              height: 8px;
+              bottom: 100%;
+
+              border: 8px solid transparent;
+              border-bottom-color:$white;
+              box-sizing: border-box;
+            }
+            .hard-hint--header{
+              font-weight: $font-bold;
+              margin-bottom: 8px;
+            }
+          }
         }
 
         p{
           margin-bottom: 8px;
 
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           font-weight: $font-regular;
           line-height: 2rem;
           color: $black--text;
+          @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
         }
 
         a{

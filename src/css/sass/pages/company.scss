@@ -10,13 +10,20 @@
     position: fixed;
     z-index: 1;
     top: 88px;
-    height: 100vh;
-    max-height: 768px;
+    height: calc(100vh - 128px);
     width:100%;
     max-width: 224px;
     margin-right: 16px;
     transition: top .5s ease-in-out;
     transition-duration: .5s;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    //todo !fix me
+    //overflow-y: auto;
+    //overflow-x:visible;
 
     &.fixed{
       top: 30px;
@@ -44,7 +51,8 @@
       }
 
     }
-    ul{
+
+    & > ul{
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -53,7 +61,7 @@
       @media (min-width: 1344px) {
         padding-top: 16px;
       }
-      li{
+      & > li{
         position: relative;
         margin-bottom: 12px;
         @media (min-width: 1344px) {
@@ -116,7 +124,7 @@
 
           }
         }
-        a{
+        & > a{
 
           display: inline-block;
           padding-left: 21px;
@@ -235,40 +243,81 @@
   }
 
   &-btn{
-    position: fixed;
-    z-index: 99;
-    width: 304px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 32px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 24px;
-    background: $white;
-    @media (min-width: 1280px){
-      left: auto;
-      right: 52px;
+    flex-direction: column;
+    width: 100%;
+    &--inner{
+      margin-bottom: 16px;
+      position: relative;
     }
 
-    .btn{
-      flex-basis: 50%;
-      width: 50%;
-      border: none;
-      border-radius: 0;
-      text-transform: none;
+    &--dropdown{
+      position: absolute;
+      display: none;
+      width: 204px;
+      left: 0;
+      bottom: calc(100% + 16px);
+      background-color: $white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+      border-right: 4px;
+      padding: 8px 0;
+      box-sizing: content-box;
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: -16px;
+        left: 68px;
+        width: 8px;
+        height: 8px;
+        border: 8px solid transparent;
+        border-top-color: $white;
+        box-sizing: border-box;
 
-      &:first-child{
-        border-right:1px solid  rgba(0, 0, 0, .1);
-        border-top-left-radius:24px;
-        border-bottom-left-radius:24px;
       }
-      &:last-child{
-        border-top-right-radius:24px;
-        border-bottom-right-radius:24px;
 
+      li{
+        width: 100%;
+        a{
+          padding: 8px 16px;
+          display: block;
+          font:{
+            size: 1.4rem;
+            weight: $font-regular;
+          }
+          line-height: 1.6rem;
+          letter-spacing: normal;
+          color:$black--text;
+          transition: .5s ease all;
+          &:hover{
+            text-decoration: none;
+            background-color:  rgba(0, 0, 0, 0.05);
+          }
+        }
+      }
+    }
+    .btn{
+      width: 144px;
+      height: 32px;
+      border-radius: 16px;
+      background-color: rgb(153, 153, 153);
+      padding: 8px 16px;
+
+      text-align: center;
+      font:{
+        size: 1.4rem;
+        weight: $font-bold;
+      }
+      line-height: 1.6rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+
+      color: $white;
+      &:hover{
+        text-decoration: none;
+        background-color: rgb(102, 102, 102);
+      }
+      &:active{
+        transform: scale(.96);
       }
     }
   }
@@ -323,7 +372,6 @@
       }
 
     }
-
     &.download-modal,
     &.print-modal{
       width: 200px;

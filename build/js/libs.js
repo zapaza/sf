@@ -6,7 +6,7 @@ function Scrolling(){
         var up = false;
         var newscroll;
         var scrollEnd =  $('.page-content').innerHeight() - $('.page-content').offset().top  - $('.company-sidebar').innerHeight();
-        // console.log(scrollEnd);
+        console.log(scrollEnd);
         mywindow.scroll(function () {
             newscroll = mywindow.scrollTop();
             if (newscroll > mypos && !up) { //если есть прокрутка в низ·
@@ -163,16 +163,15 @@ function Tabs(){
     }
 }
 
-
 $(document).ready(function () {
 
     var $body = $('body'),
         ua = navigator.userAgent,
         event = (ua.match(/iPad/i)) ? "touchstart" : "click";
 
-    Scrolling();
-    Tabs();
 
+    Tabs();
+    Scrolling();
 //фокус поиска
     $('#query').on('keyup',function(){
         var $this = $(this),
@@ -194,7 +193,7 @@ $(document).ready(function () {
     });
 
 //скрол по якорю
-    $body.on(event,".company-sidebar a", function (e) {
+    $body.on(event,".company-sidebar--menu a", function (e) {
         e.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top - 70;
@@ -206,6 +205,7 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).toggleClass('open');
         $('#lk-menu').fadeToggle('500');
+
     });
 
 //скрипт показа модалки
@@ -218,6 +218,10 @@ $(document).ready(function () {
         removalDelay: 300,
         closeBtnInside: true,
         mainClass: 'zoom-in'
+    });
+    $body.on(event, '.btn-green-close', function (e) {
+        e.preventDefault();
+        $.magnificPopup.close();
     });
 //модалка авторизации
     $('a[data-modal-authorization]').magnificPopup({
@@ -266,9 +270,9 @@ $(document).ready(function () {
                 if($('.mfp-wrap').find('.big')){
                     $('.mfp-wrap').find('.big').closest('.mfp-content').addClass('big');
                 }
-                //аккордион на главной странице
+
                 if($('.document-list--item_accordion').length > 0){
-                    var accordionContent = $('.document-list--item_accordion .content').hide();
+                    // var accordionContent = $('.document-list--item_accordion .content').hide();
 
                     $body.on(event, '.document-list--item_accordion .title', function () {
                         $this = $(this);
@@ -377,7 +381,7 @@ $(document).ready(function () {
             }
         });
 
-        $('body').on(event, '.card-header--inner', function() {
+        $body.on(event, '.card-header--inner', function() {
             $('html, body').animate({scrollTop: 0},500);
             return false;
         })
@@ -391,10 +395,10 @@ $(document).ready(function () {
         });
     }
 //показ выпадающих годов
-    $('body').on(event,'.show-all--list', function (e) {
+    $body.on(event,'.show-all--list', function (e) {
         e.preventDefault();
         $(this).next('.show-all--dropdown').fadeToggle();
-    })
+    });
 
     //scroll table
     $('.scroll-horizontal').smoothDivScroll({
@@ -406,7 +410,33 @@ $(document).ready(function () {
         mousewheelScrolling: "allDirections",
     });
 
+//подробнее в главной карточке
+    if($('.main-card-status').length>0){
 
+      $body.on(event, '.main-card-status .show-more-btn', function (e) {
+          e.preventDefault();
+          $(this).toggleClass('active')
+              .closest('.main-card-status_header').next('.main-card-status_content').slideToggle();
+      });
+
+    }
+
+    //вункционал кнопок отчетность и выписка
+
+    if($('.company-btn--inner').length>0){
+        $body.on(event, '.company-btn--inner .btn', function (e) {
+            e.preventDefault();
+
+            $(this).closest('.company-btn--inner').find('.company-btn--dropdown').fadeToggle(500);
+
+        });
+        $('body').mouseup(function (e) {
+            if (!$('.company-btn--inner .btn').is(e.target) // если клик был не по нашему блоку
+                && $('.company-btn--dropdown').has(e.target).length === 0) { // и не по его дочерним элементам
+                $('.company-btn--dropdown').fadeOut(500); // скрываем его
+            }
+        });
+    }
 });
 $(document).mouseup(function (e){
     var div = $(".company-modal");
