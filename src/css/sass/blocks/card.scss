@@ -284,19 +284,41 @@
       }
     }
   }
+
   .lazyload{
     width: 100%;
-    height: 100%;
+    height: 288px;
     flex: 1 0 auto;
+    margin-bottom: 160px;
     background-image: url(../images/lazyload-card-small.svg);
     background-size:100%;
     background-repeat: no-repeat;
     background-position: top left;
     @media (min-width: 1264px) and (min-height:671px){
       background-image: url(../images/lazyload-card-big.svg);
+      margin-bottom: 152px;
     }
     @media (min-width: 1344px){
       background-image: url(../images/lazyload-card-big.svg);
+      height: 296px ;
+      margin-bottom: 152px;
+    }
+
+  }
+  .lazyload-main{
+    width: 100%;
+    height:  816px;
+    margin-bottom: 96px;
+    flex: 1 0 auto;
+    background-image: url(../images/lazyload-card-small-main.svg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    @media (min-width: 1264px) and (min-height:671px){
+      background-image: url(../images/lazyload-card-big-main.svg);
+    }
+    @media (min-width: 1344px){
+      background-image: url(../images/lazyload-card-big-main.svg);
     }
 
   }
@@ -334,6 +356,54 @@
     h1,h2{
       max-width: 469px;
       width: 59.2%;
+    }
+    h1[data-hint]{
+      &:before{
+        position: absolute;
+        z-index: 999;
+        pointer-events: none;
+        content: attr(data-hint);
+        display: block;
+        padding: 12px;
+        opacity: 0;
+        max-width: 100%;
+        bottom: 100%;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        background-color: rgb(153, 153, 153);
+        transition: .2s ease opacity;
+        text-transform: uppercase;
+        font:{
+          size: 1.4rem;
+          weight: $font-regular;
+        }
+        line-height: 1.6rem;
+        letter-spacing: 0.5px;
+        color: rgb(255, 255, 255);
+
+      }
+      &:after{
+        position: absolute;
+        z-index: 99;
+        content: '';
+        width: 8px;
+        height: 16px;
+        left: 12px;
+        bottom: 100%;
+        margin-bottom: -8px;
+        border: 8px solid transparent;
+        border-top-color:rgb(153, 153, 153);
+        box-sizing: border-box;
+        opacity: 0;
+        transition: .2s ease opacity;
+      }
+      &:hover{
+        &:before,
+        &:after{
+          opacity: 1;
+        }
+
+      }
     }
 
     &--factors{
@@ -571,6 +641,9 @@
         }
         &--registration{
           color: $mid-gray--text;
+          &:last-child{
+            margin-bottom: 0;
+          }
         }
 
         .icon-red-question{
@@ -700,7 +773,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          margin-bottom: 8px;
+          //margin-bottom: 8px;
 
 
           .text{
@@ -768,7 +841,7 @@
           max-width: 556px;
           padding-left: 48px;
           box-sizing: border-box;
-
+          margin-top: 8px;
           font-size: 1.4rem;
           font-weight: $font-regular;
           line-height: 2rem;
@@ -991,6 +1064,30 @@
                 &:hover{
                   span{
                     color: lighten($black--text, 10%);
+                  }
+                }
+              }
+            }
+            &.isk{
+              display: flex;
+              flex-wrap: wrap;
+
+
+              .title{
+                width: 100%;
+              }
+
+              .isk-content{
+                display: flex;
+                flex-wrap: wrap;
+                width: 200px;
+
+                .link{
+                  margin-right: 36px;
+                  margin-bottom: 10px;
+                  display: inline-block;
+                  &:nth-child(2n){
+                    margin-right: 0;
                   }
                 }
               }
@@ -2104,6 +2201,7 @@
               line-height: 2rem;
               letter-spacing: 0.5px;
               color:$black--text;
+
               @media (min-width: 1264px) and (min-height:671px){
                 font-size: 1.6rem;
               }
@@ -2134,6 +2232,30 @@
             bottom: 16px;
           };
           cursor: pointer;
+          &.dangerously{
+            .table-col{
+              .name{
+                color: $red !important;
+
+                .icon-name{
+                  opacity: .6;
+                  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23F23D3D'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                }
+              }
+            }
+          }
+          &.satisfactorily{
+            .table-col{
+              .name{
+                color: $gold;
+
+                .icon-name{
+                  opacity: .6;
+                  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23FA9F37'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                }
+              }
+            }
+          }
           &:hover{
             border-radius: 4px;
             background-color: rgba(0, 0, 0, 0.05);
@@ -2317,6 +2439,54 @@
                   color: $mid-gray--text !important;
                 }
 
+                &.dangerously{
+                  .table-col{
+                    .name{
+                      color: $red !important;
+                      opacity: .5;
+
+                      .icon-name{
+                        background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23F23D3D'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                      }
+                    }
+                  }
+                }
+                &.satisfactorily{
+                  .table-col{
+                    .name{
+                      color: $gold;
+
+                      .icon-name{
+                        opacity: .5;
+                        background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%FA9F37'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                      }
+                    }
+                  }
+                }
+              }
+              &.dangerously{
+                .table-col{
+                  .name{
+                    color: $red;
+
+                    .icon-name{
+                      opacity: .5;
+                      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23F23D3D'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                    }
+                  }
+                }
+              }
+              &.satisfactorily{
+                .table-col{
+                  .name{
+                    color: $gold;
+
+                    .icon-name{
+                      opacity: .5;
+                      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23FA9F37'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                    }
+                  }
+                }
               }
             }
             &-col{
@@ -2415,6 +2585,8 @@
           }
         }
       }
+
+
 
     }
     //ситили для карточки тендера

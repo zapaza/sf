@@ -3,6 +3,22 @@
   margin: auto;
   width: 100%;
   padding-top: 72px;
+
+  &.lazyload{
+    .search-info{
+      visibility: hidden;
+    }
+
+
+    .search-list--item{
+      height: 112px;
+      background-image: url(../images/lazyload-search.svg);
+      &:hover{
+        background-color: $white;
+      }
+    }
+  }
+
   &-info{
 
     width: 100%;

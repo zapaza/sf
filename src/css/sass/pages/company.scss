@@ -35,21 +35,14 @@
       top: auto;
     }
 
-    .lazyload{
-      width: 100%;
-      height: 100%;
-      flex: 1 0 auto;
-      background-image: url(../images/lazyload-sidebar-small.svg);
-      background-size:100%;
-      background-repeat: no-repeat;
-      background-position: top left;
-      @media (min-width: 1264px) and (min-height:671px){
-        background-image: url(../images/lazyload-sidebar-big.svg);
+    &.lazyload{
+      ul > li > a{
+        pointer-events: none;
+        opacity: .5;
+        &:before{
+          display: none;
+        }
       }
-      @media (min-width: 1344px){
-        background-image: url(../images/lazyload-sidebar-big.svg);
-      }
-
     }
 
     & > ul{

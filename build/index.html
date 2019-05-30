@@ -205,14 +205,14 @@
               <article id="main" class="company-content--item main-card-eliminated card index-card-js">
                 <!-- если существует - то ничего не добавляется, а если ликвидирована то добавляется класс main-card-eliminated , если по решению налоговой то main-card-eliminated_nalog -->
                 <div class="card-header">
-                  <h1>ООО «МОЯ ОБОРОНА»</h1>
+                  <h1 data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «МОЯ ОБОРОНА»</h1>
                   <a href="#0" class="card-header--factors">9 стоп-факторов</a>
                 </div>
                 <div class="card-content">
                   <div class="main-card ">
                     <div class="main-card-header">
                       <p class="main-card-header--status">Действующее юридическое лицо</p>
-                      <!--        <p class="main-card-header&#45;&#45;registration">Зарегистрировано 26.09.2007</p>-->
+                      <p class="main-card-header--registration">Зарегистрировано 26.09.2007</p>
                       <p class="main-card-header--registration">
                         Ликвидировано 16.06.2017 по решению ФНС
                         <span class="icon-red-question">
@@ -359,6 +359,17 @@
                           <p><span>ОКВЭД: </span>70.22</p>
                           <p>Консультирование по вопросам коммерческой деятельности и управления</p>
                           <a href="#modal-activity" data-modal-card><span>Все виды деятельности</span> 144</a>
+                        </div>
+
+                        <div class="main-card-info--row isk">
+                          <p class="title">Поданные иски о ликвидации</p>
+                          <div class="isk-content">
+                            <a href="#0" class="link">18.03.2018 <span class="icon-name"></span></a>
+                            <a href="#0" class="link">18.03.2018 <span class="icon-name"></span></a>
+                            <a href="#0" class="link">18.03.2018 <span class="icon-name"></span></a>
+                            <a href="#0" class="link">18.03.2018 <span class="icon-name"></span></a>
+                          </div>
+
                         </div>
                       </div>
 
@@ -1183,7 +1194,7 @@
                       </div>
 
                       <div class="table-body">
-                        <a href="#0" target="_blank" class="table-row">
+                        <a href="#0" target="_blank" class="table-row satisfactorily">
                           <span class="table-col">
                             <span class="name">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></span>
                             <span class="name-info">ОГРН:<span>2346734574554</span></span>
@@ -1193,7 +1204,7 @@
                           <span class="table-col"><span>7 040 000 000 000</span></span>
                         </a>
 
-                        <a href="#0" target="_blank" class="table-row">
+                        <a href="#0" target="_blank" class="table-row dangerously">
                           <span class="table-col">
                             <span class="name">КОМПАНИЯ С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЯНДЕКС МЕДИА СЕРВИСЫ Б.В. (НИДЕРЛАНДЫ)<span class="icon-name"></span></span>
                             <!--<span class="name-info">ОГРН:<span>2346734574554</span></span>-->
@@ -1415,7 +1426,7 @@
                             <span class="table-col"><span>7 040 000 000 000</span></span>
                           </a>
 
-                          <a href="#0" target="_blank" class="table-row">
+                          <a href="#0" target="_blank" class="table-row dangerously">
                             <span class="table-col">
                               <span class="name">КОМПАНИЯ С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЯНДЕКС МЕДИА СЕРВИСЫ Б.В. (НИДЕРЛАНДЫ)<span class="icon-name"></span></span>
                               <!--<span class="name-info">ОГРН:<span>2346734574554</span></span>-->
@@ -1425,7 +1436,7 @@
                             <span class="table-col"><span> 800 000 000 000</span></span>
                           </a>
 
-                          <a href="#0" target="_blank" class="table-row  eliminated">
+                          <a href="#0" target="_blank" class="table-row  eliminated dangerously">
                             <!--Если ликвидировано то добавляется класс -->
                             <span class="table-col">
                               <span class="name">ООО «ЯНДЕКС.ВЕРТИКАЛИ ПРОБКИ ПОГОДА ТЕХНОЛОГИИ»<span class="icon-name"></span></span>
@@ -1437,7 +1448,7 @@
                             <span class="table-col"><span>80 000 000 000</span></span>
                           </a>
 
-                          <a href="#0" target="_blank" class="table-row">
+                          <a href="#0" target="_blank" class="table-row satisfactorily">
                             <span class="table-col">
                               <span class="name">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></span>
                               <span class="name-info">ОГРН:<span>2346734574554</span></span>
@@ -1461,7 +1472,7 @@
                         </div>
 
                         <div class="table-body">
-                          <a href="#0" target="_blank" class="table-row">
+                          <a href="#0" target="_blank" class="table-row dangerously">
                             <span class="table-col">
                               <span class="name">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></span>
                               <span class="name-info">ОГРН:<span>2346734574554</span></span>
@@ -1471,7 +1482,7 @@
                             <span class="table-col"><span>7 040 000 000 000</span></span>
                           </a>
 
-                          <a href="#0" target="_blank" class="table-row">
+                          <a href="#0" target="_blank" class="table-row satisfactorily">
                             <span class="table-col">
                               <span class="name">КОМПАНИЯ С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЯНДЕКС МЕДИА СЕРВИСЫ Б.В. (НИДЕРЛАНДЫ)<span class="icon-name"></span></span>
                               <!--<span class="name-info">ОГРН:<span>2346734574554</span></span>-->
@@ -1481,7 +1492,7 @@
                             <span class="table-col"><span> 800 000 000 000</span></span>
                           </a>
 
-                          <a href="#0" target="_blank" class="table-row  eliminated">
+                          <a href="#0" target="_blank" class="table-row  eliminated satisfactorily">
                             <!--Если ликвидировано то добавляется класс -->
                             <span class="table-col">
                               <span class="name">ООО «ЯНДЕКС.ВЕРТИКАЛИ ПРОБКИ ПОГОДА ТЕХНОЛОГИИ»<span class="icon-name"></span></span>

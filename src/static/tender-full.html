@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Краткий отчет</title>
+    <link href="css/plugins.min.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+
+    .modal.modal-inside,
+    .modal-inside-tender{
+        width: 700px;
+        display: block;
+        padding: 20px  0;
+        margin: auto;
+        height: auto;
+        min-height: auto;
+    }
+    .modal.modal-inside .modal-inside-wrapper{
+        margin-top: 20px;
+    }
+
+    h1{
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 10px;
+    }
+    .subheader{
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    table tr,
+    .modal-inside-tender .tender-list--item,
+    .modal-inside-tender .tender-list--item_info .document-list--item,
+    .modal-inside-tender .tender-list--item_info .document-list--item_accordion .content-item{
+        page-break-inside: avoid;
+    }
+    .modal-inside-tender .tender-list{
+        width: 100%;
+    }
+    .modal-inside-tender .tender-list--item{
+        border: none;
+        border-left: 4px solid #000;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item{
+        border-bottom: 1px solid #e6e6e6;
+        display: block;
+        width: 100%;
+    }
+    .modal-inside-tender .tender-list--item{
+        border:none;
+        border-left: 4px solid #000000;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item_accordion .title::after{
+        display: none;
+    }
+    .modal-inside-tender .tender-list--item .info div.date{
+        width: 105px;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item_value a .icon-name{
+        display: none;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item_value a span:not(.icon-name){
+        text-decoration: none !important;
+        border:none;
+        display: block;
+        color: #717171;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item_value a{
+        display: block;
+    }
+
+    .modal-inside-tender .tender-list--item_info .document-list--item_name{
+        width: 29%;
+        display: inline-block;
+        margin-right: 1%;
+        vertical-align: top;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item_value .price{
+        display: inline-block;
+        margin-right: 0;
+        margin-left: auto;
+        position: static;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item_value{
+        width: 69%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item_accordion .content-item:first-of-type{
+        padding-top: 10px;
+    }
+    .modal-inside-tender .tender-list--item .info{
+        display: block;
+        width: 100%;
+    }
+    .modal-inside-tender .tender-list--item .info div{
+        display: inline-block;
+        margin-right: 16px;
+        width: auto;
+        vertical-align: middle;
+    }
+    .modal-inside-tender .tender-list--item .info div.number>a span:not(.icon-name){
+        border: none;
+        border-bottom: 1px solid #e6e6e6;
+        display: inline-block;
+    }
+    .modal-inside-tender .tender-list--item .info div.number>a{
+        text-decoration: none;
+        display: inline-block;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list{
+        width: 100%;
+        display: block;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item_accordion .content{
+        display: block !important;
+        padding-right: 0;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item_accordion .content-item p{
+        width: 100%;
+        display: table-row;
+    }
+    .modal-inside-tender .tender-list--item_info .document-list--item_accordion .content-item p .name{
+        display: table-cell;
+        width: 180px;
+        padding: 8px 20px 8px 0;
+        margin-right: 0;
+    }
+
+</style>
+<div class="modal modal-inside modal-inside-tender" id="modal-inside-tender"><!--отчетность-->
+    <div class="modal-inside-wrapper">
+
+        <h1>Все</h1>
+        <p class="subheader">Все торги </p>
+
+
+        <dl class="tender-list">
+            <!--певрвое дело-->
+            <dt class="tender-list--item"> <!-- основная инфа-->
+                <div class="info">
+                    <div class="number">Закупка: <a href="#0" target="_blank"><span>01024/18/77054-ИП</span><span class="icon-name"></span></a></div>
+                    <div class="date">от 02.09.2013</div>
+                    <div>223-ФЗ</div>
+                </div>
+            </dt>
+            <dd class="tender-list--item_info"><!--подробная инфа-->
+                <div class="document-list">
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Контракт
+                        </div>
+                        <div class="document-list--item_value">
+                            <a href="#0" target="_blank"><span>67801392271170000860001</span><span class="icon-name"></span></a>
+                            <p class="price">494 916,00 ₽</p>
+                        </div>
+                    </div>
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Название лота
+                        </div>
+                        <div class="document-list--item_value">
+                            <p>Оказание рекламных услуг, связанных с размещением рекламных материалов в сети Интернет</p>
+                        </div>
+                    </div>
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Заказчик
+                        </div>
+                        <div class="document-list--item_value">
+                            <a href="#0" target="_blank"><span>ООО «КОРУС КОНСАЛТИНГ СНГ»</span><span class="icon-name"></span></a>
+                        </div>
+                    </div>
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Участник
+                        </div>
+                        <div class="document-list--item_value">
+                            <a href="#0" target="_blank"><span>ООО «КОРУС КОНСАЛТИНГ СНГ»</span><span class="icon-name"></span></a>
+                            <a href="#0" target="_blank"><span>АБ «Линия права»</span><span class="icon-name"></span></a>
+                        </div>
+                    </div>
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Предмет контракта
+                        </div>
+                        <div class="document-list--item_value">
+                            <div class="document-list--item_accordion">
+                                <div class="title"><p>Размещение рекламных сообщений о продаже имущества</p></div>
+                                <div class="content" style="display: block;">
+                                    <div class="content-item">
+                                        <p><span class="name">Код позиции</span>2320020</p>
+                                        <p><span class="name">Единица измерения</span>Комплект</p>
+                                        <p><span class="name">Цена за единицу</span>24 999,90 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="document-list--item_accordion">
+                                <div class="title"><p>Услуги, предоставляемые рекламными агентствами</p></div>
+                                <div class="content " style="display: block;">
+                                    <div class="content-item">
+                                        <p><span class="name">Код позиции</span>2320020</p>
+                                        <p><span class="name">Единица измерения</span>Комплект</p>
+                                        <p><span class="name">Цена за единицу</span>24 999,90 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Дополнительно
+                        </div>
+                        <div class="document-list--item_value">
+                            <div class="document-list--item_accordion">
+                                <div class="title"><p>Контракты и протоколы <span>3</span></p></div>
+                                <div class="content" style="display: block;">
+                                    <div class="content-item">
+                                        <div class="content-title">Контракт</div>
+                                        <p><span class="name">Дата заключения контракта</span>30.11.2017</p>
+                                        <p><span class="name">Единица измерения</span>Комплект</p>
+                                        <p><span class="name">Цена за единицу</span>24 999,90 ₽</p>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="content-title">Контракт</div>
+                                        <p><span class="name">Дата заключения контракта</span>30.11.2017</p>
+                                        <p><span class="name">Единица измерения</span>Комплект</p>
+                                        <p><span class="name">Цена за единицу</span>24 999,90 ₽</p>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="content-title">Протокол</div>
+                                        <p><span class="name">Дата заключения контракта</span>30.11.2017</p>
+                                        <p><span class="name">Единица измерения</span>Комплект</p>
+                                        <p><span class="name">Цена за единицу</span>24 999,90 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </dd>
+            <!-- конец первого дела-->
+
+            <!--певрвое дело-->
+            <dt class="tender-list--item"> <!-- основная инфа-->
+                <div class="info">
+                    <div class="number">Закупка: 01024/18/77054-ИП</div><!--Состояние когда нет ссылки на закупку-->
+                    <div class="date">от 02.09.2013</div>
+                    <div>223-ФЗ</div>
+                </div>
+            </dt>
+            <dd class="tender-list--item_info"><!--подробная инфа-->
+                <div class="document-list">
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Контракт
+                        </div>
+                        <div class="document-list--item_value">
+                            <a href="#0" target="_blank"><span>67801392271170000860001</span><span class="icon-name"></span></a>
+                            <p class="price">494 916,00 ₽</p>
+                        </div>
+                    </div>
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Название лота
+                        </div>
+                        <div class="document-list--item_value">
+                            <p>Оказание рекламных услуг, связанных с размещением рекламных материалов в сети Интернет</p>
+                        </div>
+                    </div>
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Заказчик
+                        </div>
+                        <div class="document-list--item_value">
+                            <a href="#0" target="_blank"><span>ООО «КОРУС КОНСАЛТИНГ СНГ»</span><span class="icon-name"></span></a>
+                        </div>
+                    </div>
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Участник
+                        </div>
+                        <div class="document-list--item_value">
+                            <a href="#0" target="_blank"><span>ООО «КОРУС КОНСАЛТИНГ СНГ»</span><span class="icon-name"></span></a>
+                            <a href="#0" target="_blank"><span>АБ «Линия права»</span><span class="icon-name"></span></a>
+                        </div>
+                    </div>
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Предмет контракта
+                        </div>
+                        <div class="document-list--item_value">
+                            <div class="document-list--item_accordion">
+                                <div class="title"><p>Размещение рекламных сообщений о продаже имущества</p></div>
+                                <div class="content" style="display: block;">
+                                    <div class="content-item">
+                                        <p><span class="name">Код позиции</span>2320020</p>
+                                        <p><span class="name">Единица измерения</span>Комплект</p>
+                                        <p><span class="name">Цена за единицу</span>24 999,90 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="document-list--item_accordion">
+                                <div class="title"><p>Услуги, предоставляемые рекламными агентствами</p></div>
+                                <div class="content" style="display: block;">
+                                    <div class="content-item">
+                                        <p><span class="name">Код позиции</span>2320020</p>
+                                        <p><span class="name">Единица измерения</span>Комплект</p>
+                                        <p><span class="name">Цена за единицу</span>24 999,90 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="document-list--item">
+                        <div class="document-list--item_name">
+                            Дополнительно
+                        </div>
+                        <div class="document-list--item_value">
+                            <div class="document-list--item_accordion">
+                                <div class="title"><p>Контракты и протоколы <span>3</span></p></div>
+                                <div class="content" style="display: block;">
+                                    <div class="content-item">
+                                        <div class="content-title">Контракт</div>
+                                        <p><span class="name">Дата заключения контракта</span>30.11.2017</p>
+                                        <p><span class="name">Единица измерения</span>Комплект</p>
+                                        <p><span class="name">Цена за единицу</span>24 999,90 ₽</p>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="content-title">Контракт</div>
+                                        <p><span class="name">Дата заключения контракта</span>30.11.2017</p>
+                                        <p><span class="name">Единица измерения</span>Комплект</p>
+                                        <p><span class="name">Цена за единицу</span>24 999,90 ₽</p>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="content-title">Протокол</div>
+                                        <p><span class="name">Дата заключения контракта</span>30.11.2017</p>
+                                        <p><span class="name">Единица измерения</span>Комплект</p>
+                                        <p><span class="name">Цена за единицу</span>24 999,90 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </dd>
+            <!-- конец первого дела-->
+
+        </dl>
+    </div>
+
+</div>
+
+
+</body>
+</html>

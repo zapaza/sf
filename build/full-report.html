@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Краткий отчет</title>
+    <link href="css/plugins.min.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+    .modal.short-report .modal-inside-wrapper{
+        width: 700px;
+        display: block;
+        padding-top: 20px;
+    }
+    .modal.short-report .modal-inside-wrapper .short-report--header{
+        width: 700px;
+        display: block;
+    }
+    .modal.short-report .modal-inside-wrapper .short-report--table.table {
+        display:  block;
+        width: 700px;
+    }
+    .modal.short-report .modal-inside-wrapper .short-report--table.table .table-row{
+        display: block;
+        width: 700px;
+        border: none;
+        border-bottom: 1px solid  #e6e6e6;
+    }
+    .modal.short-report .modal-inside-wrapper .short-report--table.table .table-row .table-col.name{
+        width: 20%;
+        margin-right: 5%;
+    }
+    .modal.short-report .modal-inside-wrapper .short-report--table.table .table-row .table-col{
+        width: 74%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .modal.short-report .short-report--table .table-col .info{
+        border: none;
+        border-left: 4px solid #e6e6e6;
+    }
+    .modal.short-report .short-report--table .table-col .detail{
+        border: none;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .modal.short-report .short-report--table .table-col .detail .col{
+        width: 49%;
+        margin-right: 0.5%;
+        display: block;
+    }
+    .modal.short-report .short-report--table .table-col .detail .col p{
+        text-align: left;
+    }
+    .modal.short-report .short-report--factors{
+        width: 39%;
+        display: inline-block;
+        margin-left: 1%;
+        vertical-align: top;
+    }
+    .modal.short-report .short-report--header .title{
+        width: 59%;
+        display: inline-block;
+        vertical-align: top;
+    }
+</style>
+
+<div class="modal short-report" id="short-report">
+    <div class="modal-inside-wrapper">
+        <div class="short-report--header">
+            <div class="title">
+                <h2>ООО «МОЯ ОБОРОНА»</h2>
+                <p>Краткий отчет от <span>20.12.2011</span></p>
+            </div>
+            <!--            Стоп-фактор в учрежденных и управляемых считается как один-->
+            <span class="short-report--factors">9 стоп-факторов</span>
+        </div>
+
+        <div class="short-report--table table">
+            <div class="table-row">
+                <div class="table-col name">Полное наименование</div>
+                <div class="table-col">
+                    <h3>Общество с ограниченной ответственностью «РАМБЛЕР ИНТЕРНЕТ ХОЛДИНГ»</h3>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Статус</div>
+                <div class="table-col">
+                    <!--                    Если действует — пишем «Действует с 26.06.2002» зеленым
+
+                    Если ликвидировано — «Ликвидировано 26.06.2002» серым.
+
+                    Нижний блок показываем только если ликвидировано по решению ФНС.-->
+                    <p class="normal">Действует с 26.06.2002</p>
+                    <p class="warning">Ликвидировано 26.06.2002 по решению ФНС</p>
+                    <p>Прекращение деятельности юридического лица в связи с исключением из </p>
+
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Единоличный <br> исполнительный орган</div>
+                <div class="table-col">
+                    <h3>Сергеев Дмитрий Александрович</h3>
+                    <p>Генеральный исполнительный директор</p>
+                    <!--                 Если все ок, то не показываем эту строку      -->
+                    <p><span>ИНН:</span>772502306276</p>
+                    <p><span>Дата изменения:</span>26.08.2018</p>
+                    <p class="warning">Входит в реестр массовых руководителей (13 компаний) ФНС России</p>
+                    <div class="detail">
+                        <div class="col">
+                            <h3>ООО «Яндекс.Медиасервисы»</h3>
+                            <p><span>ОГРН:</span><span>2346734574554</span></p>
+                            <p><span>ИНН:</span><span>1634534588 </span></p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="col">
+                            <h3>ООО «Яндекс.Медиасервисы»</h3>
+                            <p><span>ОГРН:</span><span>2346734574554</span></p>
+                            <p><span>ИНН:</span><span>1634534588 </span></p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="col">
+                            <h3>ООО «Яндекс.Медиасервисы»</h3>
+                            <p><span>ОГРН:</span><span>2346734574554</span></p>
+                            <p><span>ИНН:</span><span>1634534588 </span></p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="col">
+                            <h3>ООО «Яндекс.Медиасервисы»</h3>
+                            <p><span>ОГРН:</span><span>2346734574554</span></p>
+                            <p><span>ИНН:</span><span>1634534588 </span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Размер</div>
+                <div class="table-col">
+                    <p>Микропредприятие</p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Выручка в 2017 году</div>
+                <div class="table-col">
+                    <p>Менее 120 млн. руб.</p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Штат</div>
+                <div class="table-col">
+                    <p>Менее 15 человек</p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Уставный капитал</div>
+                <div class="table-col">
+                    <p>5 105 981 778 ₽</p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Налоговый режим</div>
+                <div class="table-col">
+                    <p>УСН</p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Лицензии</div>
+                <div class="table-col">
+                    <p class="row">
+                        <span class="title">Выдано</span>
+                        <span class="value">782</span>
+                    </p>
+                    <p class="row">
+                        <!--                        показываем только сколько действует.
+                        если все лицензии у компании действительны, то не показываем эту строку.-->
+                        <span class="title">Действует</span>
+                        <span class="value">700</span>
+                    </p>
+                    <div class="row">
+                        <div class="modal modal-license" id="modal-license">
+                            <div class="modal-content">
+                                <div class="warning" style="display: table; width: 100%; border-top: 1px solid #e6e6e6;padding-top: 10px" >
+                                    <!-- warning - если отменина expire - если истекла  normal- если все норм -->
+                                    <div class="col from">
+                                        <p>СЛХ 02559 НР</p>
+                                        <p class="disc" style="color:  rgba(0,0,0,0.4)">Департамент по недропользованию по Уральскому ФО</p>
+                                    </div>
+                                    <div class="col text">
+                                        <p>Геологическое изучение недр, включающее поиски и оценку месторождений полезных ископаемых и оценку пригодности участков недр для строительства и эксплуатации подземных сооружений, не связанных с добычей полезных ископаемых.</p>
+                                        <p class="disc" style="color:  rgba(0,0,0,0.4)">Ямало-Ненецкий автономный округ, Тазовский район, Толавэйский</p>
+                                    </div>
+                                    <div class="col out">
+                                        <p>24.09.2009 — 24.09.2019 </p>
+                                        <p class="disc" style="color: #f24c3d">Приостановлена</p>
+                                    </div>
+                                </div>
+                                <div class="normal" style="display: table; width: 100%; border-top: 1px solid #e6e6e6; padding-top: 10px">
+                                    <!-- warning - если отменина expire - если истекла  normal- если все норм -->
+                                    <div class="col from">
+                                        <p>СЛХ 02559 НР</p>
+                                        <p class="disc" style="color: rgba(0,0,0,0.4)">Департамент по недропользованию по Уральскому ФО</p>
+                                    </div>
+                                    <div class="col text">
+                                        <p>Геологическое изучение недр, включающее поиски и оценку месторождений полезных ископаемых и оценку пригодности участков недр для строительства и эксплуатации подземных сооружений, не связанных с добычей полезных ископаемых.</p>
+                                    </div>
+                                    <div class="col out">
+                                        <p  style="color: #3aa65e">Выдана 24.09.2018 </p>
+                                    </div>
+                                </div>
+                                <div class="expire" style="display: table; width: 100%; border-top: 1px solid #e6e6e6;padding-top: 10px">
+                                    <!-- warning - если отменина expire - если истекла  normal- если все норм -->
+                                    <div class="col from">
+                                        <p>СЛХ 02559 НР</p>
+                                        <p class="disc" style="color: rgba(0,0,0,0.4)">Департамент по недропользованию по Уральскому ФО</p>
+                                    </div>
+                                    <div class="col text">
+                                        <p>Геологическое изучение недр, включающее поиски и оценку месторождений полезных ископаемых и оценку пригодности участков недр для строительства и эксплуатации подземных сооружений, не связанных с добычей полезных ископаемых.</p>
+                                        <p class="disc" style="color: rgba(0,0,0,0.4)">Ямало-Ненецкий автономный округ, Тазовский район, Толавэйский</p>
+                                    </div>
+                                    <div class="col out">
+                                        <p>24.09.2009 — 24.09.2019 </p>
+                                        <p class="disc" style="color: rgba(0,0,0,0.4)">Истекла</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Коды статистики</div>
+                <div class="table-col">
+                    <p class="row">
+                        <span class="title">ОГРН</span>
+                        <span class="value">1027700161906</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">ОКПО</span>
+                        <span class="value">58032482</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">ИНН</span>
+                        <span class="value">7707300940</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">КПП</span>
+                        <span class="value">770701001</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">ОКАТО</span>
+                        <span class="value">1027700161906</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">ОКТМО</span>
+                        <span class="value">58032482</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">ОКВЭД</span>
+                        <span class="value">7707300940</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">ОКФС</span>
+                        <span class="value">770701001</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">ОКОПФ</span>
+                        <span class="value">102770016190610277001619061027700161906</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">ФСС</span>
+                        <span class="value">078043011894 — Управление Пенсионного фонда РФ в Московском районе г. Твери (11.04.2001)</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">ПФР</span>
+                        <span class="value">078043011894 — Управление Пенсионного фонда РФ в Московском районе г. Твери (11.04.2001)</span>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Виды деятельности</div>
+                <div class="table-col">
+                    <p class="row">
+                        <span class="title">70.22</span>
+                        <span class="value"  style="color: #3aa65e">Консультирование по вопросам коммерческой деятельности и управления (основной)</span>
+                    </p>
+                    <p class="row">
+                        <span class="title">70.22</span>
+                        <span class="value"  >Консультирование по вопросам коммерческой деятельности и управления </span>
+                    </p>
+                    <p class="row">
+                        <span class="title">70.22</span>
+                        <span class="value"  >Консультирование по вопросам коммерческой деятельности и управления </span>
+                    </p>
+                    <p class="row">
+                        <span class="title">70.22</span>
+                        <span class="value"  >Консультирование по вопросам коммерческой деятельности и управления </span>
+                    </p>
+                    <p class="row">
+                        <span class="title">70.22</span>
+                        <span class="value"  >Консультирование по вопросам коммерческой деятельности и управления </span>
+                    </p>
+                    <p class="row">
+                        <span class="title">70.22</span>
+                        <span class="value"  >Консультирование по вопросам коммерческой деятельности и управления </span>
+                    </p>
+                    <p class="row">
+                        <span class="title">70.22</span>
+                        <span class="value"  >Консультирование по вопросам коммерческой деятельности и управления </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Поданные иски о ликвидации</div>
+                <div class="table-col">
+                    <p href="#0" class="link" style="display: inline-block; margin-right: 16px;  margin-bottom: 10px;">18.03.2018 <span class="icon-name"></span></p>
+                    <p href="#0" class="link" style="display: inline-block; margin-right: 16px;  margin-bottom: 10px;">18.03.2018 <span class="icon-name"></span></p>
+                    <p href="#0" class="link" style="display: inline-block; margin-right: 16px;  margin-bottom: 10px;">18.03.2018 <span class="icon-name"></span></p>
+                    <p href="#0" class="link" style="display: inline-block; margin-right: 16px;  margin-bottom: 10px;">18.03.2018 <span class="icon-name"></span></p>
+                    <p href="#0" class="link" style="display: inline-block; margin-right: 16px;  margin-bottom: 10px;">18.03.2018 <span class="icon-name"></span></p>
+
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Юридический адрес</div>
+                <div class="table-col">
+                    <h3></h3>
+                    <p>123044, г. Комсомольск-на-Амуре, ул. Соломенного века, д. 15, корп. 1</p>
+                    <!--                    Если все ок, то не показываем эту строку-->
+                    <p class="warning">Адрес массовой регистрации (7 юридических лиц)</p>
+                    <!--                    Если все ок, то не показываем эту строку-->
+                    <p class="warning">Сведения недостоверны (результаты проверки достоверности содержащихся в ЕГРЮЛ сведений о юридическом лице) по состоянию на 22.06.2017</p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Филиалы и представительства</div>
+                <div class="table-col">
+                    <p style="margin-bottom: 24px;">115035, г. Москва, ул. Софийская Набережная, 26</p>
+
+                    <div style="margin-bottom: 24px;">
+                        <h3>ПРЕДСТАВИТЕЛЬСТВО ПАО «НК «РОСНЕФТЬ» В ДАЛЬНЕВОСТОЧНОМ ФЕДЕРАЛЬНОМ ОКРУГЕ	</h3>
+                        <p>628331, Нефтеюганский район, пгт Пойковский, мкр. 1, дом 115.</p>
+                    </div>
+                    <div style="margin-bottom: 24px;">
+                        <h3>ПРЕДСТАВИТЕЛЬСТВО ПАО «НК «РОСНЕФТЬ» В ДАЛЬНЕВОСТОЧНОМ ФЕДЕРАЛЬНОМ ОКРУГЕ	</h3>
+                        <p>628331, Нефтеюганский район, пгт Пойковский, мкр. 1, дом 115.</p>
+                    </div>
+                    <p style="margin-bottom: 24px;">115035, г. Москва, ул. Софийская Набережная, 26</p>
+                    <p style="margin-bottom: 24px;">115035, г. Москва, ул. Софийская Набережная, 26</p>
+                    <p style="margin-bottom: 24px;">115035, г. Москва, ул. Софийская Набережная, 26</p>
+                    <p style="margin-bottom: 24px;">115035, г. Москва, ул. Софийская Набережная, 26</p>
+                    <p style="margin-bottom: 24px;">115035, г. Москва, ул. Софийская Набережная, 26</p>
+                    <p style="margin-bottom: 24px;">115035, г. Москва, ул. Софийская Набережная, 26</p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Телефоны</div>
+                <div class="table-col">
+                    <p style="display: inline-block; margin-right: 16px; margin-bottom: 16px;">+7 (495) 278-13-13</p> <p style="display: inline-block; margin-right: 16px; margin-bottom: 16px;">+7 (495) 278-13-13</p>
+                    <p style="display: inline-block; margin-right: 16px; margin-bottom: 16px;">+7 (495) 278-13-13</p>
+                    <p style="display: inline-block; margin-right: 16px; margin-bottom: 16px;">+7 (495) 278-13-13</p>
+                    <p style="display: inline-block; margin-right: 16px; margin-bottom: 16px;">+7 (495) 278-13-13</p>
+                    <p style="display: inline-block; margin-right: 16px; margin-bottom: 16px;">+7 (495) 278-13-13</p>
+                    <p style="display: inline-block; margin-right: 16px; margin-bottom: 16px;">+7 (495) 278-13-13</p>
+                    <p style="display: inline-block; margin-right: 16px; margin-bottom: 16px;">+7 (495) 278-13-13</p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Электронная почта</div>
+                <div class="table-col">
+                    <p>info@rambler-co.ru</p> <p>info@rambler.ru</p>
+                    <p>info@rambler-co.ru</p> <p>info@rambler.ru</p>
+                    <p>info@rambler-co.ru</p> <p>info@rambler.ru</p>
+                    <p>info@rambler-co.ru</p> <p>info@rambler.ru</p>
+                    <p>info@rambler-co.ru</p> <p>info@rambler.ru</p><p>info@rambler-co.ru</p> <p>info@rambler.ru</p>
+                    <p>info@rambler-co.ru</p> <p>info@rambler.ru</p>
+                    <p>info@rambler-co.ru</p> <p>info@rambler.ru</p>
+
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Сайт</div>
+                <div class="table-col">
+                    <p>www.auto.ru</p>
+                    <p>www.auto.ru</p>
+                    <p>www.auto.ru</p>
+                    <p>www.auto.ru</p>
+                    <p>www.auto.ru</p>
+                    <p>www.auto.ru</p>
+                    <p>www.auto.ru</p>
+
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Собтсвенники </div>
+                <div class="table-col">
+                    <div class="info">
+                        <p>Ведение реестра акционеров c 03.08.2016 передано реестродержателю</p>
+                        <h3>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ГЕНЕРАЛЬНЫЙ ВЕРХОВНЫЙ РЕЕСТР-РН»</h3>
+                    </div>
+                    <div class="detail">
+                        <div class="col">
+                            <h3>ООО «Яндекс.Медиасервисы»</h3>
+                            <p><span>ОГРН:</span><span>2346734574554</span></p>
+                            <p><span>ИНН:</span><span>1634534588 </span></p>
+                        </div>
+                        <div class="col"><p>7 040 000 000 000 ₽<span>(88%)</span></p></div>
+                    </div>
+                    <div class="detail">
+                        <div class="col">
+                            <h3>ООО «Яндекс.Медиасервисы»</h3>
+                            <p><span>ОГРН:</span><span>2346734574554</span></p>
+                            <p><span>ИНН:</span><span>1634534588 </span></p>
+                        </div>
+                        <div class="col"><p>7 040 000 000 000 ₽<span>(88%)</span></p></div>
+                    </div>
+                    <div class="detail">
+                        <div class="col">
+                            <h3>КОМПАНИЯ С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЯНДЕКС МЕДИА СЕРВИСЫ Б.В. (НИДЕРЛАНДЫ)</h3>
+                        </div>
+                        <div class="col"><p> 800 000 000 000 ₽</p></div>
+                    </div>
+                    <div class="detail">
+                        <div class="col">
+                            <h3>ООО «Яндекс.Медиасервисы»</h3>
+                            <p><span>ОГРН:</span><span>2346734574554</span></p>
+                            <p><span>ИНН:</span><span>1634534588 </span></p>
+                        </div>
+                        <div class="col"><p>7 040 000 000 000 ₽<span>(1%)</span></p></div>
+                    </div>
+
+                    <div class="factors satisfactorily "><!--dangerously--> <!--                    Если все ок, то не показываем этот блок.-->
+                        <h4>Будьте осторожны!</h4>
+                        <p>Общество является участником (акционером), владеющим долей (акциями) в размере менее 50% уставного капитала, 2-х и более юридических лиц, ранее ликвидированных на основании решения ФНС России.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Учрежденные ДЗО</div>
+                <div class="table-col">
+                    <div class="detail">
+                        <div class="col">
+                            <h3>ООО «Яндекс.Медиасервисы»</h3>
+                            <p><span>ОГРН:</span><span>2346734574554</span></p>
+                            <p><span>ИНН:</span><span>1634534588 </span></p>
+                        </div>
+                        <div class="col"><p><span></span></p></div>
+                    </div>
+                    <div class="detail">
+                        <div class="col">
+                            <h3>КОМПАНИЯ С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЯНДЕКС МЕДИА СЕРВИСЫ Б.В. (НИДЕРЛАНДЫ)</h3>
+                        </div>
+                    </div>
+                    <!--                    Если все ок, то не показываем этот блок.-->
+                    <div class="factors dangerously "><!--satisfactorily-->
+                        <h4>Стоп-фактор!</h4>
+                        <p>Общество является управляющей компанией 2-х и более юридических лиц, ранее ликвидированных на основании решения ФНС России</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Управляемые ДЗО</div>
+                <div class="table-col">
+                    <div class="detail">
+                        <div class="col">
+                            <h3>ООО «Яндекс.Медиасервисы»</h3>
+                            <p><span>ОГРН:</span><span>2346734574554</span></p>
+                            <p><span>ИНН:</span><span>1634534588 </span></p>
+                        </div>
+                        <div class="col"><p><span></span></p></div>
+                    </div>
+                    <div class="detail">
+                        <div class="col">
+                            <h3>КОМПАНИЯ С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЯНДЕКС МЕДИА СЕРВИСЫ Б.В. (НИДЕРЛАНДЫ)</h3>
+                        </div>
+                    </div>
+                    <!--                    Если все ок, то не показываем этот блок.-->
+                    <div class="factors dangerously "><!--satisfactorily-->
+                        <h4>Стоп-фактор!</h4>
+                        <p>Общество является управляющей компанией 2-х и более юридических лиц, ранее ликвидированных на основании решения ФНС России</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Здесь и далее:
+если все ок, то не показываем ваще всю строку. -->
+            <div class="table-row">
+                <div class="table-col name">Записи ЕГРЮЛ</div>
+                <div class="table-col">
+                    <div class="factors satisfactorily "><!--dangerously-->
+                        <h4>Будьте осторожны!</h4>
+                        <p>Общество является средним или малым предприятияем (выручка менее 800 млн.руб.) и его единоличный исполнительнй орган сменялся 2 и более раз за последний год</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Отчетность</div>
+                <div class="table-col">
+                    <div class="factors satisfactorily "><!--dangerously-->
+                        <h4>Будьте осторожны!</h4>
+                        <p>Не сдана отчетность в ФНС России за предыдущий отчетный год</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Экономика</div>
+                <div class="table-col">
+                    <div class="factors satisfactorily "><!--dangerously-->
+                        <h4>Будьте осторожны!</h4>
+                        <p>Дебиторская задолженность Общества за последний отчетный год составляет от 50 до 90% всех активов Общества (Строка 1600 бухгалтерского баланса)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Бизнес-коэффициенты</div>
+                <div class="table-col">
+                    <div class="factors satisfactorily "><!--dangerously-->
+                        <h4>Будьте осторожны!</h4>
+                        <p>Из 10 основных бизнес-коэфициентов 3 и более имеют отклонение от нормы</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Арбитраж</div>
+                <div class="table-col">
+                    <div class="factors satisfactorily "><!--dangerously-->
+                        <h4>Будьте осторожны!</h4>
+                        <p>Сумма требований, по которым Общество выступает ответчиком, превышает сумму требований, по которым Общество выступает истцом, ИЛИ подано заявление о признании Общества банкротом</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">ФССП</div>
+                <div class="table-col">
+                    <div class="factors satisfactorily "><!--dangerously-->
+                        <h4>Будьте осторожны!</h4>
+                        <p>Сумма открытых исполнительных производств в отношении Общества более 25% всех активов Общества за последний отчетный период ИЛИ при отсутствии бухгалтерской отчетности имеются открытые в исполнительные производства</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Тендеры</div>
+                <div class="table-col">
+                    <div class="factors satisfactorily "><!--dangerously-->
+                        <h4>Будьте осторожны!</h4>
+                        <p>Юридическое лицо было внесено более 3-х лет назад в реестр недобросовестных поставщиков согласно ФЗ № 44-ФЗ или ФЗ № 223-ФЗ, но на данный момент в реестре уже не соостоит</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-col name">Проверки</div>
+                <div class="table-col">
+                    <div class="factors satisfactorily "><!--dangerously-->
+                        <h4>Будьте осторожны!</h4>
+                        <p>Нарушения выявлены в более чем 25% случаев проверок, проводенных в отношении данного Общества</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
