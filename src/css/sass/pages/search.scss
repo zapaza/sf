@@ -9,10 +9,15 @@
       visibility: hidden;
     }
 
+    .search-list{
+      background-color: $white;
+    }
 
     .search-list--item{
       height: 112px;
       background-image: url(../images/lazyload-search.svg);
+      transition: .2s ease-in-out;
+      animation: lazyload 2s ease-in-out infinite;
       &:hover{
         background-color: $white;
       }

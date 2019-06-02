@@ -242,6 +242,15 @@
     opacity:0;
   }
 }
+@keyframes lazyload{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: .5;
+  }
+}
+
 
 //выбор года в подалке
 .select-years{

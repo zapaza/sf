@@ -1,20 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
-    <title>0D02FAD1-B3A8-4742-9039-03343BA204EC</title>
-    <desc>Created with sketchtool.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon/card/print/L/normal">
-            <g id="Group">
-                <g id="Group-25">
-                    <rect id="Rectangle" opacity="0.200000003" x="0" y="0" width="32" height="32"></rect>
-                    <rect id="Rectangle" stroke="#000000" x="11.5" y="15.5" width="9" height="7"></rect>
-                    <path d="M10,12 L12,12 L12,18 L8,18 L8,14 C8,12.8954305 8.8954305,12 10,12 Z" id="Rectangle" fill="#000000"></path>
-                    <path d="M20,12 L22,12 C23.1045695,12 24,12.8954305 24,14 L24,18 L20,18 L20,12 Z" id="Rectangle" fill="#000000"></path>
-                    <rect id="Rectangle" fill="#000000" x="11" y="12" width="10" height="4"></rect>
-                    <rect id="Rectangle" stroke="#000000" x="11.5" y="9.5" width="9" height="3"></rect>
-                </g>
-            </g>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h32v32H0z" opacity=".2"/>
+        <path stroke="#FFF" d="M11.5 15.5h9v7h-9z"/>
+        <path fill="#FFF" d="M10 12h2v6H8v-4a2 2 0 0 1 2-2zM20 12h2a2 2 0 0 1 2 2v4h-4v-6z"/>
+        <path fill="#FFF" d="M11 12h10v4H11z"/>
+        <path stroke="#FFF" d="M11.5 9.5h9v3h-9z"/>
     </g>
 </svg>

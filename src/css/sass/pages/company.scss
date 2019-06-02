@@ -43,6 +43,16 @@
           display: none;
         }
       }
+
+      .company-btn{
+
+        &--inner{
+          a {
+            opacity: .5;
+            pointer-events: none;
+          }
+        }
+      }
     }
 
     & > ul{
@@ -112,7 +122,7 @@
             &:before,
             &:after{
               opacity: 1;
-              transition-delay: 2s;
+              transition-delay: .6s;
             }
 
           }

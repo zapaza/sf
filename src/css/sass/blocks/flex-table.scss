@@ -42,5 +42,53 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    [data-hint]{
+      &:before{
+        position: absolute;
+        z-index: 999;
+        pointer-events: none;
+        content: attr(data-hint);
+        display: block;
+        padding: 12px;
+        opacity: 0;
+        max-width: 100%;
+        bottom: 100%;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        background-color: rgb(153, 153, 153);
+        transition: .2s ease opacity;
+        text-transform: uppercase;
+        font:{
+          size: 1.4rem;
+          weight: $font-regular;
+        }
+        line-height: 1.6rem;
+        letter-spacing: 0.5px;
+        color: rgb(255, 255, 255);
+
+      }
+      &:after{
+        position: absolute;
+        z-index: 99;
+        content: '';
+        width: 8px;
+        height: 16px;
+        left: 12px;
+        bottom: 100%;
+        margin-bottom: -8px;
+        border: 8px solid transparent;
+        border-top-color:rgb(153, 153, 153);
+        box-sizing: border-box;
+        opacity: 0;
+        transition: .2s ease opacity;
+      }
+      &:hover{
+        &:before,
+        &:after{
+          opacity: 1;
+        }
+
+      }
+    }
   }
 }

@@ -258,35 +258,37 @@ $(document).ready(function () {
     });
     $('a[data-modal-inside]').magnificPopup({
         type: 'inline',
-        midClick: true,
+        midClick:true,
         fixedBgPos: true,
         preloader: false,
         overflowY: 'auto',
         removalDelay: 300,
         closeBtnInside: false,
+        closeOnBgClick: false,
         mainClass: 'zoom-in modal-inside',
         callbacks: {
             open: function () {
                 if($('.mfp-wrap').find('.big')){
                     $('.mfp-wrap').find('.big').closest('.mfp-content').addClass('big');
                 }
+                if($('.modal .card-footer').length > 0){
+                    var links = $('.mfp-wrap .card-footer').clone();
 
-                if($('.document-list--item_accordion').length > 0){
-                    // var accordionContent = $('.document-list--item_accordion .content').hide();
-
-                    $body.on(event, '.document-list--item_accordion .title', function () {
-                        $this = $(this);
-                        $target = $this.closest('.document-list--item_accordion').find('.content');
-
-                        $this.toggleClass('active');
-                        $target.slideToggle(100);
-
-                    } )
+                    $('.modal').find('.card-footer').remove();
+                    $('.modal').closest('.mfp-wrap').append(links);
                 }
             }
         }
 
     });
+    $body.on(event, '.document-list--item_accordion .title', function () {
+        $this = $(this);
+        $target = $this.closest('.document-list--item_accordion').find('.content');
+
+        $this.toggleClass('active');
+        $target.slideToggle(100);
+
+    } );
 
 //модалка в модалке "открытия на другом устройстве"
     if(('.use-here').length > 0){
@@ -328,7 +330,7 @@ $(document).ready(function () {
 
 //аккордион на главной странице
     if($('.questions').length > 0){
-        var accordionContent = $('.questions-list .content').hide();
+        var accordionContentQuestion = $('.questions-list .content').hide();
 
         $body.on(event, '.questions-list--item .title', function () {
             $this = $(this);
@@ -401,14 +403,14 @@ $(document).ready(function () {
     });
 
     //scroll table
-    $('.scroll-horizontal').smoothDivScroll({
-        touchScrolling: true,
-        manualContinuousScrolling: false,
-        hotSpotScrolling: false,
-        visibleHotSpotBackgrounds: "",
-        mousewheelScrollingStep: 45,
-        mousewheelScrolling: "allDirections",
-    });
+    // $('.scroll-horizontal').smoothDivScroll({
+    //     touchScrolling: true,
+    //     manualContinuousScrolling: false,
+    //     hotSpotScrolling: false,
+    //     visibleHotSpotBackgrounds: "",
+    //     mousewheelScrollingStep: 45,
+    //     mousewheelScrolling: "allDirections",
+    // });
 
 //подробнее в главной карточке
     if($('.main-card-status').length>0){
@@ -423,18 +425,24 @@ $(document).ready(function () {
 
     //вункционал кнопок отчетность и выписка
 
-    if($('.company-btn--inner').length>0){
-        $body.on(event, '.company-btn--inner .btn', function (e) {
-            e.preventDefault();
+    if($('.company-btn').length>0){
+        $body.on(event, '.company-btn--inner .btn', function(event){
+              event.preventDefault();
 
-            $(this).closest('.company-btn--inner').find('.company-btn--dropdown').fadeToggle(500);
+            $(this).parent().find('.company-btn--dropdown').first().toggle();
 
-        });
-        $('body').mouseup(function (e) {
-            if (!$('.company-btn--inner .btn').is(e.target) // если клик был не по нашему блоку
-                && $('.company-btn--dropdown').has(e.target).length === 0) { // и не по его дочерним элементам
-                $('.company-btn--dropdown').fadeOut(500); // скрываем его
-            }
+            $(this).parent().siblings().find('.company-btn--dropdown').hide();
+
+            //Hide menu when clicked outside
+            $(this).parent().find('.company-btn--dropdown').mouseout(function(){
+                var thisUI = $(this);
+                $('html').click(function(){
+                    thisUI.hide();
+                    $('html').unbind('click');
+                });
+            });
+
+
         });
     }
 });

@@ -1,0 +1,65 @@
+.text-page{
+  padding-top: 98px;
+  margin-bottom: 64px;
+
+  &--content{
+    width: 100%;
+    max-width: 704px;
+    margin: 0 auto 0 240px;
+    background-color: $white;
+    padding: 32px 40px 64px;
+    @media (min-width: 1264px) and (min-height:671px){
+      max-width: 784px;
+    }
+    @media (min-width: 1344px){
+      max-width: 784px;
+    }
+
+
+    h1{
+      margin-bottom: 32px;
+
+      font:{
+        size: 2.2rem;
+        weight: $font-bold
+      }
+      line-height: 3.2rem;
+      letter-spacing: normal;
+      color: $black--text;
+      text-align: left;
+    }
+
+    p{
+      margin-bottom: 24px;
+      font:{
+        weight: $font-regular;
+        size: 1.4rem;
+      };
+      line-height: 2rem;
+    }
+
+    ol{
+      & > li{
+        font: {
+          weight: $font-bold;
+          size: 1.4rem;
+        }
+        margin-bottom: 24px;
+
+        & > ol > li{
+          margin-bottom: 8px;
+
+          font-weight: $font-regular;
+          &:first-of-type{
+            padding-top: 8px;
+          }
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+
+}

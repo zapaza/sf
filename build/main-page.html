@@ -150,7 +150,7 @@
                 </div>
               </div>
               <ul class="profile-menu">
-                <li class="statement active"><a href="">Мои выписки<span>8</span></a></li>
+                <li class="statement active"><a href="#modal-extract" data-modal-card>Мои выписки<span>8</span></a></li>
                 <!--если есть новые выписки добовляется класс active-->
                 <li><a href="">Тарифы</a></li>
                 <li><a href="">Настройки</a></li>
@@ -799,6 +799,33 @@
           <div></div>
         </div>
       </div>
+    </div>
+    <div class="card-footer">
+      <ul class="card-footer-link">
+        <li>
+          <a href="#0" class="card-footer-link--download " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--download reloaded " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+          <div class="company-modal share-modal">
+            <div class="lds-ring">
+              <!--лоадер-->
+              <div></div>
+            </div>
+            <form action="">
+              <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+              <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+              <!--когда скопирована , то показывается ссылка скопирова-->
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a>
+        </li>
+      </ul>
     </div>
   </div>
   <div class="modal modal-main-card modal-license  mfp-hide" id="modal-license">
@@ -1675,153 +1702,35 @@
           </div>
         </div>
       </div>
-      <div class="card-footer">
-        <ul class="card-footer-link">
-          <li>
-            <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
-            <div class="company-modal download-modal">
-              <form action="">
-                <label for="card-1">
-                  <input type="checkbox" name="download-card" id="card-1">
-                  <span class="checkbox-info">Краткая справка</span>
-                </label>
-                <label for="card-2">
-                  <input type="checkbox" name="download-card" id="card-2">
-                  <span class="checkbox-info">Собственники</span>
-                </label>
-                <label for="card-3">
-                  <input type="checkbox" name="download-card" id="card-3">
-                  <span class="checkbox-info">Взаимосвязи</span>
-                </label>
-                <label for="card-4">
-                  <input type="checkbox" name="download-card" id="card-4">
-                  <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
-                </label>
-                <label for="card-5">
-                  <input type="checkbox" name="download-card" id="card-5">
-                  <span class="checkbox-info">Отчетность</span>
-                </label>
-                <label for="card-6">
-                  <input type="checkbox" name="download-card" id="card-6">
-                  <span class="checkbox-info">Экономика</span>
-                </label>
-                <label for="card-7">
-                  <input type="checkbox" name="download-card" id="card-7">
-                  <span class="checkbox-info">Бизнес</span>
-                </label>
-                <label for="card-8">
-                  <input type="checkbox" name="download-card" id="card-8">
-                  <span class="checkbox-info">Арбитражи</span>
-                </label>
-                <label for="card-9">
-                  <input type="checkbox" name="download-card" id="card-9">
-                  <span class="checkbox-info">ФССП</span>
-                </label>
-                <label for="card-10">
-                  <input type="checkbox" name="download-card" id="card-10">
-                  <span class="checkbox-info">Тендеры</span>
-                </label>
-                <label for="card-11">
-                  <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
-                  <span class="checkbox-info">Проверки</span>
-                </label>
-                <label for="check-all" class="check-all">
-                  <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
-                  <span class="checkbox-info">Выделить все</span>
-                </label>
-                <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
-                <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
-                <button type="button" class="btn btn-green enter">
-                  <span class="loader">
-                    <span class="loader-item loader-item--1"></span>
-                    <span class="loader-item loader-item--2"></span>
-                    <span class="loader-item loader-item--3"></span>
-                  </span>
-                </button>
-              </form>
-            </div>
-          </li>
-          <li>
-            <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
-            <div class="company-modal share-modal">
-              <div class="lds-ring">
-                <!--лоадер-->
-                <div></div>
-              </div>
-              <form action="">
-                <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
-                <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
-                <!--когда скопирована , то показывается ссылка скопирова-->
-              </form>
-            </div>
-          </li>
-          <li>
-            <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
-            <div class="company-modal print-modal">
-              <form action="">
-                <label for="card-print-1">
-                  <input type="checkbox" name="print-card" id="card-print-1">
-                  <span class="checkbox-info">Краткая справка</span>
-                </label>
-                <label for="card-print-2">
-                  <input type="checkbox" name="print-card" id="card-print-2">
-                  <span class="checkbox-info">Собственники</span>
-                </label>
-                <label for="card-print-3">
-                  <input type="checkbox" name="print-card" id="card-print-3">
-                  <span class="checkbox-info">Взаимосвязи</span>
-                </label>
-                <label for="card-print-4">
-                  <input type="checkbox" name="print-card" id="card-print-4">
-                  <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
-                </label>
-                <label for="card-print-5">
-                  <input type="checkbox" name="print-card" id="card-print-5">
-                  <span class="checkbox-info">Отчетность</span>
-                </label>
-                <label for="card-print-6">
-                  <input type="checkbox" name="print-card" id="card-print-6">
-                  <span class="checkbox-info">Экономика</span>
-                </label>
-                <label for="card-print-7">
-                  <input type="checkbox" name="print-card" id="card-print-7">
-                  <span class="checkbox-info">Бизнес</span>
-                </label>
-                <label for="card-print-8">
-                  <input type="checkbox" name="print-card" id="card-print-8">
-                  <span class="checkbox-info">Арбитражи</span>
-                </label>
-                <label for="card-print-9">
-                  <input type="checkbox" name="print-card" id="card-print-9">
-                  <span class="checkbox-info">ФССП</span>
-                </label>
-                <label for="card-print-10">
-                  <input type="checkbox" name="print-card" id="card-print-10">
-                  <span class="checkbox-info">Тендеры</span>
-                </label>
-                <label for="card-print-11">
-                  <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
-                  <span class="checkbox-info">Проверки</span>
-                </label>
-                <label for="check-all-print" class="check-all">
-                  <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
-                  <span class="checkbox-info">Выделить все</span>
-                </label>
-                <button type="submit" class="coppy-link btn btn-green">Печать</button>
-                <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
-                <button type="button" class="btn btn-green enter">
-                  <span class="loader">
-                    <span class="loader-item loader-item--1"></span>
-                    <span class="loader-item loader-item--2"></span>
-                    <span class="loader-item loader-item--3"></span>
-                  </span>
-                </button>
-              </form>
-            </div>
-          </li>
-        </ul>
-      </div>
+
     </article>
+    <div class="card-footer">
+      <ul class="card-footer-link">
+        <li>
+          <a href="#0" class="card-footer-link--download " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--download reloaded " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+          <div class="company-modal share-modal">
+            <div class="lds-ring">
+              <!--лоадер-->
+              <div></div>
+            </div>
+            <form action="">
+              <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+              <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+              <!--когда скопирована , то показывается ссылка скопирова-->
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="modal mfp-hide modal-inside" id="modal-inside-owner">
     <!--собственники-->
@@ -2018,153 +1927,35 @@
           </div>
         </div>
       </div>
-      <div class="card-footer">
-        <ul class="card-footer-link">
-          <li>
-            <a href="#0" class="card-footer-link--download trigger-modal" data-hint="Скачать"></a>
-            <div class="company-modal download-modal">
-              <form action="">
-                <label for="card-1">
-                  <input type="checkbox" name="download-card" id="card-1">
-                  <span class="checkbox-info">Краткая справка</span>
-                </label>
-                <label for="card-2">
-                  <input type="checkbox" name="download-card" id="card-2">
-                  <span class="checkbox-info">Собственники</span>
-                </label>
-                <label for="card-3">
-                  <input type="checkbox" name="download-card" id="card-3">
-                  <span class="checkbox-info">Взаимосвязи</span>
-                </label>
-                <label for="card-4">
-                  <input type="checkbox" name="download-card" id="card-4">
-                  <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
-                </label>
-                <label for="card-5">
-                  <input type="checkbox" name="download-card" id="card-5">
-                  <span class="checkbox-info">Отчетность</span>
-                </label>
-                <label for="card-6">
-                  <input type="checkbox" name="download-card" id="card-6">
-                  <span class="checkbox-info">Экономика</span>
-                </label>
-                <label for="card-7">
-                  <input type="checkbox" name="download-card" id="card-7">
-                  <span class="checkbox-info">Бизнес</span>
-                </label>
-                <label for="card-8">
-                  <input type="checkbox" name="download-card" id="card-8">
-                  <span class="checkbox-info">Арбитражи</span>
-                </label>
-                <label for="card-9">
-                  <input type="checkbox" name="download-card" id="card-9">
-                  <span class="checkbox-info">ФССП</span>
-                </label>
-                <label for="card-10">
-                  <input type="checkbox" name="download-card" id="card-10">
-                  <span class="checkbox-info">Тендеры</span>
-                </label>
-                <label for="card-11">
-                  <input type="checkbox" name="download-card" id="card-11" class=checkbox-info">
-                  <span class="checkbox-info">Проверки</span>
-                </label>
-                <label for="check-all" class="check-all">
-                  <input type="checkbox" name="download-card" id="check-all" class=checkbox-info">
-                  <span class="checkbox-info">Выделить все</span>
-                </label>
-                <button type="submit" class="coppy-link btn btn-green">Скачать PDF</button>
-                <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
-                <button type="button" class="btn btn-green enter">
-                  <span class="loader">
-                    <span class="loader-item loader-item--1"></span>
-                    <span class="loader-item loader-item--2"></span>
-                    <span class="loader-item loader-item--3"></span>
-                  </span>
-                </button>
-              </form>
-            </div>
-          </li>
-          <li>
-            <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
-            <div class="company-modal share-modal">
-              <div class="lds-ring">
-                <!--лоадер-->
-                <div></div>
-              </div>
-              <form action="">
-                <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
-                <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
-                <!--когда скопирована , то показывается ссылка скопирова-->
-              </form>
-            </div>
-          </li>
-          <li>
-            <a href="#0" class="card-footer-link--print trigger-modal" data-hint="Распечатать"></a>
-            <div class="company-modal print-modal">
-              <form action="">
-                <label for="card-print-1">
-                  <input type="checkbox" name="print-card" id="card-print-1">
-                  <span class="checkbox-info">Краткая справка</span>
-                </label>
-                <label for="card-print-2">
-                  <input type="checkbox" name="print-card" id="card-print-2">
-                  <span class="checkbox-info">Собственники</span>
-                </label>
-                <label for="card-print-3">
-                  <input type="checkbox" name="print-card" id="card-print-3">
-                  <span class="checkbox-info">Взаимосвязи</span>
-                </label>
-                <label for="card-print-4">
-                  <input type="checkbox" name="print-card" id="card-print-4">
-                  <span class="checkbox-info">Записи в <span>EГРЮЛ</span></span>
-                </label>
-                <label for="card-print-5">
-                  <input type="checkbox" name="print-card" id="card-print-5">
-                  <span class="checkbox-info">Отчетность</span>
-                </label>
-                <label for="card-print-6">
-                  <input type="checkbox" name="print-card" id="card-print-6">
-                  <span class="checkbox-info">Экономика</span>
-                </label>
-                <label for="card-print-7">
-                  <input type="checkbox" name="print-card" id="card-print-7">
-                  <span class="checkbox-info">Бизнес</span>
-                </label>
-                <label for="card-print-8">
-                  <input type="checkbox" name="print-card" id="card-print-8">
-                  <span class="checkbox-info">Арбитражи</span>
-                </label>
-                <label for="card-print-9">
-                  <input type="checkbox" name="print-card" id="card-print-9">
-                  <span class="checkbox-info">ФССП</span>
-                </label>
-                <label for="card-print-10">
-                  <input type="checkbox" name="print-card" id="card-print-10">
-                  <span class="checkbox-info">Тендеры</span>
-                </label>
-                <label for="card-print-11">
-                  <input type="checkbox" name="print-card" id="card-print-11" class=checkbox-info">
-                  <span class="checkbox-info">Проверки</span>
-                </label>
-                <label for="check-all-print" class="check-all">
-                  <input type="checkbox" name="download-card" id="check-all-print" class=checkbox-info">
-                  <span class="checkbox-info">Выделить все</span>
-                </label>
-                <button type="submit" class="coppy-link btn btn-green">Печать</button>
-                <!--когда мобирается pdf то показывается вторая кнопка , когда не выбран не один чекбокс добавляется класс disable-->
-                <button type="button" class="btn btn-green enter">
-                  <span class="loader">
-                    <span class="loader-item loader-item--1"></span>
-                    <span class="loader-item loader-item--2"></span>
-                    <span class="loader-item loader-item--3"></span>
-                  </span>
-                </button>
-              </form>
-            </div>
-          </li>
-        </ul>
-      </div>
+
     </article>
+    <div class="card-footer">
+      <ul class="card-footer-link">
+        <li>
+          <a href="#0" class="card-footer-link--download " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--download reloaded " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+          <div class="company-modal share-modal">
+            <div class="lds-ring">
+              <!--лоадер-->
+              <div></div>
+            </div>
+            <form action="">
+              <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+              <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+              <!--когда скопирована , то показывается ссылка скопирова-->
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="modal mfp-hide modal-inside big" id="modal-inside-report">
     <!--отчетность-->
@@ -3102,6 +2893,33 @@
       </div>
 
     </div>
+    <div class="card-footer">
+      <ul class="card-footer-link">
+        <li>
+          <a href="#0" class="card-footer-link--download " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--download reloaded " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+          <div class="company-modal share-modal">
+            <div class="lds-ring">
+              <!--лоадер-->
+              <div></div>
+            </div>
+            <form action="">
+              <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+              <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+              <!--когда скопирована , то показывается ссылка скопирова-->
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a>
+        </li>
+      </ul>
+    </div>
 
   </div>
 
@@ -3300,6 +3118,33 @@
         </dd>
         <!-- конец второго дела-->
       </dl>
+    </div>
+    <div class="card-footer">
+      <ul class="card-footer-link">
+        <li>
+          <a href="#0" class="card-footer-link--download " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--download reloaded " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+          <div class="company-modal share-modal">
+            <div class="lds-ring">
+              <!--лоадер-->
+              <div></div>
+            </div>
+            <form action="">
+              <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+              <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+              <!--когда скопирована , то показывается ссылка скопирова-->
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a>
+        </li>
+      </ul>
     </div>
 
   </div>
@@ -3526,6 +3371,33 @@
         </dd>
         <!-- конец третьего дела-->
       </dl>
+    </div>
+    <div class="card-footer">
+      <ul class="card-footer-link">
+        <li>
+          <a href="#0" class="card-footer-link--download " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--download reloaded " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+          <div class="company-modal share-modal">
+            <div class="lds-ring">
+              <!--лоадер-->
+              <div></div>
+            </div>
+            <form action="">
+              <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+              <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+              <!--когда скопирована , то показывается ссылка скопирова-->
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a>
+        </li>
+      </ul>
     </div>
 
   </div>
@@ -3860,7 +3732,33 @@
 
       </dl>
     </div>
-
+    <div class="card-footer">
+      <ul class="card-footer-link">
+        <li>
+          <a href="#0" class="card-footer-link--download " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--download reloaded " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+          <div class="company-modal share-modal">
+            <div class="lds-ring">
+              <!--лоадер-->
+              <div></div>
+            </div>
+            <form action="">
+              <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+              <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+              <!--когда скопирована , то показывается ссылка скопирова-->
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="modal mfp-hide modal-inside big modal-inside-tender" id="modal-inside-checks">
     <!--отчетность-->
@@ -3997,7 +3895,33 @@
         <!-- конец первого дела-->
       </dl>
     </div>
-
+    <div class="card-footer">
+      <ul class="card-footer-link">
+        <li>
+          <a href="#0" class="card-footer-link--download " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--download reloaded " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+          <div class="company-modal share-modal">
+            <div class="lds-ring">
+              <!--лоадер-->
+              <div></div>
+            </div>
+            <form action="">
+              <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+              <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+              <!--когда скопирована , то показывается ссылка скопирова-->
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="modal mfp-hide modal-inside big business" id="modal-inside-business">
     <!--отчетность-->
@@ -4186,7 +4110,33 @@
         </div>
       </div>
     </div>
-
+    <div class="card-footer">
+      <ul class="card-footer-link">
+        <li>
+          <a href="#0" class="card-footer-link--download " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--download reloaded " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+          <div class="company-modal share-modal">
+            <div class="lds-ring">
+              <!--лоадер-->
+              <div></div>
+            </div>
+            <form action="">
+              <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+              <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+              <!--когда скопирована , то показывается ссылка скопирова-->
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="modal mfp-hide modal-inside big modal-inside-economy" id="modal-inside-economy">
     <div class="modal-inside-wrapper">
@@ -4308,7 +4258,33 @@
         </div>
       </div>
     </div>
-
+    <div class="card-footer">
+      <ul class="card-footer-link">
+        <li>
+          <a href="#0" class="card-footer-link--download " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--download reloaded " data-hint="Скачать"></a>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--share trigger-modal" data-hint="Поделиться"></a>
+          <div class="company-modal share-modal">
+            <div class="lds-ring">
+              <!--лоадер-->
+              <div></div>
+            </div>
+            <form action="">
+              <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+              <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button>
+              <!--когда скопирована , то показывается ссылка скопирова-->
+            </form>
+          </div>
+        </li>
+        <li>
+          <a href="#0" class="card-footer-link--print" data-hint="Распечатать"></a>
+        </li>
+      </ul>
+    </div>
   </div>
   <!--внутрянки конец-->
 
@@ -4723,10 +4699,354 @@
         </div>
       </div>
     </div>
-
   </div>
-
   <!--Краткий отчет конец-->
+
+  <!-- мои выписки-->
+  <div class="modal modal-extract mfp-hide" id="modal-extract">
+    <div class="modal-header">
+      <h2>Мои выписки</h2>
+      <span class="modal-header--count">Всего 10</span>
+    </div>
+    <div class="modal-content">
+      <div class="table">
+        <div class="table-row">
+          <div class="table-col">
+            <span class="date">25.05.2019</span>
+            <span class="status">Заверена ЭЦП</span>
+          </div>
+          <div class="table-col">
+            <a href="" class="name" data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></a>
+            <span class="name-info">ОГРН:<span>2346734574554</span></span>
+            <span class="name-info">ИНН:<span>1634534588 </span></span>
+          </div>
+          <div class="table-col">
+            <span class="modal-extract--btn">
+              <a href="" class="delite" data-hint="Удалить">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path class="icon" fill="#000" d="M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z" />
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="download" data-hint="Скачать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path fill="#000" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+                    <path fill="#000" d="M12.5 15h7L16 19.75z" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-col">
+            <span class="date">25.05.2019</span>
+          </div>
+          <div class="table-col">
+            <a href="" class="name" data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></a>
+            <span class="name-info">ОГРН:<span>2346734574554</span></span>
+            <span class="name-info">ИНН:<span>1634534588 </span></span>
+          </div>
+          <div class="table-col">
+            <span class="modal-extract--btn">
+              <a href="" class="delite" data-hint="Удалить">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path class="icon" fill="#000" d="M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z" />
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="download" data-hint="Скачать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path fill="#000" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+                    <path fill="#000" d="M12.5 15h7L16 19.75z" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-col">
+            <span class="date">25.05.2019</span>
+            <span class="status">Заверена ЭЦП</span>
+          </div>
+          <div class="table-col">
+            <a href="" class="name" data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></a>
+            <span class="name-info">ОГРН:<span>2346734574554</span></span>
+            <span class="name-info">ИНН:<span>1634534588 </span></span>
+          </div>
+          <div class="table-col">
+            <span class="modal-extract--btn">
+              <a href="" class="delite" data-hint="Удалить">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path class="icon" fill="#000" d="M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z" />
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="download" data-hint="Скачать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path fill="#000" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+                    <path fill="#000" d="M12.5 15h7L16 19.75z" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-col">
+            <span class="date">25.05.2019</span>
+            <span class="status">Заверена ЭЦП</span>
+          </div>
+          <div class="table-col">
+            <a href="" class="name" data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></a>
+            <span class="name-info">ОГРН:<span>2346734574554</span></span>
+            <span class="name-info">ИНН:<span>1634534588 </span></span>
+          </div>
+          <div class="table-col">
+            <span class="modal-extract--btn">
+              <a href="" class="delite" data-hint="Удалить">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path class="icon" fill="#000" d="M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z" />
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="download" data-hint="Скачать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path fill="#000" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+                    <path fill="#000" d="M12.5 15h7L16 19.75z" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-col">
+            <span class="date">25.05.2019</span>
+            <span class="status">Заверена ЭЦП</span>
+          </div>
+          <div class="table-col">
+            <a href="" class="name" data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></a>
+            <span class="name-info">ОГРН:<span>2346734574554</span></span>
+            <span class="name-info">ИНН:<span>1634534588 </span></span>
+          </div>
+          <div class="table-col">
+            <span class="modal-extract--btn">
+              <a href="" class="delite" data-hint="Удалить">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path class="icon" fill="#000" d="M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z" />
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="download" data-hint="Скачать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path fill="#000" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+                    <path fill="#000" d="M12.5 15h7L16 19.75z" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="table-row liquidation">
+          <div class="table-col">
+            <span class="date">25.05.2019</span>
+            <span class="status">Заверена ЭЦП</span>
+          </div>
+          <div class="table-col">
+            <a href="" class="name" data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «СМОЛЕНСКО-БРЯНСКИЙ ОБЪЕДИНЕННЫЙ КОМБИНАТ КИРПИЧНО-ЦЕМЕНТНЫХ СМЕСЕЙ И ГРАВИЯ»<span class="icon-name"></span></a>
+            <span class="name-info">ОГРН:<span>2346734574554</span></span>
+            <span class="name-info">ИНН:<span>1634534588 </span></span>
+          </div>
+          <div class="table-col">
+            <span class="modal-extract--btn">
+              <a href="" class="delite" data-hint="Удалить">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path class="icon" fill="#000" d="M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z" />
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="download" data-hint="Скачать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path fill="#000" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+                    <path fill="#000" d="M12.5 15h7L16 19.75z" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-col">
+            <span class="date">25.05.2019</span>
+            <span class="status">Заверена ЭЦП</span>
+          </div>
+          <div class="table-col">
+            <a href="" class="name" data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></a>
+            <span class="name-info">ОГРН:<span>2346734574554</span></span>
+            <span class="name-info">ИНН:<span>1634534588 </span></span>
+          </div>
+          <div class="table-col">
+            <span class="modal-extract--btn">
+              <a href="" class="delite" data-hint="Удалить">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path class="icon" fill="#000" d="M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z" />
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="download" data-hint="Скачать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path fill="#000" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+                    <path fill="#000" d="M12.5 15h7L16 19.75z" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-col">
+            <span class="date">25.05.2019</span>
+            <span class="status">Заверена ЭЦП</span>
+          </div>
+          <div class="table-col">
+            <a href="" class="name" data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></a>
+            <span class="name-info">ОГРН:<span>2346734574554</span></span>
+            <span class="name-info">ИНН:<span>1634534588 </span></span>
+          </div>
+          <div class="table-col">
+            <span class="modal-extract--btn">
+              <a href="" class="delite" data-hint="Удалить">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path class="icon" fill="#000" d="M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z" />
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="download" data-hint="Скачать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path fill="#000" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+                    <path fill="#000" d="M12.5 15h7L16 19.75z" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-col">
+            <span class="date">25.05.2019</span>
+            <span class="status">Заверена ЭЦП</span>
+          </div>
+          <div class="table-col">
+            <a href="" class="name" data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></a>
+            <span class="name-info">ОГРН:<span>2346734574554</span></span>
+            <span class="name-info">ИНН:<span>1634534588 </span></span>
+          </div>
+          <div class="table-col">
+            <span class="modal-extract--btn">
+              <a href="" class="delite" data-hint="Удалить">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path class="icon" fill="#000" d="M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z" />
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="download" data-hint="Скачать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path fill="#000" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+                    <path fill="#000" d="M12.5 15h7L16 19.75z" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-col">
+            <span class="date">25.05.2019</span>
+            <span class="status">Заверена ЭЦП</span>
+          </div>
+          <div class="table-col">
+            <a href="" class="name" data-hint="большое при большое название компании бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла»">ООО «Яндекс.Медиасервисы»<span class="icon-name"></span></a>
+            <span class="name-info">ОГРН:<span>2346734574554</span></span>
+            <span class="name-info">ИНН:<span>1634534588 </span></span>
+          </div>
+          <div class="table-col">
+            <span class="modal-extract--btn">
+              <a href="" class="delite" data-hint="Удалить">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path class="icon" fill="#000" d="M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z" />
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="download" data-hint="Скачать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h32v32H0z" opacity=".2" />
+                    <path fill="#000" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+                    <path fill="#000" d="M12.5 15h7L16 19.75z" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content-pagination">
+
+        <div class="modal-content-pagination--btn">
+          <a href="#0" class="btn btn-green">Загрузить еще</a>
+          <a href="#0" class="btn btn-green">
+            <span class="loader">
+              <span class="loader-item loader-item--1"></span>
+              <span class="loader-item loader-item--2"></span>
+              <span class="loader-item loader-item--3"></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- мои выписки конец-->
+
   <!--svg-sprite-->
   <div class="svgSprite" hidden>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
