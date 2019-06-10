@@ -173,6 +173,9 @@ $(document).ready(function () {
     Tabs();
     Scrolling();
 //фокус поиска
+    $body.on(event, '#query', function () {
+        $(this).focus().closest('form').find('.history').show();
+    });
     $('#query').on('keyup',function(){
         var $this = $(this),
             val = $this.val();
@@ -184,6 +187,8 @@ $(document).ready(function () {
             $(this).closest('form').find('.header-search--btn_reset').fadeOut('200');
             $(this).closest('form').find('.header-search--btn').css('opacity','.4');
         }
+        //показ пооследних компаний которые искались
+
     });
 
 //очистка поля поиска
@@ -445,6 +450,9 @@ $(document).ready(function () {
 
         });
     }
+
+
+
 });
 $(document).mouseup(function (e){
     var div = $(".company-modal");

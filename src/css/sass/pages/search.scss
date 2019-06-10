@@ -139,6 +139,7 @@
     justify-content: flex-start;
     width: 100%;
     margin-bottom: 64px;
+    background-color: $white;
 
     &--item{
       padding: 24px 24px 24px 32px;
@@ -251,6 +252,12 @@
             margin-bottom: 8px;
             &.one-element{
               text-transform: none;
+
+              span{
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 4px;
+              }
             }
             span{
               color: $mid-gray--text;
