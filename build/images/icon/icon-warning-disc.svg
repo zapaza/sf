@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
-    <title>A9F57B32-3621-49F6-8B0F-60C67BD8DA1C</title>
-    <desc>Created with sketchtool.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon/NO/S/red">
-            <g id="Group-2">
-                <g id="Group">
-                    <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
-                    <path d="M5,11 L11,5" id="Line-3" stroke="#F24C3D" stroke-width="1.8" stroke-linecap="square"></path>
-                    <path d="M11,11 L5,5" id="Line-3" stroke="#F24C3D" stroke-width="1.8" stroke-linecap="square"></path>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h16v16H0z"/><path d="M5 11l6-6m0 6L5 5" stroke="#F24C3D" stroke-width="1.8" stroke-linecap="square"/></g></svg>

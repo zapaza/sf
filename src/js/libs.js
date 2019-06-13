@@ -103,7 +103,7 @@ function Tabs(){
 
 
 
-    //tabs в карточеке тендеры
+    //tabs в карточеке тендеры егрюл и собственники
     if($('.tender').length > 0){
         $(".tender").find('.tender-content-tab').hide();
         $(".tender").find('.tender-content-tab:first').show();
@@ -453,6 +453,8 @@ $(document).ready(function () {
 
 
 
+
+
 });
 $(document).mouseup(function (e){
     var div = $(".company-modal");
@@ -461,4 +463,40 @@ $(document).mouseup(function (e){
     } else if (div.prev('a').is(e.target)){
         div.show();
     }
+});
+
+$(window).on('scroll',function () {
+    // позиционирование хинтов стопфакторов
+    $.fn.myFunctionPosition = function() {
+        if ($(this).length > 0){
+            var hint = $(this);
+            var hintHeight = hint.innerHeight();
+            var offset = hint.offset();
+            var summHeight = offset.top - $(window).scrollTop();
+            var heightWindow = $(window).height();
+
+            // console.log(summHeight);
+            // console.log(heightWindow);
+            // console.log(heightWindow - hintHeight);
+            if (summHeight > (heightWindow - hintHeight)) {
+                hint.addClass('top');
+            }else if(summHeight < (heightWindow - hintHeight)) {
+                hint.removeClass('top');
+            }
+        }
+
+    }
+
+    $('#egrul .hard-hint').myFunctionPosition();
+    $('#owner .hard-hint').myFunctionPosition();
+    $('#child .hard-hint').myFunctionPosition();
+    $('#report .hard-hint').myFunctionPosition();
+    $('#checks .hard-hint').myFunctionPosition();
+    $('#business .hard-hint').myFunctionPosition();
+    $('#аrbitrage .hard-hint').myFunctionPosition();
+    $('#economy .hard-hint').myFunctionPosition();
+    $('#fssp .hard-hint').myFunctionPosition();
+    $('#tender .hard-hint').myFunctionPosition();
+
+
 });
