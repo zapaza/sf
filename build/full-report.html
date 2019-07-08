@@ -33,6 +33,18 @@
                     </div>
                 </td>
             </tr>
+            <!-- на всякий случай еще с красной картинкой-->
+            <!--<tr class="full-report--table_factor count-claims">
+                <td colspan="2">
+                    <div class="full-report--table_factor--img">
+                        <img src="print_img/red-icon.png" alt="">
+                    </div>
+                    <div class="full-report--table_factor--text">
+                        <h3>В отношении компании подавались иски о банкротстве </h3>
+                        <p>Всего 3 иска: <span>23.06.2013</span> <span>22.04.2011</span> <span>14.12.2010</span></p>
+                    </div>
+                </td>
+            </tr>-->
 
             <tr class="full-report--table_row">
                 <td class="full-report--table_row--name">Полное наименование</td>
@@ -56,8 +68,8 @@
                         <p>ИНН:<span>772502306276</span></p>
                         <p>Дата изменения:<span>26.08.2018</span></p>
                     </div>
+                    <p class="warning">Сведения недостоверны (результаты проверки достоверности содержащихся в ЕГРЮЛ сведений о юридическом лице) по состоянию на 22.06.2017</p>
                     <p class="warning">Входит в реестр массовых руководителей (13 компаний) ФНС России</p>
-
                     <div class="company-info">
                         <div class="company-info--header">
                             <h2>ООО «Яндекс.Медиасервисы»</h2>
@@ -504,7 +516,7 @@
                     </div>
                 </td>
             </tr>
-            <tr class="full-report--table_title">
+            <tr class="full-report--table_title no-padding">
                 <td colspan="3">
                     ФНС
                 </td>
@@ -1297,26 +1309,1399 @@
             </tbody>
         </table>
         <!--форма 3 таблица в 4 колонки-->
-        <table class="full-report--table report report-form3">
+        <!--я не знаю какая таблица будет в отчетности последней, и не хочу блок по отчетности в div оборачивать, что бы проблем с переносом не было поэтому последней таблице надо добавить style="margin-bottom: 96px;"-->
+        <table class="full-report--table report report-form3 report-form3--mini" style="margin-bottom: 96px;">
             <caption>III. Чистые активы</caption>
             <thead class="report-table--header">
             <tr>
-                <th class="rtl">Наименование показателя</th>
-                <th class="rtr">Код</th>
-                <th class="rtr">На 31 декабря отчетного года</th>
-                <th class="rtr">На 31 декабря предыдущего года</th>
+                <th class="rtl name">Наименование показателя</th>
+                <th class="rtr code">Код</th>
+                <th class="rtr total">На 31 декабря отчетного года</th>
+                <th class="rtr total">На 31 декабря предыдущего года</th>
             </tr>
             </thead>
             <tbody class="report-table--body">
             <tr>
-                <td class="rtl">Чистые активы</td>
-                <td class="rtr">1310</td>
-                <td class="rtr">105 982 000</td>
-                <td class="rtr">105 982 000</td>
+                <td class="rtl name">Чистые активы</td>
+                <td class="rtr code">1310</td>
+                <td class="rtr total">105 982 000</td>
+                <td class="rtr total">105 982 000</td>
             </tr>
             </tbody>
         </table>
 
+<!--        экономика-->
+        <table class="full-report--header sub-header">
+            <tr>
+                <td colspan="2" class="full-report--header_title">
+                    <h1>Экономика</h1>
+                </td>
+            </tr>
+        </table>
+        <table class="full-report--table economy economy--factor">
+            <tr class="full-report--table_factor">
+                <td colspan="2">
+                    <div class="full-report--table_factor--img">
+                        <img src="print_img/orange-icon.png" alt="">
+                    </div>
+                    <div class="full-report--table_factor--text">
+                        <h3>Будьте осторожны!</h3>
+                        <p>Общество является средним или малым предприятияем (выручка менее 800 млн.руб.) и его единоличный исполнительнй орган сменялся 2 и более раз за последний год</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table class="full-report--table economy">
+            <thead class="economy-table--header">
+                <tr>
+                    <th class="rtl name"></th>
+                    <th class="rtr value ">2016</th>
+                    <th class="rtr value">2015</th>
+                    <th class="rtr last">2014</th>
+                </tr>
+            </thead>
+            <tbody class="economy-table--body">
+                <tr>
+                    <td class="rtl name">Выручка</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr last">12 232 423 234 265</td>
+                </tr>
+                <tr>
+                    <td class="rtl name">Основные средства</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr last">12 232 423 234 265</td>
+                </tr>
+                <tr>
+                    <td class="rtl name">Запасы</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr last">12 232 423 234 265</td>
+                </tr>
+                <tr>
+                    <td class="rtl name">Дебиторская задолженность</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr last">12 232 423 234 265</td>
+                </tr>
+                <tr>
+                    <td class="rtl name">Дебиторская задолженность</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr last">12 232 423 234 265</td>
+                </tr>
+                <tr>
+                    <td class="rtl name">Кредиторская задолженность</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr last">12 232 423 234 265</td>
+                </tr>
+                <tr>
+                    <td class="rtl name">Прибыль или убыток от продаж</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr last">12 232 423 234 265</td>
+                </tr>
+                <tr>
+                    <td class="rtl name">Чистая прибыль или убыток</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr last">12 232 423 234 265</td>
+                </tr>
+                <tr>
+                    <td class="rtl name">Прибыль (до налогооблажения)</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr last">12 232 423 234 265</td>
+                </tr>
+                <tr>
+                    <td class="rtl name">Коэффициент финансирования</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr value">12 232 423 234 265</td>
+                    <td class="rtr last">12 232 423 234 265</td>
+                </tr>
+            </tbody>
+        </table>
+<!--        тут тожэе надо добавить инлайн стиль-->
+        <table class="full-report--table economy "  style="margin-bottom: 96px;">
+            <thead class="economy-table--header">
+            <tr>
+                <th class="rtl name"></th>
+                <th class="rtr value">2013</th>
+                <th class="rtr value">2012</th>
+                <th class="rtr last">2011</th>
+            </tr>
+            </thead>
+            <tbody class="economy-table--body">
+            <tr>
+                <td class="rtl name">Выручка</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr last">12 232 423 234 265</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Основные средства</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr last">12 232 423 234 265</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Запасы</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr last">12 232 423 234 265</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Дебиторская задолженность</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr last">12 232 423 234 265</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Дебиторская задолженность</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr last">12 232 423 234 265</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Кредиторская задолженность</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr last">12 232 423 234 265</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Прибыль или убыток от продаж</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr last">12 232 423 234 265</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Чистая прибыль или убыток</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr last">12 232 423 234 265</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Прибыль (до налогооблажения)</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr last">12 232 423 234 265</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Коэффициент финансирования</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr value">12 232 423 234 265</td>
+                <td class="rtr last">12 232 423 234 265</td>
+            </tr>
+            <tr class="full-report--table_row images">
+                <td colspan="4">
+                    <div class="images-item" style="background-color: rgb(242, 242, 242);">
+
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+<!--        экономика конец-->
+<!--        бизнес-->
+        <table class="full-report--header sub-header">
+            <tr>
+                <td colspan="2" class="full-report--header_title">
+                    <h1>Бизнес-коэффициенты</h1>
+                </td>
+            </tr>
+        </table>
+        <table class="full-report--table business business--factor">
+            <tr class="full-report--table_factor">
+                <td colspan="2">
+                    <div class="full-report--table_factor--img">
+                        <img src="print_img/orange-icon.png" alt="">
+                    </div>
+                    <div class="full-report--table_factor--text">
+                        <h3>Будьте осторожны!</h3>
+                        <p>Из 10 основных бизнес-коэфициентов 3 и более имеют отклонение от нормы</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table class="full-report--table business">
+            <thead class="business-table--header">
+                <tr>
+                    <th class="rtl name "></th>
+                    <th class="rtl norm gray">Норма, %</th>
+                    <th class="rtr value">2017</th>
+                    <th class="rtr value">2016</th>
+                    <th class="rtr value">2015</th>
+                    <th class="rtr value">2014</th>
+                    <th class="rtr value">2013</th>
+                    <th class="rtr last">2012</th>
+                </tr>
+            </thead>
+            <tbody class="business-table--body">
+            <tr>
+                <td class="rtl name">Абсолютная ликвидность</td>
+                <td class="rtl norm gray">≥ 25</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Текущая ликвидность</td>
+                <td class="rtl norm gray">≥ 200</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Восстановление платежеспособности</td>
+                <td class="rtl norm gray">≥ 100</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Финансовая устройчивость</td>
+                <td class="rtl norm gray">≥ 50</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Коэффициент маневренности</td>
+                <td class="rtl norm gray">≥ 10</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Автономность</td>
+                <td class="rtl norm gray">≥ 50</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Обеспеченность собсвтенными средствами</td>
+                <td class="rtl norm gray">≥ 50</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Соотношение собственных и заемных средств</td>
+                <td class="rtl norm gray">≤ 70</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Коэффициент капитализации</td>
+                <td class="rtl norm gray">≤ 100</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Коэффициент финансирования</td>
+                <td class="rtl norm gray">≥ 100</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="full-report--table business " style="margin-bottom: 96px;">
+            <thead class="business-table--header">
+            <tr>
+                <th class="rtl name "></th>
+                <th class="rtl norm gray">Норма, %</th>
+                <th class="rtr value">2011</th>
+                <th class="rtr value">2010</th>
+                <th class="rtr value">2009</th>
+                <th class="rtr value">2008</th>
+                <th class="rtr value">2007</th>
+                <th class="rtr last">2006</th>
+            </tr>
+            </thead>
+            <tbody class="business-table--body">
+            <tr>
+                <td class="rtl name">Абсолютная ликвидность</td>
+                <td class="rtl norm gray">≥ 25</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Текущая ликвидность</td>
+                <td class="rtl norm gray">≥ 200</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Восстановление платежеспособности</td>
+                <td class="rtl norm gray">≥ 100</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Финансовая устройчивость</td>
+                <td class="rtl norm gray">≥ 50</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Коэффициент маневренности</td>
+                <td class="rtl norm gray">≥ 10</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Автономность</td>
+                <td class="rtl norm gray">≥ 50</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Обеспеченность собсвтенными средствами</td>
+                <td class="rtl norm gray">≥ 50</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Соотношение собственных и заемных средств</td>
+                <td class="rtl norm gray">≤ 70</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Коэффициент капитализации</td>
+                <td class="rtl norm gray">≤ 100</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr>
+                <td class="rtl name">Коэффициент финансирования</td>
+                <td class="rtl norm gray">≥ 100</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr value green">132</td>
+                <td class="rtr value red">132</td>
+                <td class="rtr last green">132</td>
+            </tr>
+            <tr class="full-report--table_row images">
+                <td colspan="8">
+                    <div class="images-item" style="background-color: rgb(242, 242, 242);">
+
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+<!--        бизнес конец-->
+<!--        арбитражи -->
+        <table class="full-report--header sub-header">
+            <tr>
+                <td colspan="2" class="full-report--header_title">
+                    <h1>Арбитраж</h1>
+                </td>
+            </tr>
+        </table>
+        <table class="full-report--table arbitration arbitration--factor">
+            <tr class="full-report--table_factor">
+                <td colspan="4">
+                    <div class="full-report--table_factor--img">
+                        <img src="print_img/orange-icon.png" alt="">
+                    </div>
+                    <div class="full-report--table_factor--text">
+                        <h3>Будьте осторожны!</h3>
+                        <p>Сумма требований, по которым Общество выступает ответчиком, превышает сумму требований, по которым Общество выступает истцом, ИЛИ подано заявление о признании Общества банкротом</p>
+                    </div>
+                </td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2018</td>
+                <td class="rtl side">
+                    <p>Истец</p>
+                    <p>Ответчик</p>
+                    <p>3 сторона</p>
+                </td>
+                <td class="rtl count">
+                    <p>22 дела</p>
+                    <p>8 дел</p>
+                    <p>13 дел</p>
+                </td>
+                <td class="rtr">
+                    <p>131,73 млн. ₽</p>
+                    <p>28,29 млн. ₽</p>
+                    <p>6 303,89 млн. ₽</p>
+                </td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2017</td>
+                <td class="rtl side">
+                    <p>Истец</p>
+                    <p>Ответчик</p>
+                    <p>3 сторона</p>
+                </td>
+                <td class="rtl count">
+                    <p>22 дела</p>
+                    <p>8 дел</p>
+                    <p>13 дел</p>
+                </td>
+                <td class="rtr">
+                    <p>131,73 млн. ₽</p>
+                    <p>28,29 млн. ₽</p>
+                    <p>6 303,89 млн. ₽</p>
+                </td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2016</td>
+                <td class="rtl side">
+                    <p>Истец</p>
+                    <p>Ответчик</p>
+                    <p>3 сторона</p>
+                </td>
+                <td class="rtl count">
+                    <p>22 дела</p>
+                    <p>8 дел</p>
+                    <p>13 дел</p>
+                </td>
+                <td class="rtr">
+                    <p>131,73 млн. ₽</p>
+                    <p>28,29 млн. ₽</p>
+                    <p>6 303,89 млн. ₽</p>
+                </td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2015</td>
+                <td class="rtl side">
+                    <p>Истец</p>
+                    <p>Ответчик</p>
+                    <p>3 сторона</p>
+                </td>
+                <td class="rtl count">
+                    <p>22 дела</p>
+                    <p>8 дел</p>
+                    <p>13 дел</p>
+                </td>
+                <td class="rtr">
+                    <p>131,73 млн. ₽</p>
+                    <p>28,29 млн. ₽</p>
+                    <p>6 303,89 млн. ₽</p>
+                </td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2014</td>
+                <td class="rtl side">
+                    <p>Истец</p>
+                    <p>Ответчик</p>
+                    <p>3 сторона</p>
+                </td>
+                <td class="rtl count">
+                    <p>22 дела</p>
+                    <p>8 дел</p>
+                    <p>13 дел</p>
+                </td>
+                <td class="rtr">
+                    <p>131,73 млн. ₽</p>
+                    <p>28,29 млн. ₽</p>
+                    <p>6 303,89 млн. ₽</p>
+                </td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2013</td>
+                <td class="rtl side">
+                    <p>Истец</p>
+                    <p>Ответчик</p>
+                    <p>3 сторона</p>
+                </td>
+                <td class="rtl count">
+                    <p>22 дела</p>
+                    <p>8 дел</p>
+                    <p>13 дел</p>
+                </td>
+                <td class="rtr">
+                    <p>131,73 млн. ₽</p>
+                    <p>28,29 млн. ₽</p>
+                    <p>6 303,89 млн. ₽</p>
+                </td>
+            </tr>
+            <tr class="full-report--table_row images">
+                <td colspan="4">
+                    <div class="images-item" style="background-color: rgb(242, 242, 242);">
+
+                    </div>
+                </td>
+            </tr>
+            <tr class="full-report--table_row info">
+                <td colspan="4" class="full-report--table_row--content">
+                    <div class="quote">
+                        <p><span>02.09.2019</span><span>A27-12521/2013</span><span>Иск на сумму 0 ₽</span></p>
+                        <p>О неисполнении или ненадлежащем исполнении обязательств по договорам в сфере транспортной деятельности</p>
+                    </div>
+                    <div class="arbitration-name">
+                        <h4>Истец:</h4>
+                        <p>ПАО «Нефтяная компания РОСНЕФТЬ»</p>
+                    </div>
+                    <div class="arbitration-name">
+                        <h4>Ответчик:</h4>
+                        <p>ЗАО «КРУПА ЛАЙФ»</p>
+                    </div>
+                    <div class="arbitration-name">
+                        <h4>Третья сторона:</h4>
+                        <p>ООО "НОВОУРЕНГОЙСКАЯ ТОПЛИВНАЯ КОМПАНИЯ
+                            ПО ПРОИЗВОДСТВУ ГОРНЫХ СРЕДСТВ СИЛЫ»</p>
+                        <p>ООО «МОЛОЧНЫЙ ПРАЗДНИК»</p>
+                    </div>
+                    <div class="docs">
+                        <h4>Документы:</h4>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="date">30.08.2019</td>
+                                <td class="content">
+                                    <p>Наименование документа в одну строчку</p>
+                                    <p>Первая инстанция: АС Ростовской области</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="date">30.08.2019</td>
+                                <td class="content">
+                                    <p>Наименование документа, которое при необходимости нужно  уместить в две строчки, чтобы посмотреть на то, как это будет выглядеть</p>
+                                    <p>Первая инстанция: АС Ростовской области</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="date">30.08.2019</td>
+                                <td class="content">
+                                    <p>Наименование документа, которое при необходимости нужно уместить в три строчки, чтобы иметь наиболее полное представление о том, как оно будет выглядеть, когда текст в названии строки оказывается слишком объёмным</p>
+                                    <p>Первая инстанция: АС Ростовской области</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr class="full-report--table_row info">
+                <td colspan="4" class="full-report--table_row--content">
+                    <div class="quote">
+                        <p><span>02.09.2019</span><span>A27-12521/2013</span><span>Иск на сумму 0 ₽</span></p>
+                        <p>О неисполнении или ненадлежащем исполнении обязательств по договорам в сфере транспортной деятельности</p>
+                    </div>
+                    <div class="arbitration-name">
+                        <h4>Истец:</h4>
+                        <p>ПАО «Нефтяная компания РОСНЕФТЬ»</p>
+                    </div>
+                    <div class="arbitration-name">
+                        <h4>Ответчик:</h4>
+                        <p>ЗАО «КРУПА ЛАЙФ»</p>
+                    </div>
+                    <div class="arbitration-name">
+                        <h4>Третья сторона:</h4>
+                        <p>ООО "НОВОУРЕНГОЙСКАЯ ТОПЛИВНАЯ КОМПАНИЯ
+                            ПО ПРОИЗВОДСТВУ ГОРНЫХ СРЕДСТВ СИЛЫ»</p>
+                        <p>ООО «МОЛОЧНЫЙ ПРАЗДНИК»</p>
+                    </div>
+                    <div class="docs">
+                        <h4>Документы:</h4>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="date">30.08.2019</td>
+                                <td class="content">
+                                    <p>Наименование документа в одну строчку</p>
+                                    <p>Первая инстанция: АС Ростовской области</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="date">30.08.2019</td>
+                                <td class="content">
+                                    <p>Наименование документа, которое при необходимости нужно  уместить в две строчки, чтобы посмотреть на то, как это будет выглядеть</p>
+                                    <p>Первая инстанция: АС Ростовской области</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="date">30.08.2019</td>
+                                <td class="content">
+                                    <p>Наименование документа, которое при необходимости нужно уместить в три строчки, чтобы иметь наиболее полное представление о том, как оно будет выглядеть, когда текст в названии строки оказывается слишком объёмным</p>
+                                    <p>Первая инстанция: АС Ростовской области</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+<!--        арбитражи конец-->
+<!--фссп-->
+        <table class="full-report--header sub-header">
+            <tr>
+                <td colspan="2" class="full-report--header_title">
+                    <h1>ФССП</h1>
+                </td>
+            </tr>
+        </table>
+        <table class="full-report--table fssp fssp--factor">
+            <tr class="full-report--table_factor">
+                <td colspan="4">
+                    <div class="full-report--table_factor--img">
+                        <img src="print_img/orange-icon.png" alt="">
+                    </div>
+                    <div class="full-report--table_factor--text">
+                        <h3>Будьте осторожны!</h3>
+                        <p>Сумма открытых исполнительных производств в отношении Общества более 25% всех активов Общества за последний отчетный период ИЛИ при отсутствии бухгалтерской отчетности имеются открытые в исполнительные производства</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table class="full-report--table fssp">
+            <thead class="fssp-table--header">
+            <tr class="full-report--table_row">
+                <th class="rtl years">Год</th>
+                <th class="rtl open ">Открытые</th>
+                <th class="rtl close">Оконченные</th>
+                <th class="rtr sum  ">Общая сумма</th>
+            </tr>
+            </thead>
+            <tbody class="fssp-table--body">
+            <tr class="full-report--table_row">
+                <td class="rtl years">2019</td>
+                <td class="rtl open ">—</td>
+                <td class="rtl close">2</td>
+                <td class="rtr sum  ">24 470,69 ₽</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2018</td>
+                <td class="rtl open ">8</td>
+                <td class="rtl close">123</td>
+                <td class="rtr sum  ">993 989 549,36 ₽</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2017</td>
+                <td class="rtl open ">8</td>
+                <td class="rtl close">123</td>
+                <td class="rtr sum  ">993 989 549,36 ₽</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2016</td>
+                <td class="rtl open ">8</td>
+                <td class="rtl close">123</td>
+                <td class="rtr sum  ">993 989 549,36 ₽</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2015</td>
+                <td class="rtl open ">8</td>
+                <td class="rtl close">123</td>
+                <td class="rtr sum  ">993 989 549,36 ₽</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years">2014</td>
+                <td class="rtl open ">8</td>
+                <td class="rtl close">123</td>
+                <td class="rtr sum  ">993 989 549,36 ₽</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="rtl years"><b>Всего</b></td>
+                <td class="rtl open ">8</td>
+                <td class="rtl close">123</td>
+                <td class="rtr sum  ">993 989 549,36 ₽</td>
+            </tr>
+            <tr class="full-report--table_row images">
+                <td colspan="4">
+                    <div class="images-item" style="background-color: rgb(242, 242, 242);">
+
+                    </div>
+                </td>
+            </tr>
+            <tr class="full-report--table_row info">
+                <td colspan="4" class="full-report--table_row--content">
+                    <div class="quote">
+                        <p><span>10.04.2019</span><span>101024/18/77054-ИП</span><span><b>Окончено</b></span></p>
+                    </div>
+                    <div class="content">
+                        <table class="sub-table">
+                            <tr>
+                                <td class="name">Сумма</td>
+                                <td class="content">3 000,00 ₽</td>
+                            </tr>
+                            <tr>
+                                <td class="name">Предмет исполнения</td>
+                                <td class="content">Госпошлина, присужденная судом</td>
+                            </tr>
+                            <tr>
+                                <td class="name">Дата исполнительного документа</td>
+                                <td class="content">06.08.2018</td>
+                            </tr>
+                            <tr>
+                                <td class="name">№ исполнительного документа</td>
+                                <td class="content">0355431010118061600034571</td>
+                            </tr>
+                            <tr>
+                                <td class="name">Адрес отдела судебных приставов</td>
+                                <td class="content">109044, Россия, г. Москва, ул. Крутицкий Вал, 18, стр. 2-3</td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr class="full-report--table_row info">
+                <td colspan="4" class="full-report--table_row--content">
+                    <div class="quote">
+                        <p><span>10.04.2019</span><span>101024/18/77054-ИП</span><span><b>Открыто</b></span></p>
+                    </div>
+                    <div class="content">
+                    <table class="sub-table">
+                        <tr>
+                            <td class="name">Сумма</td>
+                            <td class="content">3 000,00 ₽</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Предмет исполнения</td>
+                            <td class="content">Постановление о взыскании исполнительского сбора Постановление о взыскании расходов по совершению исполнительных действий</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Дата исполнительного документа</td>
+                            <td class="content">06.08.2018</td>
+                        </tr>
+                        <tr>
+                            <td class="name">№ исполнительного документа</td>
+                            <td class="content">0355431010118061600034571</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Адрес отдела судебных приставов</td>
+                            <td class="content">109044, Россия, г. Москва, ул. Крутицкий Вал, 18, стр. 2-3</td>
+                        </tr>
+                    </table>
+                    </div>
+                </td>
+            </tr>
+            <tr class="full-report--table_row info">
+                <td colspan="4" class="full-report--table_row--content">
+                    <div class="quote">
+                        <p><span>10.04.2019</span><span>101024/18/77054-ИП</span><span><b>Окончено</b></span></p>
+                    </div>
+                    <div class="content">
+                    <table class="sub-table">
+                        <tr>
+                            <td class="name">Сумма</td>
+                            <td class="content">3 000,00 ₽</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Предмет исполнения</td>
+                            <td class="content">Госпошлина, присужденная судом</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Дата исполнительного документа</td>
+                            <td class="content">06.08.2018</td>
+                        </tr>
+                        <tr>
+                            <td class="name">№ исполнительного документа</td>
+                            <td class="content">0355431010118061600034571</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Адрес отдела судебных приставов</td>
+                            <td class="content">109044, Россия, г. Москва, ул. Крутицкий Вал, 18, стр. 2-3</td>
+                        </tr>
+                    </table>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+<!--фссп конец-->
+<!--        тендеры-->
+        <table class="full-report--header sub-header">
+            <tr>
+                <td colspan="2" class="full-report--header_title">
+                    <h1>Тендеры</h1>
+                </td>
+            </tr>
+        </table>
+        <table class="full-report--table tender tender--factor">
+            <tr class="full-report--table_factor">
+                <td colspan="4">
+                    <div class="full-report--table_factor--img">
+                        <img src="print_img/orange-icon.png" alt="">
+                    </div>
+                    <div class="full-report--table_factor--text">
+                        <h3>Будьте осторожны!</h3>
+                        <p>Сумма открытых исполнительных производств в отношении Общества более 25% всех активов Общества за последний отчетный период ИЛИ при отсутствии бухгалтерской отчетности имеются открытые в исполнительные производства</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table class="full-report--table tender tender-table">
+            <caption>Участник</caption>
+            <thead class="tender-table--header">
+            <tr class="full-report--table_row">
+                <th class="years">Год</th>
+                <th><span>44-ФЗ</span> (млн. ₽)</th>
+                <th><span>223-ФЗ</span> (млн. ₽)</th>
+                <th>Всего (млн. ₽)</th>
+            </tr>
+            </thead>
+            <tbody class="tender-table--body">
+            <tr class="full-report--table_row">
+                <td class="years">2019</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2018</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2017</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2016</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2015</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2014</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years"><b>Всего</b></td>
+                <td><b>172</b> (11 022,84)</td>
+                <td><b>1995</b> (2 297 120,04)</td>
+                <td><b>367</b> (2 371 064,32)</td>
+            </tr>
+            <tr class="full-report--table_row images">
+                <td colspan="4">
+                    <div class="images-item" style="background-color: rgb(242, 242, 242);">
+
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="full-report--table tender tender-table">
+            <caption>Победитель</caption>
+            <thead class="tender-table--header">
+            <tr class="full-report--table_row">
+                <th class="years">Год</th>
+                <th><span>44-ФЗ</span> (млн. ₽)</th>
+                <th><span>223-ФЗ</span> (млн. ₽)</th>
+                <th>Всего (млн. ₽)</th>
+            </tr>
+            </thead>
+            <tbody class="tender-table--body">
+            <tr class="full-report--table_row">
+                <td class="years">2019</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2018</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2017</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2016</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2015</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2014</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years"><b>Всего</b></td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row images">
+                <td colspan="4">
+                    <div class="images-item" style="background-color: rgb(242, 242, 242);">
+
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="full-report--table tender tender-table">
+            <caption>Заказчик</caption>
+            <thead class="tender-table--header">
+            <tr class="full-report--table_row">
+                <th class="years">Год</th>
+                <th><span>44-ФЗ</span> (млн. ₽)</th>
+                <th><span>223-ФЗ</span> (млн. ₽)</th>
+                <th>Всего (млн. ₽)</th>
+            </tr>
+            </thead>
+            <tbody class="tender-table--body">
+            <tr>
+                <td class="years">2019</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2018</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2017</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2016</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2015</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years">2014</td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row">
+                <td class="years"><b>Всего</b></td>
+                <td><b>2</b> (1 022,84)</td>
+                <td><b>5</b> (7 329,06)</td>
+                <td><b>367</b> (8 351,90)</td>
+            </tr>
+            <tr class="full-report--table_row images">
+                <td colspan="4">
+                    <div class="images-item" style="background-color: rgb(242, 242, 242);">
+
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="full-report--table tender">
+            <tr class="full-report--table_row info">
+                <td colspan="4" class="full-report--table_row--content">
+                    <div class="quote">
+                        <p><span>Закупка: <b>31705814668</b></span><span>от 30.11.2019</span><span>44-ФЗ</span></p>
+                    </div>
+                    <div class="content">
+                        <table class="sub-table">
+                            <tr>
+                                <td class="name">Контракт</td>
+                                <td class="content"><p>67801392271170000860001 <b>494 916,00 ₽</b></p></td>
+                            </tr>
+                            <tr>
+                                <td class="name">Название лота</td>
+                                <td class="content"><p>Оказание рекламных услуг, связанных с размещением рекламных
+                                    материалов в сети Интернет</p></td>
+                            </tr>
+                            <tr>
+                                <td class="name">Заказчик</td>
+                                <td class="content"><p>ООО «КОРУС КОНСАЛТИНГ СНГ»</p></td>
+                            </tr>
+                            <tr>
+                                <td class="name">Победитель</td>
+                                <td class="content"><p>ООО «ЯНДЕКС»</p></td>
+                            </tr>
+                            <tr>
+                                <td class="name">Участник</td>
+                                <td class="content">
+                                    <p>ООО «ЯНДЕКС»</p>
+                                    <p>АБ «Линия права»</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Предмет контракта</td>
+                                <td class="content">
+                                    <p>Размещение рекламных сообщений о продаже имущества</p>
+                                    <table class="inner-table">
+                                        <tr>
+                                            <td>Код позиции</td>
+                                            <td>2320020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Единица измерения</td>
+                                            <td>Комплект</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цена за единицу</td>
+                                            <td>24 999,90 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Количество</td>
+                                            <td>660</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Сумма</td>
+                                            <td>16 499 934 ₽</td>
+                                        </tr>
+                                    </table>
+                                    <p>Услуги по аренде и лизингу</p>
+                                    <table class="inner-table">
+                                        <tr>
+                                            <td>Код позиции</td>
+                                            <td>2320020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Единица измерения</td>
+                                            <td>Условная единица</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Количество</td>
+                                            <td>1</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Дополнительно</td>
+                                <td class="content">
+                                    <p>Контракты и протоколы <span>3</span></p>
+                                    <table class="inner-table">
+                                        <tr>
+                                            <td colspan="2">Контракт</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Реестровый номер контракта</td>
+                                            <td>67801392271170000860001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Номер контракта</td>
+                                            <td>67801392271170000860001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Дата заключения контракта</td>
+                                            <td>30.11.2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Федеральный закон №</td>
+                                            <td>223-ФЗ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цена контракта</td>
+                                            <td>494 916,00 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Дата окончания контракта</td>
+                                            <td>30.11.2018</td>
+                                        </tr>
+                                    </table>
+                                    <table class="inner-table">
+                                        <tr>
+                                            <td colspan="2">Контракт</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Реестровый номер контракта</td>
+                                            <td>67801392271170000860001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Номер контракта</td>
+                                            <td>67801392271170000860001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Дата заключения контракта</td>
+                                            <td>30.11.2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Федеральный закон №</td>
+                                            <td>223-ФЗ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цена контракта</td>
+                                            <td>494 916,00 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Дата окончания контракта</td>
+                                            <td>30.11.2018</td>
+                                        </tr>
+                                    </table>
+                                    <table class="inner-table">
+                                        <tr>
+                                            <td colspan="2">Протокол</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Номер протокола</td>
+                                            <td>67801392271170000860001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Название</td>
+                                            <td>Протокол закупки («Иной способ»)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Дата подписания протокола</td>
+                                            <td>19.11.2014</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr class="full-report--table_row info">
+                <td colspan="4" class="full-report--table_row--content">
+                    <div class="quote">
+                        <p><span>Закупка: <b>31705814668</b></span><span>от 30.11.2019</span><span>44-ФЗ</span></p>
+                    </div>
+                    <div class="content">
+                        <table class="sub-table">
+                            <tr>
+                                <td class="name">Контракт</td>
+                                <td class="content"><p>67801392271170000860001 <b>494 916,00 ₽</b></p></td>
+                            </tr>
+                            <tr>
+                                <td class="name">Название лота</td>
+                                <td class="content"><p>Оказание рекламных услуг, связанных с размещением рекламных
+                                    материалов в сети Интернет</p></td>
+                            </tr>
+                            <tr>
+                                <td class="name">Заказчик</td>
+                                <td class="content"><p>ООО «КОРУС КОНСАЛТИНГ СНГ»</p></td>
+                            </tr>
+                            <tr>
+                                <td class="name">Победитель</td>
+                                <td class="content"><p>ООО «ЯНДЕКС»</p></td>
+                            </tr>
+                            <tr>
+                                <td class="name">Участник</td>
+                                <td class="content">
+                                    <p>ООО «ЯНДЕКС»</p>
+                                    <p>АБ «Линия права»</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Предмет контракта</td>
+                                <td class="content">
+                                    <p>Размещение рекламных сообщений о продаже имущества</p>
+                                    <table class="inner-table">
+                                        <tr>
+                                            <td>Код позиции</td>
+                                            <td>2320020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Единица измерения</td>
+                                            <td>Комплект</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цена за единицу</td>
+                                            <td>24 999,90 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Количество</td>
+                                            <td>660</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Сумма</td>
+                                            <td>16 499 934 ₽</td>
+                                        </tr>
+                                    </table>
+                                    <p>Услуги по аренде и лизингу</p>
+                                    <table class="inner-table">
+                                        <tr>
+                                            <td>Код позиции</td>
+                                            <td>2320020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Единица измерения</td>
+                                            <td>Условная единица</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Количество</td>
+                                            <td>1</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Дополнительно</td>
+                                <td class="content">
+                                    <p>Контракты и протоколы <span>3</span></p>
+                                    <table class="inner-table">
+                                        <tr>
+                                            <td colspan="2">Контракт</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Реестровый номер контракта</td>
+                                            <td>67801392271170000860001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Номер контракта</td>
+                                            <td>67801392271170000860001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Дата заключения контракта</td>
+                                            <td>30.11.2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Федеральный закон №</td>
+                                            <td>223-ФЗ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цена контракта</td>
+                                            <td>494 916,00 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Дата окончания контракта</td>
+                                            <td>30.11.2018</td>
+                                        </tr>
+                                    </table>
+                                    <table class="inner-table">
+                                        <tr>
+                                            <td colspan="2">Контракт</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Реестровый номер контракта</td>
+                                            <td>67801392271170000860001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Номер контракта</td>
+                                            <td>67801392271170000860001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Дата заключения контракта</td>
+                                            <td>30.11.2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Федеральный закон №</td>
+                                            <td>223-ФЗ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цена контракта</td>
+                                            <td>494 916,00 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Дата окончания контракта</td>
+                                            <td>30.11.2018</td>
+                                        </tr>
+                                    </table>
+                                    <table class="inner-table">
+                                        <tr>
+                                            <td colspan="2">Протокол</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Номер протокола</td>
+                                            <td>67801392271170000860001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Название</td>
+                                            <td>Протокол закупки («Иной способ»)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Дата подписания протокола</td>
+                                            <td>19.11.2014</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+<!--        тендеры конец-->
     </div>
 </div>
 
