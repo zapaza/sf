@@ -95,7 +95,7 @@
   &--table{
     width: 100%;
     margin-bottom: 96px;
-    page-break-after: always;
+    //page-break-after: always;
     box-sizing: border-box;
     &.owner{
       .company-info{
@@ -591,8 +591,6 @@
           }
         }
       }
-
-
     }
     &.tender{
       &.tender-table{
@@ -681,18 +679,163 @@
                     b{
                       float: right;
                     }
+
+                    span{
+                      display: inline-block;
+                      margin-left: 8px;
+                      color: #999999;
+                    }
                   }
                 }
 
                 .inner-table{
                   width: 100%;
+                  border-bottom: 1px solid #999999;
+                  &:last-of-type{
+                    border-bottom: 0;
+                  }
+                  & ~ p{
+                    margin-top: 16px;
+                  }
+                  & + .inner-table{
+                    margin-top: 8px;
+                  }
                   tr{
-                    border-bottom: 1px solid #999999;
+                    border-bottom: 0;
+                    &:last-of-type{
+                      td{
+                        padding-bottom: 15px;
+                      }
+                    }
+                    td{
+                      padding: 4px 0;
+                    }
                   }
                 }
               }
             }
           }
+        }
+      }
+    }
+    &.checks{
+        &--factors{
+          margin-bottom: 15px;
+          tr{
+            border-bottom: 0;
+          }
+        }
+      tr{
+        border-bottom: 0;
+        &.images{
+          td{
+            padding-top: 16px;
+            padding-bottom: 15px;
+            border-bottom:1px solid #999999 ;
+          }
+        }
+        td,th{
+          padding-bottom: 15px;
+          padding-top: 0;
+          &.years{
+            width: 256px;
+            padding-right: 216px;
+          }
+          &.plan{
+            width: 220px;
+            padding-right: 124px;
+          }
+          &.noplan{
+            width: 220px;
+            padding-right: 124px;
+          }
+          .sum{
+            width: 88px;
+          }
+        }
+        th{
+          color:#999999;
+        }
+        td{
+          span{
+            display: inline-block;
+            width:  40px;
+            &.two{
+              padding-left: 8px;
+              box-sizing: border-box;
+            }
+            &.red{
+              color: $red;
+            }
+          }
+          .rtl{
+            text-align: left;
+          }
+          .rtr{
+            text-align: right;
+          }
+        }
+        &.last-row{
+          border-top: 1px solid #999999;
+          border-bottom: 1px solid #999999;
+          td{
+            padding: 16px 0 15px;
+          }
+        }
+      }
+
+      .info{
+        .full-report--table_row--content{
+          padding-left: 0;
+          padding-top: 16px;
+        }
+        .quote{
+          span{
+            width: auto;
+            margin-right: 16px;
+          }
+        }
+        .content{
+          padding-left: 48px;
+          .sub-table{
+           margin-top: 8px;
+            tr{
+              border-bottom: 1px solid #999999;
+              &:last-of-type{
+                border-bottom: 0;
+              }
+              td{
+                padding-top: 16px;
+                padding-bottom: 15px;
+              }
+              .name{
+                width: 272px;
+                padding-right: 32px;
+              }
+              .content{
+                width: 464px;
+                p{
+                  span{
+                    display: inline-block;
+                    margin-left: 8px;
+                    color: #999999;
+                  }
+                }
+
+                .inner-table{
+                  tr{
+                    &:last-of-type{
+                      border-bottom: 1px solid #999999;
+                    }
+                  }
+                  td{
+
+                  }
+                }
+              }
+            }
+          }
+
         }
       }
     }
@@ -820,6 +963,7 @@
             height: 100%;
             margin: auto;
             width: auto;
+            max-width: 100%;
           }
         }
       }
