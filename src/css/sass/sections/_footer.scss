@@ -100,31 +100,45 @@
       }
 
       &.right{
-        text-align: right;
+        display: flex;
+        justify-content: flex-end;
         a{
-          position: relative;
-          display: inline-block;
-          margin-right: 20px;
-          font-size: 1.4rem;
-          font-weight: $font-regular;
-          line-height: 1.6rem;
-          letter-spacing: normal;
-          text-align: right;
-          color: rgb(255, 255, 255);
-          border-bottom: 1px solid rgb(255, 255, 255);
-          &:after{
-            position: absolute;
-            content: '';
-            right: 0px;
-            top: -1px;
-            margin-right: -16px;
-            width: 16px;
-            height: 16px;
-            background-image: url(../images/icon-arrow-light.svg);
-          }
+          display:flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 8px 16px;
+          width: 184px;
+          height: 56px;
+          border-radius: 4px;
+          background-color: rgb(26, 26, 26);
+          transition: .2s ease all;
           &:hover{
             text-decoration: none;
-            opacity: .8;
+            opacity: .7;
+          }
+          .icon{
+            width: 32px;
+            height: 32px;
+            display: block;
+            flex-shrink: 0;
+            flex-grow: 0;
+            img{
+              display: block;
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
+
+          .text{
+            width: 104px;
+            font-size: rem(14px);
+            font-weight: $font-regular;
+            line-height:2rem;
+            letter-spacing: normal;
+            color: rgb(255, 255, 255);
+            span{
+              letter-spacing: 0.5px;
+            }
           }
         }
       }

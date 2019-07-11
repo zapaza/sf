@@ -14,6 +14,9 @@
       line-height: 2rem;
       font-weight: $font-regular;
     }
+    .group-table{
+      page-break-after:always;
+    }
   }
 
   &--header{
@@ -95,8 +98,8 @@
   &--table{
     width: 100%;
     margin-bottom: 96px;
-    //page-break-after: always;
     box-sizing: border-box;
+    page-break-after: auto;
     &.owner{
       .company-info{
         &:last-of-type{
@@ -842,6 +845,7 @@
 
     &_factor{
       border-bottom: 1px solid #999999;
+      page-break-after: auto;
       td{
         padding-bottom: 23px;
       }
@@ -882,6 +886,7 @@
       }
     }
     &_title{
+      page-break-after: auto;
       border-bottom: 1px solid #999999;
 
       &:first-of-type{
@@ -898,8 +903,8 @@
       }
     }
     &_row{
-      border-bottom: 1px solid #999999;
       page-break-after: auto;
+      border-bottom: 1px solid #999999;
       &:last-of-type{
         border-bottom: 0;
       }
@@ -933,7 +938,6 @@
       &.executive{
         .executive-info{
           padding-bottom: 16px;
-          page-break-after: avoid;
           p{
             span{
               display: inline-block;
@@ -1044,7 +1048,6 @@
           padding-bottom: 7px;
           box-sizing: border-box;
           border-bottom: 1px solid #999999;
-          page-break-after: avoid;
 
           &--content{
             p{
@@ -1065,7 +1068,6 @@
         }
 
         .license-item{
-          page-break-after: avoid;
           padding-top: 16px;
           padding-bottom: 7px;
           box-sizing: border-box;
@@ -1097,7 +1099,6 @@
         }
 
         .item{
-          page-break-after: avoid;
           width: 100%;
           padding-bottom: 16px;
           &:after {

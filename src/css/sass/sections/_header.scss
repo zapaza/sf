@@ -655,4 +655,23 @@
     }
   }
 
+
+  ///админка
+
+  &-admin{
+    border-bottom: 0;
+    position: static;
+    height: 72px;
+
+    .wrapper{
+      max-width: 960px;
+    }
+
+    .header-logo{
+      svg{
+        opacity: .5;
+      }
+    }
+  }
+
 }
