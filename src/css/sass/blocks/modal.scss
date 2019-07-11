@@ -17,8 +17,45 @@
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 1;
   }
+
+  &.mfp-price{
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+
+    .mfp-close{
+      right: 24px;
+      top: 24px;
+      width: 24px;
+      height: 24px;
+      text-indent: -999px;
+      overflow: hidden;
+      opacity: 1;
+      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ED254B955-C740-450F-8233-2BCE7A651267%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/M/normal'%3E%3Cg id='Group-14'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpath d='M4.5,4.5 L19.5,19.5' id='Line-2' stroke='%23000000' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M19.5,4.5 L4.5,19.5' id='Line-2' stroke='%23000000' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      transition: .2s ease opacity;
+      &:hover{
+        opacity: .6;
+      }
+    }
+  }
 }
 .mfp-wrap{
+  &.mfp-price{
+    .mfp-close{
+      right: 24px;
+      top: 24px;
+      width: 32px;
+      height: 32px;
+      text-indent: -999px;
+      overflow: hidden;
+      opacity: 1;
+      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ED254B955-C740-450F-8233-2BCE7A651267%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/M/normal'%3E%3Cg id='Group-14'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpath d='M4.5,4.5 L19.5,19.5' id='Line-2' stroke='%23ffffff' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M19.5,4.5 L4.5,19.5' id='Line-2' stroke='%23ffffff' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-size: contain;
+      transition: .2s ease opacity;
+      &:hover{
+        opacity: .6;
+      }
+    }
+  }
 
   &.authorization{
     &:before{
@@ -193,6 +230,148 @@
   //position: relative;
   display: block;
   background-color: $white;
+
+  &-price{
+    width: 464px;
+    height: 272px;
+    border-radius: 4px;
+    background-color: $white;
+    margin: auto;
+    padding: 48px;
+    box-sizing: border-box;
+
+    &--title{
+      font-size: rem(22px);
+      font-weight: $font-bold;
+      line-height: 1.27;
+      text-align: center;
+      color: $black--text;
+      margin-bottom: 16px;
+    }
+
+    &--body{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      &__wrap{
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      p{
+        flex-shrink: 0;
+        flex-grow: 0;
+        width: 304px;
+        font-size: rem(14px);
+        line-height: 1.43;
+        text-align: center;
+        color: $black--text;
+        margin-bottom: 24px;
+      }
+      .btn-download{
+        width: 304px;
+        height: 48px;
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon-download{
+
+        }
+      }
+    }
+    &--item{
+      width: 184px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &__icon{
+        display: block;
+        width: 104px;
+        height: 104px;
+        margin-bottom: 4px;
+        transition: .2s ease all;
+        img{
+          display: block;
+          width: 100%;
+        }
+      }
+      &__text{
+        font-size: rem(14px);
+        line-height: 1.43;
+        text-align: center;
+        color: $black--text;
+        transition: .2s ease all;
+      }
+      &:last-of-type{
+        border-left: 1px solid rgb(230, 230, 230);
+      }
+      &:hover{
+        text-decoration: none;
+        .modal-price--item__icon{
+          transform: translateY(-4px);
+        }
+        .modal-price--item__text{
+          color: $mid-gray--text;
+        }
+      }
+
+      &__disable{
+        position: relative;
+        .modal-price--item__icon{
+          opacity: .5;
+        }
+        .modal-price--item__text{
+          color: rgba(0,0,0,.2);
+        }
+        &:after{
+          position: absolute;
+          content: attr(data-hint);
+          width: 190px;
+          height: 56px;
+          border-radius: 4px;
+          background-color: rgb(153, 153, 153);
+          padding: 12px;
+          box-sizing: border-box;
+          font-size: rem(14px);
+          line-height: 1.14;
+          color: $white;
+          left: 151px;
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: 0;
+          transition: .2s ease all;
+        }
+        &:before{
+          content:'';
+          position: absolute;
+          width: 8px;
+          height: 16px;
+          border: 8px solid transparent;
+          border-right-color: rgb(153, 153, 153);
+          box-sizing: border-box;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 137px;
+          opacity: 0;
+          transition: .2s ease all;
+        }
+        &:hover{
+          .modal-price--item__icon{
+            transform: translateY(0);
+          }
+          .modal-price--item__text{
+            color: rgba(0,0,0,.2);
+          }
+          &:after,&:before{
+            opacity: 1;
+          }
+
+        }
+      }
+    }
+  }
 
 
 

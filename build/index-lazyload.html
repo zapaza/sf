@@ -1811,6 +1811,48 @@
       </div>
     </div>
   </div>
+  <!--vМодалки с оплатой-->
+  <div class="modal modal-price mfp-hide" id="modal-price">
+    <div class="modal-price--title">
+      <h2>Выберите способ оплаты</h2>
+    </div>
+    <div class="modal-price--body">
+      <a href="#0" class="modal-price--item" target="_blank" rel="noopener noreferrer">
+        <span class="modal-price--item__icon"><img src="images/card.svg" alt=""></span>
+        <span class="modal-price--item__text">Оплата картой</span>
+      </a>
+      <a href="#modal-price--score" data-modal-price class="modal-price--item">
+        <span class="modal-price--item__icon"><img src="images/schet.svg" alt=""></span>
+        <span class="modal-price--item__text">Счет на оплату</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal modal-price modal-price--mount mfp-hide" id="modal-price--mount">
+    <div class="modal-price--title">
+      <h2>Выберите способ оплаты</h2>
+    </div>
+    <div class="modal-price--body">
+      <a href="#0" class="modal-price--item" target="_blank" rel="noopener noreferrer">
+        <span class="modal-price--item__icon"><img src="images/card.svg" alt=""></span>
+        <span class="modal-price--item__text">Оплата картой</span>
+      </a>
+      <a href="javascript:void(0)" class="modal-price--item modal-price--item__disable" data-hint="Только при оформлении подписки на год">
+        <span class="modal-price--item__icon"><img src="images/schet.svg" alt=""></span>
+        <span class="modal-price--item__text">Счет на оплату</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal modal-price mfp-hide" id="modal-price--score">
+    <div class="modal-price--title">
+      <h2>Счет на оплату выставлен</h2>
+    </div>
+    <div class="modal-price--body modal-price--body__wrap ">
+      <p>Доступ будет предоставлен после поступления средств на наш счет, Вы получите уведомление.</p>
+      <a href="" class="btn btn-green btn-download" download><span class="icon-download"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <path fill="#FFF" d="M9 21h14v2H9zM15 9h2v9h-2z" />
+            <path fill="#FFF" d="M12.5 15h7L16 19.75z" /></svg></span>Скачать счет</a>
+    </div>
+  </div>
 
   <!--модалки для главной карточки компании-->
   <div class="modal modal-main-card modal-sites  mfp-hide" id="modal-sites">
@@ -4162,7 +4204,6 @@
     </div>
 
   </div>
-
   <div class="modal mfp-hide modal-inside big" id="modal-inside-аrbitrage">
     <!--отчетность-->
     <div class="modal-inside-wrapper">

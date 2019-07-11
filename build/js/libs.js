@@ -224,6 +224,16 @@ $(document).ready(function () {
         closeBtnInside: true,
         mainClass: 'zoom-in'
     });
+    $('a[data-modal-price]').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        fixedBgPos: true,
+        preloader: false,
+        overflowY: 'scroll',
+        removalDelay: 300,
+        closeBtnInside: false,
+        mainClass: 'zoom-in mfp-price'
+    });
     $body.on(event, '.btn-green-close', function (e) {
         e.preventDefault();
         $.magnificPopup.close();
@@ -429,15 +439,11 @@ $(document).ready(function () {
     }
 
     //вункционал кнопок отчетность и выписка
-
     if($('.company-btn').length>0){
         $body.on(event, '.company-btn--inner .btn', function(event){
               event.preventDefault();
-
             $(this).parent().find('.company-btn--dropdown').first().toggle();
-
             $(this).parent().siblings().find('.company-btn--dropdown').hide();
-
             //Hide menu when clicked outside
             $(this).parent().find('.company-btn--dropdown').mouseout(function(){
                 var thisUI = $(this);
@@ -446,15 +452,8 @@ $(document).ready(function () {
                     $('html').unbind('click');
                 });
             });
-
-
         });
     }
-
-
-
-
-
 });
 $(document).mouseup(function (e){
     var div = $(".company-modal");
