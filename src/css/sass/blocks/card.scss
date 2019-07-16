@@ -323,6 +323,19 @@
       }
     }
   }
+  &.main-card-eliminated_fns{
+    .main-card-header--registration {
+      &.warning{
+        color: $red;
+      }
+    }
+    .main-card-info:not(.full){
+      .title{
+        color: $red;
+      }
+    }
+
+  }
   &.main-card-eliminated{
     .main-card-header--status {
       display: none;

@@ -234,7 +234,7 @@
                 <li class="statement active"><a href="#modal-extract" data-modal-card>Мои выписки<span>8</span></a></li>
                 <!--если есть новые выписки добовляется класс active-->
                 <li><a href="">Тарифы</a></li>
-                <li><a href="">Настройки</a></li>
+                <li><a href="#modal-settings" data-modal-authorization>Настройки</a></li>
                 <li><a href="">Выход</a></li>
               </ul>
             </div>
@@ -467,6 +467,10 @@
         </form>
         <p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>
         <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>
+        <!--            когда модалка отправлена все тело удаляется остается колько этот  заголовок с кнопкой-->
+        <h2>Пароль успешно изменён</h2>
+        <button class="btn btn-green btn-green-close" type="submit">ок</button>
+
       </div>
     </div>
   </div>
@@ -5038,7 +5042,97 @@
     </div>
   </div>
   <!-- мои выписки конец-->
+  <!--Настройки-->
+  <div class="modal modal-settings mfp-hide" id="modal-settings">
+    <section class="settings">
+      <div class="wrapper">
+        <div class="settings-form">
+          <h1>Настройки</h1>
+          <div class="settings-form--group">
+            <form action="">
+              <label for="phone">
+                <input id="phone" type="text" disabled value="+7 (124) 124-12-42">
+                <span class="icon-question">
+                  <span class="hard-hint">Для замены номера телефона обратитесь в службу поддержки</span>
+                </span>
+              </label>
+            </form>
+          </div>
+          <div class="settings-form--group">
+            <!--опросто инпут с кнопкой-->
+            <form action="">
+              <label for="email">
+                <input type="email" id="email" placeholder="Электронная почта" required autocomplete="off">
+                <button type="submit" class="btn btn-green">Подтвердить</button>
+              </label>
+            </form>
+          </div>
+          <div class="settings-form--group">
+            <!--инпут когда емеил ожидает подтверждания-->
+            <form action="">
+              <label for="email">
+                <input type="email" id="email" placeholder="Электронная почта" required autocomplete="off" value="cotech@milo.ru">
+                <span class="icon-time">
+                  <span class="hard-hint">
+                    <!--показывается при наведении на icon-time-->
+                    Адрес ожидает подтверждения<button type="submit">Отправить письмо повторно</button>
+                  </span>
+                </span>
+                <!--показать когда описьмо отправлено 1раз-->
+              </label>
+            </form>
+          </div>
+          <div class="settings-form--group">
+            <!--инпут когда емеил подтвержден-->
+            <form action="">
+              <label for="email">
+                <input type="email" id="email" placeholder="Электронная почта" required autocomplete="off" value="cotech@milo.ru">
+                <span class="icon-sucsess">
+                  <span class="hard-hint">
+                    <!--показывается при наведении на icon-sucsess-->
+                    Подтверждено
+                  </span>
+                </span>
+              </label>
+            </form>
+          </div>
+          <div class="settings-form--group">
+            <!--инпут когда емеил email заходят измениить  тут инпуту добавляется  класс-->
+            <form action="">
+              <label for="email">
+                <input type="email" class="rewrite" id="email" placeholder="Электронная почта" required autocomplete="off" value="cotech@milo.ru">
+                <span class="hard-hint">
+                  <!--показывается при наведении на icon-sucsess-->
+                  <span>На новую почту придет письмо с подтверждением.</span>
+                  <span>На старую почту придёт письмо с уведомлением об изменениях.</span>
+                </span>
+                <button type="submit" class="btn btn-green">Подтвердить</button>
+              </label>
+            </form>
+          </div>
+          <div class="settings-form--group">
+            <form action="">
+              <label for="name">
+                <input type="text" id="name" placeholder="Имя" autocomplete="off">
+                <button type="submit" class="btn btn-green">Сохранить</button>
+              </label>
+            </form>
+          </div>
+          <div class="settings-form--group">
+            <form action="">
+              <label for="organization">
+                <input type="text" id="organization" placeholder="Организация" autocomplete="off">
+                <button type="submit" class="btn btn-green">Сохранить</button>
+              </label>
+            </form>
+          </div>
 
+          <a href="#rewrite-password" class="rewrite-password" data-modal>Сменить пароль</a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!--Настройки конец-->
   <!--svg-sprite-->
   <div class="svgSprite" hidden>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
