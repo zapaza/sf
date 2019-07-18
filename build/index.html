@@ -169,7 +169,7 @@
 
           <div class="header-link">
 
-            <!--            <a href="#use-here" data-modal-authorization class="btn btn-green enter">Войти</a>-->
+            <a href="#authorization" data-modal-authorization class="btn btn-green enter">Войти</a>
 
             <!--            <a href="#0" class="btn btn-green enter">-->
             <!--               <span class="loader">-->
@@ -179,39 +179,17 @@
             <!--               </span>-->
             <!--            </a>-->
 
-            <ul>
-              <li><a href="#0" class="header-link--item" data-hint="Мониторинг"><svg id="icon-favourites" width="100%" height="100%">
-                    <g fill="none" fill-rule="evenodd">
-                      <path d="M0 0h32v32H0z"></path>
-                      <path class="star" fill="#999" d="M16 20.94l-7.641 5.577 2.943-8.99-7.666-5.544 9.46.02L16 3l2.904 9.003 9.46-.02-7.666 5.544 2.943 8.99z"></path>
-                    </g>
-                  </svg>
-                </a></li>
-              <li><a href="#0" class="header-link--item" data-hint="Сравнение"><svg id="icon-options" width="100%" height="100%">
-                    <g fill="none" fill-rule="evenodd">
-                      <path d="M0 0h32v32H0z"></path>
-                      <g fill="#999">
-                        <path class="options" d="M16 4h2v24h-2zM19 8h9v4h-9zM8 8h7v4H8zM19 14h5v4h-5zM4 14h11v4H4zM10 20h5v4h-5zM19 20h7v4h-7z"></path>
-                      </g>
-                    </g>
-                  </svg>
-                </a></li>
-              <li><a href="#0" class="header-link--item big" id="show-menu">
-                  <span class="mark"></span>
-                  <!--После появления новой выписки из ЕГРЮЛ показываем кружок у юзерпика.
-Убираем его после открытия меню сразу же (чтоб при открытом меню иконка была уже без кружка)-->
-                  <svg id="icon-profile" width="100%" height="100%">
-                    <g fill="none" fill-rule="evenodd">
-                      <path class="overlay" d="M0 0h32v32H0z"></path>
-                      <g fill-opacity=".1" fill="#000">
-                        <circle id="a" cx="16" cy="16" r="16"></circle>
-                      </g>
-                      <circle fill="#999" mask="url(#b)" cx="16" cy="38" r="15"></circle>
-                      <circle fill="#999" cx="16" cy="14" r="7"></circle>
-                    </g>
-                  </svg>
-                </a></li>
-            </ul>
+            <!--            <ul>-->
+            <!--                <li><a href="#0" class="header-link&#45;&#45;item" data-hint="Мониторинг"><svg id="icon-favourites" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path d="M0 0h32v32H0z"></path><path class="star" fill="#999" d="M16 20.94l-7.641 5.577 2.943-8.99-7.666-5.544 9.46.02L16 3l2.904 9.003 9.46-.02-7.666 5.544 2.943 8.99z"></path></g></svg>-->
+            <!--                </a></li>-->
+            <!--                <li><a href="#0" class="header-link&#45;&#45;item" data-hint="Сравнение"><svg id="icon-options" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path d="M0 0h32v32H0z"></path><g fill="#999"><path class="options" d="M16 4h2v24h-2zM19 8h9v4h-9zM8 8h7v4H8zM19 14h5v4h-5zM4 14h11v4H4zM10 20h5v4h-5zM19 20h7v4h-7z"></path></g></g></svg>-->
+            <!--                </a></li>-->
+            <!--                <li><a href="#0" class="header-link&#45;&#45;item big" id="show-menu">-->
+            <!--                    <span class="mark"></span>&lt;!&ndash;После появления новой выписки из ЕГРЮЛ показываем кружок у юзерпика.-->
+            <!--Убираем его после открытия меню сразу же (чтоб при открытом меню иконка была уже без кружка)&ndash;&gt;-->
+            <!--                    <svg id="icon-profile" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path class="overlay" d="M0 0h32v32H0z"></path><g fill-opacity=".1" fill="#000"><circle id="a" cx="16" cy="16" r="16"></circle></g><circle fill="#999" mask="url(#b)" cx="16" cy="38" r="15"></circle><circle fill="#999" cx="16" cy="14" r="7"></circle></g></svg>-->
+            <!--                </a></li>-->
+            <!--            </ul>-->
 
             <div class="header-link--menu" id="lk-menu">
               <div class="profile-info">
@@ -3969,67 +3947,85 @@
   <!--модалки-->
   <div class="modal modal-full mfp-hide" id="authorization">
     <div class="modal-content">
-      <!--        <div class="modal-content&#45;&#45;inner">&lt;!&ndash; тело для входа &ndash;&gt;-->
-      <!--            <h2>Вход</h2>-->
-      <!--            <form action="" class="sing-in">-->
-      <!--                <label for="sing-in-tel" class="">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды&ndash;&gt;-->
-      <!--                    <input type="tel"  id="sing-in-tel" placeholder="Номер телеофна" autocomplete="off">-->
-      <!--                </label>-->
-      <!--                <label for="sing-in-password" class="error">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды&ndash;&gt;-->
-      <!--                    <input type="password"   class="password " id="sing-in-password" autocomplete="off" placeholder="Пароль">-->
-      <!--                    <button type="button" class="show-password"></button>-->
-      <!--                </label>-->
-      <!--                <div class="g-recaptcha" data-sitekey="" data-callback="recaptchaCallback"></div> &lt;!&ndash;После трех попыток неудачного входа показываем капчу.&ndash;&gt;-->
-      <!--                <button class="btn btn-green" type="submit">Войти</button>-->
-      <!--            </form>-->
-      <!--            <p class="error-massage">Неверный номер или пароль</p>&lt;!&ndash;показывается если не порошел валидацию  показать на 2-3 секунды&ndash;&gt;-->
-      <!--            <a href="#0" class="recovery-pass normal">Забыли пароль?</a>-->
-      <!--            <a href="#0" class="registradion green">Зарегистрироваться</a>-->
-      <!--        </div>-->
+      <!-- <div class="modal-content&#45;&#45;inner">&lt;!&ndash; тело для входа &ndash;&gt;
+            <h2>Вход</h2>
+            <form action="" class="sing-in">
+                <label for="sing-in-tel" class="">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды&ndash;&gt;
+                    <input type="tel"  id="sing-in-tel" placeholder="Номер телеофна" autocomplete="off">
+                </label>
+                <label for="sing-in-password" class="error">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды&ndash;&gt;
+                    <input type="password"   class="password " id="sing-in-password" autocomplete="off" placeholder="Пароль">
+                    <button type="button" class="show-password"></button>
+                </label>
+                <div class="g-recaptcha" data-sitekey="" data-callback="recaptchaCallback"></div> &lt;!&ndash;После трех попыток неудачного входа показываем капчу.&ndash;&gt;
+                <button class="btn btn-green" type="submit">Войти</button>
+            </form>
+            <p class="error-massage">Неверный номер или пароль</p>&lt;!&ndash;показывается если не порошел валидацию  показать на 2-3 секунды&ndash;&gt;
+            <a href="#0" class="recovery-pass normal">Забыли пароль?</a>
+            <a href="#0" class="registradion green">Зарегистрироваться</a>
+        </div>-->
 
-      <!--        <div class="modal-content&#45;&#45;inner registration" >&lt;!&ndash;тело для регистрации   добавляется класс&ndash;&gt;-->
-      <!--            <h2>Регистрация</h2>-->
-      <!--            <p>Введите свой номер телефона,  <br> мы отправим вам проверочный код</p> &lt;!&ndash;Если  сообщение отправлено текст меняется на 'СМС с кодом отправлено на номер +7 (909) 668-88-58'&ndash;&gt;-->
-      <!--            <form action="" class="sing-in">-->
-      <!--                <label for="sing-in-tel" class="error" data-hint="Некорректный номер" >&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды. Если номер написан в правильном формате, но не найден в базе,  добавляется клаcc error 2-3 секунды, в хинте (data-hint) с ошибкой будет «Номер уже зарегистрирован».&ndash;&gt;-->
-      <!--                    <input type="tel"  id="sing-in-tel" autocomplete="off" placeholder="Номер телефона" >-->
-      <!--                </label>-->
-      <!--                <label for="sing-in-code"  >&lt;!&ndash;показывается когда телефон прошел валидацию и телефон отправился&ndash;&gt;-->
-      <!--                    <input type="text"  id="sing-in-code" autocomplete="off" placeholder="Код из СМС" >-->
-      <!--                </label>-->
-      <!--                <label for="sing-in-password" class="error" data-hint="Пароль слишком короткий">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды, валидация это минимум 6 символов&ndash;&gt;-->
-      <!--                    <input type="password"   class="password " id="sing-in-password" autocomplete="off" minlength="6" placeholder="Пароль">-->
-      <!--                    <button type="button" class="show-password"></button>-->
-      <!--                </label>-->
-      <!--                <button class="btn btn-green" type="submit">Продолжить</button> &lt;!&ndash;Когда доходит до шага придумать пароль то заменить текст на "Зарегистрироваться"&ndash;&gt;-->
-      <!--                <a href="#0" class="btn btn-default">Назад</a>-->
-      <!--            </form>-->
-      <!--            <p class="info">Уже зарегистрированы? <a href="#0" class="recovery-pass">Войти</a></p>-->
-      <!--            <p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>&lt;!&ndash;Скрипт написал, лежит в libs.js 149 строка если что&ndash;&gt;-->
-      <!--            <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>-->
-      <!--        </div>-->
+      <!-- <div class="modal-content&#45;&#45;inner registration" >&lt;!&ndash;тело для регистрации   добавляется класс&ndash;&gt;
+            <h2>Регистрация</h2>
+            <p>Введите свой номер телефона, <br> мы отправим вам проверочный код</p> &lt;!&ndash;Если  сообщение отправлено текст меняется на 'СМС с кодом отправлено на номер +7 (909) 668-88-58'&ndash;&gt;
+            <form action="" class="sing-in">
+                <label for="sing-in-tel" class="error" data-hint="Некорректный номер" >&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды. Если номер написан в правильном формате, но не найден в базе,  добавляется клаcc error 2-3 секунды, в хинте (data-hint) с ошибкой будет «Номер уже зарегистрирован».&ndash;&gt;
+                    <input type="tel"  id="sing-in-tel" autocomplete="off" placeholder="Номер телефона" >
+                </label>
+                <label for="sing-in-code"  >&lt;!&ndash;показывается когда телефон прошел валидацию и телефон отправился&ndash;&gt;
+                    <input type="text"  id="sing-in-code" autocomplete="off" placeholder="Код из СМС" >
+                </label>
+                <label for="sing-in-password" class="error" data-hint="Пароль слишком короткий">&lt;!&ndash;если не порошел валидацию то добавляется клаcc error 2-3 секунды, валидация это минимум 6 символов&ndash;&gt;
+                    <input type="password"   class="password " id="sing-in-password" autocomplete="off" minlength="6" placeholder="Пароль">
+                    <button type="button" class="show-password"></button>
+                </label>
+                <button class="btn btn-green" type="submit">Продолжить</button> &lt;!&ndash;Когда доходит до шага придумать пароль то заменить текст на "Зарегистрироваться"&ndash;&gt;
+                <a href="#0" class="btn btn-default">Назад</a>
+            </form>
+            <p class="info">Уже зарегистрированы? <a href="#0" class="recovery-pass">Войти</a></p>
+            <p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>&lt;!&ndash;Скрипт написал, лежит в libs.js 149 строка если что&ndash;&gt;
+            <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>
+        </div>-->
+      <!--После подверждения телефона выбираем показываем этот шаг-->
+      <div class="modal-content--inner registration">
+        <!--тело для регистрации   добавляется класс-->
+        <h2>Регистрация</h2>
+        <p>Укажите дополнительную информацию</p>
+        <!--Если  сообщение отправлено текст меняется на 'СМС с кодом отправлено на номер +7 (909) 668-88-58'-->
+        <form action="" class="sing-in">
+          <label for="sing-in-email" class="error" data-hint="Некорректный e-mail">
+            <input type="email" id="sing-in-email" placeholder="E-mail" required autocomplete="off">
+          </label>
+          <label for="sing-in-ip" class="error">
+            <input type="text" id="sing-in-ip" autocomplete="off" required placeholder="Название организации">
+          </label>
+          <button class="btn btn-green" type="submit">Продолжить</button>
+          <!--Когда доходит до шага придумать пароль то заменить текст на "Зарегистрироваться"-->
+        </form>
+        <a href="#0" class='green'>Пропустить</a>
+      </div>
 
-      <!--        <div class="modal-content&#45;&#45;inner registration" >&lt;!&ndash;тело для востановления пароля, так как оно такое как и регистрация, то я не вижу смысла менять класс на какой-то другой, тк будет одинакой css код как и для класса registration фунгционал тот же самый&ndash;&gt;-->
-      <!--            <h2>Восстановление пароля</h2>-->
-      <!--            <p>Введите номер телефона,<br> которые вы указали при регистрации</p> &lt;!&ndash;Если  сообщение отправлено текст меняется на 'СМС с кодом отправлено на номер +7 (909) 668-88-58'&ndash;&gt;-->
-      <!--            <form action="" class="sing-in">-->
-      <!--                <label for="sing-in-tel" class="error" data-hint="Некорректный номер" >-->
-      <!--                    <input type="tel"  id="sing-in-tel" autocomplete="off" placeholder="Номер телефона" >-->
-      <!--                </label>-->
-      <!--                <label for="sing-in-code"  >-->
-      <!--                    <input type="text"  id="sing-in-code" autocomplete="off" placeholder="Код из СМС" >-->
-      <!--                </label>-->
-      <!--                <label for="sing-in-password" class="error" data-hint="Пароль слишком короткий">-->
-      <!--                    <input type="password"   class="password " id="sing-in-password" autocomplete="off" minlength="6" placeholder="Пароль">-->
-      <!--                    <button type="button" class="show-password"></button>-->
-      <!--                </label>-->
-      <!--                <button class="btn btn-green" type="submit">Продолжить</button> &lt;!&ndash;Когда доходит до шага придумать пароль то заменить текст на "Сохранить и войти"&ndash;&gt;-->
-      <!--                <a href="#0" class="btn btn-default">Назад</a>-->
-      <!--            </form>-->
-      <!--            <p class="info">Уже зарегистрированы? <a href="#0" class="recovery-pass">Войти</a></p>-->
-      <!--            <p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>-->
-      <!--            <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>-->
-      <!--        </div>-->
+      <!--<div class="modal-content&#45;&#45;inner registration" >&lt;!&ndash;тело для востановления пароля, так как оно такое как и регистрация, то я не вижу смысла менять класс на какой-то другой, тк будет одинакой css код как и для класса registration фунгционал тот же самый&ndash;&gt;
+            <h2>Восстановление пароля</h2>
+            <p>Введите номер телефона,<br> которые вы указали при регистрации</p> &lt;!&ndash;Если  сообщение отправлено текст меняется на 'СМС с кодом отправлено на номер +7 (909) 668-88-58'&ndash;&gt;
+            <form action="" class="sing-in">
+                <label for="sing-in-tel" class="error" data-hint="Некорректный номер" >
+                    <input type="tel"  id="sing-in-tel" autocomplete="off" placeholder="Номер телефона" >
+                </label>
+                <label for="sing-in-code"  >
+                    <input type="text"  id="sing-in-code" autocomplete="off" placeholder="Код из СМС" >
+                </label>
+                <label for="sing-in-password" class="error" data-hint="Пароль слишком короткий">
+                    <input type="password"   class="password " id="sing-in-password" autocomplete="off" minlength="6" placeholder="Пароль">
+                    <button type="button" class="show-password"></button>
+                </label>
+                <button class="btn btn-green" type="submit">Продолжить</button> &lt;!&ndash;Когда доходит до шага придумать пароль то заменить текст на "Сохранить и войти"&ndash;&gt;
+                <a href="#0" class="btn btn-default">Назад</a>
+            </form>
+            <p class="info">Уже зарегистрированы? <a href="#0" class="recovery-pass">Войти</a></p>
+            <p class="info">Повторная отправка СМС через <span class="timeout">30</span> сек.</p>
+            <a href="#0" class="green return-code" style="display: none;">Отправить код повторно</a>
+        </div>-->
     </div>
   </div>
   <div class="modal modal-rewrite-password  mfp-hide" id="rewrite-password">
