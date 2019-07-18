@@ -215,9 +215,43 @@
       }
       &--share{
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h32v32H0z' opacity='.2'/%3E%3Cpath fill='%23FFF' d='M18 21V9l7 6zM18 12.5v5c-3.145 0-7 1.5-10 4.5 0-5 6.5-9.5 10-9.5z'/%3E%3C/g%3E%3C/svg%3E");
+        &.reloaded{
+          background-image: none;
+          position: relative;
+          &:after{
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            margin-top: 8px;
+            margin-left: 8px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px solid $white;
+            border-bottom-color: transparent;
+            animation: lds-ring 1.2s cubic-bezier(1, 1, 1, 1) infinite;
+          }
+        }
       }
       &--print{
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h32v32H0z' opacity='.2'/%3E%3Cpath stroke='%23FFF' d='M11.5 15.5h9v7h-9z'/%3E%3Cpath fill='%23FFF' d='M10 12h2v6H8v-4a2 2 0 0 1 2-2zM20 12h2a2 2 0 0 1 2 2v4h-4v-6z'/%3E%3Cpath fill='%23FFF' d='M11 12h10v4H11z'/%3E%3Cpath stroke='%23FFF' d='M11.5 9.5h9v3h-9z'/%3E%3C/g%3E%3C/svg%3E");
+        &.reloaded{
+          background-image: none;
+          position: relative;
+          &:after{
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            margin-top: 8px;
+            margin-left: 8px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px solid $white;
+            border-bottom-color: transparent;
+            animation: lds-ring 1.2s cubic-bezier(1, 1, 1, 1) infinite;
+          }
+        }
       }
 
     }
@@ -3725,7 +3759,14 @@
   .select-years{
     margin-bottom: 48px;
   }
-
+  .tender-tabs--inner{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .tender-tabs--modal{
+      margin-right: 24px;
+    }
+  }
   .tender-type{
     display: flex;
     align-items: flex-start;
@@ -3738,7 +3779,7 @@
           text-decoration: none;
 
           .name{
-            border-bottom: 0;
+            border-bottom-color:transparent;
 
           }
         }

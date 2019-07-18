@@ -611,12 +611,66 @@
       }
       &--download{
         background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E15C97301-E412-4403-BC48-8DB05A83377C%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/card/download/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-25'%3E%3Crect id='Rectangle' opacity='0.200000003' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23000000' x='9' y='21' width='14' height='2'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23000000' x='15' y='9' width='2' height='9'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3Cpolygon id='Rectangle' fill='%23000000' points='12.5 15 19.5 15 16 19.75'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        &.reloaded{
+          background-image: none;
+          position: relative;
+          opacity: 1;
+          &:after{
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            margin-top: 8px;
+            margin-left: 8px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px solid $mid-gray;
+            border-bottom-color: transparent;
+            animation: lds-ring 1.2s cubic-bezier(1, 1, 1, 1) infinite;
+          }
+        }
       }
       &--share{
         background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E5BF25B24-7353-42A0-B10A-53AF445FCF4D%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/card/share/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-25'%3E%3Crect id='Rectangle' opacity='0.200000003' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Cpolygon id='Rectangle' fill='%23000000' points='18 21 18 9 25 15'%3E%3C/polygon%3E%3C/g%3E%3Cpath d='M18,12.5 C18,14.5 18,15.5 18,17.5 C14.8550239,17.5 11,19 8,22 C8,17 14.5,12.5 18,12.5 Z' id='Rectangle' fill='%23000000'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        &.reloaded{
+          background-image: none;
+          position: relative;
+          opacity: 1;
+          &:after{
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            margin-top: 8px;
+            margin-left: 8px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px solid $mid-gray;
+            border-bottom-color: transparent;
+            animation: lds-ring 1.2s cubic-bezier(1, 1, 1, 1) infinite;
+          }
+        }
       }
       &--print{
         background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E0D02FAD1-B3A8-4742-9039-03343BA204EC%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/card/print/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-25'%3E%3Crect id='Rectangle' opacity='0.200000003' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Crect id='Rectangle' stroke='%23000000' x='11.5' y='15.5' width='9' height='7'%3E%3C/rect%3E%3Cpath d='M10,12 L12,12 L12,18 L8,18 L8,14 C8,12.8954305 8.8954305,12 10,12 Z' id='Rectangle' fill='%23000000'%3E%3C/path%3E%3Cpath d='M20,12 L22,12 C23.1045695,12 24,12.8954305 24,14 L24,18 L20,18 L20,12 Z' id='Rectangle' fill='%23000000'%3E%3C/path%3E%3Crect id='Rectangle' fill='%23000000' x='11' y='12' width='10' height='4'%3E%3C/rect%3E%3Crect id='Rectangle' stroke='%23000000' x='11.5' y='9.5' width='9' height='3'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        &.reloaded{
+          background-image: none;
+          position: relative;
+          opacity: 1;
+          &:after{
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            margin-top: 8px;
+            margin-left: 8px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px solid $mid-gray;
+            border-bottom-color: transparent;
+            animation: lds-ring 1.2s cubic-bezier(1, 1, 1, 1) infinite;
+          }
+        }
       }
     }
   }
@@ -2703,7 +2757,9 @@
         align-items: center;
         margin-bottom: 24px;
         &--name{
-          padding: 8px 16px;
+          width: 118px;
+          padding: 8px 0;
+          text-align: center;
           border: solid 1px rgba(0, 0, 0, 0.15);
           font:{
             size: 1.4rem;
@@ -2724,7 +2780,6 @@
           &:first-child{
             border-top-left-radius:4px;
             border-bottom-left-radius:4px ;
-            border-right: 0;
           }
           &:last-child{
             border-top-right-radius:4px;
@@ -2836,6 +2891,27 @@
               span{
                 &.normal{
                   color: $mid-gray--text;
+                }
+
+              }
+            }
+
+            &-executor{
+              .table-row{
+                justify-content: flex-start;
+              }
+              .table-col{
+                max-width: none;
+                width: 256px;
+                margin-right: 112px;
+                flex: 0 0 auto;
+                justify-content: space-between;
+                &:first-child{
+                  width: 96px;
+                  margin-right: 32px;
+                }
+                &:last-child{
+                  margin-right: 0;
                 }
 
               }
