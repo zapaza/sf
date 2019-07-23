@@ -100,7 +100,7 @@
                   border-top-color: $mid-gray;
                   box-sizing: border-box;
                   opacity: 1;
-                  transition: .1s ease opacity;
+                  transition: .2s ease opacity;
                 }
               }
               &:focus + .hard-hint{
@@ -160,7 +160,7 @@
                 border-right-color:$mid-gray;
                 box-sizing: border-box;
                 opacity: 1;
-                transition: .1s ease opacity;
+                transition: .2s ease opacity;
                 transform: translateY(-50%);
               }
               &:before{
@@ -241,7 +241,7 @@
                 border-right-color:$mid-gray;
                 box-sizing: border-box;
                 opacity: 1;
-                transition: .1s ease opacity;
+                transition: .2s ease opacity;
                 transform: translateY(-50%);
               }
               &:before{
@@ -322,7 +322,7 @@
                 border-right-color:$green;
                 box-sizing: border-box;
                 opacity: 1;
-                transition: .1s ease opacity;
+                transition: .2s ease opacity;
                 transform: translateY(-50%);
               }
               &:before{

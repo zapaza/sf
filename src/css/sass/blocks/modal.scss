@@ -516,11 +516,8 @@
             display: block;
             max-width: 464px;
             padding: 8px;
-
             pointer-events: none;
-
             opacity: 1;
-
             border-radius: 4px;
             background-color: $red;
             transition: .2s ease opacity;
@@ -549,7 +546,7 @@
             border-right-color:$red;
             box-sizing: border-box;
             opacity: 1;
-            transition: .1s ease opacity;
+            transition: .2s ease opacity;
             transition-delay: 0s;
           }
         }
@@ -698,11 +695,8 @@
                   display: block;
                   max-width: 464px;
                   padding: 8px;
-
                   pointer-events: none;
-
                   opacity: 1;
-
                   border-radius: 4px;
                   background-color: $red;
                   transition: .2s ease opacity;
@@ -729,7 +723,7 @@
                   border-top-color:$red;
                   box-sizing: border-box;
                   opacity: 1;
-                  transition: .1s ease opacity;
+                  transition: .2s ease opacity;
                   transition-delay: 0s;
                 }
               }
@@ -830,11 +824,8 @@
               display: block;
               max-width: 464px;
               padding: 8px;
-
               pointer-events: none;
-
               opacity: 1;
-
               border-radius: 4px;
               background-color: $red;
               transition: .2s ease opacity;
@@ -863,7 +854,7 @@
               border-right-color:$red;
               box-sizing: border-box;
               opacity: 1;
-              transition: .1s ease opacity;
+              transition: .2s ease opacity;
               transition-delay: 0s;
             }
           }
