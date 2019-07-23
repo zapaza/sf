@@ -685,6 +685,7 @@
       display: flex;
       align-items: center;
       z-index: 99;
+      width: 180px;
       &--link{
         font:{
           size: 1.4rem;
@@ -692,11 +693,19 @@
         }
         color:$mid-gray--text;
         transition: .2s color ease;
-        margin-right: 16px;
         cursor: pointer;
+        width: 50%;
         &:last-child{
-          margin-right: 0;
-          margin-left: 16px;
+          padding-left: 48px;
+          &.active{
+            padding-left: 0;
+          }
+        }
+        &:first-child{
+          width: 104px;
+          &.active{
+            width: 56px;
+          }
         }
 
         &.active{
@@ -704,16 +713,17 @@
         }
       }
       &--switch{
+        position: absolute;
         display: flex;
         flex-shrink: 0;
         align-items: center;
-        position: relative;
         width: 24px;
         height: 8px;
         border-radius: 50em;
         padding: 3px 0;
         cursor: pointer;
         pointer-events: none;
+        left: 64px;
 
         input,
         label{
