@@ -706,6 +706,7 @@
         }
         &:first-child{
           width: 104px;
+          flex-shrink: 0;
           &.active{
             width: 56px;
           }

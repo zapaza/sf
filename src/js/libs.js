@@ -88,14 +88,10 @@ function Tabs(){
 
 
         $body.on(event, ".card-content-tabs .card-content-tabs--link", function () {
-
             $(this).closest('.card-content').find(".card-content-item").hide();
-
             var activeTab = $(this).attr("rel");
-
             $("#" + activeTab).fadeIn();
-
-            $(".card-content-tabs .card-content-tabs--link").removeClass("active");
+            $(this).closest('.card-content-tabs').find(".card-content-tabs--link").removeClass("active");
             $(this).addClass("active");
 
         });
