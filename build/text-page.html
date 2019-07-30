@@ -169,27 +169,53 @@
 
           <div class="header-link">
 
-            <a href="#authorization" data-modal-authorization class="btn btn-green enter">Войти</a>
+            <!--            <a href="#authorization" data-modal-authorization class="btn btn-green enter">Войти</a>-->
 
-            <!--            <a href="#0" class="btn btn-green enter">-->
-            <!--               <span class="loader">-->
-            <!--                  <span class="loader-item loader-item&#45;&#45;1"></span>-->
-            <!--                  <span class="loader-item loader-item&#45;&#45;2"></span>-->
-            <!--                  <span class="loader-item loader-item&#45;&#45;3"></span>-->
-            <!--               </span>-->
-            <!--            </a>-->
+            <!--            <a href="#0" class="btn btn-green enter">
+               <span class="loader">
+                  <span class="loader-item loader-item&#45;&#45;1"></span>
+                  <span class="loader-item loader-item&#45;&#45;2"></span>
+                  <span class="loader-item loader-item&#45;&#45;3"></span>
+               </span>
+            </a>-->
 
-            <!--            <ul>-->
-            <!--                <li><a href="#0" class="header-link&#45;&#45;item" data-hint="Мониторинг"><svg id="icon-favourites" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path d="M0 0h32v32H0z"></path><path class="star" fill="#999" d="M16 20.94l-7.641 5.577 2.943-8.99-7.666-5.544 9.46.02L16 3l2.904 9.003 9.46-.02-7.666 5.544 2.943 8.99z"></path></g></svg>-->
-            <!--                </a></li>-->
-            <!--                <li><a href="#0" class="header-link&#45;&#45;item" data-hint="Сравнение"><svg id="icon-options" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path d="M0 0h32v32H0z"></path><g fill="#999"><path class="options" d="M16 4h2v24h-2zM19 8h9v4h-9zM8 8h7v4H8zM19 14h5v4h-5zM4 14h11v4H4zM10 20h5v4h-5zM19 20h7v4h-7z"></path></g></g></svg>-->
-            <!--                </a></li>-->
-            <!--                <li><a href="#0" class="header-link&#45;&#45;item big" id="show-menu">-->
-            <!--                    <span class="mark"></span>&lt;!&ndash;После появления новой выписки из ЕГРЮЛ показываем кружок у юзерпика.-->
-            <!--Убираем его после открытия меню сразу же (чтоб при открытом меню иконка была уже без кружка)&ndash;&gt;-->
-            <!--                    <svg id="icon-profile" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path class="overlay" d="M0 0h32v32H0z"></path><g fill-opacity=".1" fill="#000"><circle id="a" cx="16" cy="16" r="16"></circle></g><circle fill="#999" mask="url(#b)" cx="16" cy="38" r="15"></circle><circle fill="#999" cx="16" cy="14" r="7"></circle></g></svg>-->
-            <!--                </a></li>-->
-            <!--            </ul>-->
+            <ul>
+              <li><a href="#0" class="header-link--item" data-hint="Мониторинг"><svg id="icon-favourites" width="100%" height="100%">
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M0 0h32v32H0z"></path>
+                      <path class="star" fill="#999" d="M16 20.94l-7.641 5.577 2.943-8.99-7.666-5.544 9.46.02L16 3l2.904 9.003 9.46-.02-7.666 5.544 2.943 8.99z"></path>
+                    </g>
+                  </svg>
+                </a></li>
+              <li>
+                <!--                    Если к сравнению добавлено меньше двух компаний — иконка “сравнение” в хедере неактивна.-->
+                <!--                    Когда иконка сравнения неактивна, при наведении на неё появляется хинт с текстом “добавьте две компании” (если не добавлено ни одной) или “добавьте еще одну компанию” (если добавлена только одна)-->
+                <!--                    <span  class="header-link&#45;&#45;item add-more"  data-hint="Добавьте две компании"><svg id="icon-options" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path d="M0 0h32v32H0z"></path><g fill="#999"><path class="options" d="M16 4h2v24h-2zM19 8h9v4h-9zM8 8h7v4H8zM19 14h5v4h-5zM4 14h11v4H4zM10 20h5v4h-5zM19 20h7v4h-7z"></path></g></g></svg></span>-->
+                <a href="#modal-compare" data-modal-inside class="header-link--item" data-hint="Сравнение"><svg id="icon-options" width="100%" height="100%">
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M0 0h32v32H0z"></path>
+                      <g fill="#999">
+                        <path class="options" d="M16 4h2v24h-2zM19 8h9v4h-9zM8 8h7v4H8zM19 14h5v4h-5zM4 14h11v4H4zM10 20h5v4h-5zM19 20h7v4h-7z"></path>
+                      </g>
+                    </g>
+                  </svg></a>
+              </li>
+              <li><a href="#0" class="header-link--item big" id="show-menu">
+                  <span class="mark"></span>
+                  <!--После появления новой выписки из ЕГРЮЛ показываем кружок у юзерпика.
+Убираем его после открытия меню сразу же (чтоб при открытом меню иконка была уже без кружка)-->
+                  <svg id="icon-profile" width="100%" height="100%">
+                    <g fill="none" fill-rule="evenodd">
+                      <path class="overlay" d="M0 0h32v32H0z"></path>
+                      <g fill-opacity=".1" fill="#000">
+                        <circle id="a" cx="16" cy="16" r="16"></circle>
+                      </g>
+                      <circle fill="#999" mask="url(#b)" cx="16" cy="38" r="15"></circle>
+                      <circle fill="#999" cx="16" cy="14" r="7"></circle>
+                    </g>
+                  </svg>
+                </a></li>
+            </ul>
 
             <div class="header-link--menu" id="lk-menu">
               <div class="profile-info">
@@ -5075,6 +5101,177 @@
     </section>
   </div>
   <!--Настройки конец-->
+
+  <!--сравнение-->
+  <div class="modal modal-compare mfp-hide" id="modal-compare">
+    <div class="modal-header">
+      <h2>Сравнение</h2>
+    </div>
+    <div class="modal-compare-list">
+      <div class="modal-compare-item">
+        <div class="compare-select">
+          <button type="button" class="compare-select--btn"><span>ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ ГОРОДА ВОРОНЕЖА»</span></button>
+          <ul class="compare-select--list">
+            <li class="compare-select--item"><a href="" class="crop">ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ И КОНСТРУКЦИЙ ГОРОДА КОМСОМОЛ</a><button type="button" class="delite"></button></li>
+            <li class="compare-select--item"><a href="">ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ ГОРОДА ВОРОНЕЖА»</a><button type="button" class="delite"></button></li>
+            <li class="compare-select--item"><a href="">ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ ГОРОДА ВОРОНЕЖА»</a><button type="button" class="delite"></button></li>
+            <li class="compare-select--item"><a href="">ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ ГОРОДА ВОРОНЕЖА»</a><button type="button" class="delite"></button></li>
+            <li class="compare-select--item"><a href="">ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ ГОРОДА ВОРОНЕЖА»</a><button type="button" class="delite"></button></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="modal-compare-item">
+        <div class="compare-select">
+          <button type="button" class="compare-select--btn"><span>ООО «ТРАНССИБИРСКИЙ</span></button>
+          <ul class="compare-select--list">
+            <li class="compare-select--item"><a href="">ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ ГОРОДА ВОРОНЕЖА»</a><button type="button" class="delite"></button></li>
+            <li class="compare-select--item"><a href="">ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ ГОРОДА ВОРОНЕЖА»</a><button type="button" class="delite"></button></li>
+            <li class="compare-select--item"><a href="">ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ ГОРОДА ВОРОНЕЖА»</a><button type="button" class="delite"></button></li>
+            <li class="compare-select--item"><a href="">ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ ГОРОДА ВОРОНЕЖА»</a><button type="button" class="delite"></button></li>
+            <li class="compare-select--item"><a href="">ООО «ТРАНССИБИРСКИЙ ЗАВОД ЖЕЛЕЗОБЕТОННЫХ ИЗДЕЛИЙ ГОРОДА ВОРОНЕЖА»</a><button type="button" class="delite"></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="modal-compare-factors">
+      <div class="title">
+        <h3>Стоп-факторы</h3>
+      </div>
+      <div class="modal-compare-factors--list">
+        <div class="modal-compare-factors--item">
+          <div class="left">
+            <span class="icon icon-red"></span>
+          </div>
+          <div class="midle">Арбитраж</div>
+          <div class="right">
+            <span class="icon icon-yellow"></span>
+          </div>
+        </div>
+        <div class="modal-compare-factors--item">
+          <div class="left"> <span class="icon icon-red"></span></div>
+          <div class="midle">Проверки</div>
+          <div class="right"> <span class="icon icon-yellow"></span></div>
+        </div>
+        <div class="modal-compare-factors--item">
+          <div class="left"> <span class="icon icon-yellow"></span></div>
+          <div class="midle">Бизнес</div>
+          <div class="right"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-compare-count">
+      <div class="modal-compare-count--list">
+        <div class="modal-compare-count--item">
+          <div class="left">
+            <div class="count">294 649</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+          <div class="midle">Сотрудники</div>
+          <div class="right">
+            <div class="count">50</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-compare-count--item">
+          <div class="left">
+            <div class="count">2 308 913 075 000 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+          <div class="midle">Уставной капитал</div>
+          <div class="right">
+            <div class="count">10 000 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-compare-count--item">
+          <div class="left">
+            <div class="count">320 000 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+          <div class="midle">Выручка за год</div>
+          <div class="right">
+            <div class="count">120 000 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-compare-count--item">
+          <div class="left">
+            <div class="count">87 999 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+          <div class="midle">Чистая прибыль</div>
+          <div class="right">
+            <div class="count">59 000 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-compare-count--item">
+          <div class="left">
+            <div class="count"> 2 225 488 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+          <div class="midle">Основные средства</div>
+          <div class="right">
+            <div class="count">925 000 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-compare-count--item">
+          <div class="left">
+            <div class="count">43 000 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+          <div class="midle">Дебиторка</div>
+          <div class="right">
+            <div class="count">0 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 20%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-compare-count--item">
+          <div class="left">
+            <div class="count">11 000 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="midle">Кредиторка</div>
+          <div class="right">
+            <div class="count">59 000 ₽</div>
+            <div class="compare-bar">
+              <div class="compare-bar--count" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Конец сравнения-->
+
   <!--svg-sprite-->
   <div class="svgSprite" hidden>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">

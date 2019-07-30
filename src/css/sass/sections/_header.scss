@@ -412,6 +412,29 @@
       display: block;
       width: 32px;
       height: 32px;
+
+      &.add-more{
+        cursor: pointer;
+        svg{
+          .options{
+            fill:$white--text;
+          }
+        }
+        &:before{
+          width: 113px;
+          padding:4px 8px;
+          text-align: center;
+        }
+        &:hover{
+          svg{
+            .options{
+              fill:$white--text;
+            }
+          }
+        }
+
+
+      }
       &[data-hint]{
         position: relative;
         &:before{
@@ -431,7 +454,6 @@
           transition: .2s ease opacity;
           text-transform: none;
           font:{
-            family: $font-family;
             size: 1.3rem;
             weight: $font-regular;
           }

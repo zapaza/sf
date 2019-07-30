@@ -1,0 +1,162 @@
+.compare-select{
+  width: 100%;
+  max-width: 464px;
+  height: 88px;
+  position: relative;
+
+  &--btn{
+    position: relative;
+    background-color: $white;
+    border-radius: 4px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 14px 136px 14px 16px;
+    box-sizing: border-box;
+    span{
+      display: block;
+      height: 100%;
+      text-align: left;
+      font:{
+        weight: $font-bold;
+        size: rem(16px);
+      }
+      line-height: rem(20px);
+      text-transform: uppercase;
+      width: 304px;
+      letter-spacing: rem(0.4rem);
+      &.crop{
+        position: relative;
+        &:before{
+          position: absolute;
+          content: '';
+          bottom: -5px;
+          right: 0;
+          width: 56px;
+          height: 20px;
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+        }
+      }
+      @media(max-width: 1184px){
+        font-size: rem(14px);
+      }
+
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      width: 8px;
+      height: 8px;
+      border-left: 2px solid $mid-gray--text;
+      border-bottom: 2px solid $mid-gray--text;
+      transform: translateY(-50%) rotate(-45deg);
+      box-sizing: border-box;
+    }
+    &:hover{
+      background-color:rgba(0, 0, 0, 0.05);
+      .crop{
+        &:before{
+          background-image: linear-gradient(to right, rgba(242, 242, 242, 0), rgb(242, 242, 242));
+        }
+      }
+    }
+    &.open{
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+    }
+  }
+  &--list{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height:300px;
+    overflow: auto;
+    background-color: $white;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    border-top: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+    &.open{
+      display: block;
+    }
+  }
+  &--item{
+    padding: 14px 63px 14px 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $light-gray--text;
+    position: relative;
+    &:hover{
+      background-color: rgb(230, 230, 230);
+      a{
+        text-decoration: none;
+        &.crop{
+          &:before{
+            background-image: linear-gradient(to right, rgba(242, 242, 242, 0), #e4e4e4);
+          }
+        }
+        @media(max-width: 1184px){
+          font-size: rem(14px);
+        }
+
+      }
+
+      .delite{
+        visibility: visible;
+      }
+    }
+    a{
+      max-width: 304px;
+      width: 100%;
+      display: block;
+      font:{
+        weight: $font-bold;
+      }
+      line-height: 1.43;
+      letter-spacing: rem(0.4px);
+      color: $black--text;
+      overflow: hidden;
+      max-height: 60px;
+      position: relative;
+      &.crop{
+        &:before{
+          position: absolute;
+          content: '';
+          bottom: -5px;
+          right: 0;
+          width: 56px;
+          height: 20px;
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+        }
+      }
+      @media(max-width: 1184px){
+        font-size: rem(14px);
+      }
+
+    }
+
+    .delite{
+      visibility: hidden;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right:15px ;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h32v32H0z' opacity='.2'/%3E%3Cpath fill='%23000' opacity='.4' d='M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z'/%3E%3C/g%3E%3C/svg%3E");
+      border: 0;
+      background-color: transparent;
+      &:hover{
+        background-color: $white;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h32v32H0z' opacity='.2'/%3E%3Cpath fill='%23F24C3D' d='M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z'/%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+  }
+}

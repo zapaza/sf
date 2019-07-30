@@ -450,6 +450,12 @@ $(document).ready(function () {
             });
         });
     }
+
+    //выбор компании для сравнения
+    $body.on(event, '.compare-select--btn', function () {
+        $(this).toggleClass('open');
+        $(this).closest('.compare-select').find('.compare-select--list').toggleClass('open');
+    });
 });
 $(document).mouseup(function (e){
     var div = $(".company-modal");
