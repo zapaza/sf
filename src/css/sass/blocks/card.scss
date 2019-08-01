@@ -1904,6 +1904,7 @@
           width: 100%;
           display: flex;
           align-items: flex-start;
+          justify-content: space-between;
           padding: 23px 0 20px;
           border-top: 1px solid rgba(0, 0, 0, 0.1);
           &:first-child{
@@ -1914,7 +1915,7 @@
             @media (max-width: 1440px){
               font-size: 1.4rem;
             }
-            width: 30%;
+            width: auto;
             display: block;
             text-align: left;
             font:{
@@ -1933,7 +1934,7 @@
           }
 
           .table-row{
-            width: 70%;
+            width: 512px;
             flex-direction: column;
             align-items: normal;
             &-inner{
@@ -1949,8 +1950,8 @@
                 background-color: rgba(0, 0, 0, 0.05);
               }
               .table-col{
-                width: 12%;
-                margin-right: 14%;
+                width:80px;
+                margin-right: 112px;
                 span{
                   width: 100%;
                   display: block;
@@ -1970,7 +1971,9 @@
                   }
                 }
                 &:first-child{
-                  width: 16%;
+                  width: 104px;
+                  margin-right: 72px;
+                  flex-shrink: 0;
                   span{
                     display: inline-block;
                     width: auto;
@@ -1980,7 +1983,7 @@
                 }
                 &:last-child{
                   margin-right: 0;
-                  width: 43%;
+                  width: 144px;
                 }
               }
             }
@@ -2920,9 +2923,16 @@
                 margin-right: 112px;
                 flex: 0 0 auto;
                 justify-content: space-between;
+                @media (max-width: 1344px){
+                  width: 224px  ;
+                }
                 &:first-child{
                   width: 96px;
                   margin-right: 32px;
+                  @media (max-width: 1344px){
+                    width: 64px;
+                    margin-right: 48px;
+                  }
                 }
                 &:last-child{
                   margin-right: 0;
