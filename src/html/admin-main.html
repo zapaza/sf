@@ -1,222 +1,114 @@
 {% extends 'layouts/admin.html' %}
 
 {% block content %}
-<div class="admin-content">
-    <div class="wrapper">
-        <main class="admin-main">
-            <h1>Выставить новый счет</h1>
-<!--            дял понятность сделаю шагами как в зеплине-->
-            <div class="admin-main--form">
-                <div class="form-group error" data-hint="Номер не найден" > <!--если номера нет то добавлятся класс error v data-hint-->
-                    <form action="">
-                        <label for="addNumber">
-                        <input type="tel" id="addNumber" placeholder="Номер телефона клиента">
-                    </label>
-                        <button type="submit" class="form-btn">
-                        <svg id="icon-search" width="24px" height="24px">
-                            <g fill="none" fill-rule="evenodd">
-                                <path d="M0 0h24v24H0z"></path>
-                                <path d="M14.5 14.5l5 5" stroke="#000" stroke-width="2" stroke-linecap="square"></path>
-                                <circle stroke="#000" stroke-width="2" cx="10" cy="10" r="6"></circle>
-                            </g>
-                        </svg>
-                    </button>
-                    </form>
-                </div>
-            </div>
-<!--           После успешного вбития номера — появляется кнопка сформировать счет и поле для присвоения ID битрикса-->
-            <div class="admin-main--form">
-                <div class="form-group" >
-                    <form action="">
-                        <label for="addNumber">
-                            <input type="tel" id="addNumber" value="+7 (909) 999-31-55" placeholder="Номер телефона клиента">
-                        </label>
-                        <button type="submit" class="form-btn">
-                            <svg id="icon-search" width="24px" height="24px">
-                                <g fill="none" fill-rule="evenodd">
-                                    <path d="M0 0h24v24H0z"></path>
-                                    <path d="M14.5 14.5l5 5" stroke="#000" stroke-width="2" stroke-linecap="square"></path>
-                                    <circle stroke="#000" stroke-width="2" cx="10" cy="10" r="6"></circle>
-                                </g>
-                            </svg>
-                        </button>
-                    </form>
-                </div><div class="form-group form-group--big">
-                    <div class="form-group--item">
-                        <button class="btn btn-green btn-score" type="button">Сформировать счет</button>
-                    </div>
-                    или
-                    <div class="form-group--item">
-                        <form action="">
-                            <label for="" class="bitrix-item">
-                                <input class="bitrix" type="text"">
-                                <span class="fake-placeholder">ID Битрикс</span>
-                            </label>
-                            <button class="btn btn-bitrix btn-green btn-disabled">Сохранить</button>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-<!--           После ввода ID битрикса кнопка рядом с ним  становится доступной. -->
-            <div class="admin-main--form">
-                <div class="form-group" >
-                    <form action="">
-                        <label for="addNumber">
-                            <input type="tel" id="addNumber" placeholder="Номер телефона клиента" value="+7 (909) 999-31-55">
-                        </label>
-                        <button type="submit" class="form-btn">
-                            <svg id="icon-search" width="24px" height="24px">
-                                <g fill="none" fill-rule="evenodd">
-                                    <path d="M0 0h24v24H0z"></path>
-                                    <path d="M14.5 14.5l5 5" stroke="#000" stroke-width="2" stroke-linecap="square"></path>
-                                    <circle stroke="#000" stroke-width="2" cx="10" cy="10" r="6"></circle>
-                                </g>
-                            </svg>
-                        </button>
-                    </form>
-                </div><div class="form-group form-group--big">
-                <div class="form-group--item">
-                    <button class="btn btn-green btn-score" type="button">Сформировать счет</button>
-                </div>
-                или
-                <div class="form-group--item">
-                    <form action="">
-                        <label for="" class="bitrix-item">
-                            <input class="bitrix" type="text" value="SF/1234678">
-                            <span class="fake-placeholder">ID Битрикс</span>
-                        </label>
-<!--                        удаляется класс btn-disabled-->
-                        <button class="btn btn-bitrix btn-green">Сохранить</button>
-                    </form>
-                </div>
-            </div>
-
-            </div>
-<!--           После нажатия на btn-bitrix добавляем строку в таблицу-->
-            <div class="admin-main--form">
-                <div class="form-group" >
-                    <form action="">
-                        <label for="addNumber">
-                            <input type="tel" id="addNumber" placeholder="Номер телефона клиента" value="+7 (909) 999-31-55">
-                        </label>
-                        <button type="submit" class="form-btn">
-                            <svg id="icon-search" width="24px" height="24px">
-                                <g fill="none" fill-rule="evenodd">
-                                    <path d="M0 0h24v24H0z"></path>
-                                    <path d="M14.5 14.5l5 5" stroke="#000" stroke-width="2" stroke-linecap="square"></path>
-                                    <circle stroke="#000" stroke-width="2" cx="10" cy="10" r="6"></circle>
-                                </g>
-                            </svg>
-                        </button>
-                    </form>
-                </div><div class="form-group form-group--big">
-                <div class="form-group--item">
-                    <button class="btn btn-green btn-score" type="button">Сформировать счет</button>
-                </div>
-                или
-                <div class="form-group--item">
-                    <form action="">
-                        <label for="" class="bitrix-item">
-                            <input class="bitrix" type="text" value="SF/1234678">
-                            <span class="fake-placeholder">ID Битрикс</span>
-                            <span class="chek">
-                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-                                    <polyline id="Line-3" stroke="#3AA65E" stroke-width="1.8" stroke-linecap="square" points="5 12 9.5 16.5 19 7"></polyline>
-                                </svg>
-                            </span>
-                        </label>
-                    </form>
-                </div>
-            </div>
-
-            </div>
-<!--            После нажатия на «Сформировать счет» добавляем строку в таблицу-->
-            <div class="admin-main--form">
-
-                <div class="form-group" >
-                    <form action="">
-                        <label for="addNumber">
-                            <input type="tel" id="addNumber" placeholder="Номер телефона клиента" value="+7 (909) 999-31-55">
-                        </label>
-                        <button type="submit" class="form-btn">
-                            <svg id="icon-search" width="24px" height="24px">
-                                <g fill="none" fill-rule="evenodd">
-                                    <path d="M0 0h24v24H0z"></path>
-                                    <path d="M14.5 14.5l5 5" stroke="#000" stroke-width="2" stroke-linecap="square"></path>
-                                    <circle stroke="#000" stroke-width="2" cx="10" cy="10" r="6"></circle>
-                                </g>
-                            </svg>
-                        </button>
-                    </form>
-                </div><div class="form-group form-group--big">
-                <div class="form-group--item">
-                    <label for="" class="score-item">
-                        <input class="score" type="text" value="SF/1234678" readonly>
-                        <span class="fake-placeholder">ID счета</span>
-                        <span class="chek">
-                            <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-                                <polyline id="Line-3" stroke="#3AA65E" stroke-width="1.8" stroke-linecap="square" points="5 12 9.5 16.5 19 7"></polyline>
-                            </svg>
-                        </span>
-                    </label>
-                </div>
-                или
-                <div class="form-group--item">
-                    <form action="">
-                        <label for="" class="bitrix-item">
-                            <input class="bitrix" type="text">
-                            <span class="fake-placeholder">ID Битрикс</span>
-                            <span class="chek">
-                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-                                    <polyline id="Line-3" stroke="#3AA65E" stroke-width="1.8" stroke-linecap="square" points="5 12 9.5 16.5 19 7"></polyline>
-                                </svg>
-                                </span>
-                        </label>
-                        <button class="btn btn-bitrix btn-green btn-disabled">Сохранить</button>
-                    </form>
-                </div>
-            </div>
-
-            </div>
-
-            <div class="table admin-main--table">
-                <div class="table-row">
-                    <div class="table-col phone">+7 (909) 238-13-13</div>
-                    <div class="table-col score"><span>ID счета</span>100-124-432-120</div>
-                    <div class="table-col bitrix"><span>ID Битрикс</span>SF/1234678</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-col phone">+7 (909) 238-13-13</div>
-                    <div class="table-col score"><span>ID счета</span>100-124-432-120</div>
-                    <div class="table-col bitrix"><span>ID Битрикс</span>SF/1234678</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-col phone">+7 (909) 238-13-13</div>
-                    <div class="table-col score"><span>ID счета</span>100-124-432-120</div>
-                    <div class="table-col bitrix"><span>ID Битрикс</span>SF/1234678</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-col phone">+7 (909) 238-13-13</div>
-                    <div class="table-col score"><span>ID счета</span>100-124-432-120</div>
-                    <div class="table-col bitrix"><span>ID Битрикс</span>SF/1234678</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-col phone">+7 (909) 238-13-13</div>
-                    <div class="table-col score"><span>ID счета</span>100-124-432-120</div>
-                    <div class="table-col bitrix"><span>ID Битрикс</span>SF/1234678</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-col phone">+7 (909) 238-13-13</div>
-                    <div class="table-col score"><span>ID счета</span>100-124-432-120</div>
-                    <div class="table-col bitrix"><span>ID Битрикс</span>SF/1234678</div>
-                </div>
-            </div>
-        </main>
+<main class="admin-main">
+    <h1>Редактирование пользователей</h1>
+    <div class="admin-main-search">
+        <form action="">
+            <label class="error"  data-hint="Пользователь уже существует">
+                <input placeholder="Номер телефона" type="tel">
+            </label>
+            <label for="">
+                <input placeholder="Добавочный номер" type="tel">
+            </label>
+            <button type="submit">
+                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                        <path d="M14.5,14.5 L19.5,19.5" id="Line-2" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                        <circle id="Oval" stroke="#000000" stroke-width="2" cx="10" cy="10" r="6"></circle>
+                    </g>
+                </svg>
+            </button>
+        </form>
+        <a href="#0" class="btn btn-green create-user">Создать пользователя</a>
     </div>
-</div>
+
+    <div class="admin-main-users">
+        <h2>Пользователи</h2>
+        <div class="admin-main-users--item">
+            <div class="phone">+7 (909) 238-13-13</div>
+            <div class="phone-dob"><span>доб.</span>4000</div>
+            <div class="price"><a href="#modal-billed" data-modal-card class="admin-link-green">Выставленные счета</a></div>
+            <div class="login-link"><a href="#modal-share" data-modal-card class="admin-link-green">Ссылка для входа</a></div>
+            <div class="remove-pass"><a href="#0" class="admin-link-green">Сбросить пароль</a></div>
+            <div class="remove-user">
+                <button type="button"></button>
+            </div>
+        </div>
+        <div class="admin-main-users--item">
+            <div class="phone">+7 (909) 238-13-13</div>
+            <div class="phone-dob"></div>
+            <div class="price"><a href="#modal-billed" data-modal-card class="admin-link-green">Выставленные счета</a></div>
+            <div class="login-link"><a href="#modal-share" data-modal-card class="admin-link-green">Ссылка для входа</a></div>
+            <div class="remove-pass"><a href="#0" class="admin-link-green">Сбросить пароль</a></div>
+            <div class="remove-user">
+                <button type="button"></button>
+            </div>
+        </div>
+        <div class="admin-main-users--item">
+            <div class="phone">+7 (909) 238-13-13</div>
+            <div class="phone-dob"><span>доб.</span>4000</div>
+            <div class="price"><a href="#modal-billed" data-modal-card class="admin-link-green">Выставленные счета</a></div>
+            <div class="login-link"><a  href="#modal-share" data-modal-card class="admin-link-green">Ссылка для входа</a></div>
+            <div class="remove-pass"><a href="#0" class="admin-link-green">Сбросить пароль</a></div>
+            <div class="remove-user">
+                <button type="button"></button>
+            </div>
+        </div>
+        <div class="admin-main-users--item">
+            <div class="phone">+7 (909) 238-13-13</div>
+            <div class="phone-dob"><span>доб.</span>4000</div>
+            <div class="price"><a href="#modal-billed" data-modal-card class="admin-link-green">Выставленные счета</a></div>
+            <div class="login-link"><a  href="#modal-share" data-modal-card class="admin-link-green">Ссылка для входа</a></div>
+            <div class="remove-pass"><a href="#0" class="admin-link-green">Сбросить пароль</a></div>
+            <div class="remove-user">
+                <button type="button"></button>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<section class="admin-list">
+    <div class="admin-list--item">
+        <div class="phone">+7 (909) 238-13-13</div>
+        <div class="phone-dob"><span>доб.</span>4000</div>
+        <div class="id"><span>ID счета</span>100-124-432-120</div>
+        <div class="download">
+            <button class="btn btn-download"></button>
+        </div>
+    </div>
+    <div class="admin-list--item">
+        <div class="phone">+7 (909) 238-13-13</div>
+        <div class="phone-dob"><span>доб.</span>4000</div>
+        <div class="id"><span>ID счета</span>100-124-432-120</div>
+        <div class="download">
+            <button class="btn btn-download"></button>
+        </div>
+    </div>
+    <div class="admin-list--item">
+        <div class="phone">+7 (909) 238-13-13</div>
+        <div class="phone-dob"><span>доб.</span>4000</div>
+        <div class="id"><span>ID Битрикс</span>100-124-432-120</div>
+        <div class="download">
+        </div>
+    </div>
+    <div class="admin-list--item">
+        <div class="phone">+7 (909) 238-13-13</div>
+        <div class="phone-dob"><span>доб.</span>4000</div>
+        <div class="id"><span>ID счета</span>100-124-432-120</div>
+        <div class="download">
+            <button class="btn btn-download"></button>
+        </div>
+    </div>
+    <div class="admin-list--item">
+        <div class="phone">+7 (909) 238-13-13</div>
+        <div class="phone-dob"><span>доб.</span>4000</div>
+        <div class="id"><span>ID счета</span>100-124-432-120</div>
+        <div class="download">
+        </div>
+    </div>
+</section>
 
 {% endblock %}

@@ -1,6 +1,6 @@
 function Scrolling(){
     //анимация скролинга страницы
-    if(!$('body').hasClass('main-page')){
+    if(!$('body').hasClass('main-page') && !$('body').hasClass('adm')){
         var mywindow = $(window);
         var mypos = 68;
         var up = false;

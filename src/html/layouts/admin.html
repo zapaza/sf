@@ -18,7 +18,7 @@
 
     {% include 'layouts/_og.html' %}
 </head>
-<body class="{{ bodyClass }}">
+<body class="adm">
 
 {% macro svg(id) %}
 <svg xmlns="http://www.w3.org/2000/svg" class="{{id}}">
@@ -34,6 +34,69 @@
         </div>
     </div>
 </div>
+<div class="modal mfp-hide modal-share" id="modal-share">
+    <div class="company-modal share-modal" >
+        <div class="lds-ring"> <!--лоадер-->
+            <div></div>
+        </div>
+        <form action="">
+            <input type="text" autofocus readonly="readonly " value="https://stopfactor.ru/lnk/JF1GG9LE56G027924">
+            <button type="button" class="coppy-link btn btn-green">Скопировать ссылку</button> <!--когда скопирована , то показывается ссылка скопирова-->
+        </form>
+    </div>
+</div>
+<div class="modal mfp-hide modal-billed" id="modal-billed">
+    <div class="modal-billed-inner">
+        <div class="modal-billed-header">
+            <h2>Выставленные счета</h2>
+            <h2 class="phone">+7 (909) 668-88-58</h2>
+        </div>
+        <div class="modal-billed-content modal-billed-content--main">
+            <div class="form-group form-group--big">
+                <div class="form-group--item">
+                    <button class="btn btn-green btn-score" type="button">Сформировать счет</button>
+                </div>
+                или
+                <div class="form-group--item">
+                    <form action="">
+                        <label for="" class="bitrix-item">
+                            <input class="bitrix" type="text">
+                            <span class="fake-placeholder">ID Битрикс</span>
+                        </label>
+                        <button class="btn btn-bitrix btn-green btn-disabled">Сохранить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-billed-content modal-billed-content--list">
+            <div class="modal-billed-content--item">
+                <div class="id"><span>ID счета</span>100-124-432-120</div>
+                <div class="download">
+                    <button class="btn btn-download"></button>
+                </div>
+            </div>
+            <div class="modal-billed-content--item">
+                <div class="id"><span>ID в Битрикс</span>100-124-432-120</div>
+                <div class="download">
+                    <button class="btn btn-download"></button>
+                </div>
+            </div>
+            <div class="modal-billed-content--item">
+                <div class="id"><span>ID счета</span>100-124-432-120</div>
+                <div class="download">
+                    <button class="btn btn-download"></button>
+                </div>
+            </div>
+            <div class="modal-billed-content--item">
+                <div class="id"><span>ID в Битрикс</span>100-124-432-120</div>
+                <div class="download">
+                    <button class="btn btn-download"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="js/combined.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.11.1/dist/js/jquery.suggestions.min.js"></script>
 <!--<script>-->
@@ -48,6 +111,7 @@
 
 
 <!--</script>-->
+<script src="js/combined.min.js"></script>
 <script src="js/libs.js"></script>
 
 {% include 'layouts/_counters.html' %}

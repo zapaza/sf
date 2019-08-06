@@ -252,5 +252,53 @@
 
       }
     }
+    .phone{
+      width: 128px;
+      margin-right: 7px;
+      flex-shrink: 0;
+      font-size: rem(14px);
+      &-dob{
+        flex-shrink: 0;
+        width: 64px;
+        margin-right: 81px;
+        font-size: rem(14px);
+        span{
+          color: rgba(0, 0, 0, 0.4);
+          font-size: rem(14px);
+          display: inline-block;
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .id{
+      font-size: rem(14px);
+      width: 227px;
+      span{
+        width: 71px;
+        color: rgba(0, 0, 0, 0.4);
+        font-size: rem(14px);
+        display: inline-block;
+        margin-right: 8px;
+      }
+    }
+    .download{
+      width: 32px;
+      .btn-download{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E15C97301-E412-4403-BC48-8DB05A83377C%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/card/download/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-25'%3E%3Crect id='Rectangle' opacity='0.200000003' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23000000' x='9' y='21' width='14' height='2'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23000000' x='15' y='9' width='2' height='9'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3Cpolygon id='Rectangle' fill='%23000000' points='12.5 15 19.5 15 16 19.75'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: .4;
+        border: 0;
+        background-color: transparent;
+        &:hover{
+          opacity: 1;
+          background-color: $white;
+          background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E15C97301-E412-4403-BC48-8DB05A83377C%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/card/download/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-25'%3E%3Crect id='Rectangle' opacity='0.200000003' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23000000' x='9' y='21' width='14' height='2'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23000000' x='15' y='9' width='2' height='9'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3Cpolygon id='Rectangle' fill='%23000000' points='12.5 15 19.5 15 16 19.75'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+      }
+
+    }
   }
 }
