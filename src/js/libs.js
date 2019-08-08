@@ -456,6 +456,25 @@ $(document).ready(function () {
         $(this).toggleClass('open');
         $(this).closest('.compare-select').find('.compare-select--list').toggleClass('open');
     });
+
+
+    //show monitoring
+    $body.on('click', '.show-monitoring', function (e) {
+        e.preventDefault();
+        $('#monitoring').toggleClass('monitoring--open');
+        $body.toggleClass('overflow');
+    });
+    $body.on('click', '.monitoring-close', function (e) {
+        e.preventDefault();
+        $('#monitoring').toggleClass('monitoring--open');
+        $body.toggleClass('overflow');
+    });
+
+
+    //скприпт модалки новой заявки
+    if($('.select-price input').is('checked')){
+        $(this).parent('lable').toggleClass('active');
+    }
 });
 $(document).mouseup(function (e){
     var div = $(".company-modal");

@@ -4362,6 +4362,59 @@
 <!--Конец сравнения-->
 
 
+<!--модалка новой заявки-->
+<div class="modal new-application mfp-hide" id="new-aplication">
+    <div class="new-application-content">
+        <div class="new-application-header">
+            <h2>Новая заявка</h2>
+        </div>
+        <div class="new-application-body">
+            <form action="">
+                <input type="text" placeholder="Имя" required>
+                <input type="text" placeholder="Организация">
+                <input type="email" placeholder="E-mail">
+                <fieldset class="input-group">
+                    <input type="tel" placeholder="Номер телефона">
+                    <input type="tel" placeholder="Добавочный номер">
+                </fieldset>
+                <fieldset class="select-price">
+                    <input type="radio" name="price" id="price-1" >
+                    <label for="price-1" class="one-select">
+                        <span class="name">3 дня бесплатно</span>
+                        <span>20 запросов в сутки</span>
+                    </label>
+                    <input type="radio" name="price" id="price-2">
+                    <label for="price-2" class="two-select">
+                        <span class="name">Подписка на 1 год</span>
+                        <span>за 15 000 ₽</span>
+                    </label>
+                </fieldset>
+
+                <button class="btn btn-green" type="submit">Оставить заявку</button>
+                <button class="btn btn-desable" type="submit">Оставить заявку</button>
+
+                <label for="check-politicy" class="politicy">
+                    <input type="checkbox" name="politycy" id="check-politicy" required checked>
+                    <span>Я прочитал и соглашаюсь с <a href="">политикой конфиденциальности</a></span>
+                </label>
+            </form>
+            <div class="support">
+                <a href="#0" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--модалка новой заявки конец-->
+<!--cуксес новой модалки-->
+<div class="modal new-application--sucsess mfp-hide" id="new-aplication--sucsess">
+    <div class="new-application--sucsess-content">
+        <h2>Ваша заявка отправлена</h2>
+        <p>Менеджер свяжется с вами в течении N минут.</p>
+        <button class="btn btn-green">ОК</button>
+    </div>
+</div>
+<!--cуксес новой модалки конец-->
+
 
 <!--svg-sprite-->
 <div class="svgSprite" hidden>
