@@ -1493,6 +1493,10 @@
         .politicy{
           display: flex;
           position: relative;
+          margin-bottom: 16px;
+          &:last-child{
+            margin-bottom: 0;
+          }
           input{
             position: absolute;
             width: 16px;
@@ -1500,7 +1504,7 @@
             left: 16px;
             visibility: hidden;
             &:checked + span:before{
-              visibility: visible;
+              display: block;
             }
           }
           span{
@@ -1539,9 +1543,10 @@
               }
             }
             &:before{
-              visibility: hidden;
+              z-index: 2;
               content: '';
               position: absolute;
+              display: none;
               left: 20px;
               top: 4px;
               width: 8px;

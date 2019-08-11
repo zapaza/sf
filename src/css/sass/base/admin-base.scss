@@ -153,7 +153,17 @@
     }
 
     &--list{
-
+      &.checks{
+        .modal-billed-content--item{
+          padding-left:56px;
+          &:hover{
+            padding-left: 88px;
+            &:before{
+              left: 32px;
+            }
+          }
+        }
+      }
 
     }
 
@@ -164,6 +174,26 @@
       padding: 16px 0;
       box-sizing: border-box;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      &.check{
+        position: relative;
+        &:before{
+          position: absolute;
+          content: '';
+          width: 20px;
+          height: 20px;
+          display: block;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          border-radius: 50%;
+          -webkit-background-size: contain;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h20v20H0z'/%3E%3Ccircle cx='10' cy='10' r='9.1' fill='%233AA65E' stroke='%233AA65E' stroke-width='1.8'/%3E%3Cpath stroke='%23FFF' stroke-linecap='square' stroke-width='1.8' d='M6.667 10.417L8.75 12.5l4.583-4.583'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+      }
 
       &:first-of-type{
         border-top:  1px solid rgba(0, 0, 0, 0.1);
@@ -173,8 +203,8 @@
       }
 
       &:hover {
-        margin: 0 -16px;
-        padding: 16px 16px;
+        margin: 0 -32px;
+        padding: 16px 32px;
         border-top-color: transparent;
         background-color: rgba(0, 0, 0, 0.05);
         border-bottom-color: transparent;
