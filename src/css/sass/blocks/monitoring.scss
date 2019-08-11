@@ -93,6 +93,7 @@
       flex-direction: column;
     }
     &--item{
+      cursor: pointer;
       position: relative;
       width: 100%;
       padding: 24px 40px;
@@ -103,13 +104,23 @@
       align-items:center;
       justify-content: space-between;
       background-color: $white;
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.05);
+      }
       &.new{
-        background-color: #f5fbf7;
+        background-color: rgba(58, 166, 94, 0.05);
+        &:hover{
+          background-color: rgba(58, 166, 94, 0.1);
+        }
       }
       &.spinner{
         height: 144px;
         position: relative;
         width: 100%;
+        cursor: default;
+        &:hover{
+          background-color: $white;
+        }
         &:after{
           content: '';
           position: absolute;

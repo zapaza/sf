@@ -185,8 +185,9 @@
                       <path d="M0 0h32v32H0z"></path>
                       <path class="star" fill="#999" d="M16 20.94l-7.641 5.577 2.943-8.99-7.666-5.544 9.46.02L16 3l2.904 9.003 9.46-.02-7.666 5.544 2.943 8.99z"></path>
                     </g>
-                  </svg>
-                </a></li>
+                  </svg></a>
+                <span class="show-monitoring--count">99+</span>
+              </li>
               <li>
                 <!--                    Если к сравнению добавлено меньше двух компаний — иконка “сравнение” в хедере неактивна.-->
                 <!--                    Когда иконка сравнения неактивна, при наведении на неё появляется хинт с текстом “добавьте две компании” (если не добавлено ни одной) или “добавьте еще одну компанию” (если добавлена только одна)-->
@@ -453,6 +454,407 @@
           </section>
         </div>
 
+        <div class="monitoring" id="monitoring">
+          <div class="monitoring-content">
+            <div class="monitoring-header">
+              <h2>Мониторинг</h2>
+              <div class="status">4 новых события</div>
+              <button class="monitoring-close"></button>
+            </div>
+            <div class="monitoring-inner">
+
+              <!--            когда пустой-->
+              <!--            <div class="monitoring-inner&#45;&#45;empty">-->
+              <!--                <img src="images/advantage-icon-2.svg" alt="Мониторинг">-->
+              <!--                <h3>Здесь пока ничего нет</h3>-->
+              <!--                <p>Отмечайте контрагентов и получайте настраиваемые уведомления — о любых изменениях или только при появлении новых стоп-факторов.</p>-->
+              <!--            </div>-->
+              <!--            когда пустой --конец -->
+
+              <!--        когда есть что-то-->
+              <div class="monitoring-inner--list">
+                <div class="monitoring-inner--item new" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status norm">Действует</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">Изменились сведения о лице, имеющем право без доверенности действовать от имени юридического лица</div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item new" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status liquidation">Ликвидировано</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">Новое производство <br> № 78710/18/77054-ИП</div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status norm">Действует</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">
+                      <div class="factors">
+                        <span class="factors-icon dangerously">
+                          <!-- satisfactorily-->
+                          <span class="hard-hint">
+                            <span class="hard-hint--header">
+                              <h3>Стоп-фактор!</h3>
+                            </span>
+                            <span class="hard-hint--text">
+                              Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                          </span>
+                        </span>
+                        <div class="factors-content">Новый арбитраж А19-1984/2019</div>
+                      </div>
+                    </div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item new" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status norm">Действует</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">Изменились сведения о лице, имеющем право без доверенности действовать от имени юридического лица</div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item new" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status liquidation">Ликвидировано</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">Новое производство <br> № 78710/18/77054-ИП</div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status norm">Действует</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">
+                      <div class="factors">
+                        <span class="factors-icon dangerously">
+                          <!-- satisfactorily-->
+                          <span class="hard-hint">
+                            <span class="hard-hint--header">
+                              <h3>Стоп-фактор!</h3>
+                            </span>
+                            <span class="hard-hint--text">
+                              Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                          </span>
+                        </span>
+                        <div class="factors-content">Новый арбитраж А19-1984/2019</div>
+                      </div>
+                    </div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item new" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status norm">Действует</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">Изменились сведения о лице, имеющем право без доверенности действовать от имени юридического лица</div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item new" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status liquidation">Ликвидировано</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">Новое производство <br> № 78710/18/77054-ИП</div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status norm">Действует</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">
+                      <div class="factors">
+                        <span class="factors-icon dangerously">
+                          <!-- satisfactorily-->
+                          <span class="hard-hint">
+                            <span class="hard-hint--header">
+                              <h3>Стоп-фактор!</h3>
+                            </span>
+                            <span class="hard-hint--text">
+                              Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                          </span>
+                        </span>
+                        <div class="factors-content">Новый арбитраж А19-1984/2019</div>
+                      </div>
+                    </div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item new" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status norm">Действует</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">Изменились сведения о лице, имеющем право без доверенности действовать от имени юридического лица</div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item new" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status liquidation">Ликвидировано</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">Новое производство <br> № 78710/18/77054-ИП</div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status norm">Действует</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">
+                      <div class="factors">
+                        <span class="factors-icon dangerously">
+                          <!-- satisfactorily-->
+                          <span class="hard-hint">
+                            <span class="hard-hint--header">
+                              <h3>Стоп-фактор!</h3>
+                            </span>
+                            <span class="hard-hint--text">
+                              Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                          </span>
+                        </span>
+                        <div class="factors-content">Новый арбитраж А19-1984/2019</div>
+                      </div>
+                    </div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item new" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status norm">Действует</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">Изменились сведения о лице, имеющем право без доверенности действовать от имени юридического лица</div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item new" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status liquidation">Ликвидировано</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">Новое производство <br> № 78710/18/77054-ИП</div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item" role="button" data-mfp-src="#modal-moniroting">
+                  <div class="item-name">
+                    <a href="#0" class="name">ООО «ЯНДЕКС.ПОСУДА»</a>
+                    <p><span>ОГРН:</span>2346734574554</p>
+                    <div class="item-name--status norm">Действует</div>
+                  </div>
+                  <div class="item-refactor">
+                    <div class="name">ФССП</div>
+                    <div class="content">
+                      <div class="factors">
+                        <span class="factors-icon dangerously">
+                          <!-- satisfactorily-->
+                          <span class="hard-hint">
+                            <span class="hard-hint--header">
+                              <h3>Стоп-фактор!</h3>
+                            </span>
+                            <span class="hard-hint--text">
+                              Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                          </span>
+                        </span>
+                        <div class="factors-content">Новый арбитраж А19-1984/2019</div>
+                      </div>
+                    </div>
+                    <div class="date">10.06.2019</div>
+                    <div class="item-refactor--count">+ еще 2 события</div>
+                  </div>
+                  <div class="item-options">
+                    <button type="button" class="options-btn"></button>
+                    <div class="options-list">
+                      <a href="#options-monitoring" data-modal-price class="options-item"><span class="icon-notifications"></span>Настроить уведомления</a>
+                      <a href="#" class="options-item"><span class="icon-stop"></span>Прекратить мониторинг</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="monitoring-inner--item spinner">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <footer class="footer">
@@ -5498,6 +5900,217 @@
     </div>
   </div>
   <!--cуксес новой модалки конец-->
+
+  <!--настройки мониторинга -->
+  <div id="options-monitoring" class="options-monitoring modal mfp-hide">
+    <div class="options-monitoring-content">
+      <div class="options-monitoring-header">
+        <h2>Уведомления об изменениях</h2>
+      </div>
+      <div class="options-monitoring-body">
+        <form action="">
+          <fieldset class="options-list">
+            <label for="options-1">
+              <input type="checkbox" checked name="options-item" id="options-1">
+              <span class="info">О компании</span>
+            </label>
+            <label for="options-2">
+              <input type="checkbox" checked name="options-item" id="options-2">
+              <span class="info">Бизнес</span>
+            </label>
+            <label for="options-3">
+              <input type="checkbox" checked name="options-item" id="options-3">
+              <span class="info">Собственники</span>
+            </label>
+            <label for="options-4">
+              <input type="checkbox" checked name="options-item" id="options-4">
+              <span class="info">Арбитражи</span>
+            </label>
+            <label for="options-5">
+              <input type="checkbox" checked name="options-item" id="options-5">
+              <span class="info">ДЗО</span>
+            </label>
+            <label for="options-6">
+              <input type="checkbox" checked name="options-item" id="options-6">
+              <span class="info">ФССП</span>
+            </label>
+            <label for="options-7">
+              <input type="checkbox" checked name="options-item" id="options-7">
+              <span class="info">Записи в ЕГРЮЛ</span>
+            </label>
+            <label for="options-8">
+              <input type="checkbox" checked name="options-item" id="options-8">
+              <span class="info">Тендеры</span>
+            </label>
+            <label for="options-9">
+              <input type="checkbox" checked name="options-item" id="options-9">
+              <span class="info">Отчетность</span>
+            </label>
+            <label for="options-10">
+              <input type="checkbox" checked name="options-item" id="options-10">
+              <span class="info">Проверки</span>
+            </label>
+            <label for="options-11">
+              <input type="checkbox" checked name="options-item" id="options-11">
+              <span class="info">Экономика</span>
+            </label>
+          </fieldset>
+          <fieldset class="notifications">
+            <div class="search-info--switch">
+              <div class="search-info--switch_inner">
+                <input class="switch_input" type="checkbox" id="switch_input">
+                <label aria-hidden="true" class="switch_label" for="switch_input" data-name="Получать уведомления на почту">вкл</label>
+                <div aria-hidden="true" class="switch_marker"></div>
+              </div>
+            </div>
+          </fieldset>
+          <button class="btn btn-green">Сохранить</button>
+          <button class="btn btn-disable">Сохранить</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--настройки мониторинга конец-->
+  <div id="modal-moniroting" class="modal modal-inside modal-moniroting mfp-hide">
+    <div class="modal-moniroting--content">
+      <h2>ООО «РАМБЛЕР ДС»</h2>
+      <div class="modal-moniroting--settings">
+        <a href="#0"><span class="icon icon-stop"></span>Прекратить мониторинг</a>
+        <a href="#options-monitoring" data-modal-price><span class="icon icon-notifications"></span>Настроить уведомленя</a>
+      </div>
+      <div class="modal-moniroting--item">
+        <div class="col-date">15.03.2019</div>
+        <div class="col-name">Арбитраж</div>
+        <div class="col-content">Новый арбитраж <a href="#0" class="name"><span>А21-8836/2019</span><span class="icon icon-name"></span></a></div>
+      </div>
+      <div class="modal-moniroting--item">
+        <div class="col-date">15.03.2019</div>
+        <div class="col-name">ФССП</div>
+        <div class="col-content">Открыто новое производство № 78710/18/77054-ИП</div>
+      </div>
+      <div class="modal-moniroting--item">
+        <div class="col-date">15.03.2019</div>
+        <div class="col-name">ФССП</div>
+        <div class="col-content">Открыто новое производство № 78710/18/77013-ИП</div>
+      </div>
+      <div class="modal-moniroting--item">
+        <div class="col-date">15.03.2019</div>
+        <div class="col-name">Записи ЕГРЮЛ</div>
+        <div class="col-content">
+          <div class="factors">
+            <div class="factors-header">
+              <div class="icon icon-dangerously ">
+                <!--icon-satisfactorily-->
+              </div>
+              <div class="name">Будьте осторожны!</div>
+            </div>
+            <div class="factors-content">
+              Общество является участником (акционером), владеющим долей (акциями) в размере менее 50% уставного капитала, 2-х и более юридических лиц, ранее ликвидированных на основании решения ФНС России.
+            </div>
+          </div>
+          <div class="refactors">
+            <p>Сведения о доле учредителя (участника)</p>
+            <div class="refactors-before">
+              <p><span class="refactors-content">Номинальная стоимость доли в рублях: 29 031 690 670</span></p>
+
+            </div>
+            <div class="refactors-after">
+              <p><span>Номинальная стоимость доли в рублях: 29 690 670</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-moniroting--item">
+        <div class="col-date">15.03.2019</div>
+        <div class="col-name">Проверки</div>
+        <div class="col-content">Новый арбитраж: <a href="#0" class="name"><span>А21-8836/2019</span><span class="icon icon-name"></span></a></div>
+      </div>
+      <div class="modal-moniroting--item">
+        <div class="col-date">15.03.2019</div>
+        <div class="col-name">Записи ЕГРЮЛ</div>
+        <div class="col-content">
+          <p>Основной вид деятельности</p>
+          <div class="refactors">
+            <div class="refactors-before">
+              <p><span class="title">ОКВЭД:</span><span class="refactor-content"></span>74.14</p>
+              <p>
+                <span class="refactors-content">
+                  КОНСУЛЬТИРОВАНИЕ ПО ВОПРОСАМ КОММЕРЧЕСКОЙ ДЕЯТЕЛЬНОСТИ И УПРАВЛЕНИЯ
+                </span>
+              </p>
+            </div>
+            <div class="refactors-after">
+              <p><span class="title">ОКВЭД:</span><span></span>70.22</p>
+              <p>
+                <span>
+                  КОНСУЛЬТИРОВАНИЕ ПО ВОПРОСАМ КОММЕРЧЕСКОЙ ДЕЯТЕЛЬНОСТИ И УПРАВЛЕНИЯ
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="refactors">
+            <div class="refactors-before">
+              <p><span class="title">ОКВЭД:</span><span class="refactor-content">74.14</span></p>
+              <p><span class="refactors-content">
+                  КОНСУЛЬТИРОВАНИЕ ПО ВОПРОСАМ КОММЕРЧЕСКОЙ ДЕЯТЕЛЬНОСТИ И УПРАВЛЕНИЯ
+                </span></p>
+              <p><span class="title">ОКВЭД:</span><span>74.40</span></p>
+              <p><span class="refactors-content">
+                  РЕКЛАМНАЯ ДЕЯТЕЛЬНОСТЬ
+                </span></p>
+            </div>
+            <div class="refactors-after">
+              <p><span class="title">ОКВЭД:</span><span></span>70.22</p>
+              <p><span class="refactors-content">
+                  КОНСУЛЬТИРОВАНИЕ ПО ВОПРОСАМ КОММЕРЧЕСКОЙ ДЕЯТЕЛЬНОСТИ И УПРАВЛЕНИЯ
+                </span></p>
+              <p><span class="title">ОКВЭД:</span><span class="refactor-content"></span>74.40</p>
+              <p><span class="refactors-content">
+                  Рекламная деятельность
+                </span></p>
+            </div>
+          </div>
+          <div class="refactors">
+            <p>Телефон</p>
+            <div class="refactors-before">
+              <p><span class="refactors-content">+7 (495) 958-11-12</span></p>
+            </div>
+            <div class="refactors-after">
+              <p><span>+7 (499) 236-18-10</span></p>
+            </div>
+          </div>
+          <div class="refactors">
+            <p>Факс</p>
+            <div class="refactors-before">
+              <p><span class="refactors-content">+7 (495) 958-11-12</span></p>
+            </div>
+            <div class="refactors-after">
+              <p><span>+7 (499) 236-18-54</span></p>
+            </div>
+          </div>
+          <div class="refactors">
+            <p>ОКОПФ</p>
+            <div class="refactors-before">
+              <p><span class="refactors-content">13393</span></p>
+            </div>
+            <div class="refactors-after">
+              <p><span>13700</span></p>
+            </div>
+          </div>
+          <div class="refactors">
+            <p>Юридический адрес</p>
+            <div class="refactors-before">
+              <p><span class="refactors-content">141090, САМАРСКАЯ ОБЛАСТЬ, ГОРОД ТОЛЬЯТТИ, УЛИЦА БОРИСА ЖИГУЛЁНКИНА, ДОМ 5</span></p>
+            </div>
+            <div class="refactors-after">
+              <p><span>141090, МОСКВА, УЛИЦА КРАСНОГО МАЯКА, ДОМ 11</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!--svg-sprite-->
   <div class="svgSprite" hidden>

@@ -300,6 +300,18 @@ $(document).ready(function () {
         $target.slideToggle(100);
 
     } );
+    $('[data-mfp-src]').magnificPopup({
+        type: 'inline',
+        midClick:true,
+        fixedBgPos: true,
+        preloader: false,
+        overflowY: 'auto',
+        removalDelay: 300,
+        closeBtnInside: false,
+        closeOnBgClick: false,
+        mainClass: 'zoom-in modal-inside',
+
+    });
 
 //модалка в модалке "открытия на другом устройстве"
     if(('.use-here').length > 0){
