@@ -372,35 +372,70 @@
         transition: .2s opacity ease;
         &--img{
           position: relative;
-          display: block;
-          width: 24px;
-          height: 24px;
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          margin-right: 8px;
           border: none;
           background-color: transparent;
-          overflow: hidden;
-          text-indent: -9999px;
-          &:after{
-            position: absolute;
-            content: '';
-            top: 50%;
-            left: 50%;
+          border-radius: 50%;
+          transition: .2s ease all;
+          svg{
+            display: block;
             width: 24px;
             height: 24px;
-            transform: translate(-50%, -50%);
+            opacity: .4;
+            transition: .2s ease all;
           }
-          &.favorites{
-            &:after{
-              background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E607EEE43-B293-4D31-80F3-0106FCC96039%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/monitoring/M/normal'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpolygon id='Star' fill='%23999999' points='12 15.9 6.12214748 20.1901699 8.38598524 13.2742646 2.48943484 9.00983006 9.76641604 9.02573542 12 2.1 14.233584 9.02573542 21.5105652 9.00983006 15.6140148 13.2742646 17.8778525 20.1901699'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+          &:last-child{
+            margin-right: 0;
+          }
+          &:before{
+            position: absolute;
+            z-index:  9991;
+            pointer-events: none;
+            content: attr(data-hint);
+            display: block;
+            padding: 4px 8px;
+            opacity: 0;
+            max-width: 464px;
+            top: 100%;
+            left: 50%;
+            margin-top: 8px;
+            border-radius: 4px;
+            background-color: rgb(153, 153, 153);
+            transition: .2s ease opacity;
+            text-transform: none;
+            font:{
+              size: 1.3rem;
+              weight: $font-regular;
             }
+            line-height: 1.6rem;
+            letter-spacing: 0.5px;
+            transform: translateX(-50%);
+            color: rgb(255, 255, 255);
+            white-space: nowrap;
 
           }
-          &.options{
-            &:after{
-              display: block;
-              background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E0349ADB5-EC14-440F-9A32-9D1521D8F892%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/compare/M/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-11'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Crect id='Rectangle-Copy-5' fill='%23999999' x='11' y='2' width='2' height='19'%3E%3C/rect%3E%3Crect id='Rectangle-Copy-6' fill='%23999999' x='14' y='5' width='7' height='3'%3E%3C/rect%3E%3Crect id='Rectangle-Copy-7' fill='%23999999' x='6' y='5' width='4' height='3'%3E%3C/rect%3E%3Crect id='Rectangle-Copy-14' fill='%23999999' x='14' y='10' width='4' height='3'%3E%3C/rect%3E%3Crect id='Rectangle-Copy-15' fill='%23999999' x='3' y='10' width='7' height='3'%3E%3C/rect%3E%3Crect id='Rectangle-Copy-16' fill='%23999999' x='7' y='15' width='3' height='3'%3E%3C/rect%3E%3Crect id='Rectangle-Copy-17' fill='%23999999' x='14' y='15' width='5' height='3'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+          &:hover{
+            background-color: $white;
+            svg{
+              opacity: 1;
+            }
+            &:before{
+              opacity: 1;
             }
           }
-
+          &.add{
+            svg{
+              opacity: 1;
+              polygon,#Group-11{
+                fill:$green;
+              }
+            }
+          }
         }
 
       }

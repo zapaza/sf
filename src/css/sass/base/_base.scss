@@ -85,6 +85,25 @@
       transform: scale(.96);
     }
   }
+  &-green2{
+    font:{
+      family: $font-family;
+      weight: $font-bold;
+      size: 1.4rem;
+    }
+    background-color: $green;
+    color: $white;
+    &:hover{
+      background-color:$green-hover;
+      color: $white;
+      text-decoration: none;
+    }
+    &:active{
+      color: $white;
+      background: $green-hover;
+      transform: scale(.96);
+    }
+  }
 
   &-default{
     border: solid 1px $white--text;

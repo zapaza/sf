@@ -228,8 +228,12 @@ $(document).ready(function () {
         overflowY: 'scroll',
         removalDelay: 300,
         closeBtnInside: false,
-        mainClass: 'zoom-in mfp-price'
+        mainClass: 'zoom-in mfp-price',
     });
+    if(!$('.options-monitoring').hasClass('mfp-hide')) {
+        console.log(1111);
+        $('.mfp-bg').removeClass('modal-inside').addClass('mfp-price');
+    }
     $body.on(event, '.btn-green-close', function (e) {
         e.preventDefault();
         $.magnificPopup.close();
@@ -309,8 +313,7 @@ $(document).ready(function () {
         removalDelay: 300,
         closeBtnInside: false,
         closeOnBgClick: false,
-        mainClass: 'zoom-in modal-inside',
-
+        mainClass: 'zoom-in modal-inside'
     });
 
 //модалка в модалке "открытия на другом устройстве"

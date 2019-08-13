@@ -790,6 +790,7 @@
     //стили для клавной карточки
     .main-card{
       &-header{
+        position: relative;
         text-align: left;
         margin-bottom:24px;
         p{
@@ -900,6 +901,88 @@
             }
           }
 
+        }
+
+        &--btn{
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          button{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            &:after{
+              content: '';
+              opacity: 0;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: rgba(0, 0, 0, 0.1);
+              transition: .2s ease all;
+            }
+            &:before{
+              position: absolute;
+              z-index:  9991;
+              pointer-events: none;
+              content: attr(data-hint);
+              display: block;
+              padding: 4px 8px;
+              opacity: 0;
+              max-width: 464px;
+              top: 100%;
+              left: 50%;
+              margin-top: 8px;
+              border-radius: 4px;
+              background-color: rgb(153, 153, 153);
+              transition: .2s ease opacity;
+              text-transform: none;
+              font:{
+                size: 1.3rem;
+                weight: $font-regular;
+              }
+              line-height: 1.6rem;
+              letter-spacing: 0.5px;
+              transform: translateX(-50%);
+              color: rgb(255, 255, 255);
+              white-space: nowrap;
+
+            }
+            &:last-child{
+              margin-right: 0;
+            }
+            &:hover{
+              &:after,&:before{
+                opacity: 1;
+              }
+            }
+            svg{
+              display: block;
+              width: 32px;
+              height: 32px;
+            }
+            &.add{
+              background-color: $green;
+              svg{
+                polygon,#Group-11{
+                  fill:$white;
+                }
+              }
+            }
+
+          }
         }
       }
 
