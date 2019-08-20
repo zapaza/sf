@@ -467,10 +467,20 @@ $(document).ready(function () {
     }
 
     //выбор компании для сравнения
-    $body.on(event, '.compare-select--btn', function () {
+    $body.on(event, '.compare-select--btn', function (e) {
         $(this).toggleClass('open');
         $(this).closest('.compare-select').find('.compare-select--list').toggleClass('open');
     });
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $(".compare-select"); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            div.find('.compare-select--btn').removeClass('open');
+            div.find('.compare-select--list').removeClass('open');// скрываем его
+        }
+    });
+
+
 
 
     //show monitoring

@@ -153,7 +153,7 @@
       }
       &:hover{
         background-color: rgba(0, 0, 0, 0.05);
-        .item-icon{
+        .item-icon--img{
           opacity: 1;
         }
       }
@@ -368,8 +368,7 @@
         align-items: center;
         justify-content: space-between;
         width: 8.16%;
-        opacity: 0;
-        transition: .2s opacity ease;
+
         &--img{
           position: relative;
           display:flex;
@@ -382,6 +381,7 @@
           background-color: transparent;
           border-radius: 50%;
           transition: .2s ease all;
+          opacity: 0;
           svg{
             display: block;
             width: 24px;
@@ -429,6 +429,7 @@
             }
           }
           &.add{
+            opacity: 1;
             svg{
               opacity: 1;
               polygon,#Group-11{

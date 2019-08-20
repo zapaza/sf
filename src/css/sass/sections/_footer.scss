@@ -48,6 +48,7 @@
     line-height: 3.2rem;
     letter-spacing: normal;
     color:$white;
+
     a{
       font-size: 2.2rem;
       font-weight: $font-bold;
@@ -59,6 +60,32 @@
       &:hover{
         text-decoration: none;
         border-bottom: 1px solid rgba(255,255,255,.5);
+      }
+      &.footer-ask--phone{
+        margin-bottom: 8px;
+        display: inline-block;
+        font-size: rem(36px);
+        font-weight: $font-bold;
+        line-height: 1.11;
+        letter-spacing: normal;
+        border-bottom: none;
+        color: $white;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    .footer-ask--phone{
+      margin-bottom: 8px;
+      display: inline-block;
+      font-size: rem(36px);
+      font-weight: $font-bold;
+      line-height: 1.11;
+      letter-spacing: normal;
+      border-bottom: none;
+      color: $white;
+      &:hover{
+        text-decoration: none;
       }
     }
   }

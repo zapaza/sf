@@ -3,6 +3,17 @@
   max-width: 464px;
   height: 88px;
   position: relative;
+  &.no-select{
+    .compare-select--btn{
+      &:hover{
+        background-color: $white;
+      }
+      &:after{
+        border-left: 2px solid rgba(0,0,0,0.2);
+        border-bottom: 2px solid rgba(0,0,0,0.2);
+      }
+    }
+  }
 
   &--btn{
     position: relative;
@@ -14,7 +25,9 @@
     height: 100%;
     padding: 14px 136px 14px 16px;
     box-sizing: border-box;
+
     span{
+      overflow: hidden;
       display: block;
       height: 100%;
       text-align: left;
@@ -75,7 +88,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    height:300px;
+    max-height:300px;
     overflow: auto;
     background-color: $white;
     border: solid 1px rgba(0, 0, 0, 0.15);
