@@ -1,0 +1,61 @@
+&-content{
+  width: 100%;
+  max-width: 704px;
+  margin: 0 auto 0 240px;
+  @media (min-width: 1264px) and (min-height:671px){
+    max-width: 784px;
+  }
+  @media (min-width: 1344px){
+    max-width: 784px;
+  }
+  @media(max-width: 412px){
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  &--item{
+    width: 100%;
+    background-color: $white;
+    padding: 32px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    @media(max-width: 412px){
+      padding: 24px 24px 20px 24px;
+      overflow: hidden;
+    }
+
+
+    &.dangerously{
+      background-color: rgb(255, 232, 230);
+
+      .btn{
+        background-color: rgb(255, 232, 230);
+        &:hover{
+          background-color:darken(rgb(255, 232, 230), 5%);
+        }
+      }
+
+    }
+    &.satisfactorily{
+      background-color: rgb(255, 241, 222);
+
+      .card-header--factors{
+        color: $gold;
+      }
+
+      .btn{
+        background-color:rgb(255, 241, 214);
+        &:hover{
+          background-color:darken(rgb(255, 241, 214), 5%);
+        }
+      }
+
+    }
+    &.card-egrul{
+      padding: 32px 16px;
+      .card-header{
+        padding: 0 16px;
+      }
+    }
+  }
+}

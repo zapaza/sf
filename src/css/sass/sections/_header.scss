@@ -14,6 +14,10 @@
   @media (min-width:1264px){
     height: 68px;
   }
+  //@media (max-width: 412px){
+  //  display: none;
+  //}
+
   &.scroll-bottom{
     top: -68px;
     @media (max-width: 1263px){
@@ -711,4 +715,11 @@
     }
   }
 
+}
+
+.header-mobile{
+  display: none;
+  @media (max-width: 412px){
+    display: block;
+  }
 }

@@ -1,0 +1,129 @@
+.fssp{
+  .table-header{
+    .table-row{
+      cursor: default;
+      &:hover{
+        background-color: transparent;
+      }
+    }
+  }
+
+  .table{
+    &-col{
+      width: 18%;
+      margin-right: 2%;
+      span{
+        display: block;
+        width: 100%;
+        text-align: right;
+      }
+      &:first-child{
+        width: 18%;
+        margin-right: 10%;
+        span{
+          text-align: left;
+        }
+      }
+      &:nth-child(2){
+        span{
+          text-align: left;
+        }
+      }
+      &:last-child{
+        width: 30%;
+        margin-right: 0;
+
+      }
+    }
+    &-row{
+      padding: 6px 16px;
+      margin: 0 -16px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-sizing: border-box;
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.05);
+        text-decoration: none;
+      }
+    }
+    &-body{
+      padding-bottom: 24px;
+
+      .table-col{
+        font: {
+          size: 1.4rem;
+          weight: $font-regular;
+        }
+        line-height: 2rem;
+        letter-spacing: normal;
+        color:$black--text;
+        @media (min-width: 1264px) and (min-height:671px){
+          font-size: 1.6rem;
+        }
+        @media (min-width: 1344px){
+          font-size: 1.6rem;
+        }
+        span.no-content{
+          color:$mid-gray--text;
+        }
+        &:first-child{
+          font: {
+            size: 1.4rem;
+            weight: $font-bold;
+          }
+          line-height: 2rem;
+          letter-spacing: normal;
+          color:$black--text;
+          @media (min-width: 1264px) and (min-height:671px){
+            font-size: 1.6rem;
+          }
+          @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
+          span{
+            width: auto;
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+          }
+        }
+      }
+    }
+    &-footer{
+      border-top: 1px solid rgb(216, 216, 216);;
+      padding-top: 23px;
+      margin-right: 0;
+      margin-left: 0;
+      padding-bottom: 16px;
+      .table-row{
+        padding: 6px 16px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        cursor: default;
+        &:hover{
+          background-color: transparent;
+        }
+      }
+      .table-col{
+        &:first-child{
+          font: {
+            size: 1.4em;
+            weight: $font-bold;
+          }
+          line-height: 2rem;
+          letter-spacing: normal;
+          color:$black--text;
+          @media (min-width: 1264px) and (min-height:671px){
+            font-size: 1.6rem;
+          }
+          @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
+          span{
+            width: auto;
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+          }
+
+        }
+      }
+    }
+  }
+}

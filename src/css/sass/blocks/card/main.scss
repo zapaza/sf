@@ -1,0 +1,995 @@
+.main-card{
+
+  &-header{
+    position: relative;
+    text-align: left;
+    margin-bottom:24px;
+    p{
+      margin-bottom: 8px;
+      font:{
+        size: 1.4rem;
+        weight: $font-regular;
+      }
+      line-height: 1.6rem;
+      letter-spacing: normal;
+      @media (min-width: 1264px) and (min-height:671px){
+        font-size: 1.6rem;
+      }
+      @media (min-width: 1344px){
+        font-size: 1.6rem;
+      }
+      @media(max-width: 412px){
+        margin-bottom: 4px;
+      }
+    }
+    &--status{
+      color: $green;
+    }
+    &--registration{
+      color: $mid-gray--text;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    .icon-red-question{
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      margin-left: 4px;
+      svg {
+        path, circle{
+          transition: .2s;
+        }
+      }
+      &:hover{
+        path{
+          fill: $white;
+        }
+        circle{
+          fill: $red
+        }
+
+        .hard-hint{
+          opacity: 1;
+          display: block;
+
+        }
+      }
+      .hard-hint{
+        display: none;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        width: 260px;
+        height: auto;
+        border-radius: 4px;
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        text-align: left;
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2) ;
+        left:calc(100% + 12px);
+        margin-top: -12px;
+        margin-right: 0;
+        transition: .6s ease all;
+        transition-duration: 1s;
+        box-sizing: border-box;
+        &:after{
+          position: absolute;
+          content: '';
+          top: 12px;
+          left: -12px;
+          width: 6px;
+          height: 16px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          border: 8px solid transparent;
+          border-right-color: white;
+        }
+        &--text{
+          color:$black--text;
+          font-weight: $font-regular;
+          font-size: 1.4rem;
+          line-height: 1.6rem;
+          @media (min-width: 1264px) and (min-height:671px){
+            font-size: 1.6rem;
+          }
+          @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
+        }
+        &--header{
+          color:$black--text;
+          margin-bottom: 8px;
+          font-size: 1.4rem;
+          line-height: 1.6rem;
+          @media (min-width: 1264px) and (min-height:671px){
+            font-size: 1.6rem;
+          }
+          @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
+        }
+      }
+
+    }
+
+    &--btn{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media(max-width: 412px){
+        position: relative;
+        justify-content: flex-start;
+        margin-top: 8px;
+        margin-bottom: 20px;
+      }
+      button{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.1);
+        &:after{
+          content: '';
+          opacity: 0;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.1);
+          transition: .2s ease all;
+        }
+        &:before{
+          position: absolute;
+          z-index:  9991;
+          pointer-events: none;
+          content: attr(data-hint);
+          display: block;
+          padding: 4px 8px;
+          opacity: 0;
+          max-width: 464px;
+          top: 100%;
+          left: 50%;
+          margin-top: 8px;
+          border-radius: 4px;
+          background-color: rgb(153, 153, 153);
+          transition: .2s ease opacity;
+          text-transform: none;
+          font:{
+            size: 1.3rem;
+            weight: $font-regular;
+          }
+          line-height: 1.6rem;
+          letter-spacing: 0.5px;
+          transform: translateX(-50%);
+          color: rgb(255, 255, 255);
+          white-space: nowrap;
+
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        &:hover{
+          &:after,&:before{
+            opacity: 1;
+          }
+        }
+        svg{
+          display: block;
+          width: 32px;
+          height: 32px;
+        }
+        &.add{
+          background-color: $green;
+          svg{
+            polygon,#Group-11{
+              fill:$white;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  &-status{
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    padding: 16px 20px 16px 16px;
+    @media(max-width: 412px){
+      width: auto;
+      margin: 0 -16px 20px;
+      padding: 16px;
+    }
+    &.liquidation{
+      background-color: $gold--bg;
+      color: $gold;
+
+      .text{
+        .icon{
+          background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3E228AA890-4BB7-4B13-B5C6-7B04F61B2E72%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='CARDS/DESKTOP/GUIDES-HINT' transform='translate(-384.000000, -291.000000)'%3E%3Cg id='icon/stopfactor/XL/alert' transform='translate(384.000000, 291.000000)'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Ccircle id='Oval' fill='%23E6A345' cx='20' cy='20' r='20'%3E%3C/circle%3E%3Cpath d='M17.6,10 L22.4,10 L21.5625,23.893918 L18.46875,23.893918 L17.6,10 Z M20.0325,31.6 C19.2741629,31.6 18.6458358,31.3483896 18.1475,30.8451613 C17.6491642,30.341933 17.4,29.721294 17.4,28.9832258 C17.4,28.2451576 17.6491642,27.63011 18.1475,27.1380645 C18.6458358,26.646019 19.2741629,26.4 20.0325,26.4 C20.7691703,26.4 21.3812476,26.646019 21.86875,27.1380645 C22.3562524,27.63011 22.6,28.2451576 22.6,28.9832258 C22.6,29.721294 22.3562524,30.341933 21.86875,30.8451613 C21.3812476,31.3483896 20.7691703,31.6 20.0325,31.6 Z' id='!' fill='%23FFFFFF' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+      }
+
+      .show-more-btn{
+        .icon{
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'/%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='%23FA9F37'/%3E%3Cpath stroke='%23FA9F37' stroke-linecap='square' stroke-width='1.8' d='M8 13.5l4-4 4 4'/%3E%3C/g%3E%3C/svg%3E");
+        }
+      }
+    }
+    &.bankruptcy{
+      background-color: $red-bg;
+      color: $red;
+      .text{
+        .icon{
+          background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3EAC5EEC6E-2150-4A16-BBE1-27952C7829B7%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/stopfactor/XL/stop'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Ccircle id='Oval' fill='%23F24C3D' cx='20' cy='20' r='20'%3E%3C/circle%3E%3Cg id='Group-9' transform='translate(15.000000, 15.000000)' stroke='%23FFFFFF' stroke-linecap='square' stroke-width='3.5'%3E%3Cpath d='M2.66009437e-13,10 L10,1.71418435e-13' id='Line-7'%3E%3C/path%3E%3Cpath d='M-3.96127575e-13,2.40030218e-12 L10,10' id='Line-7'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+      }
+
+      .show-more-btn {
+        .icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'/%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='%23f24c3d'/%3E%3Cpath stroke='%23f24c3d' stroke-linecap='square' stroke-width='1.8' d='M8 13.5l4-4 4 4'/%3E%3C/g%3E%3C/svg%3E");
+        }
+      }
+    }
+
+    &_header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      //margin-bottom: 8px;
+
+
+      .text{
+        display: flex;
+        align-items: center;
+        max-width: 508px;
+
+        font-size: 1.4rem;
+        font-weight: $font-bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.6rem;
+        letter-spacing: normal;
+        @media(max-width: 412px){
+          max-width: 332px;
+          margin-right: 8px;
+          h2{
+            max-width: 284px;
+          }
+        }
+        .icon{
+          display: inline-block;
+          margin-right: 16px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+
+      .show-more{
+        @media(max-width: 412px){
+          width: 24px;
+          height: 24px;
+          overflow: hidden;
+          position: relative;
+        }
+
+        &-btn{
+
+          border: none;
+          background-color: transparent;
+          color:inherit;
+
+          font-size: 1.4rem;
+          font-weight:$font-regular;
+          line-height: 1.6rem;
+          text-align: right;
+          transition: .5s ease all;
+          &.active{
+            color: transparent;
+
+            .icon{
+              transform: rotate(0);
+            }
+          }
+          @media(max-width: 412px){
+            font-size: 0;
+            width: 24px;
+            height: 24px;
+            margin-left: 0;
+            text-align: left;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+
+          .icon{
+            display: inline-block;
+            vertical-align: middle;
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+            background-position: center;
+            border-right: none;
+            -webkit-background-size: contain;
+            background-size: contain;
+            transition: .5s ease all;
+            transform: rotate(-180deg);
+            @media(max-width: 412px){
+              margin-left: 0;
+            }
+          }
+
+        }
+      }
+    }
+    &_content{
+      display: none;
+      max-width: 556px;
+      padding-left: 48px;
+      box-sizing: border-box;
+      margin-top: 8px;
+      font-size: 1.4rem;
+      font-weight: $font-regular;
+      line-height: 2rem;
+
+      .title{
+        margin-bottom: 8px;
+      }
+
+      .isk-list{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .isk-item{
+        display: block;
+        width: 104px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        padding: 4px 6px 4px 8px;
+        box-sizing: border-box;
+
+        font:{
+          weight: $font-regular;
+          size: 1.4rem;
+        }
+        line-height: 1.6rem;
+
+        border-radius: 4px;
+        background-color: $gold;
+        opacity: 1;
+        transition: .2s all ease;
+        color: $white;
+
+        .icon-name{
+          display: inline-block;
+          vertical-align: baseline;
+          margin-bottom: -2px;
+          width: 16px;
+          height: 16px;
+          margin-left: 2px;
+          background-repeat: no-repeat;
+          background-position: center;
+          -webkit-background-size: contain;
+          background-size: contain;
+          background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23fff'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        &:hover{
+          opacity: .7;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &-info{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    @media(max-width: 412px){
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-right: -24px;
+      [data-modal-affiliation]{
+        display: none;
+      }
+    }
+    &.full{
+      align-items: flex-start;
+      .main-card-info--col{
+        box-shadow: none;
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        justify-content: flex-start;
+      }
+      .main-card-info--row{
+        margin-bottom: 32px;
+        &.characteristic{
+          span{
+            display: inline-block;
+            width: auto;
+            margin-right: 8px;
+            &.good{
+              color: $green;
+              display: inline;
+            }
+            &.warning{
+              color: $red;
+              display: inline;
+              &-icon{
+                display: inline-block;
+                margin-left: 8px;
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                cursor: pointer;
+                position: relative;
+                svg{
+                  circle, path{
+                    transition: .2s;
+                  }
+                  &:hover{
+                    circle{
+                      fill:$red;
+                    }
+                    path{
+                      fill:$white;
+                    }
+
+                  }
+                }
+
+                @media (min-width: 1264px) and (min-height:671px){
+                  font-size: 1.6rem;
+                }
+                @media (min-width: 1344px){
+                  font-size: 1.6rem;
+                }
+                &:hover{
+                  .hard-hint{
+                    display: block;
+                  }
+                }
+                .hard-hint{
+                  display: none;
+                  position: absolute;
+                  bottom: 100%;
+                  width: 270px;
+                  height: auto;
+                  border-radius: 4px;
+                  background-color: rgb(255, 255, 255);
+                  padding: 20px;
+                  text-align: left;
+                  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2) ;
+                  left: 0;
+                  margin-bottom: 12px;
+                  margin-right: 0;
+                  transition: .6s ease;
+                  transition-duration: 1s;
+                  box-sizing: border-box;
+                  &:after{
+                    position: absolute;
+                    content: '';
+                    top: 100%;
+                    left: 2px;
+                    width: 6px;
+                    height: 16px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    border: 8px solid transparent;
+                    border-top-color: white;
+                  }
+                  &--text{
+                    color:$black--text;
+                    font-weight: $font-regular;
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                    @media (min-width: 1264px) and (min-height:671px){
+                      font-size: 1.6rem;
+                    }
+                    @media (min-width: 1344px){
+                      font-size: 1.6rem;
+                    }
+                  }
+                  &--header{
+                    color:$black--text;
+                    margin-bottom: 8px;
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                    @media (min-width: 1264px) and (min-height:671px){
+                      font-size: 1.6rem;
+                    }
+                    @media (min-width: 1344px){
+                      font-size: 1.6rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .block-price{
+            display: inline-block;
+            background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3E581F362E-5B1F-4367-9ECF-D329A532106B%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/S/refresh/black/thin'%3E%3Cg id='Group-2' transform='translate(0.000000, -1.000000)'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='1' width='16' height='16'%3E%3C/rect%3E%3Cg transform='translate(2.999165, 0.971865)' id='Path'%3E%3Cpath d='M9.3309619,5.52813547 C10.7116738,7.91959859 9.89229799,10.9775506 7.50083488,12.3582625 C5.10937176,13.7389744 2.05141973,12.9195986 0.670707857,10.5281355 C-0.710004017,8.13667236 0.109371759,5.07872033 2.50083488,3.69800845 C3.68514425,3.01424712 5.03290776,2.87004975 6.25947496,3.18914451 L6.94163399,3.43383054' stroke='%23000000' stroke-width='1.2'%3E%3C/path%3E%3Cpolygon fill='%23000000' points='5 0.528135474 9 3.02813547 5 5.52813547'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-position: center left;
+            background-repeat: no-repeat;
+            color: $black--text;
+            padding-left: 20px;
+            &.loading{
+              padding-left: 0;
+              background-image:none;
+              vertical-align: text-bottom;
+
+              .loader{
+                width: 24px;
+                height: 16px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 auto ;
+                @for $i from 1 through 3{
+                  &-item--#{$i}{
+                    display: block;
+                    margin-right: auto;
+                    width: 6px;
+                    height: 6px;
+                    background-color: rgba(0,0,0,.4);
+                    border-radius: 50%;
+                    animation: opacity 1.5s infinite ease;
+                    animation-delay: .3s * $i;
+                    transition: .2s all ease;
+                  }
+                }
+              }
+            }
+            span{
+              border-bottom: 1px solid rgba(0,0,0,.2);
+              color: $black--text;
+              &.loader{
+                border-bottom: 0;
+
+              }
+            }
+            &:hover{
+              span{
+                color: lighten($black--text, 10%);
+              }
+            }
+          }
+        }
+        &.isk{
+          display: flex;
+          flex-wrap: wrap;
+
+
+          .title{
+            width: 100%;
+          }
+
+          .isk-content{
+            display: flex;
+            flex-wrap: wrap;
+            width: 200px;
+
+            .link{
+              margin-right: 36px;
+              margin-bottom: 10px;
+              display: inline-block;
+              &:nth-child(2n){
+                margin-right: 0;
+              }
+            }
+          }
+        }
+        p{
+          margin-bottom: 12px;
+          &:not(.title){
+            font-size: 1.4rem;
+            line-height: 2rem;
+            @media (min-width: 1264px) and (min-height:671px){
+              font-size: 1.6rem;
+            }
+            @media (min-width: 1344px){
+              font-size: 1.6rem;
+            }
+          }
+          span{
+            display: inline-block;
+            width: 72px;
+            &.normal{
+              width: auto;
+              margin-right: 4px;
+            }
+            &.warning{
+              height: auto;
+              width: auto;
+              vertical-align: middle;
+              color: $red;
+              .icon-red-question{
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                margin-left: 4px;
+                svg {
+                  path, circle{
+                    transition: .2s;
+                  }
+                }
+                &:hover{
+                  path{
+                    fill: $white;
+                  }
+                  circle{
+                    fill: $red
+                  }
+
+                  .hard-hint{
+                    opacity: 1;
+                    display: block;
+
+                  }
+                }
+                .hard-hint{
+                  display: none;
+                  position: absolute;
+                  opacity: 0;
+                  bottom: 100%;
+                  width: 260px;
+                  height: auto;
+                  border-radius: 4px;
+                  background-color: rgb(255, 255, 255);
+                  padding: 20px;
+                  text-align: left;
+                  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2) ;
+                  right:-12px;
+                  margin-bottom: 12px;
+                  margin-right: 0;
+                  transition: .6s ease;
+                  transition-duration: 1s;
+                  box-sizing: border-box;
+                  &:after{
+                    position: absolute;
+                    content: '';
+                    bottom: -12px;
+                    right: 12px;
+                    width: 6px;
+                    height: 16px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    border: 8px solid transparent;
+                    border-top-color: white;
+                    transition: .6s ease;
+                  }
+                  &--text{
+                    width: 100%;
+                    color:$black--text;
+                    font-weight: $font-regular;
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                    @media (min-width: 1264px) and (min-height:671px){
+                      font-size: 1.6rem;
+                    }
+                    @media (min-width: 1344px){
+                      font-size: 1.6rem;
+                    }
+                  }
+                  &--header{
+                    color:$black--text;
+                    margin-bottom: 8px;
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                    @media (min-width: 1264px) and (min-height:671px){
+                      font-size: 1.6rem;
+                    }
+                    @media (min-width: 1344px){
+                      font-size: 1.6rem;
+                    }
+                  }
+                }
+
+              }
+            }
+          }
+        }
+        .item-address{
+          margin-bottom: 8px;
+          p{
+            margin-bottom: 0;
+          }
+          &--mas{
+            display:block;
+            margin-bottom: 8px;
+            span{
+              color: $red;
+              display: inline-block;
+              border-bottom: 1px solid $red;
+            }
+
+          }
+        }
+      }
+
+    }
+    &--col{
+      width: 49%;
+      max-width: 352px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 16px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+      background-color: rgb(255, 255, 255);
+      transition: .2s all ease;
+      @media(max-width: 412px){
+        width: 100%;
+        max-width: none;
+        padding: 20px 0;
+        box-shadow: none;
+        border-bottom: 1px solid $light-gray;
+        border-radius: 0;
+      }
+      &[data-modal-affiliation],
+      &[data-noregistr]{
+        padding: 40px 32px 32px 92px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='80px' height='80px' viewBox='0 0 80 80' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3E09BC0AE9-83AB-4E55-9A90-1D766DBDEB8D%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='cards/big/MAIN-NORMAL' transform='translate(-432.000000, -224.000000)'%3E%3Cg id='scheme' transform='translate(400.000000, 192.000000)'%3E%3Cg id='graphic/scheme/var2' transform='translate(32.000000, 32.000000)'%3E%3Cg id='Group'%3E%3Cg id='Oval-2'%3E%3Crect id='Rectangle' x='0' y='0' width='80' height='80'%3E%3C/rect%3E%3Cg id='Group-Copy'%3E%3Cg id='Group-2' transform='translate(8.000000, 8.000000)' stroke='%23000000' stroke-opacity='0.2'%3E%3Cpath d='M0,19 L31.9969,32' id='Stroke-2'%3E%3C/path%3E%3Cpath d='M19,1.09139364e-11 L31.9969,32' id='Stroke-2'%3E%3C/path%3E%3Cpath d='M32,32 L44.9969,64' id='Stroke-2'%3E%3C/path%3E%3Cpath d='M32,32 L63.9969,45' id='Stroke-2'%3E%3C/path%3E%3Cpath d='M32,32 L63.9969,19' id='Stroke-2'%3E%3C/path%3E%3Cpath d='M32,32 L44.9969,3.63797881e-12' id='Stroke-2'%3E%3C/path%3E%3Cpath d='M19,64 L31.9969,32' id='Stroke-2'%3E%3C/path%3E%3Cpath d='M0,45 L31.9969,32' id='Stroke-2'%3E%3C/path%3E%3C/g%3E%3Ccircle id='Oval' stroke='%233AA65E' fill='%23FFFFFF' cx='27' cy='8' r='7.5'%3E%3C/circle%3E%3Ccircle id='Oval' stroke='%233AA65E' fill='%23FFFFFF' cx='27' cy='72' r='7.5'%3E%3C/circle%3E%3Ccircle id='Oval' stroke='%233AA65E' fill='%23FFFFFF' cx='72' cy='53' r='7.5'%3E%3C/circle%3E%3Ccircle id='Oval' stroke='%233AA65E' fill='%23FFFFFF' cx='72' cy='27' r='7.5'%3E%3C/circle%3E%3Ccircle id='Oval' stroke='%233AA65E' fill='%23FFFFFF' cx='53' cy='8' r='7.5'%3E%3C/circle%3E%3Ccircle id='Oval' stroke='%233AA65E' fill='%23FFFFFF' cx='53' cy='72' r='7.5'%3E%3C/circle%3E%3Ccircle id='Oval' stroke='%233AA65E' fill='%23FFFFFF' cx='8' cy='53' r='7.5'%3E%3C/circle%3E%3Ccircle id='Oval' stroke='%233AA65E' fill='%23FFFFFF' cx='40' cy='40' r='11.5'%3E%3C/circle%3E%3Ccircle id='Oval' stroke='%233AA65E' fill='%23FFFFFF' cx='8' cy='27' r='7.5'%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: -7px 32px;
+        min-height: 144px;
+        @media (min-width: 1264px) and (min-height:671px){
+          padding: 40px 32px 32px 132px;
+          background-position: 32px 32px;
+        }
+        @media (min-width: 1344px){
+          padding: 40px 32px 32px 132px;
+          background-position: 32px 32px;
+        }
+        &:hover{
+          text-decoration: none;
+          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+
+          .green{
+            color: $green-hover;
+          }
+        }
+
+        .green{
+          color: $green;
+        }
+      }
+      &[data-modal-card]{
+        @media(max-width: 412px){
+          position: relative;
+          &:after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            width: 24px;
+            height: 24px;
+            display: block;
+            background-image: url(../images/icon/mobil-arrow.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size: contain;
+            background-size: contain;
+            transform: rotate(90deg);
+          }
+        }
+        &:hover{
+          text-decoration: none;
+          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+          @media(max-width: 412px){
+            box-shadow: none;
+          }
+        }
+
+      }
+
+      p{
+        font:{
+          size: 1.4rem;
+          weight:$font-regular;
+        }
+        line-height: 1.6rem;
+        letter-spacing: normal;
+        color: $black--text;
+        @media (min-width: 1264px) and (min-height:671px){
+          font-size: 1.6rem;
+        }
+        @media (min-width: 1344px){
+          font-size: 1.6rem;
+        }
+        span{
+          color: $mid-gray--text;
+        }
+        &.title{
+          margin-bottom: 8px;
+          color: $mid-gray--text;
+        }
+      }
+
+      h3{
+        margin-bottom: 12px;
+
+        font:{
+          size: 1.4rem;
+          weight: $font-bold;
+        }
+        line-height: 2rem;
+
+        color:$black--text;
+        @media (min-width: 1264px) and (min-height:671px){
+          font-size: 1.6rem;
+        }
+        @media (min-width: 1344px){
+          font-size: 1.6rem;
+        }
+        &.name{
+          margin-bottom: 4px;
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+          font-size: 1.6rem;
+          line-height:2rem;
+        }
+      }
+
+      a{
+        font:{
+          size: 1.4rem;
+          weight: $font-regular;
+        }
+        line-height: 1.6rem;
+        letter-spacing: normal;
+        color: $mid-gray--text;
+        @media (min-width: 1264px) and (min-height:671px){
+          font-size: 1.6rem;
+        }
+        @media (min-width: 1344px){
+          font-size: 1.6rem;
+        }
+        span{
+          color: $green;
+          border-bottom: 1px solid $green;
+        }
+        &.link{
+          position: relative;
+          font:{
+            size: 1.4rem;
+            weight:$font-regular;
+          }
+          line-height: 2rem;
+          letter-spacing: normal;
+          color: $black--text;
+          @media (min-width: 1264px) and (min-height:671px){
+            font-size: 1.6rem;
+          }
+          @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
+          &:after{
+            position: absolute;
+            content: '';
+            left: 100%;
+            top: 1px;
+            margin-left: 4px;
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='0.400000006' transform='translate(4.000000, 5.000000)' stroke='%23000000'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+          }
+          &:hover{
+
+          }
+        }
+        &:hover{
+          text-decoration: none;
+          span{
+            color: $green-hover;
+            border-bottom-color:$green-hover ;
+          }
+        }
+      }
+    }
+  }
+
+  &-interconnections{
+    width: 100%;
+    margin-bottom: 107px;
+    border-top:1px solid $body-bg-color;
+    height: 512px;
+
+    .expand{
+      display: block;
+      position: relative;
+      padding: 8px  22px 8px 46px;
+
+      font:{
+        size: 1.4rem;
+        weight: $font-regular;
+      }
+      line-height: 1.6rem;
+      letter-spacing: normal;
+      color: rgb(255, 255, 255);
+
+      border-radius: 16px;
+      border:none;
+      background-color: rgba(0, 0, 0, 0.4);
+      .icon-expand{
+        display: inline-block;
+        position: absolute;
+        left: 22px;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E55918003-13E7-4613-BE6E-09305527663C%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/maximize/S/dark/'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' transform='translate(2.000000, 2.000000)' stroke='%23FFFFFF' stroke-width='2'%3E%3Cpolyline id='Path' points='8 0 12 0 12 4'%3E%3C/polyline%3E%3Cpolyline id='Path' transform='translate(2.000000, 2.000000) scale(-1, 1) translate(-2.000000, -2.000000) ' points='0 0 4 0 4 4'%3E%3C/polyline%3E%3Cpolyline id='Path' points='0 8 9.9475983e-14 12 4 12'%3E%3C/polyline%3E%3Cpolyline id='Path' transform='translate(10.000000, 10.000000) scale(-1, 1) translate(-10.000000, -10.000000) ' points='8 8 8 12 12 12'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+
+    .change{
+      position: relative;
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: $white;
+      text-indent: -999px;
+      overflow: hidden;
+      font-weight: $font-bold;
+      &:before{
+        position: absolute;
+        content: '';
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+      }
+      &.plus{
+        &:before{
+          background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E7A86CB08-DB43-4AEA-8F5E-23EF9F4EAB5F%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/zoom/S/in'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23FFFFFF' x='2' y='7' width='12' height='2'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23FFFFFF' x='7' y='2' width='2' height='12'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+      }
+      &.minus{
+        &:before{
+          background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E621C6C53-6C73-4C96-BA7C-EB72B3625C2B%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/zoom/S/out'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23FFFFFF' x='2' y='7' width='12' height='2'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+      }
+
+    }
+  }
+}

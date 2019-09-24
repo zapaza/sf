@@ -14,6 +14,9 @@
     width: 100%;
     margin: 0 auto;
     min-width:944px;
+    @media (max-width: 412px){
+      min-width: 320px;
+    }
 
     .page-content{
       width: 100%;
@@ -38,6 +41,9 @@
   @media (min-width: 1344px){
     max-width: 1264px;
   }
+  @media(max-width: 412px){
+    max-width: 412px;
+  }
 
   &-search{
     max-width: 1264px;
@@ -49,399 +55,27 @@
   }
 }
 
-.btn{
-  display: block;
-  padding: 16px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border:none;
-  font:{
-    family: $font-family;
-    weight: $font-bold;
-    size: 1.4rem;
-  }
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  line-height: 1.6rem;
-  text-decoration: none;
-  text-align: center;
-  transition: background-color .2s;
-  &-green{
-    font:{
-      family: $font-family;
-      weight: $font-bold;
-      size: 1.4rem;
-    }
-    background-color: $green;
-    color: $white;
-    &:hover{
-      background-color:$green-hover;
-      color: $white;
-      text-decoration: none;
-    }
-    &:active{
-      color: $white;
-      background: $green-hover;
-      transform: scale(.96);
-    }
-  }
-  &-green2{
-    font:{
-      family: $font-family;
-      weight: $font-bold;
-      size: 1.4rem;
-    }
-    background-color: $green;
-    color: $white;
-    &:hover{
-      background-color:$green-hover;
-      color: $white;
-      text-decoration: none;
-    }
-    &:active{
-      color: $white;
-      background: $green-hover;
-      transform: scale(.96);
-    }
-  }
-
-  &-default{
-    border: solid 1px $white--text;
-    color: $black--text;
-    background: $white;
-    &:hover{
-      background: rgba(0,0,0,0.05);
-      color: $black--text;
-      text-decoration: none;
-    }
-    &:active{
-      transform: scale(.96);
-      color: $black--text;
-    }
-  }
-
-  &-disabled {
-    pointer-events: none;
-    color: rgba(0, 0, 0, 0.25);
-    background: $white;
-    border-color: $white--text;
-  }
-
-  .loader{
-    width: 24px;
-    height: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto ;
-    @for $i from 1 through 3{
-      &-item--#{$i}{
-        display: block;
-        width: 6px;
-        height: 6px;
-        background-color: #fff;
-        border-radius: 50%;
-        animation: opacity 1.5s infinite ease;
-        animation-delay: .3s * $i;
-        transition: .2s all ease;
-      }
-    }
-  }
-
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-.zoom-in {
-
-  /* start state */
-  .modal  {
-    opacity: 0;
-    transition: all .5s ease-in-out;
-    transform: scale(0.5);
-  }
-
-  &.mfp-bg {
-    opacity: 0;
-    transition: all .2s ease-out;
-  }
-
-  /* animate in */
-  &.mfp-ready {
-    .modal  {
-      opacity: 1;
-      transform: scale(1);
-    }
-    &.mfp-bg {
-      opacity: 0.8;
-    }
-  }
-
-  /* animate out */
-  &.mfp-removing {
-
-    .modal {
-      transform: scale(0.5);
-      opacity: 0;
-    }
-    &.mfp-bg {
-      opacity: 0;
-    }
-
-  }
-
-}
-
-.lds-ring{
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -12px;
-  margin-left: -12px;
-  width: 24px;
-  height: 24px;
-
-  div{
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border: solid 3px ;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(1, 1, 1, 1) infinite;
-    border-color: #999 #999 #999 transparent;
-  }
-}
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-//анимация стопфакторов
-@keyframes cbhCircle {
-  0% {
-    transform:scale(1);
-    opacity:0
-  }
-  30% {
-    transform:scale(1.5);
-    opacity:0;
-  }
-  31% {
-    transform:scale(1.5);
-    opacity:.2;
-  }
-  100% {
-    transform:scale(1.8);
-    opacity:0;
-  }
-}
-@keyframes cbhCircle-inner {
-  0% {
-    transform:scale(1);
-    opacity:.01
-  }
-  30% {
-    transform:scale(1.5);
-    opacity:.2
-  }
-  100% {
-    transform:scale(1);
-    opacity:0;
-  }
-}
-@keyframes lazyload{
-  0%{
-    opacity: 1;
-  }
-  50%{
-    opacity: .5;
-  }
-}
-
-
-//выбор года в подалке
-.select-years{
-  position: relative;
-  ul{
-    padding: 24px 28px 24px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 48px;
-    box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: visible;
-    li{
-      margin-left: 24px;
-      &:first-child{
-        margin-left: 0;
-      }
-      &.no-info{
-        a{
-          pointer-events: none;
-          border-bottom: 0;
-          color: rgba(0, 0, 0, 0.2);
-        }
-      }
-      &.active{
-        margin-left:18px;
-        margin-right: -6px;
-        a{
-          padding: 4px 6px;
-          background-color: $green;
-          border-radius: 4px;
-          color: $white;
-          text-decoration: none;
-          border-bottom: 0;
-        }
-      }
-
-      a{
-        display: inline-block;
-        font:{
-          size: 1.4rem;
-          weight: $font-regular;
-        }
-        line-height: 1.6rem;
-        color: $mid-gray--text;
-        border-bottom: 1px solid $mid-gray--text ;
-        &:hover{
-          text-decoration: none;
-        }
-
-      }
-    }
-  }
-  .show-all{
-    position: absolute;
-    right: -24px;
-    top: 24px;
-    &--list{
-      display: block;
-      width: 24px;
-      height: 24px;
-      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3EC74020F0-C11F-4DD4-B105-531CF5FD105B%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/dots/M/normal'%3E%3Cg id='Group-14'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Ccircle id='Oval' fill='%23000000' cx='6' cy='12' r='1.5'%3E%3C/circle%3E%3Ccircle id='Oval' fill='%23000000' cx='12' cy='12' r='1.5'%3E%3C/circle%3E%3Ccircle id='Oval' fill='%23000000' cx='18' cy='12' r='1.5'%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: center;
-      text-indent: -999px;
-      opacity: .4;
-      overflow: hidden;
-    }
-
-    .show-all--dropdown{
-      position: absolute;
-      display: none;
-      right: 0;
-      top: 100%;
-      width: 80px;
-      height: 280px;
-      overflow: hidden;
-      border-radius: 4px;
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
-      background-color: rgb(255, 255, 255);
-      padding: 0;
-      box-sizing: border-box;
-      ul{
-        overflow-y: auto;
-        overflow-x: hidden;
-        height: 100%;
-        min-width:104px;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 16px 73px 16px 0;
-        box-sizing: content-box;
-        li{
-          margin:0px 0px 16px 0;
-          width: 80px;
-          box-sizing: border-box;
-          padding: 0 24px;
-          &:hover{
-            background-color: rgba(0, 0, 0, 0.05)
-          }
-
-        }
-      }
-
-    }
-  }
-}
-.show-all-years{
-  position: fixed;
-  display: block;
-  top: 20px;
-  left: 20px;
-  width: 32px;
-  height: 32px;
-  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3E022FD8E6-17C0-4B23-8D11-645A512E2C1F%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/listing/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23000000' x='4' y='7' width='2' height='2'%3E%3C/rect%3E%3Crect id='Rectangle-Copy-4' fill='%23000000' x='4' y='15' width='2' height='2'%3E%3C/rect%3E%3Crect id='Rectangle-Copy-5' fill='%23000000' x='4' y='23' width='2' height='2'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23000000' x='10' y='7' width='18' height='2'%3E%3C/rect%3E%3Crect id='Rectangle-Copy' fill='%23000000' x='10' y='15' width='18' height='2'%3E%3C/rect%3E%3Crect id='Rectangle-Copy-2' fill='%23000000' x='10' y='23' width='18' height='2'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  border: none;
-  opacity: .4;
-  cursor: pointer;
-}
-
-
-.disabled{
-    pointer-events: none !important;
-    cursor: default !important;
-    color: rgba(0,0,0,0.2) !important;
-    border-color: rgba(0, 0, 0, 0.08)!important;
-}
-
-
-/* You can alter this CSS in order to give Smooth Div Scroll your own look'n'feel */
-
-/* Invisible left hotspot */
-div.scrollingHotSpotLeft
-{
-  /* The hotspots have a minimum width of 100 pixels and if there is room the will grow
-  and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
+div.scrollingHotSpotLeft {
   min-width: 75px;
   width: 10%;
   height: 100%;
-  /* There is a big background image and it's used to solve some problems I experienced
-  in Internet Explorer 6. */
   background-repeat: repeat;
   background-position: center center;
   position: absolute;
   z-index: 200;
   left: 0;
-  /*  The first url is for Firefox and other browsers, the second is for Internet Explorer */
-
 }
-
-/* Visible left hotspot */
-div.scrollingHotSpotLeftVisible
-{
+div.scrollingHotSpotLeftVisible {
   background-image: url(../images/arrow_left.gif);
   background-color: #fff;
   background-repeat: no-repeat;
-  opacity: 0.35; /* Standard CSS3 opacity setting */
-  -moz-opacity: 0.35; /* Opacity for really old versions of Mozilla Firefox (0.9 or older) */
-  filter: alpha(opacity = 35); /* Opacity for Internet Explorer. */
-  zoom: 1; /* Trigger "hasLayout" in Internet Explorer 6 or older versions */
+  opacity: 0.35;
+  -moz-opacity: 0.35;
+  filter: alpha(opacity = 35);
+  zoom: 1;
 }
 
-/* Invisible right hotspot */
-div.scrollingHotSpotRight
-{
+div.scrollingHotSpotRight {
   min-width: 75px;
   width: 10%;
   height: 100%;
@@ -452,9 +86,7 @@ div.scrollingHotSpotRight
   right: 0;
 }
 
-/* Visible right hotspot */
-div.scrollingHotSpotRightVisible
-{
+div.scrollingHotSpotRightVisible {
   background-color: #fff;
   background-repeat: no-repeat;
   opacity: 0.35;
@@ -462,17 +94,14 @@ div.scrollingHotSpotRightVisible
   -moz-opacity: 0.35;
   zoom: 1;
 }
-
-div.scrollWrapper
-{
+div.scrollWrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
-div.scrollableArea
-{
+div.scrollableArea {
   position: relative;
   width: auto;
   height: 100%;

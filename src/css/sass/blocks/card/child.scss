@@ -1,0 +1,223 @@
+.child{
+  &-tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    &--name{
+      padding: 8px 16px;
+      font:{
+        size: 1.4rem;
+        weight: $font-regular;
+      }
+      line-height: 1.6rem;
+      letter-spacing: normal;
+      color: $mid-gray--text;
+      cursor: pointer;
+      transition: .2s ease all;
+      border-left: solid 1px rgba(0, 0, 0, 0.15);
+      border-top:  solid 1px rgba(0, 0, 0, 0.15);
+      border-bottom:  solid 1px rgba(0, 0, 0, 0.15);
+      &.active{
+        color: $black--text;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+      &:hover{
+        color: $black--text;
+      }
+      &:first-child{
+        border-top-left-radius:4px;
+        border-bottom-left-radius:4px ;
+        border-right: solid 1px rgba(0, 0, 0, 0.15);
+      }
+      &:last-child{
+        border-top-right-radius:4px;
+        border-bottom-right-radius:4px ;
+        border-left: 0;
+        border-right:  solid 1px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+  &-content{
+    &-tab {
+      display: none;
+
+      &.no-tab{
+        display: block !important;
+      }
+
+      &.active {
+        display: block;
+      }
+      .table{
+        &-row{
+          justify-content: space-between;
+          padding: 6px 16px;
+          margin: {
+            left: -16px;
+            right: -16px;
+            bottom: 16px;
+          };
+          cursor: pointer;
+          &:hover{
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+          &.eliminated{
+            span{
+              color: $mid-gray--text !important;
+            }
+
+            &.dangerously{
+              .table-col{
+                .name{
+                  color: rgba(242, 76, 61, .5)!important;
+                  //opacity: .5;
+
+                  .icon-name{
+                    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23F23D3D'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                  }
+                }
+              }
+            }
+            &.satisfactorily{
+              .table-col{
+                .name{
+                  color: $gold;
+
+                  .icon-name{
+                    opacity: .5;
+                    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%FA9F37'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                  }
+                }
+              }
+            }
+          }
+          &.dangerously{
+            .table-col{
+              .name{
+                color: $red;
+
+                .icon-name{
+                  opacity: .5;
+                  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23F23D3D'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                }
+              }
+            }
+          }
+          &.satisfactorily{
+            .table-col{
+              .name{
+                color: $gold;
+
+                .icon-name{
+                  opacity: .5;
+                  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23FA9F37'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                }
+              }
+            }
+          }
+        }
+        &-col{
+          width: 64px;
+          position: relative;
+          text-align: right;
+          margin-right: 0;
+          justify-content: flex-start;
+          &:first-child{
+            width: 66%;
+            max-width: 472px;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: auto;
+            span{
+              text-align: left;
+              display: inline-block;
+              width: auto;
+              &.name{
+                width: 100%;
+                margin-bottom: 8px;
+                font:{
+                  size: 1.4rem;
+                  weight: $font-bold;
+                }
+                line-height: 2rem;
+                letter-spacing: 0.5px;
+                color:$black--text;
+                @media (min-width: 1264px) and (min-height:671px){
+                  font-size: 1.6rem;
+                }
+                @media (min-width: 1344px){
+                  font-size: 1.6rem;
+                }
+                .icon-name{
+                  margin-left: 4px;
+                  vertical-align: baseline;
+                  width: 16px;
+                  height: 16px;
+                  background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='0.400000006' transform='translate(4.000000, 5.000000)' stroke='%23000000'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                }
+                &-info{
+                  margin-right: 16px;
+                  font:{
+                    size: 1.4rem;
+                    weight: $font-regular;
+                  }
+                  line-height: 2rem;
+                  letter-spacing: normal;
+                  color: $mid-gray--text;
+                  @media (min-width: 1264px) and (min-height:671px){
+                    font-size: 1.6rem;
+                  }
+                  @media (min-width: 1344px){
+                    font-size: 1.6rem;
+                  }
+                  span{
+                    margin-left: 4px;
+                    color: $black--text;
+                  }
+                }
+              }
+            }
+          }
+          &:last-child{
+            width: 20%;
+            text-align: right;
+            margin-left: 24px;
+          }
+          span{
+            display: block;
+            width: 100%;
+            text-align: right;
+          }
+
+        }
+        &-body{
+          .table-col{
+            font:{
+              size: 1.4rem;
+              weight:$font-regular;
+            }
+            line-height: 2rem;
+            letter-spacing: normal;
+            color: $black--text;
+            @media (min-width: 1264px) and (min-height:671px){
+              font-size: 1.6rem;
+            }
+            @media (min-width: 1344px){
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+
+
+}

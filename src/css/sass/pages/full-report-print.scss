@@ -6,7 +6,7 @@
     display: block;
     margin:0 auto;
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 0;
 
     *{
       color: #191919;
@@ -99,7 +99,10 @@
     width: 100%;
     margin-bottom: 96px;
     box-sizing: border-box;
-    page-break-after: auto;
+    //page-break-after: auto;
+    &:last-child{
+      margin-bottom: 0;
+    }
     &.owner{
       .company-info{
         &:last-of-type{
@@ -903,7 +906,7 @@
       }
     }
     &_row{
-      page-break-after: auto;
+      //page-break-after: auto;
       border-bottom: 1px solid #999999;
       &:last-of-type{
         border-bottom: 0;
@@ -918,6 +921,7 @@
           p{
             margin-bottom: 0;
             span{
+              width: 145px;
               display: inline-block;
               margin-right: 32px;
               margin-top: 8px;
@@ -1106,8 +1110,9 @@
             display: table;
             clear: both;
           }
-          &:last-of-type{
-            padding-bottom: 8px;
+          &:last-child{
+            padding-bottom: 0;
+            margin-bottom: 8px;
           }
 
           &-name{

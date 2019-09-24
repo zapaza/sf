@@ -1,1 +1,21 @@
-<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h32v32H0z"/><path fill="#000" d="M4 7h2v2H4zm0 8h2v2H4zm0 8h2v2H4zm6-16h18v2H10zm0 8h18v2H10zm0 8h18v2H10z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
+    <title>022FD8E6-17C0-4B23-8D11-645A512E2C1F</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/listing/L/normal">
+            <g id="Group">
+                <g id="Group-2">
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                    <rect id="Rectangle" fill="#000000" x="4" y="7" width="2" height="2"></rect>
+                    <rect id="Rectangle-Copy-4" fill="#000000" x="4" y="15" width="2" height="2"></rect>
+                    <rect id="Rectangle-Copy-5" fill="#000000" x="4" y="23" width="2" height="2"></rect>
+                    <rect id="Rectangle" fill="#000000" x="10" y="7" width="18" height="2"></rect>
+                    <rect id="Rectangle-Copy" fill="#000000" x="10" y="15" width="18" height="2"></rect>
+                    <rect id="Rectangle-Copy-2" fill="#000000" x="10" y="23" width="18" height="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

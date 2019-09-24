@@ -1,0 +1,94 @@
+.аrbitrage{
+  .table{
+
+    &-body-inner{
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 23px 0 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      &:first-child{
+        padding-top: 0;
+        border-top: 0;
+      }
+      & > span{
+        @media (max-width: 1440px){
+          font-size: 1.4rem;
+        }
+        width: auto;
+        display: block;
+        text-align: left;
+        font:{
+          size: 1.4rem;
+          weight: $font-bold;
+        }
+        line-height: 2rem;
+        letter-spacing: normal;
+        color: $black--text;
+        @media (min-width: 1264px) and (min-height:671px){
+          font-size: 1.6rem;
+        }
+        @media (min-width: 1344px){
+          font-size: 1.6rem;
+        }
+      }
+
+      .table-row{
+        width: 512px;
+        flex-direction: column;
+        align-items: normal;
+        &-inner{
+          //width: 100%;
+          display: flex;
+          align-items: flex-start;
+          cursor: pointer;
+          padding: 6px 16px;
+          margin-right: -16px;
+          margin-left: -16px;
+          &:hover{
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.05);
+          }
+          .table-col{
+            width:80px;
+            margin-right: 112px;
+            span{
+              width: 100%;
+              display: block;
+              font: {
+                size: 1.4rem;
+                weight: $font-regular;
+              }
+              line-height: 2rem;
+              text-align: right;
+              letter-spacing: normal;
+              color:$black--text;
+              @media (min-width: 1264px) and (min-height:671px){
+                font-size: 1.6rem;
+              }
+              @media (min-width: 1344px){
+                font-size: 1.6rem;
+              }
+            }
+            &:first-child{
+              width: 104px;
+              margin-right: 72px;
+              flex-shrink: 0;
+              span{
+                display: inline-block;
+                width: auto;
+                text-align: left;
+                border-bottom: 1px solid  rgba(0, 0, 0,.2);
+              }
+            }
+            &:last-child{
+              margin-right: 0;
+              width: 144px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

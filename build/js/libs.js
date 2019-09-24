@@ -167,7 +167,11 @@ $(document).ready(function () {
 
 
     Tabs();
-    Scrolling();
+
+    if($(window).innerWidth > 412){
+        Scrolling();
+    }
+
 //фокус поиска
     $body.on(event, '#query', function () {
         $(this).focus().closest('form').find('.history').show();
@@ -254,9 +258,10 @@ $(document).ready(function () {
     $('a[data-modal-card]').magnificPopup({
         type: 'inline',
         midClick: true,
-        fixedBgPos: true,
+        fixedBgPos: false,
+        fixedContentPos:"auto",
         preloader: false,
-        overflowY: 'auto',
+        overflowY: 'scroll',
         removalDelay: 300,
         closeBtnInside: false,
         mainClass: 'zoom-in card-modal'

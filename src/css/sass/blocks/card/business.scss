@@ -1,0 +1,98 @@
+.business{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 -16px 0;
+  .table-header{
+    .table-row{
+      padding: 0 16px;
+    }
+    .table-col {
+      width: 50%;
+      text-align: left;
+
+      &:not(:first-child) {
+        text-align: right;
+        width: 72px;
+        margin: {
+          right: 0;
+          left: auto;
+        };
+        span{
+          text-align: right;
+        }
+      }
+      span{
+        width: 100%;
+        text-align: left;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        @media (min-width: 1264px) and (min-height:671px){
+          font-size: 1.4rem;
+        }
+        @media (min-width: 1344px){
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  .table-body{
+    margin-bottom: 18px;
+    .table-row{
+      padding: 6px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-sizing: border-box;
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+    .table-col{
+      width: 50%;
+      text-align: left;
+      span{
+        @media (min-width: 1264px) and (min-height:671px){
+          font-size: 1.6rem;
+        }
+        @media (min-width: 1344px){
+          font-size: 1.6rem;
+        }
+      }
+      &:not(:first-child){
+        text-align: right;
+        width: 72px;
+        margin: {
+          right: 0;
+          left: auto;
+        };
+        span{
+          display: block;
+          width: 100%;
+          font:{
+            size: 1.4rem;
+            weight: $font-regular;
+
+          }
+          line-height: 2rem;
+          letter-spacing: normal;
+          color: $black--text;
+          @media (min-width: 1264px) and (min-height:671px){
+            font-size: 1.6rem;
+          }
+          @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
+          &.normal{
+            color: $mid-gray--text;
+          }
+          &.perfectly{
+            color: $green;
+          }
+          &.dangerously{
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}

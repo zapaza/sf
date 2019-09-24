@@ -84,11 +84,20 @@
   }
 
   &.card-modal {
+    .mfp-container{
+      @media (max-width: 412px){
+        padding: 0;
+      }
+    }
 
-    .mfp-content{
+    .mfp-content {
       padding: 72px 0;
+      @media (max-width: 412px) {
+        padding: 0;
+      }
     }
     .mfp-close {
+      z-index: 99;
       position: fixed;
       opacity: 1;
       top: 20px;
@@ -100,6 +109,9 @@
       background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E5B56EE7F-3A1E-4ED2-BAB5-B5310287347B%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Cpath d='M3,29 L29,3' id='Path-2' stroke='%23ffffff' stroke-width='3'%3E%3C/path%3E%3Cpath d='M3,29 L29,3' id='Path-2-Copy' stroke='%23ffffff' stroke-width='3' transform='translate(16.000000, 16.000000) scale(-1, 1) translate(-16.000000, -16.000000) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       &:hover {
         opacity: .8;
+      }
+      @media(max-width:412px){
+      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E5B56EE7F-3A1E-4ED2-BAB5-B5310287347B%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Cpath d='M3,29 L29,3' id='Path-2' stroke='%2300000066' stroke-width='3'%3E%3C/path%3E%3Cpath d='M3,29 L29,3' id='Path-2-Copy' stroke='%2300000066' stroke-width='3' transform='translate(16.000000, 16.000000) scale(-1, 1) translate(-16.000000, -16.000000) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       }
     }
   }
@@ -785,7 +797,6 @@
           size: 2.8rem;
           weight: $font-bold;
         }
-
         line-height: 4rem;
         letter-spacing: normal;
         text-align: center;
@@ -2238,7 +2249,7 @@
   }
 
 
-&.modal-inside{
+  &.modal-inside{
   width: 100%;
   height: auto;
   padding: 120px 0 120px;
@@ -2290,16 +2301,17 @@
   }
 }
 
-
-
-
 // модалки главной карточки
-&-main-card {
+  &-main-card {
   height: auto;
   border-radius: 4px;
   background-color: rgb(255, 255, 255);
   margin: auto;
   padding: 32px 40px 48px;
+  @media(max-width: 412px){
+    border-radius: 0;
+    padding: 20px 24px;
+  }
 
   .modal-header {
     width: 100%;
@@ -2312,6 +2324,7 @@
     line-height: 3.2rem;
     letter-spacing: normal;
     color: $black--text;
+
 
     &--count {
       position: absolute;
@@ -2330,8 +2343,14 @@
         width: 100%;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         //box-sizing: border-box;
+        @media(max-width: 412px){
+          margin-right: -24px;
+        }
         &:hover{
           border-bottom: none;
+          @media(max-width: 412px){
+            border-bottom:1px solid rgba(0, 0, 0, 0.1) ;
+          }
         }
         a{
           display: block;
@@ -2346,14 +2365,24 @@
           color: $black--text;
           box-sizing: border-box;
           border-radius: 4px;
+          @media(max-width: 412px){
+            margin: 0;
+            padding: 20px 0 12px;
+          }
           &:hover{
             background-color: rgba(0, 0, 0, 0.05);
             padding-bottom: 12px;
             text-decoration: none;
+            @media(max-width: 412px){
+              background-color: $white;
+            }
           }
         }
         &:last-child{
           border-bottom-color: #fff;
+          @media(max-width: 412px){
+            border-bottom-color: rgba(0, 0, 0, 0.1);
+          }
 
         }
       }
@@ -2463,7 +2492,7 @@
   }
 }
 
-&-sites{
+  &-sites{
   max-width: 464px;
   width: 100%;
 
@@ -2856,10 +2885,20 @@
   &-address--mas{
     max-width: 784px;
     width: 100%;
+    @media(max-width: 412px){
+      width: 100%;
+      max-width: 412px;
+    }
     .modal-header{
       margin-bottom: 32px;
       h2{
         margin-bottom: 8px;
+        @media(max-width: 412px){
+          max-width: 290px;
+          font-size: rem(16px);
+          line-height: 1.25;
+          margin-bottom: 31.2px;
+        }
       }
       p{
         margin-bottom: 8px;
@@ -2870,6 +2909,9 @@
         line-height: 2rem;
         letter-spacing: normal;
         color: $black--text;
+        @media(max-width: 412px){
+          display: none;
+        }
         &:last-of-type{
           margin-bottom: 0;
         }
@@ -2887,6 +2929,9 @@
         }
         line-height:2rem;
         color: $mid-gray--text;
+        @media(max-width: 412px){
+          margin-bottom: 12px;
+        }
         & > span{
           display: inline-block;
           margin-left: 4px;
@@ -2987,16 +3032,40 @@
         margin-bottom: 48px;
         height: auto;
         flex-direction: column;
+        @media(max-width: 412px){
+          margin-right: -24px;
+          width: auto;
+          margin-bottom: 24px;
+        }
         &:last-of-type{
           margin-bottom: 0;
         }
         li{
           width: 100%;
+          position: relative;
           a{
             display: flex;
             align-items: flex-start;
             flex-direction: row;
             justify-content: space-between;
+            @media(max-width: 412px){
+              flex-direction: column;
+              &:after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                margin-top: -12px;
+                right: 24px;
+                width: 24px;
+                height: 24px;
+                background-image: url(../images/icon/mobil-arrow.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                -webkit-background-size: contain;
+                background-size: contain;
+                transform: rotate(90deg);
+              }
+            }
             &.eliminated{
               .name{
                 p{
@@ -3020,6 +3089,9 @@
             &.name{
               max-width: 354px;
               margin-right: 40px;
+              @media(max-width: 412px){
+                margin-bottom: 12px;
+              }
               p{
                 font-size: 1.4rem;
                 font-weight: $font-bold;
@@ -3034,6 +3106,9 @@
                   width: 16px;
                   height: 16px;
                   background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='0.400000006' transform='translate(4.000000, 5.000000)' stroke='%23000000'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                  @media(max-width: 412px){
+                    display: none;
+                  }
                 }
               }
 
@@ -3041,6 +3116,9 @@
             &.inn{
               max-width: 125px;
               margin-right: 35px;
+              @media(max-width: 412px){
+                margin-bottom: 8px;
+              }
               p{
                 display: inline-block;
                 margin-right: 4px;
@@ -3057,6 +3135,9 @@
             }
             &.ogrn{
               max-width: 150px;
+              @media(max-width: 412px){
+                margin-bottom: 8px;
+              }
               p{
                 font-size: 1.4rem;
                 font-weight: $font-regular;
@@ -3071,6 +3152,9 @@
             }
             &.ogrnip{
               max-width: 190px;
+              @media(max-width: 412px){
+                margin-bottom: 8px;
+              }
               p{
                 font-size: 1.4rem;
                 font-weight: $font-regular;

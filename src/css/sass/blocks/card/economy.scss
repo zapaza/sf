@@ -1,0 +1,146 @@
+.economy{
+  .table{
+    &-row{
+      padding: 6px 16px;
+      margin: {
+        left: -16px;
+        right: -16px;
+        bottom: 16px;
+      };
+      cursor: pointer;
+      &:hover{
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    &-col{
+      width: 30%;
+      position: relative;
+      text-align: right;
+      &:first-child{
+        width: 40%;
+        text-align: left;
+        span{
+          text-align: left;
+        }
+      }
+      &.col-economy{
+        padding-right: 10%;
+        box-sizing: border-box;
+      }
+      span{
+        display: block;
+        width: 100%;
+        text-align: right;
+        &.percent{
+          position: absolute;
+          right: 0;
+          font-weight: $font-regular;
+          span{
+            display: inline-block;
+          }
+          .perfectly{
+            &-up{
+              color: $green;
+              position: relative;
+              max-width: 80px;
+              width: auto;
+              margin-left: auto;
+              margin-right: 0;
+
+              &:before{
+                display: block;
+                position: absolute;
+                content: '';
+                left: 0;
+                margin-left: -16px;
+                width: 16px;
+                height: 16px;
+                background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E70BAD8D4-1BEB-434A-A313-08E20A4C8CEA%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/indicator/S/up/green'%3E%3Cg id='Group'%3E%3Cg id='Group-28'%3E%3Crect id='Rectangle-Copy-37' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cpolygon id='Rectangle' fill='%233AA65E' points='8 5 12 11 4 11'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+              }
+            }
+            &-down{
+              color: $green;
+              position: relative;
+              max-width: 80px;
+              width: auto;
+              margin-left: auto;
+              margin-right: 0;
+              &:before{
+                position: absolute;
+                content: '';
+                left: 0;
+                margin-left: -16px;
+                width: 16px;
+                height: 16px;
+                background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E70BAD8D4-1BEB-434A-A313-08E20A4C8CEA%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/indicator/S/up/green'%3E%3Cg id='Group'%3E%3Cg id='Group-28'%3E%3Crect id='Rectangle-Copy-37' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cpolygon id='Rectangle' fill='%233AA65E' points='8 5 12 11 4 11'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                transform: rotate(-180deg);
+              }
+            }
+          }
+          .warning{
+            &-up{
+              position: relative;
+              color: $red;
+              max-width: 80px;
+              width: auto;
+              margin-left: auto;
+              margin-right: 0;
+              &:before{
+                position: absolute;
+                content: '';
+                left: 0;
+                margin-left: -16px;
+                width: 16px;
+                height: 16px;
+                background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E333364C9-E32C-4050-8961-CE9CB5830CA6%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/indicator/S/up/red'%3E%3Cg id='Group'%3E%3Cg id='Group-28'%3E%3Crect id='Rectangle-Copy-37' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cpolygon id='Rectangle' fill='%23F24C3D' points='8 5 12 11 4 11'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+              }
+            }
+            &-down{
+              position: relative;
+              color: $red;
+              max-width: 80px;
+              width: auto;
+              margin-left: auto;
+              margin-right: 0;
+              &:before{
+                position: absolute;
+                content: '';
+                left: 0;
+                margin-left: -16px;
+                width: 16px;
+                height: 16px;
+                background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EF7DE9AA9-F117-438B-AD89-8C2B25DA2A95%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/indicator/S/down/red'%3E%3Cg id='Group'%3E%3Cg id='Group-28'%3E%3C/g%3E%3Crect id='Rectangle-Copy-37' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cpolygon id='Rectangle' fill='%23F24C3D' transform='translate(8.000000, 9.000000) scale(1, -1) translate(-8.000000, -9.000000) ' points='8 6 12 12 4 12'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+              }
+            }
+          }
+        }
+      }
+
+    }
+    &-body{
+      .table-col{
+        font:{
+          size: 1.4rem;
+          weight:$font-regular;
+        }
+        line-height: 2rem;
+        letter-spacing: normal;
+        color: $black--text;
+        @media (min-width: 1264px) and (min-height:671px){
+          font-size: 1.6rem;
+        }
+        @media (min-width: 1344px){
+          font-size: 1.6rem;
+        }
+        &.col-economy{
+          font-weight: $font-bold;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,113 @@
+.checkup{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 -16px 0;
+
+  .table-header{
+    .table-row{
+      padding: 0 16px;
+    }
+  }
+  .table-body{
+    margin-bottom: 18px;
+    .table-row{
+      padding: 6px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-sizing: border-box;
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  .table-footer{
+    border-top: 1px solid rgb(216, 216, 216);;
+    padding-top: 23px;
+    margin-right: 16px;
+    margin-left: 16px;
+    .table-row{
+      padding: 6px 0;
+      border-radius: 4px;
+      cursor: default;
+      box-sizing: border-box;
+    }
+  }
+
+  .table-body,
+  .table-footer{
+    .table-col{
+      &:first-child{
+        font: {
+          size: 1.4rem;
+          weight: $font-bold;
+        }
+        line-height: 2rem;
+        letter-spacing: normal;
+        color:$black--text;
+        @media (min-width: 1264px) and (min-height:671px){
+          font-size: 1.6rem;
+        }
+        @media (min-width: 1344px){
+          font-size: 1.6rem;
+        }
+        span{
+          border-bottom: 1px solid rgba(0, 0, 0, .2);
+        }
+
+      }
+      justify-content: flex-start;
+      span{
+        &.amount{
+          text-align: left;
+          width: 48px;
+          font:{
+            size: 1.4rem;
+            weight: $font-regular;
+          }
+          line-height: 2rem;
+          letter-spacing: normal;
+          color:  $black--text;
+          @media (min-width: 1264px) and (min-height:671px){
+            font-size: 1.6rem;
+          }
+          @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
+        }
+        &.normal{
+          text-align: right;
+          width: 64px;
+          font:{
+            size: 1.4rem;
+            weight: $font-regular;
+          }
+          line-height: 2rem;
+          letter-spacing: normal;
+          color:  $mid-gray--text;
+          @media (min-width: 1264px) and (min-height:671px){
+            font-size: 1.6rem;
+          }
+          @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
+          &.dangerously{
+            color: $red;
+          }
+        }
+      }
+
+    }
+  }
+  .table-col{
+    width: 20%;
+    margin-right: 10%;
+    &:first-child{
+      margin-right: 16px;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
