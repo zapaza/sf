@@ -2672,7 +2672,7 @@ div.scrollableArea {
 
 @media (max-width: 412px) {
     .company-content--item {
-        padding: 24px 24px 20px 24px;
+        padding: 24px 0 20px 24px;
         overflow: hidden;
     }
 }
@@ -2711,6 +2711,46 @@ div.scrollableArea {
 
 .company-content--item.card-egrul .card-header {
     padding: 0 16px;
+}
+
+@media (max-width: 412px) {
+    .company-content--item.card-egrul {
+        padding: 24px 0 24px 24px;
+    }
+
+    .company-content--item.card-egrul .card-header {
+        padding: 0;
+        font-size: 2.8rem;
+        line-height: 1.14;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 412px) {
+    .company-content--item.card-egrul .card-footer {
+        height: auto;
+        padding-right: 24px;
+    }
+
+    .company-content--item.card-egrul .card-footer-btn {
+        margin-bottom: 20px;
+    }
+
+    .company-content--item.card-egrul .card-footer .btn-default {
+        width: 100%;
+    }
+
+    .company-content--item.card-egrul .card-footer .btn-default span {
+        display: none;
+    }
+
+    .company-content--item.card-egrul .card-footer-link {
+        position: static;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        padding: 0;
+    }
 }
 
 .company-btn {
@@ -5426,6 +5466,15 @@ div.scrollableArea {
     z-index: 2;
 }
 
+@media (max-width: 412px) {
+    .card.dangerously .card-header--factors_icon {
+        width: 32px;
+        height: 32px;
+        right: 24px;
+        top: 0;
+    }
+}
+
 .card.dangerously .card-header--factors_icon.active:after {
     position: absolute;
     content: '';
@@ -5445,6 +5494,13 @@ div.scrollableArea {
     animation: cbhCircle 1.5s infinite ease-in-out;
 }
 
+@media (max-width: 412px) {
+    .card.dangerously .card-header--factors_icon.active:after {
+        width: 32px;
+        height: 32px;
+    }
+}
+
 .card.dangerously .card-header--factors_icon.active:before {
     position: absolute;
     z-index: -1;
@@ -5458,6 +5514,13 @@ div.scrollableArea {
     opacity: .3;
     -webkit-animation: cbhCircle-inner 1.5s infinite ease-in-out;
     animation: cbhCircle-inner 1.5s infinite ease-in-out;
+}
+
+@media (max-width: 412px) {
+    .card.dangerously .card-header--factors_icon.active:before {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 .card.dangerously .card-header--factors_icon:hover {
@@ -5586,6 +5649,15 @@ div.scrollableArea {
     z-index: 2;
 }
 
+@media (max-width: 412px) {
+    .card.satisfactorily .card-header--factors_icon {
+        width: 32px;
+        height: 32px;
+        right: 24px;
+        top: 0;
+    }
+}
+
 .card.satisfactorily .card-header--factors_icon.active:after {
     position: absolute;
     content: '';
@@ -5605,6 +5677,13 @@ div.scrollableArea {
     animation: cbhCircle 1.5s infinite ease-in-out;
 }
 
+@media (max-width: 412px) {
+    .card.satisfactorily .card-header--factors_icon.active:after {
+        width: 32px;
+        height: 32px;
+    }
+}
+
 .card.satisfactorily .card-header--factors_icon.active:before {
     position: absolute;
     z-index: -1;
@@ -5618,6 +5697,13 @@ div.scrollableArea {
     opacity: .3;
     -webkit-animation: cbhCircle-inner 1.5s infinite ease-in-out;
     animation: cbhCircle-inner 1.5s infinite ease-in-out;
+}
+
+@media (max-width: 412px) {
+    .card.satisfactorily .card-header--factors_icon.active:before {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 .card.satisfactorily .card-header--factors_icon:hover {
@@ -5877,9 +5963,24 @@ div.scrollableArea {
     }
 }
 
+@media (max-width: 412px) {
+    .card-header {
+        margin-bottom: 20px;
+    }
+}
+
 .card-header h1, .card-header h2 {
     max-width: 469px;
     width: 59.2%;
+}
+
+@media (max-width: 412px) {
+    .card-header h1, .card-header h2 {
+        max-width: none;
+        width: 100%;
+        font-size: 2.8rem;
+        line-height: 1.14;
+    }
 }
 
 .card-header h1[data-hint]:before {
@@ -5960,6 +6061,12 @@ div.scrollableArea {
     height: 48px;
 }
 
+@media (max-width: 412px) {
+    .card-footer {
+        height: auto;
+    }
+}
+
 .card-footer-btn {
     position: relative;
     width: 100%;
@@ -5974,11 +6081,23 @@ div.scrollableArea {
     justify-content: center;
 }
 
+@media (max-width: 412px) {
+    .card-footer-btn {
+        margin-bottom: 20px;
+    }
+}
+
 .card-footer-btn .btn {
     width: 100%;
     max-width: 384px;
     text-transform: none;
     letter-spacing: normal;
+}
+
+@media (max-width: 412px) {
+    .card-footer-btn .btn {
+        max-width: none;
+    }
 }
 
 .card-footer-btn .btn span {
@@ -6002,6 +6121,15 @@ div.scrollableArea {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+@media (max-width: 412px) {
+    .card-footer-link {
+        position: static;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        padding: 0;
+    }
 }
 
 .card-footer-link a {
@@ -7278,6 +7406,7 @@ div.scrollableArea {
 @media (max-width: 412px) {
     .card-content .main-card-info--col[data-modal-card] {
         position: relative;
+        padding-bottom: 12px;
     }
 
     .card-content .main-card-info--col[data-modal-card]:after {
@@ -7330,6 +7459,12 @@ div.scrollableArea {
     }
 }
 
+@media (max-width: 412px) {
+    .card-content .main-card-info--col p {
+        margin-bottom: 8px;
+    }
+}
+
 .card-content .main-card-info--col p span {
     color: rgba(0, 0, 0, 0.4);
 }
@@ -7337,6 +7472,12 @@ div.scrollableArea {
 .card-content .main-card-info--col p.title {
     margin-bottom: 8px;
     color: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 412px) {
+    .card-content .main-card-info--col p.title {
+        margin-bottom: 12px;
+    }
 }
 
 .card-content .main-card-info--col h3 {
@@ -7365,6 +7506,12 @@ div.scrollableArea {
     letter-spacing: 0.4px;
     font-size: 1.6rem;
     line-height: 2rem;
+}
+
+@media (max-width: 412px) {
+    .card-content .main-card-info--col h3.name, .card-content .main-card-info--col .tariffs-list--item h3.price, .tariffs-list--item .card-content .main-card-info--col h3.price {
+        margin-bottom: 12px;
+    }
 }
 
 .card-content .main-card-info--col a {
@@ -7512,6 +7659,13 @@ div.scrollableArea {
     flex-wrap: wrap;
 }
 
+@media (max-width: 412px) {
+    .card-content .reporting {
+        width: auto;
+        margin: 0 -16px 0 -16px;
+    }
+}
+
 .card-content .reporting-item {
     width: 96px;
     height: 96px;
@@ -7555,6 +7709,18 @@ div.scrollableArea {
 
 .card-content .reporting-item:nth-child(6n + 6) {
     margin-right: 0;
+}
+
+@media (max-width: 412px) {
+    .card-content .reporting-item {
+        width: 60px;
+        height: 80px;
+        margin-right: 16px;
+    }
+
+    .card-content .reporting-item:nth-child(6n + 6) {
+        margin-right: 16px;
+    }
 }
 
 .card-content .reporting-item.dangerously {
@@ -8295,6 +8461,12 @@ div.scrollableArea {
     margin-bottom: 24px;
 }
 
+@media (max-width: 412px) {
+    .card-content .owner {
+        padding-right: 24px;
+    }
+}
+
 .card-content .owner-one {
     margin-bottom: 24px;
     width: 100%;
@@ -8316,8 +8488,16 @@ div.scrollableArea {
     justify-content: space-between;
 }
 
+@media (max-width: 412px) {
+    .card-content .owner-one {
+        width: auto;
+        margin: 0 -16px 20px;
+        padding: 16px;
+    }
+}
+
 .card-content .owner-one--text {
-    width: calc(100% - 52px);
+    width: calc(100% - 44px);
 }
 
 .card-content .owner-one .icon-question {
@@ -9054,6 +9234,12 @@ div.scrollableArea {
     padding: 0 16px;
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul-tabs {
+        padding: 0;
+    }
+}
+
 .card-content .egrul-tabs--name {
     padding: 8px 16px;
     border: solid 1px rgba(0, 0, 0, 0.15);
@@ -9067,13 +9253,41 @@ div.scrollableArea {
     transition: .2s ease all;
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul-tabs--name {
+        margin-right: 8px;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: none;
+        color: rgba(0, 0, 0, 0.9);
+        padding: 8px;
+    }
+
+    .card-content .egrul-tabs--name:last-child {
+        margin-right: 0;
+    }
+}
+
 .card-content .egrul-tabs--name.active {
     color: rgba(0, 0, 0, 0.9);
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul-tabs--name.active {
+        background-color: #1a1a1a;
+        color: white;
+    }
+}
+
 .card-content .egrul-tabs--name:hover {
     color: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 412px) {
+    .card-content .egrul-tabs--name:hover {
+        color: white;
+    }
 }
 
 .card-content .egrul-tabs--name:first-child {
@@ -9088,6 +9302,13 @@ div.scrollableArea {
     border-left: 0;
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul .table {
+        overflow: auto;
+        max-width: 100%;
+    }
+}
+
 .card-content .egrul .table-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -9098,6 +9319,13 @@ div.scrollableArea {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+@media (max-width: 412px) {
+    .card-content .egrul .table-row {
+        border-bottom: none;
+        margin: 0 0 24px;
+    }
 }
 
 .card-content .egrul .table-row .title {
@@ -9116,9 +9344,11 @@ div.scrollableArea {
     }
 }
 
-@media (min-width: 1344px) {
+@media (max-width: 412px) {
     .card-content .egrul .table-row .title {
         font-size: 1.6rem;
+        margin-bottom: 8px;
+        width: 100%;
     }
 }
 
@@ -9153,6 +9383,22 @@ div.scrollableArea {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul .table-row-inner:hover {
+        border-radius: 0;
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 412px) {
+    .card-content .egrul .table-row-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        width: auto;
+    }
+}
+
 .card-content .egrul .table-row-inner .table-col {
     width: 100%;
     -webkit-box-orient: vertical;
@@ -9179,6 +9425,15 @@ div.scrollableArea {
     margin-right: 5.5%;
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul .table-body.fns .table-col.date {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 8px;
+        grid-column: span 2 / auto;
+    }
+}
+
 .card-content .egrul .table-body.fns .table-col.date span {
     font-size: 1.4rem;
     font-weight: 400;
@@ -9199,8 +9454,26 @@ div.scrollableArea {
     }
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul .table-body.fns .table-col.date span {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .egrul .table-body.fns .table-col.info {
     margin-right: 0;
+}
+
+@media (max-width: 412px) {
+    .card-content .egrul .table-body.fns .table-col.info, .card-content .egrul .table-body.fns .table-col.info-old {
+        padding: 16px;
+        width: 240px;
+        background-color: white;
+        border-radius: 8px;
+        -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+        margin-right: 8px;
+    }
 }
 
 .card-content .egrul .table-body.fns .table-col .item {
@@ -9228,6 +9501,12 @@ div.scrollableArea {
     }
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul .table-body.fns .table-col p {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .egrul .table-body.fns .table-col p span {
     font-size: 1.4rem;
     font-weight: 400;
@@ -9243,6 +9522,12 @@ div.scrollableArea {
 }
 
 @media (min-width: 1344px) {
+    .card-content .egrul .table-body.fns .table-col p span {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 412px) {
     .card-content .egrul .table-body.fns .table-col p span {
         font-size: 1.6rem;
     }
@@ -9285,6 +9570,15 @@ div.scrollableArea {
     margin-right: 6.7%;
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul .table-body.stat .table-col.date {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 8px;
+        grid-column: span 2 / auto;
+    }
+}
+
 .card-content .egrul .table-body.stat .table-col.date span {
     font-size: 1.4rem;
     font-weight: 400;
@@ -9305,8 +9599,26 @@ div.scrollableArea {
     }
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul .table-body.stat .table-col.date span {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .egrul .table-body.stat .table-col.info {
     margin-right: 0;
+}
+
+@media (max-width: 412px) {
+    .card-content .egrul .table-body.stat .table-col.info, .card-content .egrul .table-body.stat .table-col.info-old {
+        padding: 16px;
+        width: 240px;
+        background-color: white;
+        border-radius: 8px;
+        -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+        margin-right: 8px;
+    }
 }
 
 .card-content .egrul .table-body.stat .table-col .item {
@@ -9334,6 +9646,12 @@ div.scrollableArea {
     }
 }
 
+@media (max-width: 412px) {
+    .card-content .egrul .table-body.stat .table-col p {
+        font-size: 1.6rem;
+    }
+}
+
 .card-content .egrul .table-body.stat .table-col p span {
     font-size: 1.4rem;
     font-weight: 400;
@@ -9349,6 +9667,12 @@ div.scrollableArea {
 }
 
 @media (min-width: 1344px) {
+    .card-content .egrul .table-body.stat .table-col p span {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 412px) {
     .card-content .egrul .table-body.stat .table-col p span {
         font-size: 1.6rem;
     }

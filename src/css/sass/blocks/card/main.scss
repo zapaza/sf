@@ -792,6 +792,7 @@
       &[data-modal-card]{
         @media(max-width: 412px){
           position: relative;
+          padding-bottom: 12px;
           &:after{
             content: '';
             position: absolute;
@@ -832,12 +833,18 @@
         @media (min-width: 1344px){
           font-size: 1.6rem;
         }
+        @media(max-width: 412px){
+          margin-bottom: 8px;
+        }
         span{
           color: $mid-gray--text;
         }
         &.title{
           margin-bottom: 8px;
           color: $mid-gray--text;
+          @media (max-width: 412px){
+            margin-bottom: 12px;
+          }
         }
       }
 
@@ -863,6 +870,9 @@
           letter-spacing: 0.4px;
           font-size: 1.6rem;
           line-height:2rem;
+          @media(max-width: 412px){
+            margin-bottom: 12px;
+          }
         }
       }
 

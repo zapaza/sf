@@ -5,6 +5,9 @@
     align-items: center;
     margin-bottom: 24px;
     padding: 0 16px;
+    @media(max-width: 412px){
+      padding: 0;
+    }
     &--name{
       padding: 8px 16px;
       border: solid 1px rgba(0, 0, 0, 0.15);
@@ -17,12 +20,30 @@
       color: $mid-gray--text;
       cursor: pointer;
       transition: .2s ease all;
+      @media (max-width: 412px) {
+        margin-right: 8px;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: none;
+        color: $black--text;
+        padding: 8px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
       &.active{
         color: $black--text;
         background-color: rgba(0, 0, 0, 0.05);
+        @media(max-width: 412px){
+          background-color: #1a1a1a;
+          color: $white;
+        }
       }
       &:hover{
         color: $black--text;
+        @media(max-width: 412px){
+          color: $white;
+        }
       }
       &:first-child{
         border-top-left-radius:4px;
@@ -37,12 +58,20 @@
     }
   }
   .table{
+    @media(max-width: 412px){
+      overflow: auto;
+      max-width: 100%;
+    }
     &-row{
       flex-direction: column;
       margin: 0 16px 23px;
       padding:0 0 16px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
+      @media(max-width: 412px){
+        border-bottom: none;
+        margin:0 0 24px;
+      }
 
       .title{
         margin-bottom: 16px;
@@ -58,8 +87,14 @@
           font-size: 1.6rem;
         }
         @media (min-width: 1344px){
-          font-size: 1.6rem;
+
         }
+        @media(max-width: 412px){
+          font-size: 1.6rem;
+          margin-bottom: 8px;
+          width: 100%;
+        }
+
       }
 
       &-inner{
@@ -78,6 +113,18 @@
         &:hover{
           border-radius: 4px;
           background-color: rgba(0, 0, 0, 0.05);
+          @media(max-width: 412px){
+            border-radius: 0;
+            background-color: transparent;
+
+          }
+        }
+        @media(max-width: 412px){
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+          width: auto;
+          
         }
 
         .table-col{
@@ -85,7 +132,7 @@
           flex-direction: column;
           align-items: flex-start;
           justify-content: flex-start;
-        }
+       }
       }
     }
 
@@ -99,6 +146,12 @@
             max-width: 88px;
             width: 12.3%;
             margin-right: 5.5%;
+            @media(max-width: 412px){
+              width: 100%;
+              max-width: 100%;
+              margin-bottom: 8px;
+              grid-column: span 2 / auto;
+            }
 
             span{
               font:{
@@ -114,10 +167,23 @@
               @media (min-width: 1344px){
                 font-size: 1.6rem;
               }
+              @media(max-width: 412px){
+                font-size: rem(16px);
+              }
             }
           }
           &.info{
             margin-right: 0;
+          }
+          &.info,&.info-old{
+            @media(max-width: 412px){
+              padding: 16px;
+              width: 240px;
+              background-color: $white;
+              border-radius: 8px;
+              box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+              margin-right: 8px;
+            }
           }
           .item{
             margin-bottom:20px ;
@@ -137,6 +203,9 @@
             @media (min-width: 1344px){
               font-size: 1.6rem;
             }
+            @media(max-width: 412px){
+              font-size: rem(16px);
+            }
             span{
               font: {
                 size: 1.4rem;
@@ -150,6 +219,9 @@
               }
               @media (min-width: 1344px){
                 font-size: 1.6rem;
+              }
+              @media(max-width: 412px){
+                font-size: rem(16px);
               }
 
               &:not(.rename),
@@ -186,6 +258,12 @@
             max-width: 112px;
             width: 19.1%;
             margin-right: 6.7%;
+            @media(max-width: 412px){
+              width: 100%;
+              max-width: 100%;
+              margin-bottom: 8px;
+              grid-column: span 2 / auto;
+            }
 
             span{
               font:{
@@ -201,10 +279,23 @@
               @media (min-width: 1344px){
                 font-size: 1.6rem;
               }
+              @media(max-width: 412px){
+                font-size: rem(16px);
+              }
             }
           }
           &.info{
             margin-right: 0;
+          }
+          &.info,&.info-old {
+            @media(max-width: 412px) {
+              padding: 16px;
+              width: 240px;
+              background-color: $white;
+              border-radius: 8px;
+              box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+              margin-right: 8px;
+            }
           }
           .item{
             margin-bottom:20px ;
@@ -224,6 +315,9 @@
             @media (min-width: 1344px){
               font-size: 1.6rem;
             }
+            @media(max-width: 412px){
+              font-size: rem(16px);
+            }
             span{
               font: {
                 size: 1.4rem;
@@ -237,6 +331,9 @@
               }
               @media (min-width: 1344px){
                 font-size: 1.6rem;
+              }
+              @media(max-width: 412px){
+                font-size: rem(16px);
               }
 
               &:not(.rename),
@@ -257,7 +354,6 @@
                 text-decoration-color:$red;
                 .icon-name{
                   background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E74B47110-2B13-4DDD-966D-D84EAAA5BB49%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/out/S/bold/dark'%3E%3Cg id='Group-2'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3Cg id='Group-3' opacity='1' transform='translate(4.000000, 5.000000)' stroke='%23F23D3D'%3E%3Cpath d='M-3.95239397e-14,7 L6.75,0.25' id='Line-3' stroke-width='1.8' stroke-linecap='square'%3E%3C/path%3E%3Cpolyline id='Path' stroke-width='2' points='0 0 7 0 7 7'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-
                 }
               }
             }

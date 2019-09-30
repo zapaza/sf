@@ -1,5 +1,9 @@
 .owner{
   margin-bottom: 24px;
+  @media(max-width: 412px){
+    padding-right: 24px;
+  }
+
 
   &-one{
     margin-bottom: 24px;
@@ -12,9 +16,14 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @media(max-width: 412px){
+      width: auto;
+      margin: 0 -16px 20px;
+      padding: 16px;
+    }
 
     &--text{
-      width: calc(100% - 52px);
+      width: calc(100% - 44px);
     }
 
     .icon-question{

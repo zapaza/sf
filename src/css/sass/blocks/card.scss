@@ -49,6 +49,12 @@
       right: 8px;
       background-color: $white;
       z-index: 2;
+      @media(max-width: 412px){
+        width: 32px;
+        height: 32px;
+        right: 24px;
+        top: 0;
+      }
       &.active{
         &:after{
           position: absolute;
@@ -64,6 +70,10 @@
           opacity: .2;
           box-sizing: border-box;
           animation: cbhCircle 1.5s infinite ease-in-out ;
+          @media(max-width: 412px){
+            width: 32px;
+            height: 32px;
+          }
 
         }
         &:before{
@@ -78,6 +88,10 @@
           background-color: $red;
           opacity: .3;
           animation: cbhCircle-inner 1.5s infinite ease-in-out ;
+          @media(max-width: 412px){
+            width: 32px;
+            height: 32px;
+          }
         }
       }
       &:hover {
@@ -193,6 +207,12 @@
       right: 8px;
       background-color: $white;
       z-index: 2;
+      @media(max-width: 412px){
+        width: 32px;
+        height: 32px;
+        right: 24px;
+        top: 0;
+      }
       &.active{
         &:after{
           position: absolute;
@@ -208,6 +228,10 @@
           opacity: .2;
           box-sizing: border-box;
           animation: cbhCircle 1.5s infinite ease-in-out ;
+          @media(max-width: 412px){
+            width: 32px;
+            height: 32px;
+          }
 
         }
         &:before{
@@ -222,6 +246,10 @@
           background-color: $gold;
           opacity: .3;
           animation: cbhCircle-inner 1.5s infinite ease-in-out ;
+          @media(max-width: 412px){
+            width: 32px;
+            height: 32px;
+          }
         }
       }
       &:hover {
@@ -455,21 +483,19 @@
       font-size: 2.8rem;
       line-height: 4rem;
     }
-    //@media (max-width: 412px){
-    //  font-size: rem(22px);
-    //  font-weight: $font-bold;
-    //  line-height: 1.27;
-    //  letter-spacing: 0.4px;
-    //  margin-bottom: 8px;
-    //}
+    @media (max-width: 412px){
+    margin-bottom: 20px;
+    }
 
     h1,h2{
       max-width: 469px;
       width: 59.2%;
-      //@media (max-width: 412px){
-      //  max-width: none;
-      //  width: 100%;
-      //}
+      @media (max-width: 412px){
+        max-width: none;
+        width: 100%;
+        font-size: rem(28px);
+        line-height: 1.14;
+      }
     }
     h1[data-hint]{
       &:before{
@@ -552,18 +578,27 @@
     width: 100%;
     position: relative;
     height: 48px;
+    @media(max-width: 412px){
+      height: auto;
+    }
     &-btn{
       position: relative;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      @media(max-width: 412px){
+        margin-bottom: 20px;
+      }
 
       .btn{
         width: 100%;
         max-width: 384px;
         text-transform: none;
         letter-spacing: normal;
+        @media(max-width: 412px){
+          max-width: none;
+        }
         span{
           color: $mid-gray--text;
         }
@@ -581,6 +616,11 @@
       right: 8px;
       top: 50%;
       transform: translateY(-50%);
+      @media(max-width: 412px){
+        position: static;
+        transform: translateY(0);
+        padding: 0;
+      }
 
       a{
         display: block;
@@ -694,6 +734,7 @@
   &-content{
     margin-bottom: 32px;
     position: relative;
+
 
     &-tabs{
       position: absolute;
