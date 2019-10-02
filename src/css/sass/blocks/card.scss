@@ -465,6 +465,18 @@
         max-width: none;
       }
     }
+    @media(max-width:412px){
+      .card-footer{
+        padding-right: 24px;
+      }
+    }
+  }
+  &#report{
+    @media(max-width:412px){
+      .card-footer{
+        padding-right: 24px;
+      }
+    }
   }
   &-header{
     position: relative;
@@ -744,6 +756,9 @@
       align-items: center;
       z-index: 99;
       width: 180px;
+      @media(max-width: 412px){
+        display: none;
+      }
       &--link{
         font:{
           size: 1.4rem;
@@ -841,6 +856,9 @@
       height: 360px;
       margin-bottom: 32px;
       padding: 0 32px;
+      @media(max-width: 412px){
+        display: none;
+      }
     }
     //стили для клавной карточки
     @import "card/main";
