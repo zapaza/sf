@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
-    <title>333364C9-E32C-4050-8961-CE9CB5830CA6</title>
-    <desc>Created with sketchtool.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon/indicator/S/up/red">
-            <g id="Group">
-                <g id="Group-28">
-                    <rect id="Rectangle-Copy-37" x="0" y="0" width="16" height="16"></rect>
-                    <polygon id="Rectangle" fill="#F24C3D" points="8 5 12 11 4 11"></polygon>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h16v16H0z"/><path fill="#F24C3D" d="M8 5l4 6H4z"/></g></svg>

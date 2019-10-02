@@ -1,10 +1,10 @@
-.btn{
+.btn {
   display: block;
   padding: 16px;
   box-sizing: border-box;
   border-radius: 4px;
-  border:none;
-  font:{
+  border: none;
+  font: {
     family: $font-family;
     weight: $font-bold;
     size: 1.4rem;
@@ -15,57 +15,96 @@
   text-decoration: none;
   text-align: center;
   transition: background-color .2s;
-  &-green{
-    font:{
+
+  &-green {
+    font: {
       family: $font-family;
       weight: $font-bold;
       size: 1.4rem;
     }
     background-color: $green;
     color: $white;
-    &:hover{
-      background-color:$green-hover;
+
+    &:hover {
+      background-color: $green-hover;
       color: $white;
       text-decoration: none;
     }
-    &:active{
-      color: $white;
-      background: $green-hover;
-      transform: scale(.96);
-    }
-  }
-  &-green2{
-    font:{
-      family: $font-family;
-      weight: $font-bold;
-      size: 1.4rem;
-    }
-    background-color: $green;
-    color: $white;
-    &:hover{
-      background-color:$green-hover;
-      color: $white;
-      text-decoration: none;
-    }
-    &:active{
+
+    &:active {
       color: $white;
       background: $green-hover;
       transform: scale(.96);
     }
   }
 
-  &-default{
+  &-green2 {
+    font: {
+      family: $font-family;
+      weight: $font-bold;
+      size: 1.4rem;
+    }
+    background-color: $green;
+    color: $white;
+
+    &:hover {
+      background-color: $green-hover;
+      color: $white;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $white;
+      background: $green-hover;
+      transform: scale(.96);
+    }
+  }
+
+  &-default {
     border: solid 1px $white--text;
     color: $black--text;
     background: $white;
-    &:hover{
-      background: rgba(0,0,0,0.05);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
       color: $black--text;
       text-decoration: none;
     }
-    &:active{
+
+    &:active {
       transform: scale(.96);
       color: $black--text;
+    }
+
+    &--empty{
+      background-color: transparent;
+    }
+
+  }
+
+  &--solutions {
+    background: transparent;
+    border: solid 1px $white--text;
+    color: $black--text;
+    &:hover {
+      background-color: $green;
+      color: $white;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $white;
+      background: $green;
+      transform: scale(.96);
+    }
+    span{
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/button-arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: contain;
+      background-size: contain;
     }
   }
 
@@ -76,15 +115,15 @@
     border-color: $white--text;
   }
 
-  .loader{
+  .loader {
     width: 24px;
     height: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto ;
-    @for $i from 1 through 3{
-      &-item--#{$i}{
+    margin: 0 auto;
+    @for $i from 1 through 3 {
+      &-item--#{$i} {
         display: block;
         width: 6px;
         height: 6px;
@@ -98,10 +137,12 @@
   }
 
 }
+
 //выбор года в подалке
-.select-years{
+.select-years {
   position: relative;
-  ul{
+
+  ul {
     padding: 24px 28px 24px 0px;
     display: flex;
     align-items: center;
@@ -110,22 +151,27 @@
     box-sizing: border-box;
     overflow-y: hidden;
     overflow-x: visible;
-    li{
+
+    li {
       margin-left: 24px;
-      &:first-child{
+
+      &:first-child {
         margin-left: 0;
       }
-      &.no-info{
-        a{
+
+      &.no-info {
+        a {
           pointer-events: none;
           border-bottom: 0;
           color: rgba(0, 0, 0, 0.2);
         }
       }
-      &.active{
-        margin-left:18px;
+
+      &.active {
+        margin-left: 18px;
         margin-right: -6px;
-        a{
+
+        a {
           padding: 4px 6px;
           background-color: $green;
           border-radius: 4px;
@@ -135,27 +181,30 @@
         }
       }
 
-      a{
+      a {
         display: inline-block;
-        font:{
+        font: {
           size: 1.4rem;
           weight: $font-regular;
         }
         line-height: 1.6rem;
         color: $mid-gray--text;
-        border-bottom: 1px solid $mid-gray--text ;
-        &:hover{
+        border-bottom: 1px solid $mid-gray--text;
+
+        &:hover {
           text-decoration: none;
         }
 
       }
     }
   }
-  .show-all{
+
+  .show-all {
     position: absolute;
     right: -24px;
     top: 24px;
-    &--list{
+
+    &--list {
       display: block;
       width: 24px;
       height: 24px;
@@ -167,7 +216,7 @@
       overflow: hidden;
     }
 
-    .show-all--dropdown{
+    .show-all--dropdown {
       position: absolute;
       display: none;
       right: 0;
@@ -180,22 +229,25 @@
       background-color: rgb(255, 255, 255);
       padding: 0;
       box-sizing: border-box;
-      ul{
+
+      ul {
         overflow-y: auto;
         overflow-x: hidden;
         height: 100%;
-        min-width:104px;
+        min-width: 104px;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         padding: 16px 73px 16px 0;
         box-sizing: content-box;
-        li{
-          margin:0px 0px 16px 0;
+
+        li {
+          margin: 0px 0px 16px 0;
           width: 80px;
           box-sizing: border-box;
           padding: 0 24px;
-          &:hover{
+
+          &:hover {
             background-color: rgba(0, 0, 0, 0.05)
           }
 
@@ -205,7 +257,8 @@
     }
   }
 }
-.show-all-years{
+
+.show-all-years {
   position: fixed;
   display: block;
   top: 20px;
@@ -222,9 +275,9 @@
 }
 
 
-.disabled{
+.disabled {
   pointer-events: none !important;
   cursor: default !important;
-  color: rgba(0,0,0,0.2) !important;
-  border-color: rgba(0, 0, 0, 0.08)!important;
+  color: rgba(0, 0, 0, 0.2) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
 }
