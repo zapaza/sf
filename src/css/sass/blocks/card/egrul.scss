@@ -137,6 +137,13 @@
     }
 
     &-body{
+      .table-row{
+        &:first-child{
+          .table-col{
+
+          }
+        }
+      }
       &.fns{
         .table-col{
           max-width: 272px;
