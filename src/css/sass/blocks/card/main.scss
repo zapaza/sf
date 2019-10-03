@@ -1,5 +1,8 @@
-.main-card{
 
+.main-card{
+@media(max-width: 412px){
+  padding-right: 24px;
+}
   &-header{
     position: relative;
     text-align: left;

@@ -7,6 +7,10 @@
   &.no-index{
     .card-content{
       margin: 48px 0 56px;
+      @media(max-width: 412px){
+        padding-right: 24px;
+        margin: 40px 0 64px;
+      }
       p{
         max-width: 304px;
         margin: auto;
@@ -27,6 +31,7 @@
           line-height: 1.6rem;
         }
       };
+
     }
     .card-footer{
       .btn{
@@ -592,6 +597,7 @@
     height: 48px;
     @media(max-width: 412px){
       height: auto;
+      padding-right: 24px;
     }
     &-btn{
       position: relative;

@@ -3,10 +3,44 @@
   align-items: center;
   justify-content: flex-start;
   margin: 0 -16px 0;
+  @media(max-width: 412px){
+    padding-right: 24px;
+  }
 
   .table-header{
     .table-row{
       padding: 0 16px;
+    }
+    .table-col{
+      @media(max-width: 412px){
+        &:last-child{
+          position: relative;
+          font-size: 0;
+          overflow: hidden;
+          &:after{
+            content: 'С нарушениями';
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: right;
+            font-size: 1.4rem;
+            line-height: 1.43;
+            color: rgba(0, 0, 0, 0.4);
+            width: 104px;
+          }
+          &:before{
+            content: 'Все проверки ';
+            position: absolute;
+            text-align: right;
+            left: 0;
+            width: 104px;
+            top: 0;
+            font-size: 1.4rem;
+            line-height: 1.43;
+            color: rgba(0, 0, 0, 0.4);
+          }
+        }
+      }
     }
   }
   .table-body{
@@ -16,8 +50,16 @@
       border-radius: 4px;
       cursor: pointer;
       box-sizing: border-box;
+      @media(max-width: 412px){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
       &:hover{
         background-color: rgba(0, 0, 0, 0.05);
+        @media(max-width: 412px){
+          background-color: transparent;
+        }
       }
     }
   }
@@ -52,6 +94,9 @@
         @media (min-width: 1344px){
           font-size: 1.6rem;
         }
+        @media(max-width: 412px){
+          font-size: 1.6rem;
+        }
         span{
           border-bottom: 1px solid rgba(0, 0, 0, .2);
         }
@@ -75,6 +120,12 @@
           @media (min-width: 1344px){
             font-size: 1.6rem;
           }
+          @media(max-width: 412px){
+            font-size: 1.6rem;
+            width: 104px;
+            display: block;
+            text-align: right;
+          }
         }
         &.normal{
           text-align: right;
@@ -92,6 +143,12 @@
           @media (min-width: 1344px){
             font-size: 1.6rem;
           }
+          @media(max-width: 412px){
+            font-size: 1.6rem;
+            width: 104px;
+            display: block;
+            text-align: right;
+          }
           &.dangerously{
             color: $red;
           }
@@ -103,11 +160,27 @@
   .table-col{
     width: 20%;
     margin-right: 10%;
+    @media(max-width: 412px){
+      display: none;
+    }
     &:first-child{
       margin-right: 16px;
+      @media(max-width: 412px){
+        display: block;
+        width: 52px;
+        margin-right: 0;
+      }
     }
     &:last-child{
       margin-right: 0;
+      @media(max-width: 412px){
+        max-width: 268px;
+        width: calc(100% - 52px);
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
   }
 }
