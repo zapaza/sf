@@ -168,7 +168,7 @@ $(document).ready(function () {
 
     Tabs();
 
-    if($(window).innerWidth > 412){
+    if($(window).width() > 412){
         Scrolling();
     }
 
