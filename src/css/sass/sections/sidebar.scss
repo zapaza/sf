@@ -64,6 +64,10 @@
     bottom: 64px;
     height: auto;
     top: auto;
+    @media (max-width: 412px){
+      position: static;
+      display: none;
+    }
   }
 
   &.lazyload{

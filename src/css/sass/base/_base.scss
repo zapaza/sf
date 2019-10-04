@@ -113,3 +113,9 @@ div.scrollableArea {
     }
   }
 }
+
+.mob-hidden{
+  @media(max-width: 412px){
+    display: none !important;
+  }
+}
