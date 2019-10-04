@@ -54,6 +54,9 @@
         @media (max-width: 1263px){
           top: 52px;
         }
+        @media (max-width:412px) {
+          display: none !important;
+        }
       }
       &--inner{
         position: relative;

@@ -12,7 +12,6 @@
     max-width: none;
     margin: 0 auto;
   }
-
   &--item{
     width: 100%;
     background-color: $white;
@@ -87,5 +86,26 @@
         }
       }
     }
+  }
+}
+.mobil-factors {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 208px;
+  height: 56px;
+  border-radius: 28px;
+  font-size: rem(16px);
+  font-weight: $font-bold;
+  line-height: 1.25;
+  color: #ffffff;
+  border:none;
+  text-align: center;
+  &.warning{
+    background-color: $red;
+  }
+  &.good{
+    background-color: $green;
   }
 }
