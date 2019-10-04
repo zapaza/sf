@@ -89,6 +89,7 @@
   }
 }
 .mobil-factors {
+  display: none;
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -102,6 +103,9 @@
   color: #ffffff;
   border:none;
   text-align: center;
+  @media(max-width:412px){
+    display: block;
+  }
   &.warning{
     background-color: $red;
   }
