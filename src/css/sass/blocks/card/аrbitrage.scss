@@ -1,4 +1,7 @@
 .аrbitrage{
+  @media(max-width: 412px){
+    padding-right: 24px;
+  }
   .table{
 
     &-body-inner{
@@ -12,10 +15,16 @@
         padding-top: 0;
         border-top: 0;
       }
+      @media(max-width: 412px){
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
       & > span{
         @media (max-width: 1440px){
           font-size: 1.4rem;
         }
+
         width: auto;
         display: block;
         text-align: left;
@@ -32,12 +41,20 @@
         @media (min-width: 1344px){
           font-size: 1.6rem;
         }
+        @media(max-width: 412px){
+          font-size: 1.6rem;
+          width: 100%;
+          margin-bottom: 6px;
+        }
       }
 
       .table-row{
         width: 512px;
         flex-direction: column;
         align-items: normal;
+        @media(max-width: 412px){
+          width: 100%;
+        }
         &-inner{
           //width: 100%;
           display: flex;
@@ -50,9 +67,24 @@
             border-radius: 4px;
             background-color: rgba(0, 0, 0, 0.05);
           }
+          @media(max-width: 412px){
+            justify-content: space-between;
+            &:hover{
+              background-color: transparent;
+            }
+          }
           .table-col{
             width:80px;
             margin-right: 112px;
+            @media(max-width: 412px){
+              margin: auto;
+            }
+            @media(max-width: 360px){
+              width: 52px;
+              &:nth-child(2){
+                white-space: nowrap;
+              }
+            }
             span{
               width: 100%;
               display: block;
@@ -70,6 +102,9 @@
               @media (min-width: 1344px){
                 font-size: 1.6rem;
               }
+              @media(max-width: 412px){
+                font-size: 1.6rem;
+              }
             }
             &:first-child{
               width: 104px;
@@ -81,10 +116,20 @@
                 text-align: left;
                 border-bottom: 1px solid  rgba(0, 0, 0,.2);
               }
+              @media(max-width: 412px){
+                width: 76px;
+                margin-right: auto;
+                margin-left: 0;
+              }
             }
             &:last-child{
               margin-right: 0;
               width: 144px;
+              @media(max-width: 412px){
+                width: 120px;
+                flex-shrink: 0;
+                margin-right: 0;
+              }
             }
           }
         }

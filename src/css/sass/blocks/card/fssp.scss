@@ -1,4 +1,7 @@
 .fssp{
+  @media(max-width: 412px){
+    padding-right: 24px;
+  }
   .table-header{
     .table-row{
       cursor: default;
@@ -12,6 +15,20 @@
     &-col{
       width: 18%;
       margin-right: 2%;
+
+      &.all-mobil{
+        display: none;
+        @media(max-width: 412px){
+          display: block;
+          width: 60px;
+        }
+      }
+      @media(max-width: 412px){
+        &:nth-child(2),&:nth-child(3){
+          display: none;
+        }
+
+      }
       span{
         display: block;
         width: 100%;
@@ -23,6 +40,9 @@
         span{
           text-align: left;
         }
+        @media(max-width: 412px){
+          width: 44px;
+        }
       }
       &:nth-child(2){
         span{
@@ -32,6 +52,10 @@
       &:last-child{
         width: 30%;
         margin-right: 0;
+        @media(max-width: 412px){
+          width: 120px;
+          flex-shrink: 0;
+        }
 
       }
     }

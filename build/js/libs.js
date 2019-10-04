@@ -165,7 +165,14 @@ $(document).ready(function () {
         ua = navigator.userAgent,
         event = (ua.match(/iPad/i)) ? "touchstart" : "click";
 
-
+    $body.on(event, '.mobil-factors', function (e) {
+        e.preventDefault();
+        $('.company-sidebar').addClass('open');
+    });
+    $body.on(event, '.company-sidebar--close',function (e) {
+       e.preventDefault();
+        $('.company-sidebar').removeClass('open');
+    });
     Tabs();
 
     if($(window).width() > 412){

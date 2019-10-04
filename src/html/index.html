@@ -4,7 +4,7 @@
 
 <div class="company">
     <div class="wrapper">
-        {# % include 'sections/sidebar.html' % #}
+         {% include 'sections/sidebar.html' %}
 
         <section class="company-content">
             <!--Карточка Главная-->
@@ -2147,6 +2147,10 @@
             <!--карточка для тендера конец-->
         </section>
 
+        <button class="mobil-factors good"><!--warning добавляется когда есть стопфакторы-->
+            <span class="icon"></span>
+            <span class="text">5 стоп факторов</span>
+        </button>
     </div>
 </div>
 {% endblock %}
