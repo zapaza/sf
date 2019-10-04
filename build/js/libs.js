@@ -175,9 +175,8 @@ $(document).ready(function () {
     });
     Tabs();
 
-    if($(window).width() > 412){
-        Scrolling();
-    }
+    Scrolling();
+
 
 //фокус поиска
     $body.on(event, '#query', function () {
@@ -213,10 +212,12 @@ $(document).ready(function () {
     });
 
 //показ меню
-    $body.on(event, '#show-menu', function (e) {
+    $body.on(event, '.show-menu', function (e) {
+        console.log("click");
         e.preventDefault();
         $(this).toggleClass('open');
-        $('#lk-menu').fadeToggle('500');
+        console.log($('#lk-menu'));
+        $('#lk-menu').fadeToggle();
 
     });
 
