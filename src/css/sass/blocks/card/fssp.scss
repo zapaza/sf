@@ -87,6 +87,9 @@
         @media (min-width: 1344px){
           font-size: 1.6rem;
         }
+        @media(max-width: 412px){
+          font-size: 1.6rem;
+        }
         span.no-content{
           color:$mid-gray--text;
         }
@@ -102,6 +105,9 @@
             font-size: 1.6rem;
           }
           @media (min-width: 1344px){
+            font-size: 1.6rem;
+          }
+          @media(max-width: 412px){
             font-size: 1.6rem;
           }
           span{

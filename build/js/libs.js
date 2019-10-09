@@ -22,19 +22,23 @@ function Scrolling(){
                 $('.header').stop().removeClass('scroll-bottom');
                 up = !up;
             }
-            // проверка на анимацию шапки
-            if ( $('.header').hasClass('scroll-bottom')){
-                $('.company-sidebar').addClass('fixed');
-            } else {
-                $('.company-sidebar').removeClass('fixed');
-            }
+
             // условие прокрутки по размеру стрницы
-            if(mywindow.scrollTop() >= scrollEnd) {
-                $('.company-sidebar').addClass('overflow-height');
-            } else{
-                $('.company-sidebar').removeClass('overflow-height');
+            if($(window).width > 412){
+                // проверка на анимацию шапки
+                if ( $('.header').hasClass('scroll-bottom')){
+                    $('.company-sidebar').addClass('fixed');
+                } else {
+                    $('.company-sidebar').removeClass('fixed');
+                }
+                if(mywindow.scrollTop() >= scrollEnd) {
+                    $('.company-sidebar').addClass('overflow-height');
+                } else{
+                    $('.company-sidebar').removeClass('overflow-height');
+                }
+                mypos = newscroll;
             }
-            mypos = newscroll;
+
         });
     }
     //добавление класса к хедеру при прокруттке страницы на главной
@@ -62,7 +66,6 @@ function Scrolling(){
         });
     }
 }
-
 function Tabs(){
     var $body = $('body'),
         ua = navigator.userAgent,
@@ -160,7 +163,6 @@ function Tabs(){
 }
 
 $(document).ready(function () {
-
     var $body = $('body'),
         ua = navigator.userAgent,
         event = (ua.match(/iPad/i)) ? "touchstart" : "click";
@@ -174,7 +176,6 @@ $(document).ready(function () {
         $('.company-sidebar').removeClass('open');
     });
     Tabs();
-
     Scrolling();
 
 
@@ -430,7 +431,6 @@ $(document).ready(function () {
 
 //ховер на стопфактор
     if($('.card').length > 0){
-
         $('.card').find('.card-header--factors_icon').hover(function () {
             $(this).removeClass('active');
         });
@@ -542,7 +542,6 @@ $(window).on('scroll',function () {
                 hint.removeClass('top');
             }
         }
-
     }
 
     $('#egrul .hard-hint').myFunctionPosition();

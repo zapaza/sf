@@ -1,8 +1,85 @@
 .tender{
+  @media(max-width: 412px){
+    display: none !important;
+    &.tender-mobil{
+      display: block !important;
+      padding-right: 24px;
+
+      .table{
+        .table-row{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 6px 0;
+          margin: 0;
+          .table-col{
+            flex-shrink: 0;
+            width: 60px;
+            padding: 0;
+            margin-right: 0;
+            margin-left: auto;
+            span{
+              text-align: right;
+              display: block;
+              width: 100%;
+              font-size: 16px;
+              &.no-content{
+                color: rgba(0, 0, 0, 0.4);
+              }
+            }
+            &:first-child{
+              width: 44px;
+              margin-left: 0;
+              span{
+                text-align: left;
+              }
+            }
+            &:last-child{
+              width: 120px;
+              margin-right: 0;
+              margin-left: 44px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+  @media(max-width: 360px){
+    &.tender-mobil{
+      .table{
+        .table-row{
+          .table-col{
+            &:last-child{
+              margin-left: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media(max-width: 340px){
+    &.tender-mobil{
+      .table{
+        .table-row{
+          .table-col{
+            &:last-child{
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
   &-tabs {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
+    @media(max-width: 412px){
+      overflow-x: auto;
+      margin: 0 -24px 24px;
+      width:calc(100% + 48px);
+    }
     &--name{
       width: 118px;
       padding: 8px 0;
@@ -17,12 +94,33 @@
       color: $mid-gray--text;
       cursor: pointer;
       transition: .2s ease all;
+      @media (max-width: 412px) {
+        margin-right: 8px;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: none;
+        color: $black--text;
+        padding: 8px;
+        &:last-child{
+          margin-right: 24px;
+        }
+        &:first-child{
+          margin-left: 24px;
+        }
+      }
       &.active{
         color: $black--text;
         background-color: rgba(0, 0, 0, 0.05);
+        @media(max-width: 412px){
+          background-color: #1a1a1a;
+          color: $white;
+        }
       }
       &:hover{
         color: $black--text;
+        @media(max-width: 412px){
+          color: $white;
+        }
       }
       &:first-child{
         border-top-left-radius:4px;
@@ -43,6 +141,9 @@
       }
 
       .table{
+        @media(max-width: 412px){
+          width: 100%;
+        }
         &-header{
           span{
             width: 100%;
@@ -82,7 +183,13 @@
           &:first-child{
             width: 20%;
             margin-right: 16px;
+            @media (max-width: 412px) {
+              width: 44px !important;
+            }
             span{
+              @media (max-width: 412px) {
+                font-size: rem(16px);
+              }
             }
             &:hover{
               background: transparent;
@@ -96,6 +203,9 @@
 
         &-body{
           padding-bottom: 24px;
+          @media(max-width: 412px){
+            padding-bottom: 14px;
+          }
 
           .table-col{
             font:{
@@ -110,6 +220,9 @@
             }
             @media (min-width: 1344px){
               font-size: 1.6rem;
+            }
+            @media (max-width: 412px) {
+              font-size: rem(16px);
             }
             &:first-child{
               font-weight: $font-bold;
@@ -135,6 +248,11 @@
           margin-right: 0;
           margin-left: 0;
           padding-bottom: 16px;
+          .table-col{
+            &:first-child{
+              font-weight: $font-bold;
+            }
+          }
           span{
             &.normal{
               color: $mid-gray--text;
