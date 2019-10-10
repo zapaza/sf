@@ -8,6 +8,17 @@
     .wrapper {
       padding: 0 24px;
     }
+    .header-logo {
+      svg {
+        path, rect, polygon {
+          fill: $white;
+        }
+
+        #Line-7 {
+          stroke: $red;
+        }
+      }
+    }
   }
 
   .header {
@@ -31,7 +42,7 @@
             }
 
             #Line-7 {
-              stroke: $white;
+              stroke: $red;
             }
           }
         }
@@ -60,76 +71,50 @@
           }
         }
       }
-    }
-
-    //Авторизованный пользователь
-    &.auth {
-      @media(min-width: 413px) {
-        .controls {
-          display: none;
-        }
-      }
       @media(max-width: 412px) {
-        background: $white;
+        .header-logo {
+          svg {
+            path, rect, polygon {
+              fill: $white;
+            }
 
-        .wrapper {
-          padding-right: 16px;
-        }
-
-        .header-search {
-          display: none;
+            #Line-7 {
+              stroke: $red;
+            }
+          }
         }
         .header-link {
-          display: none;
-        }
-
-        .controls {
-          justify-self: flex-end;
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-
-          button {
-            width: 32px;
-            height: 32px;
-            margin-left: 12px;
-            border: 0;
+          .enter {
             background-color: transparent;
-
-            &:first-child {
-              margin-left: 0;
-            }
-
-            svg {
-              opacity: .4;
-            }
-          }
-
-          .header-auth-menu {
-            position: relative;
-
-            &::after {
-              content: '';
-              width: 9px;
-              height: 9px;
-              background: $red;
-              border: 1px solid #ffffff;
-              border-radius: 50%;
-              position: absolute;
-              top: 0;
-              right: 0;
-              opacity: 0;
-            }
-
-            &.has-note {
-              &::after {
-                opacity: 1;
-              }
-            }
+            border-color: $white;
           }
         }
       }
     }
+
+    &.scroll {
+      background: $white;
+
+      .header-logo {
+        svg {
+          path, rect, polygon {
+            fill: $black;
+          }
+
+          #Line-7 {
+            stroke: $red;
+          }
+        }
+      }
+    }
+
+    &.auth {
+      @media (max-width: 412px) {
+        background: $white;
+      }
+    }
+
+
   }
 
   .header-block {

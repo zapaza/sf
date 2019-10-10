@@ -1,5 +1,5 @@
 <!-- Для неавторизованного пользователя -->
-<header class="header" style="display:none;">
+<header class="header">
     <div class="wrapper">
 
         <div class="header-logo">
@@ -73,7 +73,7 @@
 </header>
 
 <!-- Для авторизованного пользователя -->
-<header class="header auth">
+<header class="header auth" style="display:none;">
     <div class="wrapper">
         <div class="header-logo">
             <a href="/">
@@ -341,6 +341,62 @@
 
             </button>
         </div>
-
     </div>
+
+    <div class="header-mobile-menu js-mobile-menu">
+        <div class="header-mobile-menu-content">
+
+            <button type="button" class="header-mobile-menu__close js-close-mobile-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <g fill="none" fill-rule="evenodd" opacity=".4">
+                        <path d="M0 0h32v32H0z"/>
+                        <path stroke="#000" stroke-linecap="square" stroke-width="2"
+                              d="M7.5 7.5l17 17M24.5 7.5l-17 17"/>
+                    </g>
+                </svg>
+            </button>
+
+            <div class="header-mobile-menu__inner">
+                <div class="header-mobile-menu__user">
+                    <img src="images/userpic.svg" alt="user-img">
+                </div>
+
+                <div class="header-mobile-menu__phone">+7 (412) 125-23-57</div>
+
+                <div class="header-mobile-menu__time">Подписка истекает через 25 дней</div>
+
+                <nav>
+                    <ul class="header-mobile-menu__nav">
+                        <li class="header-mobile-menu__nav-item">
+                            <a href="#0">
+                                <span class="icon icon--monitoring"></span>
+                                Мониторинг
+                                <span class="messages">99+</span>
+                            </a>
+                        </li>
+                        <li class="header-mobile-menu__nav-item">
+                            <a href="#0">
+                                <span class="icon icon--compare"></span>
+                                Сравнение
+                            </a>
+                        </li>
+                        <li class="header-mobile-menu__nav-item">
+                            <a href="#0">
+                                <span class="icon icon--settings"></span>
+                                Настройки
+                            </a>
+                        </li>
+                        <li class="header-mobile-menu__nav-item">
+                            <a href="#0">
+                                <span class="icon icon--exit"></span>
+                                Выход
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+
 </header>

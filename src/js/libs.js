@@ -198,9 +198,15 @@ $(document).ready(function () {
     });
 
 //очистка поля поиска
-    $body.on(event, '.header-search--btn_reset', function () {
-        $(this).fadeOut('fast');
-        $(this).closest('form').find('.header-search--btn').css('opacity','.4');
+    $body.on(event, '.header-search--btn_reset', function (e) {
+        if($(window).width() > 412) {
+            $(this).fadeOut('fast');
+            $(this).closest('form').find('.header-search--btn').css('opacity', '.4');
+        } else {
+            $('.header-search').fadeOut(200);
+            $('.header-search--btn').removeClass('active');
+            $('.header-search--input').blur();
+        }
     });
 
 //скрол по якорю
@@ -557,4 +563,22 @@ $(window).on('scroll',function () {
     $('#tender .hard-hint').myFunctionPosition();
 
 
+});
+
+$('body').on('click', '.js-header-auth-menu', function () {
+    $('html, body').addClass('overflow');
+    $('.js-mobile-menu').addClass('active');
+});
+$('body').on('click', '.js-close-mobile-menu', function () {
+    $('html, body').removeClass('overflow');
+    $('.js-mobile-menu').removeClass('active');
+});
+$('body').on('click', '.js-header-auth-search', function () {
+    $('.header-search').fadeIn(200);
+    $('.header-search--input').focus();
+    $('.header-search--btn').addClass('active');
+});
+$('body').on('click', '.search-info-mobile__btn', function () {
+    $('.search-info-mobile__btn').removeClass('active');
+    $(this).addClass('active');
 });
