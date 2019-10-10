@@ -201,7 +201,7 @@
         </div>
     </div>
 </div>
-<!--vМодалки с оплатой-->
+<!--Модалки с оплатой-->
 <div class="modal modal-price mfp-hide" id="modal-price">
    <div class="modal-price--title">
        <h2>Выберите способ оплаты</h2>
@@ -5263,16 +5263,27 @@
 
 <script src="js/combined.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.11.1/dist/js/jquery.suggestions.min.js"></script>
-<!--<script>
+<script>
     $("#query").suggestions({
         token: "93dc951d16827886219c6ec5e445288493292104",
         type: "PARTY",
-        /* Вызывается, когда пользователь выбирает одну из подсказок */
-        onSelect: function(suggestion) {
+
+        triggerSelectOnSpace: false,
+
+        triggerSelectOnEnter: false,
+
+        triggerSelectOnBlur: false,
+
+        onSelect: function (suggestion) {
             console.log(suggestion);
+            window.location = '/company/' + suggestion.data.ogrn + '/';
+            /* $('#search-form').submit();*/
         }
+
     });
-</script>-->
+
+
+</script>
 <script src="js/libs.js"></script>
 
 {% include 'layouts/_counters.html' %}
