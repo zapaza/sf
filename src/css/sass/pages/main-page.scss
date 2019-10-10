@@ -111,6 +111,17 @@
     &.auth {
       @media (max-width: 412px) {
         background: $white;
+        .header-logo {
+          svg {
+            path, rect, polygon {
+              fill: $black;
+            }
+
+            #Line-7 {
+              stroke: $red;
+            }
+          }
+        }
       }
     }
 
