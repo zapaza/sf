@@ -19,7 +19,7 @@
   &--close{
     display: none;
   }
-  @media(max-width: 412px){
+  @media(min-width: 320px) and (max-width: 412px){
     position: fixed;
     bottom: 0;
     left: 0;
@@ -27,12 +27,16 @@
     display: block;
     transform: translateY(100%);
     transition: .2s ease all;
-    border-radius: 8px;
     background-color: #ffffff;
     width: 100%;
-    height: auto;
     max-width: 412px;
     padding: 48px 50px;
+    max-height: 576px;
+    height: 100%;
+    top: auto;
+    border-radius: 8px 8px 0 0;
+    margin: 0;
+    z-index: 999;
     &.open{
       transform: translateY(0);
     }
@@ -52,7 +56,7 @@
       background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ED254B955-C740-450F-8233-2BCE7A651267%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/M/normal'%3E%3Cg id='Group-14'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpath d='M4.5,4.5 L19.5,19.5' id='Line-2' stroke='%23000000' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M19.5,4.5 L4.5,19.5' id='Line-2' stroke='%23000000' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
   }
-  @media(max-width: 360px){
+  @media(min-width: 320px)and (max-width: 360px){
     padding: 24px;
   }
 
@@ -99,10 +103,18 @@
     @media (min-width: 1344px) {
       padding-top: 16px;
     }
+    @media(min-width: 320px)and (max-width: 412px){
+      overflow-y: auto;
+      overflow-x: hidden;
+      //height: 100%;
+    }
     & > li{
       position: relative;
       margin-bottom: 12px;
       @media (min-width: 1344px) {
+        margin-bottom: 20px;
+      }
+      @media(min-width: 320px)and (max-width: 412px){
         margin-bottom: 20px;
       }
       &[data-hint]{
@@ -177,6 +189,10 @@
         color: $black--text;
         transform: .2s all ease;
         @media (min-width: 1344px) {
+          font-size: 1.6rem;
+          line-height: 2rem;
+        }
+        @media(min-width: 320px)and (max-width: 412px){
           font-size: 1.6rem;
           line-height: 2rem;
         }

@@ -9,4 +9,21 @@
   @import "../sections/company-content";
   @import "../sections/company-btn";
   @import "../sections/company-modal";
+
+  .wrapper{
+    &.cover{
+      &:before{
+        position: fixed;
+        content: '';
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 998;
+      }
+    }
+  }
 }

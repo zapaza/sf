@@ -124,7 +124,7 @@
           grid-template-columns: repeat(2, 1fr);
           grid-gap: 10px;
           width: auto;
-          
+
         }
 
         .table-col{
@@ -137,13 +137,6 @@
     }
 
     &-body{
-      .table-row{
-        &:first-child{
-          .table-col{
-
-          }
-        }
-      }
       &.fns{
         .table-col{
           max-width: 272px;

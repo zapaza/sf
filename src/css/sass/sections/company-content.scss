@@ -103,8 +103,14 @@
   color: #ffffff;
   border:none;
   text-align: center;
+  .icon{
+    margin-right: 12px;
+  }
   @media(max-width:412px){
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
   &.warning{
     background-color: $red;
