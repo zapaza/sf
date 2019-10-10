@@ -1,16 +1,16 @@
-function Scrolling(){
+function Scrolling() {
     //анимация скролинга страницы
-    if(!$('body').hasClass('main-page') && !$('body').hasClass('adm')){
+    if (!$('body').hasClass('main-page') && !$('body').hasClass('adm')) {
         var mywindow = $(window);
         var mypos = 68;
         var up = false;
         var newscroll;
-        var scrollEnd =  $('.page-content').innerHeight() - $('.page-content').offset().top  - $('.company-sidebar').innerHeight();
+        var scrollEnd = $('.page-content').innerHeight() - $('.page-content').offset().top - $('.company-sidebar').innerHeight();
         console.log(scrollEnd);
         mywindow.scroll(function () {
             newscroll = mywindow.scrollTop();
             if (newscroll > mypos && !up) { //если есть прокрутка в низ·
-                if($('#show-menu').hasClass('open')){
+                if ($('#show-menu').hasClass('open')) {
                     $('.header').stop().removeClass('scroll-bottom');
                     up = !up;
                 } else {
@@ -18,22 +18,22 @@ function Scrolling(){
                     up = !up;
                 }
 
-            } else if(newscroll < mypos && up) { //если прокрутка в верх
+            } else if (newscroll < mypos && up) { //если прокрутка в верх
                 $('.header').stop().removeClass('scroll-bottom');
                 up = !up;
             }
 
             // условие прокрутки по размеру стрницы
-            if($(window).width > 412){
+            if ($(window).width > 412) {
                 // проверка на анимацию шапки
-                if ( $('.header').hasClass('scroll-bottom')){
+                if ($('.header').hasClass('scroll-bottom')) {
                     $('.company-sidebar').addClass('fixed');
                 } else {
                     $('.company-sidebar').removeClass('fixed');
                 }
-                if(mywindow.scrollTop() >= scrollEnd) {
+                if (mywindow.scrollTop() >= scrollEnd) {
                     $('.company-sidebar').addClass('overflow-height');
-                } else{
+                } else {
                     $('.company-sidebar').removeClass('overflow-height');
                 }
                 mypos = newscroll;
@@ -42,8 +42,8 @@ function Scrolling(){
         });
     }
     //добавление класса к хедеру при прокруттке страницы на главной
-    if($('.main-page').length >0){
-        if($(window).scrollTop() >= 0) {
+    if ($('.main-page').length > 0) {
+        if ($(window).scrollTop() >= 0) {
             var height = $(window).scrollTop();
 
             if (height > 1) {
@@ -52,9 +52,9 @@ function Scrolling(){
                 $('header').removeClass('scroll');
             }
         }
-        $(window).scroll(function() {
+        $(window).scroll(function () {
 
-            if($(window).scrollTop() >= 0) {
+            if ($(window).scrollTop() >= 0) {
                 var height = $(window).scrollTop();
 
                 if (height > 1) {
@@ -66,18 +66,19 @@ function Scrolling(){
         });
     }
 }
-function Tabs(){
+
+function Tabs() {
     var $body = $('body'),
         ua = navigator.userAgent,
         event = (ua.match(/iPad/i)) ? "touchstart" : "click";
 
     //скрипт для карточек , переключение вкладок(анимация)
-    if($('.card-content').length > 0){
+    if ($('.card-content').length > 0) {
         //анимация чекбокса
-        $body.on(event, '.card-content-tabs--link',function(){
-            if (!$(this).hasClass('active')){
+        $body.on(event, '.card-content-tabs--link', function () {
+            if (!$(this).hasClass('active')) {
 
-                $(this).css('points-events','all');
+                $(this).css('points-events', 'all');
                 $(this).closest('.card-content-tabs').children('.card-content-tabs--link').removeClass('active');
                 $(this).addClass('active');
                 $(this).closest('.card-content-tabs').find('input').trigger('click');
@@ -101,9 +102,8 @@ function Tabs(){
     }
 
 
-
     //tabs в карточеке тендеры егрюл и собственники
-    if($('.tender').length > 0){
+    if ($('.tender').length > 0) {
         $(".tender").find('.tender-content-tab').hide();
         $(".tender").find('.tender-content-tab:first').show();
 
@@ -123,7 +123,7 @@ function Tabs(){
             // $(".tab-drawer-heading[rel^='" + activeTab + "']").addClass("d-active");
         });
     }
-    if($('.egrul').length > 0){
+    if ($('.egrul').length > 0) {
         $(".egrul").find('.egrul-content-tab').hide();
         $(".egrul").find('.egrul-content-tab:first').show();
 
@@ -143,7 +143,7 @@ function Tabs(){
             // $(".tab-drawer-heading[rel^='" + activeTab + "']").addClass("d-active");
         });
     }
-    if($('.child').length > 0){
+    if ($('.child').length > 0) {
         $(".child").find('.child-content-tab').hide();
         $(".child").find('.child-content-tab:first').show();
 
@@ -172,8 +172,8 @@ $(document).ready(function () {
         $('.company-sidebar').addClass('open');
         $('.company-sidebar').closest('.wrapper').addClass('cover');
     });
-    $body.on(event, '.company-sidebar--close',function (e) {
-       e.preventDefault();
+    $body.on(event, '.company-sidebar--close', function (e) {
+        e.preventDefault();
         $('.company-sidebar').removeClass('open');
         $('.company-sidebar').closest('.wrapper').removeClass('cover');
     });
@@ -185,16 +185,18 @@ $(document).ready(function () {
     $body.on(event, '#query', function () {
         $(this).focus().closest('form').find('.history').show();
     });
-    $('#query').on('keyup',function(){
+    $('#query').on('keyup', function () {
         var $this = $(this),
             val = $this.val();
 
-        if(val.length >= 1){
-            $(this).closest('form').find('.header-search--btn_reset').fadeIn('200');
-            $(this).closest('form').find('.header-search--btn').css('opacity','1');
-        }else {
-            $(this).closest('form').find('.header-search--btn_reset').fadeOut('200');
-            $(this).closest('form').find('.header-search--btn').css('opacity','.4');
+        if ($(window).width() > 412) {
+            if (val.length >= 1) {
+                $(this).closest('form').find('.header-search--btn_reset').fadeIn('200');
+                $(this).closest('form').find('.header-search--btn').css('opacity', '1');
+            } else {
+                $(this).closest('form').find('.header-search--btn_reset').fadeOut('200');
+                $(this).closest('form').find('.header-search--btn').css('opacity', '.4');
+            }
         }
         //показ пооследних компаний которые искались
 
@@ -202,7 +204,7 @@ $(document).ready(function () {
 
 //очистка поля поиска
     $body.on(event, '.header-search--btn_reset', function (e) {
-        if($(window).width() > 412) {
+        if ($(window).width() > 412) {
             $(this).fadeOut('fast');
             $(this).closest('form').find('.header-search--btn').css('opacity', '.4');
         } else {
@@ -213,9 +215,9 @@ $(document).ready(function () {
     });
 
 //скрол по якорю
-    $body.on(event,".company-sidebar--menu a", function (e) {
+    $body.on(event, ".company-sidebar--menu a", function (e) {
         e.preventDefault();
-        var id  = $(this).attr('href'),
+        var id = $(this).attr('href'),
             top = $(id).offset().top - 70;
         $('body,html').animate({scrollTop: top}, 1000);
     });
@@ -251,7 +253,7 @@ $(document).ready(function () {
         closeBtnInside: false,
         mainClass: 'zoom-in mfp-price',
     });
-    if(!$('.options-monitoring').hasClass('mfp-hide')) {
+    if (!$('.options-monitoring').hasClass('mfp-hide')) {
         console.log(1111);
         $('.mfp-bg').removeClass('modal-inside').addClass('mfp-price');
     }
@@ -266,7 +268,7 @@ $(document).ready(function () {
         fixedBgPos: true,
         preloader: false,
         overflowY: 'scroll',
-        closeOnBgClick:false,
+        closeOnBgClick: false,
         removalDelay: 300,
         closeBtnInside: false,
         mainClass: 'zoom-in authorization'
@@ -276,7 +278,7 @@ $(document).ready(function () {
         type: 'inline',
         midClick: true,
         fixedBgPos: false,
-        fixedContentPos:"auto",
+        fixedContentPos: "auto",
         preloader: false,
         overflowY: 'scroll',
         removalDelay: 300,
@@ -295,7 +297,7 @@ $(document).ready(function () {
     });
     $('a[data-modal-inside]').magnificPopup({
         type: 'inline',
-        midClick:true,
+        midClick: true,
         fixedBgPos: true,
         preloader: false,
         overflowY: 'auto',
@@ -305,10 +307,10 @@ $(document).ready(function () {
         mainClass: 'zoom-in modal-inside',
         callbacks: {
             open: function () {
-                if($('.mfp-wrap').find('.big')){
+                if ($('.mfp-wrap').find('.big')) {
                     $('.mfp-wrap').find('.big').closest('.mfp-content').addClass('big');
                 }
-                if($('.modal .card-footer').length > 0){
+                if ($('.modal .card-footer').length > 0) {
                     var links = $('.mfp-wrap .card-footer').clone();
 
                     $('.modal').find('.card-footer').remove();
@@ -325,10 +327,10 @@ $(document).ready(function () {
         $this.toggleClass('active');
         $target.slideToggle(100);
 
-    } );
+    });
     $('[data-mfp-src]').magnificPopup({
         type: 'inline',
-        midClick:true,
+        midClick: true,
         fixedBgPos: true,
         preloader: false,
         overflowY: 'auto',
@@ -339,8 +341,8 @@ $(document).ready(function () {
     });
 
 //модалка в модалке "открытия на другом устройстве"
-    if(('.use-here').length > 0){
-        $body.on(event, '.why-show',function (e) {
+    if (('.use-here').length > 0) {
+        $body.on(event, '.why-show', function (e) {
             e.preventDefault();
             $(this).closest('.use-here').find('#why-show-modal').show();
         });
@@ -361,14 +363,14 @@ $(document).ready(function () {
     });
 
 //таймер в модалке регистрации
-    if($('.timeout').length > 0){
+    if ($('.timeout').length > 0) {
         var second = $('.timeout').text(),
             int;
         int = setInterval(function () {
-            if (second > 0){
+            if (second > 0) {
                 second--;
                 $('.timeout').text(second);
-            } else{
+            } else {
                 clearInterval(int);
                 $('.timeout').closest('p').hide();
                 $('.return-code').show();
@@ -377,7 +379,7 @@ $(document).ready(function () {
     }
 
 //аккордион на главной странице
-    if($('.questions').length > 0){
+    if ($('.questions').length > 0) {
         var accordionContentQuestion = $('.questions-list .content').hide();
 
         $body.on(event, '.questions-list--item .title', function () {
@@ -387,11 +389,11 @@ $(document).ready(function () {
             $this.toggleClass('active');
             $target.slideToggle(500);
 
-        } )
+        })
     }
 
 //Показ модалки поделиться
-    if($('.company-modal').length > 0){
+    if ($('.company-modal').length > 0) {
         $body.on(event, '.trigger-modal', function (e) {
             e.preventDefault();
             $(this).next('.company-modal').fadeIn();
@@ -399,21 +401,21 @@ $(document).ready(function () {
     }
 //Анимация главной карточки при прокрутке
 
-    if($('.main-card').length > 0){
+    if ($('.main-card').length > 0) {
         var mainCard = $('.index-card-js'), //Получаем нужный объект
-            mainCardTop = mainCard.offset().top , //Получаем начальное расположение нашего блока
+            mainCardTop = mainCard.offset().top, //Получаем начальное расположение нашего блока
             mainCardHeight = $('.index-card-js')[0].scrollHeight,
-            mainCardSum = mainCardHeight -  mainCardTop - 70,
+            mainCardSum = mainCardHeight - mainCardTop - 70,
             fakeName = mainCard.find('.card-header').clone(),
-            wrapTrue =false;
+            wrapTrue = false;
         $(window).scroll(function () {
             var windowScroll = $(window).scrollTop(); //Получаем величину, показывающую на сколько прокручено окно
             if (windowScroll > mainCardSum) { // Если прокрутили больше, чем расстояние до блока, то приклеиваем его
                 $('.header .wrapper').append(fakeName);
                 setTimeout(function () {
                     $('.header').find('.card-header').fadeIn(300).addClass('show');
-                },500);
-                if( wrapTrue === false ){
+                }, 500);
+                if (wrapTrue === false) {
 
                     $('.header').find('.card-header').find('h1').wrap('<div class="card-header--inner"><div> </div></div>');
 
@@ -423,28 +425,28 @@ $(document).ready(function () {
                 $('.header').find('.card-header').removeClass('show').fadeOut(300);
                 setTimeout(function () {
                     $('.header').find('.card-header').remove();
-                },300);
+                }, 300);
             }
 
-            if ($('.card-header--inner').width() > 440){
+            if ($('.card-header--inner').width() > 440) {
                 $('.card-header--inner').find('div').addClass('fade');
             }
         });
 
-        $body.on(event, '.card-header--inner', function() {
-            $('html, body').animate({scrollTop: 0},500);
+        $body.on(event, '.card-header--inner', function () {
+            $('html, body').animate({scrollTop: 0}, 500);
             return false;
         })
     }
 
 //ховер на стопфактор
-    if($('.card').length > 0){
+    if ($('.card').length > 0) {
         $('.card').find('.card-header--factors_icon').hover(function () {
             $(this).removeClass('active');
         });
     }
 //показ выпадающих годов
-    $body.on(event,'.show-all--list', function (e) {
+    $body.on(event, '.show-all--list', function (e) {
         e.preventDefault();
         $(this).next('.show-all--dropdown').fadeToggle();
     });
@@ -460,26 +462,26 @@ $(document).ready(function () {
     // });
 
 //подробнее в главной карточке
-    if($('.main-card-status').length>0){
+    if ($('.main-card-status').length > 0) {
 
-      $body.on(event, '.main-card-status .show-more-btn', function (e) {
-          e.preventDefault();
-          $(this).toggleClass('active')
-              .closest('.main-card-status_header').next('.main-card-status_content').slideToggle();
-      });
+        $body.on(event, '.main-card-status .show-more-btn', function (e) {
+            e.preventDefault();
+            $(this).toggleClass('active')
+                .closest('.main-card-status_header').next('.main-card-status_content').slideToggle();
+        });
 
     }
 
     //вункционал кнопок отчетность и выписка
-    if($('.company-btn').length>0){
-        $body.on(event, '.company-btn--inner .btn', function(event){
-              event.preventDefault();
+    if ($('.company-btn').length > 0) {
+        $body.on(event, '.company-btn--inner .btn', function (event) {
+            event.preventDefault();
             $(this).parent().find('.company-btn--dropdown').first().toggle();
             $(this).parent().siblings().find('.company-btn--dropdown').hide();
             //Hide menu when clicked outside
-            $(this).parent().find('.company-btn--dropdown').mouseout(function(){
+            $(this).parent().find('.company-btn--dropdown').mouseout(function () {
                 var thisUI = $(this);
-                $('html').click(function(){
+                $('html').click(function () {
                     thisUI.hide();
                     $('html').unbind('click');
                 });
@@ -492,7 +494,7 @@ $(document).ready(function () {
         $(this).toggleClass('open');
         $(this).closest('.compare-select').find('.compare-select--list').toggleClass('open');
     });
-    $(document).mouseup(function (e){ // событие клика по веб-документу
+    $(document).mouseup(function (e) { // событие клика по веб-документу
         var div = $(".compare-select"); // тут указываем ID элемента
         if (!div.is(e.target) // если клик был не по нашему блоку
             && div.has(e.target).length === 0) { // и не по его дочерним элементам
@@ -500,8 +502,6 @@ $(document).ready(function () {
             div.find('.compare-select--list').removeClass('open');// скрываем его
         }
     });
-
-
 
 
     //show monitoring
@@ -518,23 +518,23 @@ $(document).ready(function () {
 
 
     //скприпт модалки новой заявки
-    if($('.select-price input').is('checked')){
+    if ($('.select-price input').is('checked')) {
         $(this).parent('lable').toggleClass('active');
     }
 });
-$(document).mouseup(function (e){
+$(document).mouseup(function (e) {
     var div = $(".company-modal");
-    if (!div.is(e.target) && div.has(e.target).length === 0 ) {
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
         div.fadeOut();
-    } else if (div.prev('a').is(e.target)){
+    } else if (div.prev('a').is(e.target)) {
         div.show();
     }
 });
 
-$(window).on('scroll',function () {
+$(window).on('scroll', function () {
     // позиционирование хинтов стопфакторов
-    $.fn.myFunctionPosition = function() {
-        if ($(this).length > 0){
+    $.fn.myFunctionPosition = function () {
+        if ($(this).length > 0) {
             var hint = $(this);
             var hintHeight = hint.innerHeight();
             var offset = hint.offset();
@@ -546,7 +546,7 @@ $(window).on('scroll',function () {
             // console.log(heightWindow - hintHeight);
             if (summHeight > (heightWindow - hintHeight)) {
                 hint.addClass('top');
-            }else if(summHeight < (heightWindow - hintHeight)) {
+            } else if (summHeight < (heightWindow - hintHeight)) {
                 hint.removeClass('top');
             }
         }
