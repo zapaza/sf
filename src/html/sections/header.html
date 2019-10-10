@@ -1,5 +1,5 @@
 <!-- Для неавторизованного пользователя -->
-<header class="header" style="display:none;">
+<header class="header">
     <div class="wrapper">
 
         <div class="header-logo">
@@ -73,7 +73,7 @@
 </header>
 
 <!-- Для авторизованного пользователя -->
-<header class="header auth" >
+<header class="header auth" style="display:none;">
     <div class="wrapper">
         <div class="header-logo">
             <a href="/">
@@ -375,8 +375,8 @@
                             </a>
                         </li>
                         <li class="header-mobile-menu__nav-item">
-                            <a href="#0">
-                                <span class="icon icon--compare"></span>
+                            <a href="#modal-compare" data-modal-inside>
+                                <span class="icon icon--compare "></span>
                                 Сравнение
                             </a>
                         </li>
