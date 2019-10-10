@@ -21,6 +21,10 @@
     opacity: .5;
     background-size: contain;
     background-repeat: no-repeat;
+    @media (max-width: 412px)  {
+      width: 24px;
+      height: 24px;
+    }
   }
   &-content{
     width: 784px;
@@ -28,6 +32,9 @@
     background-color: $white;
     margin-right: 0;
     margin-left: auto;
+    @media(max-width: 412px){
+      width: 100%;
+    }
   }
 
   &-header{
@@ -37,11 +44,19 @@
     background-color: $white;
     padding: 25px 20px 24px 40px;
     border-bottom: 1px solid $mid-gray--text;
+    @media(max-width: 412px){
+      padding: 20px 16px 20px 24px;
+    }
+
 
     h2{
       font-size: rem(22px);
       font-weight:$font-bold;
       color: $black--text;
+      @media (max-width: 412px) {
+        font-size: rem(16px);
+        line-height: 1.25;
+      }
     }
 
     .status{
@@ -49,6 +64,11 @@
       margin-right: auto;
       font-size: rem(22px);
       color: $mid-gray--text;
+      @media (max-width: 412px) {
+        font-size: rem(16px);
+        line-height: 1.25;
+        font-weight:$font-bold;
+      }
     }
 
   }
@@ -61,11 +81,24 @@
     overflow-x:hidden;
     overflow-y: scroll;
     position: relative;
+    @media(max-width: 412px){
+      height: calc(100vh - 60px);
+    }
 
     &--empty{
 
       max-width: 320px;
       margin:183px auto 0;
+      @media(max-width: 412px){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: auto;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 0 24px;
+
+      }
       img{
         display: block;
         width: 104px;
