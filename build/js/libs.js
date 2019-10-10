@@ -224,10 +224,10 @@ $(document).ready(function () {
 
 //показ меню
     $body.on(event, '.show-menu', function (e) {
-        console.log("click");
+        //console.log("click");
         e.preventDefault();
         $(this).toggleClass('open');
-        console.log($('#lk-menu'));
+        //console.log($('#lk-menu'));
         $('#lk-menu').fadeToggle();
 
     });
@@ -505,12 +505,12 @@ $(document).ready(function () {
 
 
     //show monitoring
-    $body.on('click', '.show-monitoring', function (e) {
+    $body.on(event, '.show-monitoring', function (e) {
         e.preventDefault();
         $('#monitoring').toggleClass('monitoring--open');
         $body.toggleClass('overflow');
     });
-    $body.on('click', '.monitoring-close', function (e) {
+    $body.on(event, '.monitoring-close', function (e) {
         e.preventDefault();
         $('#monitoring').toggleClass('monitoring--open');
         $body.toggleClass('overflow');
@@ -566,20 +566,31 @@ $(window).on('scroll', function () {
 
 });
 
-$('body').on('click', '.js-header-auth-menu', function () {
+$('body').on(event, '.js-header-auth-menu', function () {
     $('html, body').addClass('overflow');
     $('.js-mobile-menu').addClass('active');
 });
-$('body').on('click', '.js-close-mobile-menu', function () {
+$('body').on(event, '.js-close-mobile-menu', function () {
     $('html, body').removeClass('overflow');
     $('.js-mobile-menu').removeClass('active');
 });
-$('body').on('click', '.js-header-auth-search', function () {
+$('body').on(event, '.js-header-auth-search', function () {
     $('.header-search').fadeIn(200);
     $('.header-search--input').focus();
     $('.header-search--btn').addClass('active');
 });
-$('body').on('click', '.search-info-mobile__btn', function () {
+$('body').on(event, '.search-info-mobile__btn', function () {
     $('.search-info-mobile__btn').removeClass('active');
     $(this).addClass('active');
 });
+
+//Клик вне блока поиска. Будет работать и так, но можно завернуть в функцию и биндить ее по открытию дропдауна поиска и анбиндить по скрытию.
+if($(window).width() > 412) {
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        var div = $(".header-search"); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            console.log('Скрыть dropdown');
+        }
+    });
+}
