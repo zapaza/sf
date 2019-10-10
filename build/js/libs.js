@@ -170,10 +170,12 @@ $(document).ready(function () {
     $body.on(event, '.mobil-factors', function (e) {
         e.preventDefault();
         $('.company-sidebar').addClass('open');
+        $('.company-sidebar').closest('.wrapper').addClass('cover');
     });
     $body.on(event, '.company-sidebar--close',function (e) {
        e.preventDefault();
         $('.company-sidebar').removeClass('open');
+        $('.company-sidebar').closest('.wrapper').removeClass('cover');
     });
     Tabs();
     Scrolling();
