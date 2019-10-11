@@ -8,6 +8,30 @@
   &--inner{
     margin-bottom: 16px;
     position: relative;
+    &:first-child {
+      @media (max-width: 380px){
+        .company-btn--dropdown {
+          left: 0;
+          transform: translateX(0);
+          &:after{
+            left: 66px;
+          }
+        }
+      }
+    }
+    &:last-child {
+      @media (max-width: 380px){
+        .company-btn--dropdown {
+          right: 0;
+          left: auto;
+          transform: translateX(0);
+          &:after{
+            left: auto;
+            right: 66px ;
+          }
+        }
+      }
+    }
   }
 
   &--dropdown{
@@ -21,6 +45,10 @@
     border-right: 4px;
     padding: 8px 0;
     box-sizing: content-box;
+    @media (max-width: 412px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
     &:after{
       content: '';
       position: absolute;
@@ -31,7 +59,10 @@
       border: 8px solid transparent;
       border-top-color: $white;
       box-sizing: border-box;
-
+      @media (max-width: 412px) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     li{

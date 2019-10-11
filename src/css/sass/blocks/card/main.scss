@@ -43,6 +43,9 @@
       height: 20px;
       cursor: pointer;
       margin-left: 4px;
+      @media (max-width: 412px) {
+        display: none;
+      }
       svg {
         path, circle{
           transition: .2s;
@@ -189,6 +192,9 @@
         &:hover{
           &:after,&:before{
             opacity: 1;
+            @media (max-width: 412px) {
+              opacity: 0;
+            }
           }
         }
         svg{
@@ -419,9 +425,7 @@
       align-items: flex-start;
       justify-content: flex-start;
       margin-right: -24px;
-      [data-modal-affiliation]{
-        display: none;
-      }
+
     }
     &.full{
       align-items: flex-start;
@@ -431,6 +435,14 @@
         background: transparent;
         border-radius: 0;
         justify-content: flex-start;
+        @media(max-width: 412px){
+          width: 100%;
+          max-width: none;
+          padding: 20px 0;
+          box-shadow: none;
+          border-bottom: 1px solid $light-gray;
+          border-radius: 0;
+        }
       }
       .main-card-info--row{
         margin-bottom: 32px;
@@ -454,6 +466,9 @@
                 vertical-align: middle;
                 cursor: pointer;
                 position: relative;
+                @media (max-width: 412px) {
+                  display: none;
+                }
                 svg{
                   circle, path{
                     transition: .2s;
@@ -478,6 +493,7 @@
                 &:hover{
                   .hard-hint{
                     display: block;
+
                   }
                 }
                 .hard-hint{
@@ -764,6 +780,7 @@
         box-shadow: none;
         border-bottom: 1px solid $light-gray;
         border-radius: 0;
+
       }
       &[data-modal-affiliation],
       &[data-noregistr]{
@@ -779,6 +796,27 @@
         @media (min-width: 1344px){
           padding: 40px 32px 32px 132px;
           background-position: 32px 32px;
+        }
+        @media(max-width: 412px){
+          position: relative;
+          background-image: none;
+          padding: 20px 0;
+          min-height: auto;
+          &:after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            width: 24px;
+            height: 24px;
+            display: block;
+            background-image: url(../images/icon/mobil-arrow.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size: contain;
+            background-size: contain;
+            transform: rotate(90deg);
+          }
         }
         &:hover{
           text-decoration: none;
@@ -820,8 +858,8 @@
             box-shadow: none;
           }
         }
-
       }
+
 
       p{
         font:{

@@ -277,8 +277,8 @@ $(document).ready(function () {
     $('a[data-modal-card]').magnificPopup({
         type: 'inline',
         midClick: true,
-        fixedBgPos: false,
-        fixedContentPos: "auto",
+        fixedBgPos: true,
+        fixedContentPos: true,
         preloader: false,
         overflowY: 'scroll',
         removalDelay: 300,
@@ -289,6 +289,7 @@ $(document).ready(function () {
         type: 'inline',
         midClick: true,
         fixedBgPos: true,
+        fixedContentPos: true,
         preloader: false,
         overflowY: 'auto',
         removalDelay: 300,

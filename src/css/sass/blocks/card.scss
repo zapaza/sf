@@ -561,7 +561,11 @@
         &:after{
           opacity: 1;
           transition-delay:0;
+          @media(max-width: 412px){
+            opacity: 0;
+          }
         }
+
 
       }
     }
@@ -638,6 +642,7 @@
         position: static;
         transform: translateY(0);
         padding: 0;
+        display: none;
       }
 
       a{
