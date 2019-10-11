@@ -3,6 +3,11 @@
   max-width: 464px;
   height: 88px;
   position: relative;
+  @media (max-width: 412px) {
+    width: 100%;
+    height: 20px;
+
+  }
   &.no-select{
     .compare-select--btn{
       &:hover{
@@ -25,6 +30,13 @@
     height: 100%;
     padding: 14px 136px 14px 16px;
     box-sizing: border-box;
+    @media (max-width: 412px) {
+      border-right: 0;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      padding-left: 16px;
+    }
 
     span{
       overflow: hidden;
@@ -39,6 +51,11 @@
       text-transform: uppercase;
       width: 304px;
       letter-spacing: rem(0.4rem);
+      @media (max-width: 412px) {
+        width: 100%;
+        white-space: nowrap;
+        color: rgba(0, 0, 0, 0.4);
+      }
       &.crop{
         position: relative;
         &:before{
@@ -67,9 +84,28 @@
       border-bottom: 2px solid $mid-gray--text;
       transform: translateY(-50%) rotate(-45deg);
       box-sizing: border-box;
+      @media (max-width: 412px) {
+        right: auto;
+        left:0;
+        top: 45%;
+      }
+    }
+    @media (max-width: 412px) {
+      &:before{
+        position: absolute;
+        content: '';
+        bottom: 0;
+        right: 0;
+        width: 16px;
+        height: 20px;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+      }
     }
     &:hover{
       background-color:rgba(0, 0, 0, 0.05);
+      @media (max-width: 412px){
+        background-color: transparent;
+      }
       .crop{
         &:before{
           background-image: linear-gradient(to right, rgba(242, 242, 242, 0), rgb(242, 242, 242));
@@ -80,6 +116,10 @@
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
       box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+      @media (max-width: 412px){
+        background-color: transparent;
+        box-shadow: none;
+      }
     }
   }
   &--list{
@@ -96,6 +136,9 @@
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+    @media (max-width: 412px){
+      z-index: 99;
+    }
     &.open{
       display: block;
     }
@@ -105,6 +148,9 @@
     box-sizing: border-box;
     border-bottom: 1px solid $light-gray--text;
     position: relative;
+    @media (max-width: 412px){
+      padding: 8px 32px 8px 16px;
+    }
     &:hover{
       background-color: rgb(230, 230, 230);
       a{
@@ -169,6 +215,9 @@
       &:hover{
         background-color: $white;
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h32v32H0z' opacity='.2'/%3E%3Cpath fill='%23F24C3D' d='M14 10a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H11a1 1 0 0 1 0-2h3zm1 0h2a1 1 0 0 0-2 0zM11 13h10v8a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-8z'/%3E%3C/g%3E%3C/svg%3E");
+      }
+      @media(max-width: 412px){
+        visibility: visible;
       }
     }
   }
