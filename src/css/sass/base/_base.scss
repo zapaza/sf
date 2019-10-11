@@ -119,3 +119,13 @@ div.scrollableArea {
     display: none !important;
   }
 }
+.mfp-container{
+  @media(max-width: 412px){
+    padding: 0;
+  }
+}
+.mfp-content{
+  @media(max-width: 412px){
+    vertical-align: top;
+  }
+}

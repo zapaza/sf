@@ -136,12 +136,38 @@
       &:hover{
         background-color: rgba(0, 0, 0, 0.05);
       }
+      @media(max-width: 412px){
+        padding: 20px 56px 20px 24px;
+        &:before{
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 32px;
+          width: 24px;
+          height: 24px;
+          display: block;
+          background-image: url(../images/icon/mobil-arrow.svg);
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          -webkit-transform: rotate(90deg) translateY(-50%);
+          transform: rotate(90deg) translateY(-50%);
+          z-index: 1;
+
+        }
+      }
       & > div{
         display: flex;
         flex-direction: row;
         align-items:center;
         justify-content: space-between;
         padding-right: 104px;
+        @media(max-width:412px){
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding-right: 0;
+        }
       }
       &.new{
         background-color: rgba(58, 166, 94, 0.05);
@@ -181,6 +207,11 @@
           right: 32px;
           bottom: 50%;
           transform: translateY(50%);
+          @media(max-width: 412px){
+            right: 0;
+            bottom: 100%;
+            transform: translateY(0);
+          }
         }
       }
 
@@ -190,6 +221,11 @@
         margin-right: 80px;
         margin-top: 0;
         margin-bottom: auto;
+        @media (max-width: 412px) {
+          margin-right: 0px;
+          width: 100%;
+          margin-bottom: 12px;
+        }
         .name{
           margin-bottom: 4px;
           font-size: rem(14px);
@@ -201,11 +237,19 @@
             text-decoration: none;
             opacity: .9;
           }
+          @media (max-width: 412px){
+            font-size: 16px;
+            font-weight: $font-bold;
+            line-height: 1.25;
+          }
         }
         p{
           font-size: rem(14px);
           line-height: 1.43;
           color: $black--text;
+          @media (max-width: 412px){
+            display: none;
+          }
           span{
             display: inline-block;
             margin-right: 4px;
@@ -215,6 +259,9 @@
         &--status{
           font-size: rem(14px);
           line-height: 1.43;
+          @media (max-width: 412px){
+            display: none;
+          }
           &.norm{
             color: $green;
           }
@@ -228,6 +275,9 @@
         margin-bottom: auto;
         width: 280px;
         flex-shrink: 0;
+        @media (max-width: 412px) {
+          width: 100%;
+        }
         .name{
           margin-bottom: 4px;
           font-size: rem(14px);
@@ -242,6 +292,9 @@
 
           .factors{
             position: relative;
+            @media(max-width: 412px){
+              padding-left: 24px;
+            }
             &-icon {
               width: 24px;
               height: 24px;
@@ -253,6 +306,12 @@
               background-position: center center;
               -webkit-background-size: contain;
               background-size: contain;
+              @media (max-width: 412px){
+                width: 16px;
+                height: 16px;
+                top: 2px;
+                left: 0;
+              }
 
               &.satisfactorily {
                 background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3E228AA890-4BB7-4B13-B5C6-7B04F61B2E72%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='CARDS/DESKTOP/GUIDES-HINT' transform='translate(-384.000000, -291.000000)'%3E%3Cg id='icon/stopfactor/XL/alert' transform='translate(384.000000, 291.000000)'%3E%3Cg id='Group'%3E%3Cg id='Group-2'%3E%3Crect id='Rectangle' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Ccircle id='Oval' fill='%23E6A345' cx='20' cy='20' r='20'%3E%3C/circle%3E%3Cpath d='M17.6,10 L22.4,10 L21.5625,23.893918 L18.46875,23.893918 L17.6,10 Z M20.0325,31.6 C19.2741629,31.6 18.6458358,31.3483896 18.1475,30.8451613 C17.6491642,30.341933 17.4,29.721294 17.4,28.9832258 C17.4,28.2451576 17.6491642,27.63011 18.1475,27.1380645 C18.6458358,26.646019 19.2741629,26.4 20.0325,26.4 C20.7691703,26.4 21.3812476,26.646019 21.86875,27.1380645 C22.3562524,27.63011 22.6,28.2451576 22.6,28.9832258 C22.6,29.721294 22.3562524,30.341933 21.86875,30.8451613 C21.3812476,31.3483896 20.7691703,31.6 20.0325,31.6 Z' id='!' fill='%23FFFFFF' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -266,6 +325,11 @@
                 .hard-hint {
                   opacity: 1;
                   display: block;
+                }
+                @media(max-width: 412px){
+                  display: none;
+                  opacity: 0;
+                  pointer-events: none;
                 }
               }
 
@@ -342,6 +406,13 @@
         right: 40px;
         transform: translateY(-50%);
         padding-right: 0;
+        z-index: 2;
+        @media(max-width: 412px){
+          top: auto;
+          transform: translateY(0);
+          right: 16px;
+          bottom: 16px;
+        }
         &:hover{
           .options-list{
             display: block;
@@ -377,6 +448,9 @@
           background-color: rgb(255, 255, 255);
           padding: 8px 0;
           box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+          @media(max-width: 412px){
+            height: 96px;
+          }
         }
         .options-item{
           display: block;
@@ -386,6 +460,10 @@
           font-size: rem(14px);
           line-height: 1.14;
           color: $black--text;
+          @media(max-width: 412px){
+            font-size: rem(16px) ;
+            padding: 10px 24px;
+          }
           &:hover{
             text-decoration: none;
             background-color: rgba(0, 0, 0, 0.05);
@@ -406,6 +484,9 @@
             background-size: contain;
             transition: .2s ease all;
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3Cg fill='%23000' opacity='.9'%3E%3Cpath d='M6 2a2 2 0 1 1 4 0h3a1 1 0 0 1 0 2H3a1 1 0 1 1 0-2h3zm1 0h2a1 1 0 1 0-2 0zM3 5h10v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            @media(max-width: 412px){
+              display: none;
+            }
 
           }
           .icon-notifications{
@@ -421,6 +502,9 @@
             background-size: contain;
             transition: .2s ease all;
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3Cg opacity='.9'%3E%3Cg fill='%23000'%3E%3Cpath fill-opacity='.9' d='M8 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12zm0-2.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z'/%3E%3Cpath d='M7.162 16h1.676a.75.75 0 0 0 .744-.657l.313-2.5A.75.75 0 0 0 9.15 12h-2.3a.75.75 0 0 0-.745.843l.313 2.5a.75.75 0 0 0 .744.657zM7.162 0h1.676a.75.75 0 0 1 .744.657l.313 2.5A.75.75 0 0 1 9.15 4h-2.3a.75.75 0 0 1-.745-.843l.313-2.5A.75.75 0 0 1 7.162 0z'/%3E%3Cpath d='M13.064 14.25l1.185-1.186a.75.75 0 0 0 .062-.99l-1.547-1.99a.75.75 0 0 0-1.122-.069l-1.627 1.627a.75.75 0 0 0 .07 1.122l1.989 1.547a.75.75 0 0 0 .99-.062zM1.75 2.936L2.937 1.75a.75.75 0 0 1 .99-.062l1.99 1.547a.75.75 0 0 1 .069 1.122L4.358 5.985a.75.75 0 0 1-1.122-.07L1.689 3.926a.75.75 0 0 1 .062-.99z'/%3E%3Cpath d='M0 7.162v1.676a.75.75 0 0 0 .657.744l2.5.313A.75.75 0 0 0 4 9.15v-2.3a.75.75 0 0 0-.843-.745l-2.5.313A.75.75 0 0 0 0 7.162z'/%3E%3Cpath d='M1.75 13.064l1.186 1.185a.75.75 0 0 0 .99.062l1.99-1.547a.75.75 0 0 0 .069-1.122l-1.627-1.627a.75.75 0 0 0-1.122.07l-1.547 1.989a.75.75 0 0 0 .062.99zM13.064 1.75l1.185 1.186a.75.75 0 0 1 .062.99l-1.547 1.99a.75.75 0 0 1-1.122.069l-1.627-1.627a.75.75 0 0 1 .07-1.122l1.989-1.547a.75.75 0 0 1 .99.062z'/%3E%3C/g%3E%3Cpath fill='%23000' d='M16 7.162v1.676a.75.75 0 0 1-.657.744l-2.5.313A.75.75 0 0 1 12 9.15v-2.3a.75.75 0 0 1 .843-.745l2.5.313a.75.75 0 0 1 .657.744z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            @media(max-width: 412px){
+              display: none;
+            }
           }
         }
       }
