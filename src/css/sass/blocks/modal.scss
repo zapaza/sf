@@ -6446,6 +6446,15 @@
     &:last-child{
       border-bottom:1px solid rgba(0, 0, 0, 0) ;
     }
+    &.disabled{
+      pointer-events: none;
+      .title,.count {
+        color: rgba(0, 0, 0, 0.4);
+      }
+      .download-report{
+        display: none;
+      }
+    }
     .title{
       font-size: 16px;
       font-weight: bold;
