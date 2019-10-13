@@ -14,6 +14,11 @@
     @media (min-width: 1344px){
       max-width: 784px;
     }
+    @media(max-width: 412px){
+      width: 100%;
+      max-width: 412px;
+      margin: 0 auto;
+    }
 
 
     h1{
@@ -36,6 +41,9 @@
         size: 1.4rem;
       };
       line-height: 2rem;
+      @media(max-width: 412px){
+        font-size: 1.6rem;
+      }
     }
 
     ol{
@@ -45,6 +53,9 @@
           size: 1.4rem;
         }
         margin-bottom: 24px;
+        @media(max-width: 412px){
+          font-size: 1.6rem;
+        }
 
         & > ol > li{
           margin-bottom: 8px;

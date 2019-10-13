@@ -152,6 +152,7 @@
           background-size: contain;
           -webkit-transform: rotate(90deg) translateY(-50%);
           transform: rotate(90deg) translateY(-50%);
+          margin-top: -24px;
           z-index: 1;
 
         }
@@ -208,8 +209,8 @@
           bottom: 50%;
           transform: translateY(50%);
           @media(max-width: 412px){
-            right: 0;
-            bottom: 100%;
+            right: 32px;
+            bottom: 0%;
             transform: translateY(0);
           }
         }

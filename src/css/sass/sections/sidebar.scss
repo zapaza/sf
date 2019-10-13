@@ -170,6 +170,9 @@
           &:after{
             opacity: 1;
             transition-delay: 0;
+            @media(max-width: 412px){
+              display: none;
+            }
           }
 
         }

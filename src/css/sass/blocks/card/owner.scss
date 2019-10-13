@@ -336,6 +336,7 @@
           order: 2;
           &:first-of-type{
             order: 0;
+            width: 100%;
           }
           &:last-of-type{
             order: 1;
