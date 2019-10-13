@@ -6317,4 +6317,171 @@
 }
 
 
+.mobil-warning{
+  @media(min-width: 413px){
+    display: none !important;
+  }
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 312px;
+  border-radius: 8px 8px 0 0;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 64px 24px 24px;
+  z-index: 999;
+  .close-btn{
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ED254B955-C740-450F-8233-2BCE7A651267%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/M/normal'%3E%3Cg id='Group-14'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpath d='M4.5,4.5 L19.5,19.5' id='Line-2' stroke='%23000000' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M19.5,4.5 L4.5,19.5' id='Line-2' stroke='%23000000' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .text{
+    text-align: center;
+    margin-bottom: 24px;
+    h2{
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.25;
+      letter-spacing: normal;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.9);
+      margin-bottom: 8px;
+    }
+    p{
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.43;
+      letter-spacing: normal;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.9);
+    }
+  }
+
+  .button-list{
+    width: 100%;
+    display: block;
+    .btn{
+      width: 100%;
+      &-green{
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.mobil-download{
+  @media(min-width: 413px){
+    display: none !important;
+  }
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height:auto;
+  max-height: 100vh;
+  overflow-x: auto;
+  border-radius: 8px 8px 0 0;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px 24px 24px;
+  z-index: 999;
+  min-height: 312px;
+  .close-btn{
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ED254B955-C740-450F-8233-2BCE7A651267%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/M/normal'%3E%3Cg id='Group-14'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpath d='M4.5,4.5 L19.5,19.5' id='Line-2' stroke='%23000000' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M19.5,4.5 L4.5,19.5' id='Line-2' stroke='%23000000' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  &--header{
+    width: calc(100% - 32px);
+    padding-right: 16px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.9);
+    span{
+      color: rgba(0, 0, 0, 0.4);
+      display: inline-block;
+      margin-left: 8px;
+    }
+  }
+  .download-list{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .download-item{
+    padding: 20px 48px 20px 0;
+    border-bottom:1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    &:last-child{
+      border-bottom:1px solid rgba(0, 0, 0, 0) ;
+    }
+    .title{
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.25;
+      letter-spacing: normal;
+      color: rgba(0, 0, 0, 0.9);
+      margin-bottom: 8px;
+    }
+    .count{
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.14;
+      letter-spacing: normal;
+      color: rgba(0, 0, 0, 0.9);
+    }
+    .download-report{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 32px;
+      height: 32px;
+      border: none;
+      background-color: transparent;
+      opacity: .5;
+      transition: .2s ease opacity;
+      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E15C97301-E412-4403-BC48-8DB05A83377C%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/card/download/L/normal'%3E%3Cg id='Group'%3E%3Cg id='Group-25'%3E%3Crect id='Rectangle' opacity='0.200000003' x='0' y='0' width='32' height='32'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23000000' x='9' y='21' width='14' height='2'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23000000' x='15' y='9' width='2' height='9'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3Cpolygon id='Rectangle' fill='%23000000' points='12.5 15 19.5 15 16 19.75'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      &:active{
+        opacity: 1;
+      }
+    }
+  }
+}
 

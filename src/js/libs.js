@@ -540,6 +540,37 @@ $(document).ready(function () {
         $('.search-info-mobile__btn').removeClass('active');
         $(this).addClass('active');
     });
+
+
+    //хзакрытие модалки с загрузкой по WIFI
+    if($('.mobil-warning').length > 0){
+        $body.on (event, '.mobil-warning .close-btn',function (e) {
+            e.preventDefault();
+            $(this).closest('body').find('.wrapper').removeClass('cover');
+            $(this).parent().fadeOut();
+        } )
+    }
+    if($('.mobil-download').length > 0){
+        $body.on (event, '.mobil-download .close-btn',function (e) {
+            e.preventDefault();
+            $(this).closest('body').find('.wrapper').removeClass('cover');
+            $(this).parent().fadeOut();
+        });
+
+        $body.on(event, '.mobil-download .download-report', function (e) {
+            e.preventDefault();
+            $('.mobil-warning').fadeIn();
+            $(this).closest('.mobil-download').fadeOut();
+        });
+    }
+    if($(window).width() <= 412){
+        $('body').on(event, '[data-print-mobil]', function (e) {
+            e.preventDefault();
+            $('.mobil-download').fadeIn();
+            $(this).closest('.wrapper').addClass('cover');
+        })
+    }
+
 });
 $(document).mouseup(function (e) {
     var div = $(".company-modal");
