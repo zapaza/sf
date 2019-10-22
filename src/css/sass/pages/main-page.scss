@@ -792,6 +792,7 @@
     margin: 56px auto 0;
     padding: 0 112px 0 80px;
     display: flex;
+    align-items: stretch;
     @media(max-width: 1343px) {
       padding: 0 176px 0 160px;
       margin-top: 48px;
@@ -807,8 +808,18 @@
   }
 
   &-item {
-    width: calc(100% / 3 - 32px);
-    margin-right: 48px;
+    width: calc(100% / 3 - 16px);
+    margin-right: 16px;
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.16);
+    padding: 54px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 468px;
+
     @media(max-width: 1343px) {
       width: calc(100% / 3 - 64px / 3);
       margin-right: 32px;
@@ -816,16 +827,9 @@
     @media(max-width: 412px) {
       width: 100%;
       margin-right: 0;
-      margin-bottom: 48px;
-      &:nth-child(1) {
-        order: 2;
-      }
-      &:nth-child(2) {
-        order: 0;
-      }
-      &:nth-child(3) {
-        order: 1;
-      }
+      margin-bottom: 40px;
+      padding: 32px 24px 40px;
+      min-height: auto;
     }
 
     &:nth-child(3n) {
@@ -834,8 +838,23 @@
 
     &:first-child {
       @media(max-width: 412px) {
-        margin-bottom: 0;
+        margin-bottom: 40px;
       }
+    }
+
+    &_tag{
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.9);
+      margin-bottom: 24px;
+      padding: 4px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.14;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      margin-left: 0px;
+      margin-right: auto;
     }
 
     &__icon-container {
@@ -854,9 +873,10 @@
     }
 
     &__text {
-      margin-top: 32px;
-      font-size: 16px;
+      margin-top: 24px;
+      font-size: 14px;
       line-height: 1.25;
+      margin-bottom: 16px;
       @media(max-width: 1343px) {
         font-size: 14px;
         line-height: 1.43;
@@ -868,7 +888,8 @@
 
     .btn {
       max-width: 224px;
-      margin-top: 24px;
+      margin-top: auto;
+      margin-bottom: 0;
       display: flex;
       justify-content: center;
       align-items: center;
