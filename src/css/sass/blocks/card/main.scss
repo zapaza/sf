@@ -83,6 +83,7 @@
         transition: .6s ease all;
         transition-duration: 1s;
         box-sizing: border-box;
+        z-index: 99;
         &:after{
           position: absolute;
           content: '';

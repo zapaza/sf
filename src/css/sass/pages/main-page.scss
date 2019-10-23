@@ -887,7 +887,7 @@
     }
 
     .btn {
-      max-width: 224px;
+      width: 100%;
       margin-top: auto;
       margin-bottom: 0;
       display: flex;
@@ -896,6 +896,8 @@
       line-height: 16px;
       @media(max-width: 412px) {
         margin-top: 24px;
+        max-width: 224px;
+     
       }
       @media(max-width: 360px) {
         max-width: none;

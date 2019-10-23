@@ -1,0 +1,88 @@
+.factor-detail{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	height: 100vh;
+	opacity: 0;
+	transform:translateX(100%);
+	background-color: #ffe8e6;
+	transition: .2s ease all;
+	z-index: 9999;
+	width: 624px;
+	@media(max-width: 412px){
+		display: none;
+	}
+	&.open{
+		opacity:1;
+		transform:translateX(0);
+	}
+
+	&--header{
+		width: 100%;
+		display: flex;
+		align-items: center;
+    	justify-content: space-between;
+    	padding: 20px 24px 20px 40px;
+	}
+	&--count{
+		max-width: 264px;
+		font-size: rem(22px);
+		font-weight: $font-bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.45;
+		letter-spacing: normal;
+		color: #f24c3d;
+	}
+	&--close{
+		width: 32px;
+		height: 32px;
+		display: block;
+		background-color:transparent;
+		border: none;
+		background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ED254B955-C740-450F-8233-2BCE7A651267%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon/close/M/normal'%3E%3Cg id='Group-14'%3E%3Cg id='Group'%3E%3Crect id='Rectangle' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpath d='M4.5,4.5 L19.5,19.5' id='Line-2' stroke='%23f24c3d' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3Cpath d='M19.5,4.5 L4.5,19.5' id='Line-2' stroke='%23f24c3d' stroke-width='2' stroke-linecap='square'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	&--list{
+		width: 100%;
+		height: calc(100% - 72px);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+    	justify-content: flex-start;
+    	overflow: auto;
+    }
+
+	&--item{
+		width: 100%;
+		text-decoration: none;
+		padding: 24px 40px;
+		border-bottom: 1px solid rgba(242, 76, 61, 0.2);
+		display: flex;
+		align-items: flex-start;
+    	justify-content: space-between;
+    	font-size: rem(14px);
+		line-height: 1.43;
+		color: #f24c3d;
+
+
+		&:hover{
+			background-color: rgba(242, 76, 61, 0.05);
+			text-decoration: none;
+			color: #f24c3d;
+		}
+		&:last-child{
+			border-bottom: none;
+		}
+		.name{
+			width: 136px;
+			font-weight: $font-bold;
+		}
+		.description{
+			width: 368px;
+		}
+	}
+}

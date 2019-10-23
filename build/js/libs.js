@@ -162,7 +162,38 @@ function Tabs() {
     }
 }
 
+  //показ списка стопфааторов 
+function ShowFactorsDetail (){
+     var $body = $('body'),
+        ua = navigator.userAgent,
+        event = (ua.match(/iPad/i)) ? "touchstart" : "click";
+
+     if($(window).width() > 412){
+        $body.on(event, '.card-header--factors', function(e) {
+        e.preventDefault();
+        $('.factor-detail').addClass('open');
+        });
+        $body.on(event, '.factor-detail--close', function(e) {
+            e.preventDefault();
+            $('.factor-detail').removeClass('open');
+        });
+        $body.on(event, '.factor-detail--item', function(e){
+            e.preventDefault;
+            var id = $(this).attr('href'),
+            top = $(id).offset().top - 70;
+            $('body,html').animate({scrollTop: top}, 1000);
+            $('.factor-detail').removeClass('open');
+        });
+    }
+}
+
+$(window).resize(function () {
+     ShowFactorsDetail ();
+});
 $(document).ready(function () {
+     ShowFactorsDetail ();
+
+
     var $body = $('body'),
         ua = navigator.userAgent,
         event = (ua.match(/iPad/i)) ? "touchstart" : "click";
@@ -180,6 +211,9 @@ $(document).ready(function () {
     Tabs();
     Scrolling();
 
+
+  
+    
 
 //фокус поиска
     $body.on(event, '#query', function () {
