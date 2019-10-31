@@ -68,6 +68,7 @@
     li{
       width: 100%;
       a{
+        position: relative;
         padding: 8px 16px;
         display: block;
         font:{
@@ -81,6 +82,22 @@
         &:hover{
           text-decoration: none;
           background-color:  rgba(0, 0, 0, 0.05);
+        }
+       &.load:after {
+         top: 50%;
+         right: 16px;
+         margin-top: -8px;
+          content: '';
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          border-radius: 50%;
+          border: 2px solid #999999;
+          border-bottom-color: transparent;
+          -webkit-animation: lds-ring 1.2s cubic-bezier(1, 1, 1, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(1, 1, 1, 1) infinite;
         }
       }
     }
