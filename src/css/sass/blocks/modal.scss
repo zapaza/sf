@@ -10,6 +10,9 @@
     &.modal-inside {
       background-color: $white;
       opacity: 1;
+      @media(max-width:412px ){
+        height: 100vh;
+      }
     }
   }
 
@@ -4597,6 +4600,10 @@
       @media (min-width: 1344px) {
         width: 944px;
       }
+      @media(max-width: 412px){
+        width: 100%;
+        padding: 48px 24px;
+      }
     }
 
     .short-report {
@@ -4605,11 +4612,18 @@
         display: flex;
         align-items: flex-start;
         margin-bottom: 64px;
+        @media(max-width: 412px){
+          flex-wrap: wrap;
+          margin-bottom: 32px;
+        }
 
         .title {
           width: calc(100% - 240px);
           @media (min-width: 1264px) {
             width: calc(100% - 304px);
+          }
+          @media(max-width: 412px){
+            width: 100%;
           }
 
           h2 {
@@ -4625,6 +4639,9 @@
               font-size: 3.2rem;
               line-height: 4.8rem;
               letter-spacing: .7px;
+            }
+            @media(max-width: 412px){
+              margin-bottom: 8px;
             }
           }
 
@@ -4652,13 +4669,10 @@
         margin-right: 0;
         margin-left: 16px;
         width: 224px;
-
-
         font: {
           size: 2.4rem;
           weight: $font-bold;
         }
-
         line-height: 3.2rem;
         text-align: right;
         color: $red;
@@ -4666,6 +4680,12 @@
           width: 304px;
           font-size: 3.2rem;
           line-height: 4.8rem;
+        }
+        @media(max-width: 412px){
+          width: 100%;
+          padding-top: 8px;
+          margin-left: 0;
+          text-align: left;
         }
 
       }
@@ -4686,6 +4706,9 @@
             &:last-of-type {
               border-bottom: 0;
             }
+            @media(max-width: 412px){
+              flex-direction: column;
+            }
           }
 
           &-col {
@@ -4698,6 +4721,12 @@
             }
             @media (min-width: 1344px) {
               width: calc(100% - 320px);
+            }
+            @media(max-width: 412px){
+              font-size: 1.6rem;
+              margin-right: 0;
+              width: 100%;
+              margin-bottom: 8px;
             }
 
             &.name {
@@ -4717,6 +4746,7 @@
               @media (min-width: 1344px) {
                 margin-right: 80px;
               }
+
             }
 
             h3 {
@@ -4794,6 +4824,9 @@
               justify-content: flex-start;
               padding: 16px 0;
               border-bottom: 1px solid $light-gray--text;
+              @media(max-width: 412px){
+                flex-direction: column;
+              }
 
               &:last-child {
                 border-bottom: none;
@@ -4804,10 +4837,17 @@
                 display: flex;
                 flex-wrap: wrap;
                 text-align: right;
+                @media(max-width: 412px){
+                  width: 100%;
+                  text-align: left;
+                }
 
                 p {
                   text-align: right;
                   width: 100%;
+                  @media(max-width: 412px){
+                    text-align: left;
+                  }
 
                   span {
                     color: $black--text;
@@ -4818,6 +4858,9 @@
                   width: calc(100% - 202px);
                   margin-right: 12px;
                   text-align: left;
+                  @media(max-width: 412px){
+                    width: 100%;
+                  }
 
                   h3 {
                     width: 100%;
@@ -4858,6 +4901,11 @@
                 background-position: center;
                 -webkit-background-size: contain;
                 background-size: contain;
+                @media(max-width: 412px){
+                  left: 0;
+                  width: 24px;
+                  height: 24px;
+                }
 
               }
 
@@ -4869,6 +4917,9 @@
                 margin-bottom: 8px;
                 @media (min-width: 1264px) {
                   font-size: 1.6rem;
+                }
+                @media(max-width: 412px){
+                  padding-left: 32px;
                 }
               }
 
