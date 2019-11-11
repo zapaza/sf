@@ -13,6 +13,13 @@
     width: 304px;
     padding: 26px 24px 24px;
     box-sizing: border-box;
+    @media (max-width: 412px) {
+      -webkit-transform: translateX(-22%);
+      transform: translateX(-22%);
+      width: 280px;
+      right: auto;
+      left: 50%;
+    }
 
     input{
       margin-bottom: 16px;

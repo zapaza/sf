@@ -745,6 +745,9 @@
     padding: 48px 32px;
     box-sizing: border-box;
     margin: auto;
+    @media(max-width: 412px){
+      width: 90%;
+    }
 
     .mfp-close {
       right: 24px;
@@ -4057,6 +4060,9 @@
     &.modal-inside {
       padding-top: 120px;
       max-width: none;
+      @media(max-width: 412px){
+        padding-top: 45px;
+      }
     }
 
     .modal-inside-wrapper {
@@ -4073,11 +4079,17 @@
       @media (min-width: 1344px) {
         max-width: 1104px;
       }
+      @media(max-width: 412px){
+        max-width: 100%;
+        padding: 0 24px;
+      }
     }
 
     .modal-inside--info {
       margin-bottom: 96px;
-
+      @media(max-width: 412px){
+        margin-bottom: 32px;
+      }
       h2 {
         margin-bottom: 32px;
         font-size: 2.8rem;
@@ -4102,6 +4114,10 @@
       padding: 0 16px;
       margin-left: -32px;
       position: relative;
+      @media(max-width: 412px){
+        margin-left: -8px;
+      }
+
 
       &:after {
         right: 0;
@@ -4111,6 +4127,9 @@
         width: 120px;
         height: 100%;
         background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+        @media(max-width: 412px){
+         pointer-events: none;
+        }
       }
 
       &_inner {
@@ -4157,6 +4176,9 @@
               position: sticky;
               left: 16px;
               background-color: $white;
+              @media(max-width: 412px){
+                position: static;
+              }
 
               &:before {
                 position: absolute;
@@ -4172,6 +4194,9 @@
               position: sticky;
               left: 403px;
               background-color: $white;
+              @media(max-width: 412px){
+                position: static;
+              }
             }
           }
         }
@@ -4190,6 +4215,10 @@
             white-space: nowrap;
             margin-right: 0;
             padding-right: 40px;
+            @media(max-width: 412px){
+              width: 140px;
+              position: static;
+            }
 
             span {
               text-align: left;
@@ -4261,6 +4290,11 @@
               width: 387px;
               padding-right: 40px;
               margin-right: 0;
+              @media(max-width: 412px){
+                width: 140px;
+                padding-right: 0;
+                position: static;
+              }
 
               &:before {
                 position: absolute;
@@ -4277,6 +4311,11 @@
               left: 403px;
               padding-right: 5px;
               background-color: $white;
+              @media(max-width: 412px){
+                left: 150px;
+                position: static;
+
+              }
             }
           }
         }
