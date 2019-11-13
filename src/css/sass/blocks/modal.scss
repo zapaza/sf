@@ -1,5 +1,8 @@
 .mfp-bg {
   background-color: rgba(0, 0, 0, 0.4);
+  @media(max-width:412px ){
+    height: 100vh;
+  }
 
   &.mfp-ready {
     &.authorization {
@@ -11,7 +14,7 @@
       background-color: $white;
       opacity: 1;
       @media(max-width:412px ){
-        height: 100vh;
+        //height: 100vh;
       }
     }
   }
@@ -45,7 +48,7 @@
 
 .mfp-wrap {
   @media(max-width: 412px){
-    height: 100% !important;
+    //height: 100% !important;
     overflow-x: auto;
   }
   &.mfp-price {
@@ -223,13 +226,19 @@
     transform: translateY(-50%);
     width: auto;
     @media (max-width: 412px){
-      display: none;
+      right: 50%;
+      transform: translateX(50%);
+      top: auto;
+      bottom: 20px;
     }
 
     &-link {
       flex-direction: column;
       padding: 0;
       width: auto;
+      @media (max-width: 412px){
+        flex-direction: row;
+      }
 
       li {
         position: relative;
@@ -2886,10 +2895,17 @@
     width: 100%;
     height: auto;
     padding: 120px 0 120px;
+    @media(max-width: 412px){
+      padding: 30px 0 ;
+    }
 
     article {
       max-width: 944px;
       margin: auto;
+      @media(max-width: 412px){
+        max-width: 412px;
+        width: 100%;
+      }
 
       .subheader {
         font-size: 1.6rem;
@@ -2899,6 +2915,11 @@
         color: $black--text;
         margin-bottom: 96px;
         padding-top: 32px;
+        @media(max-width:412px) {
+          margin-bottom: 8px;
+          padding-top: 16px;
+
+        }
       }
 
     }
@@ -2916,6 +2937,9 @@
       }
       @media (min-width: 1344px) {
         max-width: 1104px;
+      }
+      @media(max-width: 412px){
+
       }
 
       &.modal-inside-tender {
@@ -4997,6 +5021,9 @@
     @media (max-width: 1344px) {
       max-width: 1104px;
     }
+    @media (max-width: 412px){
+      padding: 0 16px ;
+    }
 
     h2 {
       margin-bottom: 24px;
@@ -5006,6 +5033,11 @@
       }
       line-height: 4.8rem;
       color: $black--text;
+      @media(max-width: 412px){
+        margin-bottom: 8px;
+        font-size: 2.4rem;
+        line-height: 3.2rem  ;
+      }
     }
 
     h3 {
@@ -5021,6 +5053,9 @@
       text-transform: uppercase;
       @media(max-width: 1344px) {
         font-size: 1.6rem;
+      }
+      @media(max-width: 412px){
+        margin-bottom: 8px;
       }
     }
 
@@ -5051,16 +5086,28 @@
       @media(max-width: 1344px) {
         font-size: 1.6rem;
       }
+      @media (max-width: 412px){
+        display: flex;
+        flex-direction: column;
+      }
 
       span {
         display: inline-block;
         width: calc(100% - 208px);
         vertical-align: top;
+        @media (max-width: 412px){
+          width: 100%;
+        }
 
         &.name {
           color: $mid-gray--text;
           width: 200px;
           margin-right: 8px;
+          @media (max-width: 412px){
+            margin-right: 0px;
+            margin-bottom: 8px;
+            width: 100%;
+          }
         }
       }
 
@@ -5072,6 +5119,14 @@
 
       &.cods {
         margin-bottom: 100px;
+        @media(max-width: 412px){
+          margin-bottom: 28px;
+          p{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+          }
+        }
 
         span.name {
           width: 64px;
@@ -5084,6 +5139,11 @@
   .modal-inside--table {
     width: 100%;
     margin-bottom: 48px;
+    @media(max-width: 412px){
+      margin-bottom: 16px;
+      padding: 0 16px;
+
+    }
 
     &:last-of-type {
       margin-bottom: 0;
@@ -5186,6 +5246,11 @@
         margin-bottom: 24px;
         margin-right: -16px;
         margin-left: -16px;
+        @media(max-width: 412px){
+          margin-left: 0;
+          margin-right: 0;
+          width: 100%;
+        }
 
         &:last-of-type {
           margin-bottom: 0;
@@ -5200,6 +5265,9 @@
             width: 120px;
             height: 100%;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+            @media(max-width: 412px){
+              display: none;
+            }
           }
         }
 
@@ -5264,9 +5332,17 @@
 
       .table {
         width: auto;
+        @media(max-width: 412px){
+          margin-bottom: 24px;
+          overflow: auto;
+          width: auto;
+        }
 
         &-header {
           width: auto;
+          @media(max-width: 412px){
+          width: 784px;
+          }
 
           .table-col {
             font-size: 1.3rem;
@@ -5278,6 +5354,9 @@
 
         &-row {
           width: auto;
+          @media(max-width: 412px){
+            width: 784px;
+          }
 
           &.title {
 
@@ -5458,6 +5537,11 @@
     //---------------
     .table {
       margin-bottom: 60px;
+      @media(max-width: 412px){
+        margin-bottom: 24px;
+        overflow: auto;
+        width: auto;
+      }
 
       .title {
         width: 100%;
@@ -5467,6 +5551,9 @@
 
       .table-header {
         margin-bottom: 0;
+        @media(max-width: 412px){
+          width: 784px;
+        }
 
         .table-col {
           justify-content: flex-end;
@@ -5512,6 +5599,9 @@
       }
 
       .table-body {
+        @media(max-width: 412px){
+          width: 784px;
+        }
         .table-row {
           &:not(.title) {
             cursor: pointer;
@@ -5990,6 +6080,11 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 32px;
+    @media(max-width: 412px){
+      padding: 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     li {
       margin-right: 48px;
@@ -6090,7 +6185,9 @@
   }
 
   .tender-list {
-
+    @media(max-width: 412px){
+      padding: 0 16px;
+    }
     &--item {
       padding-left: 20px;
       border-left: 4px solid $black;
@@ -6153,6 +6250,10 @@
         box-sizing: border-box;
         padding-left: 44px;
         margin-bottom: 96px;
+        @media(max-width: 412px){
+          padding-left: 16px;
+          margin-bottom: 24px;
+        }
 
         .document-list {
           width: 100%;
@@ -6168,6 +6269,9 @@
             align-items: flex-start;
             flex-direction: row;
             justify-content: space-between;
+            @media(max-width: 412px){
+              flex-direction: column;
+            }
 
             &_name {
               width: 176px;
@@ -6179,6 +6283,9 @@
               color: $mid-gray--text;
               @media (min-width: 1264px) {
                 font-size: 1.6rem;
+              }
+              @media(max-width: 412px){
+                width: 100%;
               }
             }
 
@@ -6201,6 +6308,9 @@
               }
               @media (min-width: 1344px) {
                 width: 704px;
+              }
+              @media(max-width: 412px){
+                width: 100% !important;
               }
 
               a {
@@ -6389,6 +6499,12 @@
 
   .tender-type {
     margin-bottom: 96px;
+    @media(max-width: 412px){
+      margin-bottom: 32px;
+      padding: 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   .tender-list--item_info .document-list--item_name {

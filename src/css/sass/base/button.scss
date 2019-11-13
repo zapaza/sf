@@ -142,6 +142,7 @@
 .select-years {
   position: relative;
 
+
   ul {
     padding: 24px 28px 24px 0px;
     display: flex;
@@ -151,12 +152,28 @@
     box-sizing: border-box;
     overflow-y: hidden;
     overflow-x: visible;
+    @media (max-width: 412px){
+      padding: 8px 20px;
+      overflow: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-bottom: 0;
+    }
 
     li {
       margin-left: 24px;
+      @media (max-width: 412px){
+        margin-left: 0;
+        margin-right: 12px;
+        margin-bottom: 10px;
+      }
 
       &:first-child {
         margin-left: 0;
+        @media (max-width: 412px){
+          margin-left:0;
+        }
       }
 
       &.no-info {
@@ -170,6 +187,10 @@
       &.active {
         margin-left: 18px;
         margin-right: -6px;
+        @media (max-width: 412px){
+          margin-left: auto;
+          margin-right: 12px;
+        }
 
         a {
           padding: 4px 6px;
@@ -178,6 +199,7 @@
           color: $white;
           text-decoration: none;
           border-bottom: 0;
+          @media (max-width: 412px){}
         }
       }
 
@@ -190,6 +212,9 @@
         line-height: 1.6rem;
         color: $mid-gray--text;
         border-bottom: 1px solid $mid-gray--text;
+        @media (max-width: 412px){
+          padding: 4px 6px;
+        }
 
         &:hover {
           text-decoration: none;
@@ -203,6 +228,10 @@
     position: absolute;
     right: -24px;
     top: 24px;
+    @media(max-width: 412px){
+      position: static;
+      padding: 0 16px;
+    }
 
     &--list {
       display: block;
@@ -214,6 +243,9 @@
       text-indent: -999px;
       opacity: .4;
       overflow: hidden;
+      @media(max-width: 412px){
+        display: none;
+      }
     }
 
     .show-all--dropdown {
@@ -229,6 +261,13 @@
       background-color: rgb(255, 255, 255);
       padding: 0;
       box-sizing: border-box;
+      @media(max-width: 412px){
+        position: static;
+        display: block;
+        width: 100%;
+        box-shadow: none;
+        height: auto;
+      }
 
       ul {
         overflow-y: auto;
@@ -240,12 +279,27 @@
         justify-content: center;
         padding: 16px 73px 16px 0;
         box-sizing: content-box;
+        @media(max-width: 412px){
+          padding: 0px;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
 
         li {
           margin: 0px 0px 16px 0;
           width: 80px;
           box-sizing: border-box;
           padding: 0 24px;
+          @media(max-width: 412px){
+            width: auto;
+            margin-left: 0;
+            margin-right: 12px;
+            margin-bottom: 10px;
+            padding: 0;
+            a{
+              padding: 4px 6px;
+            }
+          }
 
           &:hover {
             background-color: rgba(0, 0, 0, 0.05)
