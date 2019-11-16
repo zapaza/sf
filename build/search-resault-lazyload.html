@@ -6505,17 +6505,51 @@
   <div class="modal new-application mfp-hide" id="new-aplication">
     <div class="new-application-content">
       <div class="new-application-header">
-        <h2>Новая заявка</h2>
+        <h2>Регистрация</h2>
       </div>
       <div class="new-application-body">
         <form action="">
-          <input type="text" placeholder="Имя" required>
+          <fieldset class="select-price">
+            <input type="radio" name="price" id="price-type1" checked>
+            <label for="price-type1" class="one-select">
+              <span class="name">Индивидуально</span>
+              <span>Оплата банковской картой</span>
+            </label>
+            <input type="radio" name="price" id="price-type2">
+            <label for="price-type2" class="two-select">
+              <span class="name">Корпоративно</span>
+              <span>Оплата по счёту</span>
+            </label>
+          </fieldset>
+          <p class="info info-gray">* Обязательная информация</p>
+          <input type="text" placeholder="Имя *" required>
           <input type="text" placeholder="Организация">
           <input type="email" placeholder="E-mail">
           <fieldset class="input-group">
             <input type="tel" placeholder="Номер телефона">
             <input type="tel" placeholder="Добавочный номер">
           </fieldset>
+          <!--                для физика-->
+          <fieldset class="input-group input-group--fiz">
+            <!--                    <p class="info">Укажите номер телефона и мы пришлем вам пароль</p>-->
+            <p class="info">Пароль отправлен на +7 (909) 993-12-12 <a href="">Изменить</a></p>
+            <!--                    <label for="" class="error"  data-hint="Номер уже используется!">-->
+            <!--                        <input type="tel" placeholder="Номер телефона *" required>-->
+            <!--                    </label>-->
+            <label for="pass-sms">
+              <!--если не порошел валидацию то добавляется клаcc error 2-3 секунды, валидация это минимум 6 символов-->
+              <input type="password" class="password " id="pass-sms" autocomplete="off" minlength="6" placeholder="Пароль из  смс">
+              <button type="button" class="show-password"></button>
+            </label>
+
+            <button class="btn btn-disable" type="button">Выслать пароль</button>
+            <!--                    <button class="btn btn-disable"  type="button">повторно через 45 сек.</button>-->
+            <!--                    <button class="btn btn-green"  type="button">Выслать пароль</button>-->
+            <!--                    <button class="btn btn-green"  type="button">Выслать повторно</button>-->
+
+            <span class="succsess-phone"> Номер +7 (909) 993-12-12 подтвержден</span>
+          </fieldset>
+          <!--                для физика конец-->
           <fieldset class="select-price">
             <input type="radio" name="price" id="price-1">
             <label for="price-1" class="one-select">
