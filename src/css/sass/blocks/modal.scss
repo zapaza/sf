@@ -2160,6 +2160,8 @@
               margin-left: 12px;
               color: $white;
               padding: 16px;
+              background-color: $light-gray;
+              vertical-align: top;
               @media(max-width: 412px){
                 width: 100%;
                 margin-left: 0px;
@@ -2380,6 +2382,7 @@
           &-desable {
             pointer-events: none;
             color: $white;
+            background-color: $light-gray;
           }
         }
 
