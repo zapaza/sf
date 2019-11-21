@@ -2152,13 +2152,14 @@
           width: 100%;
           display: block;
           &--fiz{
-            margin-bottom: 48px;
+            margin-bottom: 0px;
 
             .btn{
               display: inline-block;
               width: 224px;
               margin-left: 12px;
               color: $white;
+              padding: 16px;
               @media(max-width: 412px){
                 width: 100%;
                 margin-left: 0px;
@@ -2215,7 +2216,7 @@
               }
               &.error{
                 &:after,&:before{
-                  //display: block;
+                  display: block;
                 }
               }
             }
@@ -2255,6 +2256,7 @@
               letter-spacing: normal;
               color: rgb(58, 166, 94);
               vertical-align: middle;
+              margin-bottom: 48px;
               &:before{
                 content:'';
                 width: 32px;
@@ -2267,6 +2269,7 @@
             }
             label{
               position: relative;
+              vertical-align: middle;
             }
           }
 
