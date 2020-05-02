@@ -10,8 +10,8 @@
   <title>Site title</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <link href="css/plugins.min.css" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/plugins.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
   <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -8061,8 +8061,12 @@
           </fieldset>
           <p class="info info-gray">* Обязательная информация</p>
           <input type="text" placeholder="Имя *" required>
-          <input type="text" placeholder="Организация">
-          <input type="email" placeholder="E-mail">
+          <label for="" class="error" data-hint="Организация уже зарегестрированна!">
+            <input type="text" placeholder="Организация">
+          </label>
+          <label for="" class="error" data-hint="E-mail уже используется!">
+            <input type="email" placeholder="E-mail">
+          </label>
           <fieldset class="input-group">
             <input type="tel" placeholder="Номер телефона">
             <input type="tel" placeholder="Добавочный номер">
@@ -8380,6 +8384,15 @@
   </div>
   <!-- предупреждение для загрузки по wi-fi конец-->
 
+  <!--Предупреждение о технических работах-->
+  <div class="engineering-works show" rel="noreferrer">
+    <div class="engineering-works-text">
+      4 января сервис будет недоступен в связи с проведением плановых технических работ.
+    </div>
+    <button class="engineering-works-close"></button>
+  </div>
+  <!--Предупреждение о технических работах конец-->
+
   <!--svg-sprite-->
   <div class="svgSprite" hidden>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
@@ -8466,6 +8479,7 @@
     });
   </script>
   <script src="js/libs.js"></script>
+  <script src="js/new-libs.js"></script>
 
 </body>
 </html>

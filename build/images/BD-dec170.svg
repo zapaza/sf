@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="246" viewBox="0 0 170 246">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#E6E6E6" d="M-1142-524H638v5539h-1780z"/>
+        <g>
+            <rect width="170" height="246" fill="#191919" stroke="#FFF" rx="4"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400" transform="translate(40 170)">
+                <tspan x="11.765" y="19.368">15 000 ₽</tspan>
+            </text>
+            <path d="M40 170h91v27H40z"/>
+            <path stroke="#F24C3D" stroke-width="2" d="M47.913 192.95l73.855-18.9"/>
+            <text fill="#FFF" font-family="Roboto-Bold, Roboto" font-size="36" font-weight="bold">
+                <tspan x="22.844" y="164">7 500 ₽</tspan>
+            </text>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="13" font-weight="400">
+                <tspan x="29.453" y="219">годовая подписка</tspan>
+            </text>
+            <text fill="#FFF" font-family="Roboto-BoldItalic, Roboto" font-size="52" font-style="italic" font-weight="bold">
+                <tspan x="24" y="72">SALE</tspan>
+            </text>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="17" font-weight="400">
+                <tspan x="28" y="87">BLACK FRIDAY</tspan>
+            </text>
+            <path stroke="#FFF" stroke-dasharray="9" stroke-linecap="square" d="M162 107H8"/>
+        </g>
+        <path stroke="#FA00FA" d="M-774-10h944v256h-944z"/>
+    </g>
+</svg>
