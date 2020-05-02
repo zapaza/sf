@@ -5,6 +5,7 @@
   min-width: 944px;
   background-color: $mid-gray;
   padding: 40px 0;
+  z-index: 11;
   @media(max-width: 412px){
     min-width: 320px;
     padding: 40px 20px;

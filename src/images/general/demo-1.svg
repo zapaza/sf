@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="72" viewBox="0 0 1024 72">
+    <defs>
+        <linearGradient id="a" x1="0%" y1="49.753%" y2="50.247%">
+            <stop offset="0%" stop-color="#318C4F"/>
+            <stop offset="100%" stop-color="#3B774F"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#E6E6E6" d="M-448-1915h1780v5539H-448z"/>
+        <path fill="#FA00FA" fill-opacity=".1" stroke="#FA00FA" d="M-160-231h1344v587H-160z"/>
+        <path fill="#FA00FA" fill-opacity=".1" stroke="#FA00FA" d="M-120-231h1264v445H-120z"/>
+        <path fill="#FA00FA" fill-opacity=".1" stroke="#FA00FA" d="M0-231h1024V72H0z"/>
+        <path fill="url(#a)" d="M0 0h1024v72H0z" opacity=".99"/>
+        <text fill="#FFF" font-family="Roboto-Bold, Roboto" font-size="14" font-weight="bold" transform="translate(96 16)">
+            <tspan x="0" y="13">Годовая подписка с 50% скидкой!</tspan>
+        </text>
+        <text fill="#FFF" font-family="Roboto-Regular, Roboto" font-size="14" transform="translate(96 16)">
+            <tspan x="0" y="33">С 25 по 29 ноября оформите годовую подписку на stopfactor.ru всего за 7 500 ₽</tspan>
+        </text>
+        <g transform="translate(800 16)">
+            <rect width="184" height="40" fill="#3AA65E" rx="4"/>
+            <text fill="#FFF" font-family="Roboto-Bold, Roboto" font-size="14" font-weight="bold" letter-spacing=".5">
+                <tspan x="50.41" y="25">ОФОРМИТЬ</tspan>
+            </text>
+        </g>
+        <g>
+            <g transform="translate(40 16)">
+                <circle cx="20" cy="20" r="20" fill="#FFF"/>
+                <path fill="#000" stroke="#FFF" stroke-width="4.2" d="M19.667 21.238a1.111 1.111 0 0 0 1.571-1.571c-.434-.434-5.694-4.309-5.786-4.215-.092.094 3.78 5.352 4.215 5.786z"/>
+            </g>
+            <g stroke="#000" stroke-width="2" transform="translate(52 28)">
+                <circle cx="3" cy="3" r="3" stroke-opacity=".9"/>
+                <circle cx="13" cy="14" r="3" stroke-opacity=".9"/>
+                <path stroke-linecap="square" d="M1 16L16 0"/>
+            </g>
+        </g>
+    </g>
+</svg>

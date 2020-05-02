@@ -9,6 +9,9 @@
   @import "../sections/company-content";
   @import "../sections/company-btn";
   @import "../sections/company-modal";
+  @media(max-width:412px){
+    padding-top: 61px;
+  }
 
   .wrapper{
     &.cover{

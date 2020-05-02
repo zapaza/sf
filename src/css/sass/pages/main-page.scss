@@ -152,6 +152,7 @@
   position: relative;
   width: 100%;
   height: 560px;
+  z-index: 11;
   background: {
     color: rgb(26, 26, 26);
     image: url("../images/main-img.jpg");
@@ -164,8 +165,11 @@
   }
   @media(max-width: 412px) {
     background: $intro-bg;
-    padding: 88px 0 49px;
-    height: auto;
+    padding: 88px 0 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &:before {
@@ -260,6 +264,25 @@
       @media (min-width: 1344px) {
         width: 384px;
         padding: 20px 16px;
+      }
+    }
+  }
+  &-media{
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    top: 25.7%;
+    cursor: pointer;
+    @media(max-width: 412px){
+      position: static;
+      margin: 49px -24px 0;
+      picture{
+        width: 100%;
+        display: block;
+        img{
+          width: 100%;
+          display: block;
+        }
       }
     }
   }
@@ -382,6 +405,8 @@
 }
 
 .tariffs {
+  position: relative;
+  z-index: 11;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1019,6 +1044,78 @@
           width: 284px;
         }
       }
+    }
+  }
+}
+
+.fixed-media{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.99;
+  background-image: linear-gradient(94deg, rgb(49, 140, 79), rgb(59, 119, 79));
+  padding: 16px 0;
+  cursor: pointer;
+  z-index: 10;
+  a:hover{
+    text-decoration: none;
+  }
+
+  .wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+  }
+
+  .icon{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    flex-shrink: 0;
+    img{
+      display: block;
+      width: 100%;
+    }
+    @media(max-width: 360px){
+      display: none;
+    }
+  }
+
+  .text{
+    color: $white;
+    margin-left: 24px;
+    line-height: 1.54;
+    font-size: 13px;
+    position: relative;
+    h4{
+      font-weight: $font-bold;
+    }
+    @media(max-width: 412px){
+      padding-right: 36px;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 50%;
+        right: 0;
+        margin-top: -12px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'/%3E%3Cpath stroke='%23FFF' stroke-linecap='square' stroke-width='2' d='M9.5 4.5L17 12l-7.5 7.5'/%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+
+    @media(max-width: 360px){
+      margin-left: 0;
+    }
+  }
+  .btn{
+    margin-left: auto;
+    margin-right: 0;
+    width: 184px;
+    @media(max-width: 412px){
+      display: none;
     }
   }
 }

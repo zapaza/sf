@@ -47,7 +47,7 @@
     .table-row{
       padding: 6px 16px;
       border-radius: 4px;
-      cursor: pointer;
+      cursor:default;
       box-sizing: border-box;
       &:hover{
         background-color: rgba(0, 0, 0, 0.05);
