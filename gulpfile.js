@@ -64,7 +64,7 @@ gulp.task('sass', function () {
 
     console.log('---------- Компиляция стилей');
 
-    return gulp.src(dirs.cssPath + 'sass/styles.scss')
+    return gulp.src(dirs.cssPath + 'sass/*.scss')
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
@@ -87,7 +87,7 @@ gulp.task('sass', function () {
         .pipe(gulpIf(isDev, cssbeautify({
             autosemicolon: true
         })))
-        .pipe(gulpIf(!isDev, rename('styles.min.css')))
+        .pipe(gulpIf(!isDev, rename({suffix: '.min'})))
         .pipe(gulpIf(isDev, sourcemaps.write('/')))
         .pipe(size({
             title: 'Размер',

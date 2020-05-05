@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Сравнение</title>
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/compare.css" rel="stylesheet">
+</head>
+<body>
+<section class="compare">
+    <div class="wrapper compare__wrapper">
+
+        <h1 class="compare__title">Сравнение</h1>
+
+        <table class="table table--company">
+            <caption class="table__title">Компания</caption>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">ООО</div>
+                </td>
+                <td class="table-row__cell table-row__title">Организационно-правовая форма</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">ОАО</div>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">10 000 ₽</div>
+                </td>
+                <td class="table-row__cell table-row__title">Налогообложение</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">10 000 ₽</div>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">06.10.1 Добыча сырой нефти</div>
+                </td>
+                <td class="table-row__cell table-row__title">ОКВЭД</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">06.10.1 Добыча сырой нефти</div>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода галочки использовать span с классом ok -->
+                    <span class="ok">
+                        <img src="images/compare-ok.svg" alt="ok">
+                    </span>
+                </td>
+                <td class="table-row__cell table-row__title">Филиалы и представительства</td>
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода минуса использовать span с классом minus -->
+                    <span class="minus">
+                        <img src="images/compare-minus.svg" alt="minus">
+                    </span>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода галочки использовать span с классом ok -->
+                    <span class="ok">
+                        <img src="images/compare-ok.svg" alt="ok">
+                    </span>
+                </td>
+                <td class="table-row__cell table-row__title">ДЗО</td>
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода галочки использовать span с классом ok -->
+                    <span class="ok">
+                        <img src="images/compare-ok.svg" alt="ok">
+                    </span>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">2 308 913 075 000 ₽</div>
+                </td>
+                <td class="table-row__cell table-row__title">Уставной капитал</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">10 000 ₽</div>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">294 649</div>
+                </td>
+                <td class="table-row__cell table-row__title">Сотрудники</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">50</div>
+                </td>
+            </tr>
+        </table>
+
+        <table class="table table--factors">
+            <caption class="table__title">Cтоп-факторы</caption>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода галочки использовать span с классом ok -->
+                    <span class="ok">
+                        <img src="images/compare-ok.svg" alt="ok">
+                    </span>
+                </td>
+                <td class="table-row__cell table-row__title">Статус</td>
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода ошибки использовать следующую разметку-->
+                    <span class="hint">
+                        <img src="images/compare-error.svg" alt="error">
+                        <span class="hint-content">
+                            <span class="hint-content__title">Будьте осторожны!</span>
+                            <span class="hint-content__text">
+                                Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                        </span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода предупреждения использовать следующую разметку-->
+                    <span class="hint hint--warning">
+                        <img src="images/compare-warning.svg" alt="warning">
+                        <span class="hint-content">
+                            <span class="hint-content__title">Будьте осторожны!</span>
+                            <span class="hint-content__text">
+                                Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                        </span>
+                    </span>
+                </td>
+                <td class="table-row__cell table-row__title">Иски о банкротстве</td>
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода предупреждения использовать следующую разметку-->
+                    <span class="hint hint--warning">
+                        <img src="images/compare-warning.svg" alt="warning">
+                        <span class="hint-content">
+                            <span class="hint-content__title">Будьте осторожны!</span>
+                            <span class="hint-content__text">
+                                Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                        </span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода предупреждения использовать следующую разметку-->
+                    <span class="hint hint--warning">
+                        <img src="images/compare-warning.svg" alt="warning">
+                        <span class="hint-content">
+                            <span class="hint-content__title">Будьте осторожны!</span>
+                            <span class="hint-content__text">
+                                Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                        </span>
+                    </span>
+                </td>
+                <td class="table-row__cell table-row__title">Арбитраж</td>
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода предупреждения использовать следующую разметку-->
+                    <span class="hint hint--warning">
+                        <img src="images/compare-warning.svg" alt="warning">
+                        <span class="hint-content">
+                            <span class="hint-content__title">Будьте осторожны!</span>
+                            <span class="hint-content__text">
+                                Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                        </span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода галочки использовать span с классом ok -->
+                    <span class="ok">
+                        <img src="images/compare-ok.svg" alt="ok">
+                    </span>
+                </td>
+                <td class="table-row__cell table-row__title">Проверки</td>
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода предупреждения использовать следующую разметку-->
+                    <span class="hint hint--warning">
+                        <img src="images/compare-warning.svg" alt="warning">
+                        <span class="hint-content">
+                            <span class="hint-content__title">Будьте осторожны!</span>
+                            <span class="hint-content__text">
+                                Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                        </span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода галочки использовать span с классом ok -->
+                    <span class="ok">
+                        <img src="images/compare-ok.svg" alt="ok">
+                    </span>
+                </td>
+                <td class="table-row__cell table-row__title">Бизнес</td>
+                <td class="table-row__cell table-row__value">
+                    <!-- Для вывода предупреждения использовать следующую разметку-->
+                    <span class="hint hint--warning">
+                        <img src="images/compare-warning.svg" alt="warning">
+                        <span class="hint-content">
+                            <span class="hint-content__title">Будьте осторожны!</span>
+                            <span class="hint-content__text">
+                                Дебиторская задолженность юр.лица за последний отчетный год составляет от 50 до 90% «Валюты баланса» (Строка 1600 бухгалтерского баланса) за поледний отчетный год.
+                            </span>
+                        </span>
+                    </span>
+                </td>
+            </tr>
+        </table>
+
+        <table class="table table--sliders">
+            <caption class="table__title">Экономика</caption>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <div class="text">294 649</div>
+                        <div class="slider">
+                            <img src="images/compare-slider--bg.jpg" alt="background" class="slider-base">
+                            <!-- Ширину блока .slider-inner рассчитывать средствами бэка. В зависимости от нужного цвета выводить класс-модификатор slider-inner--gray, slider-inner--red или slider-inner--green -->
+                            <img src="images/compare-slider--green.jpg" alt="good" style="width: 95%"
+                                 class="slider-inner">
+                        </div>
+                    </div>
+                </td>
+                <td class="table-row__cell table-row__title">Выручка</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <div class="text">50</div>
+                        <div class="slider">
+                            <img src="images/compare-slider--bg.jpg" alt="background" class="slider-base">
+                            <!-- Ширину блока .slider-inner рассчитывать средствами бэка. В зависимости от нужного цвета выводить класс-модификатор slider-inner--gray, slider-inner--red или slider-inner--green -->
+                            <img src="images/compare-slider--green.jpg" alt="good" style="width: 5%"
+                                 class="slider-inner">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <div class="text">2 225 488 ₽</div>
+                        <div class="slider">
+                            <img src="images/compare-slider--bg.jpg" alt="background" class="slider-base">
+                            <!-- Ширину блока .slider-inner рассчитывать средствами бэка. В зависимости от нужного цвета выводить класс-модификатор slider-inner--gray, slider-inner--red или slider-inner--green -->
+                            <img src="images/compare-slider--red.jpg" alt="good" style="width: 95%"
+                                 class="slider-inner">
+                        </div>
+                    </div>
+                </td>
+                <td class="table-row__cell table-row__title">Кредиторка</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <div class="text">925 000 ₽</div>
+                        <div class="slider">
+                            <img src="images/compare-slider--bg.jpg" alt="background" class="slider-base">
+                            <!-- Ширину блока .slider-inner рассчитывать средствами бэка. В зависимости от нужного цвета выводить класс-модификатор slider-inner--gray, slider-inner--red или slider-inner--green -->
+                            <img src="images/compare-slider--red.jpg" alt="good" style="width: 5%" class="slider-inner">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Подзаголовок таблицы -->
+            <tr class="table-row">
+                <td colspan="3" class="table__subtitle">Истец</td>
+            </tr>
+
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <div class="text">995 000 ₽</div>
+                        <div class="slider">
+                            <img src="images/compare-slider--bg.jpg" alt="background" class="slider-base">
+                            <!-- Ширину блока .slider-inner рассчитывать средствами бэка. В зависимости от нужного цвета выводить класс-модификатор slider-inner--gray, slider-inner--red или slider-inner--green -->
+                            <img src="images/compare-slider--gray.jpg" alt="good" style="width: 95%"
+                                 class="slider-inner">
+                        </div>
+                    </div>
+                </td>
+                <td class="table-row__cell table-row__title">2019</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <div class="text">11 000 ₽</div>
+                        <div class="slider">
+                            <img src="images/compare-slider--bg.jpg" alt="background" class="slider-base">
+                            <!-- Ширину блока .slider-inner рассчитывать средствами бэка. В зависимости от нужного цвета выводить класс-модификатор slider-inner--gray, slider-inner--red или slider-inner--green -->
+                            <img src="images/compare-slider--gray.jpg" alt="good" style="width: 5%"
+                                 class="slider-inner">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <table class="table table--ratios">
+            <caption class="table__title">Бизнес коэффициенты</caption>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <!-- Блоку current выводить соответствующий цвету класс-модификатор current--red или current--green -->
+                        <div class="current current--green">100</div>
+                        <div class="base">(≥ 25)</div>
+                    </div>
+                </td>
+                <td class="table-row__cell table-row__title">Абсолютная ликвидность</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <!-- Блоку current выводить соответствующий цвету класс-модификатор current--red или current--green -->
+                        <div class="current current--green">62</div>
+                        <div class="base">(≥ 25)</div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <!-- Блоку current выводить соответствующий цвету класс-модификатор current--red или current--green -->
+                        <div class="current current--green">208</div>
+                        <div class="base">(≥ 200)</div>
+                    </div>
+                </td>
+                <td class="table-row__cell table-row__title">Текущая ликвидность</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <!-- Блоку current выводить соответствующий цвету класс-модификатор current--red или current--green -->
+                        <div class="current current--red">133</div>
+                        <div class="base">(≥ 200)</div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <!-- Блоку current выводить соответствующий цвету класс-модификатор current--red или current--green -->
+                        <div class="current current--green">124</div>
+                        <div class="base">(≥ 100)</div>
+                    </div>
+                </td>
+                <td class="table-row__cell table-row__title">Восстановление платежеспособности</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <!-- Блоку current выводить соответствующий цвету класс-модификатор current--red или current--green -->
+                        <div class="current current--red">47</div>
+                        <div class="base">(≥ 100)</div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <!-- Блоку current выводить соответствующий цвету класс-модификатор current--red или current--green -->
+                        <div class="current current--red">−263</div>
+                        <div class="base">(≥ 10)</div>
+                    </div>
+                </td>
+                <td class="table-row__cell table-row__title">Коэффициент маневренности</td>
+                <td class="table-row__cell table-row__value">
+                    <div class="inner">
+                        <!-- Блоку current выводить соответствующий цвету класс-модификатор current--red или current--green -->
+                        <div class="current current--red">-342</div>
+                        <div class="base">(≥ 10)</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</section>
+</body>

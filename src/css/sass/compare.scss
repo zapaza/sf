@@ -1,0 +1,11 @@
+//базовые стили
+@import "base/variables";
+@import "base/functions";
+@import "base/mixins";
+@import "base/sprite";
+@import "base/fonts";
+@import "base/reset";
+@import "base/base";
+
+//отдельные страницы
+@import "pages/compare";
