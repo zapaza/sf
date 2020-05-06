@@ -16,9 +16,10 @@
     .table {
         width: 100%;
         border-collapse: collapse;
-        font-size: 1.4rem;
-        line-height: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.25;
         margin: 72px 0;
+        display: table;
 
         &:first-of-type {
             margin-top: 0;
@@ -28,11 +29,38 @@
             margin-bottom: 0;
         }
 
+        &--names {
+            .table-row {
+                &__cell {
+                    width: 50%;
+                    vertical-align: top;
+                    &:first-child {
+                        margin-right: 8px;
+                    }
+                    &:last-child {
+                        padding-left: 8px;
+                    }
+                    .inner {
+                        width: 464px;
+                        min-height: 88px;
+                        padding: 14px 16px;
+                        border: 1px solid $white--text;
+                        border-radius: 4px;
+                        font-size: 1.6rem;
+                        line-height: 1.25;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
         &--company, &--factors {
             .table-row {
                 &__value {
                     width: calc(50% - 336px / 2);
                     min-width: calc(50% - 336px / 2);
+                    padding-top: 9px;
+                    padding-bottom: 9px;
 
                     .inner {
                         width: 304px;
@@ -53,6 +81,8 @@
                     width: 176px;
                     min-width: 176px;
                     max-width: 176px;
+                    padding-top: 11px;
+                    padding-bottom: 11px;
                 }
                 &__value {
                     width: calc(50% - 176px/2);
@@ -138,6 +168,7 @@
                 &__title {
                     width: 496px;
                     min-width: 496px;
+                    padding: 11px 0;
                 }
                 &__value {
                     width: calc(50% - 496px/2);
@@ -175,6 +206,8 @@
         }
 
         &__title {
+            font-size: 1.6rem;
+            line-height: 1.25;
             font-weight: 700;
             text-align: center;
             text-transform: uppercase;
@@ -182,13 +215,15 @@
         }
 
         &__subtitle {
+            font-size: 1.6rem;
+            line-height: 1.25;
             color: $mid-gray--text;
             text-align: center;
             padding: 12px 0;
         }
 
         &-row {
-            align-items: stretch;
+            display: table-row;
 
             &:first-child {
                 .table-row__cell {
@@ -197,15 +232,18 @@
             }
 
             &__cell {
+                display: table-cell;
                 padding: 11px 0;
                 border-top: 1px solid $light-gray--text;
                 vertical-align: middle;
             }
 
             &__title {
+                font-size: 1.6rem;
+                line-height: 1.25;
                 color: $black--text;
                 text-align: center;
-                padding: 0 16px;
+                padding: 9px 16px;
             }
 
             &__value {
